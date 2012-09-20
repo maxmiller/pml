@@ -1,4 +1,4 @@
-#Wed Aug 01 09:41:36 GMT-03:00 2012
+#Thu Sep 20 10:16:36 GMT-03:00 2012
 viewport.x=-85
 zoom=1.0
 print.margin.right=0.5
@@ -17,4 +17,4 @@ rulergrid.gridlevel=true
 print.margin.top=0.5
 print.useMillim=true
 print.usePortrait=true
-viewport.y=111
+viewport.y=176

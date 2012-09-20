@@ -18762,3 +18762,109 @@ Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product org.eclipse.
 
 !ENTRY org.eclipse.epp.usagedata.recording 1 0 2012-09-18 09:04:25.529
 !MESSAGE Usage data uploaded to http://udc.eclipse.org/upload.php in 17667 milliseconds.
+!SESSION 2012-09-20 08:48:53.670 -----------------------------------------------
+eclipse.buildId=M20120208-0800
+java.version=1.6.0_35
+java.vendor=Apple Inc.
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=pt_BR
+Framework arguments:  -product org.eclipse.epp.package.modeling.product -product org.eclipse.epp.package.modeling.product -keyring /Users/maxmiller/.eclipse_keyring -showlocation
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product org.eclipse.epp.package.modeling.product -data /Users/maxmiller/github/pml/workspaceEMF -product org.eclipse.epp.package.modeling.product -keyring /Users/maxmiller/.eclipse_keyring -showlocation
+
+!ENTRY org.eclipse.core.net 1 0 2012-09-20 08:49:02.692
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+
+!ENTRY org.eclipse.jface 4 4 2012-09-20 08:56:35.104
+!MESSAGE Received wrong transfer data. 
+
+!ENTRY org.eclipse.jface 4 4 2012-09-20 08:56:35.153
+!MESSAGE Received wrong transfer data. 
+
+!ENTRY org.eclipse.jface 4 4 2012-09-20 08:56:35.156
+!MESSAGE Received wrong transfer data. 
+
+!ENTRY org.eclipse.jface 4 4 2012-09-20 08:56:35.158
+!MESSAGE Received wrong transfer data. 
+
+!ENTRY org.eclipse.jface 4 4 2012-09-20 08:56:35.185
+!MESSAGE Received wrong transfer data. 
+
+!ENTRY org.eclipse.jface 4 4 2012-09-20 08:56:35.186
+!MESSAGE Received wrong transfer data. 
+
+!ENTRY org.eclipse.jface 4 4 2012-09-20 08:56:35.187
+!MESSAGE Received wrong transfer data. 
+
+!ENTRY org.eclipse.jface 4 4 2012-09-20 08:56:35.188
+!MESSAGE Received wrong transfer data. 
+
+!ENTRY org.eclipse.jface 4 4 2012-09-20 08:56:35.189
+!MESSAGE Received wrong transfer data. 
+
+!ENTRY org.eclipse.jface 4 4 2012-09-20 08:56:35.190
+!MESSAGE Received wrong transfer data. 
+
+!ENTRY org.eclipse.jface 4 4 2012-09-20 08:56:35.190
+!MESSAGE Received wrong transfer data. 
+
+!ENTRY org.eclipse.jface 4 4 2012-09-20 08:56:35.191
+!MESSAGE Received wrong transfer data. 
+
+!ENTRY org.eclipse.jface 4 4 2012-09-20 08:56:35.192
+!MESSAGE Received wrong transfer data. 
+
+!ENTRY org.eclipse.jface 4 4 2012-09-20 08:56:35.193
+!MESSAGE Received wrong transfer data. 
+
+!ENTRY org.eclipse.jface 4 4 2012-09-20 08:56:35.194
+!MESSAGE Received wrong transfer data. 
+
+!ENTRY org.eclipse.jface 4 4 2012-09-20 08:56:35.195
+!MESSAGE Received wrong transfer data. 
+
+!ENTRY org.eclipse.jface 4 4 2012-09-20 08:56:35.244
+!MESSAGE Received wrong transfer data. 
+
+!ENTRY org.eclipse.jface 4 4 2012-09-20 08:56:35.246
+!MESSAGE Received wrong transfer data. 
+
+!ENTRY org.eclipse.jface 4 4 2012-09-20 08:56:35.294
+!MESSAGE Received wrong transfer data. 
+
+!ENTRY org.eclipse.jface 4 4 2012-09-20 08:56:35.296
+!MESSAGE Received wrong transfer data. 
+
+!ENTRY org.eclipse.jface 4 4 2012-09-20 08:56:35.344
+!MESSAGE Received wrong transfer data. 
+
+!ENTRY org.eclipse.jface 4 4 2012-09-20 08:56:35.346
+!MESSAGE Received wrong transfer data. 
+
+!ENTRY org.eclipse.jface 4 4 2012-09-20 08:56:35.394
+!MESSAGE Received wrong transfer data. 
+
+!ENTRY org.eclipse.jface 4 4 2012-09-20 08:56:35.396
+!MESSAGE Received wrong transfer data. 
+
+!ENTRY org.eclipse.jface 4 4 2012-09-20 08:56:35.444
+!MESSAGE Received wrong transfer data. 
+
+!ENTRY org.eclipse.jface 4 4 2012-09-20 08:56:35.446
+!MESSAGE Received wrong transfer data. 
+
+!ENTRY org.eclipse.jface 4 4 2012-09-20 08:56:35.494
+!MESSAGE Received wrong transfer data. 
+
+!ENTRY org.eclipse.jface 4 4 2012-09-20 08:56:35.496
+!MESSAGE Received wrong transfer data. 
+
+!ENTRY org.eclipse.jface 4 4 2012-09-20 08:56:35.498
+!MESSAGE Received wrong transfer data. 
+
+!ENTRY org.eclipse.jface 4 4 2012-09-20 08:56:35.499
+!MESSAGE Received wrong transfer data. 
+
+!ENTRY org.eclipse.jface 4 4 2012-09-20 08:56:35.500
+!MESSAGE Received wrong transfer data. 
+
+!ENTRY org.eclipse.jface 4 4 2012-09-20 08:56:35.501
+!MESSAGE Received wrong transfer data. 

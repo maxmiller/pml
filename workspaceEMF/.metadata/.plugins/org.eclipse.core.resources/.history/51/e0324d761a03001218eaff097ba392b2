@@ -1363,22 +1363,6 @@
     <children xmi:type="notation:Node" xmi:id="_yzwcgLAdEeGSK7L5V0QKgg" type="1001">
       <children xmi:type="notation:Node" xmi:id="_yz60kLAdEeGSK7L5V0QKgg" type="4001"/>
       <children xmi:type="notation:Node" xmi:id="_yz7boLAdEeGSK7L5V0QKgg" type="5001">
-        <children xmi:type="notation:Node" xmi:id="_bCtbcAMaEeKmKv1UmbfGqA" type="2001">
-          <element xmi:type="ecore:EAttribute" href="pml.ecore#//Seletor/name"/>
-          <layoutConstraint xmi:type="notation:Location" xmi:id="_bCtbcQMaEeKmKv1UmbfGqA"/>
-        </children>
-        <children xmi:type="notation:Node" xmi:id="_bCtbcgMaEeKmKv1UmbfGqA" type="2001">
-          <element xmi:type="ecore:EAttribute" href="pml.ecore#//Seletor/type"/>
-          <layoutConstraint xmi:type="notation:Location" xmi:id="_bCtbcwMaEeKmKv1UmbfGqA"/>
-        </children>
-        <children xmi:type="notation:Node" xmi:id="_cRGhMAMaEeKmKv1UmbfGqA" type="2001">
-          <element xmi:type="ecore:EAttribute" href="pml.ecore#//Seletor/bit"/>
-          <layoutConstraint xmi:type="notation:Location" xmi:id="_cRGhMQMaEeKmKv1UmbfGqA"/>
-        </children>
-        <children xmi:type="notation:Node" xmi:id="_bCuCgAMaEeKmKv1UmbfGqA" type="2001">
-          <element xmi:type="ecore:EAttribute" href="pml.ecore#//Seletor/lengh"/>
-          <layoutConstraint xmi:type="notation:Location" xmi:id="_bCuCgQMaEeKmKv1UmbfGqA"/>
-        </children>
         <styles xmi:type="notation:DrawerStyle" xmi:id="_yz7bobAdEeGSK7L5V0QKgg"/>
         <styles xmi:type="notation:SortingStyle" xmi:id="_yz7borAdEeGSK7L5V0QKgg"/>
         <styles xmi:type="notation:FilteringStyle" xmi:id="_yz7bo7AdEeGSK7L5V0QKgg"/>

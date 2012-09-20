@@ -332,18 +332,6 @@
           <element xmi:type="ecore:EAttribute" href="pml.ecore#//Input/type"/>
           <layoutConstraint xmi:type="notation:Location" xmi:id="_5mUAkRqPEeGah8cd06vQjQ"/>
         </children>
-        <children xmi:type="notation:Node" xmi:id="_RXkL0AMaEeKmKv1UmbfGqA" type="2001">
-          <element xmi:type="ecore:EAttribute" href="pml.ecore#//Input/length"/>
-          <layoutConstraint xmi:type="notation:Location" xmi:id="_RXkL0QMaEeKmKv1UmbfGqA"/>
-        </children>
-        <children xmi:type="notation:Node" xmi:id="_TmrHsAMaEeKmKv1UmbfGqA" type="2001">
-          <element xmi:type="ecore:EAttribute" href="pml.ecore#//Input/bit"/>
-          <layoutConstraint xmi:type="notation:Location" xmi:id="_TmrHsQMaEeKmKv1UmbfGqA"/>
-        </children>
-        <children xmi:type="notation:Node" xmi:id="_RXky4AMaEeKmKv1UmbfGqA" type="2001">
-          <element xmi:type="ecore:EAttribute" href="pml.ecore#//Input/sensitive"/>
-          <layoutConstraint xmi:type="notation:Location" xmi:id="_RXky4QMaEeKmKv1UmbfGqA"/>
-        </children>
         <styles xmi:type="notation:DrawerStyle" xmi:id="_M-yGkhqPEeGah8cd06vQjQ"/>
         <styles xmi:type="notation:SortingStyle" xmi:id="_M-yGkxqPEeGah8cd06vQjQ"/>
         <styles xmi:type="notation:FilteringStyle" xmi:id="_M-yGlBqPEeGah8cd06vQjQ"/>
@@ -367,18 +355,6 @@
         <children xmi:type="notation:Node" xmi:id="_76rP4BqPEeGah8cd06vQjQ" type="2001">
           <element xmi:type="ecore:EAttribute" href="pml.ecore#//Output/type"/>
           <layoutConstraint xmi:type="notation:Location" xmi:id="_76rP4RqPEeGah8cd06vQjQ"/>
-        </children>
-        <children xmi:type="notation:Node" xmi:id="_Vt9kUAMaEeKmKv1UmbfGqA" type="2001">
-          <element xmi:type="ecore:EAttribute" href="pml.ecore#//Output/bit"/>
-          <layoutConstraint xmi:type="notation:Location" xmi:id="_Vt9kUQMaEeKmKv1UmbfGqA"/>
-        </children>
-        <children xmi:type="notation:Node" xmi:id="_RXnPIAMaEeKmKv1UmbfGqA" type="2001">
-          <element xmi:type="ecore:EAttribute" href="pml.ecore#//Output/sensitive"/>
-          <layoutConstraint xmi:type="notation:Location" xmi:id="_RXnPIQMaEeKmKv1UmbfGqA"/>
-        </children>
-        <children xmi:type="notation:Node" xmi:id="_RXnPIgMaEeKmKv1UmbfGqA" type="2001">
-          <element xmi:type="ecore:EAttribute" href="pml.ecore#//Output/length"/>
-          <layoutConstraint xmi:type="notation:Location" xmi:id="_RXnPIwMaEeKmKv1UmbfGqA"/>
         </children>
         <styles xmi:type="notation:DrawerStyle" xmi:id="_N4FtIhqPEeGah8cd06vQjQ"/>
         <styles xmi:type="notation:SortingStyle" xmi:id="_N4FtIxqPEeGah8cd06vQjQ"/>
@@ -1363,22 +1339,6 @@
     <children xmi:type="notation:Node" xmi:id="_yzwcgLAdEeGSK7L5V0QKgg" type="1001">
       <children xmi:type="notation:Node" xmi:id="_yz60kLAdEeGSK7L5V0QKgg" type="4001"/>
       <children xmi:type="notation:Node" xmi:id="_yz7boLAdEeGSK7L5V0QKgg" type="5001">
-        <children xmi:type="notation:Node" xmi:id="_bCtbcAMaEeKmKv1UmbfGqA" type="2001">
-          <element xmi:type="ecore:EAttribute" href="pml.ecore#//Seletor/name"/>
-          <layoutConstraint xmi:type="notation:Location" xmi:id="_bCtbcQMaEeKmKv1UmbfGqA"/>
-        </children>
-        <children xmi:type="notation:Node" xmi:id="_bCtbcgMaEeKmKv1UmbfGqA" type="2001">
-          <element xmi:type="ecore:EAttribute" href="pml.ecore#//Seletor/type"/>
-          <layoutConstraint xmi:type="notation:Location" xmi:id="_bCtbcwMaEeKmKv1UmbfGqA"/>
-        </children>
-        <children xmi:type="notation:Node" xmi:id="_cRGhMAMaEeKmKv1UmbfGqA" type="2001">
-          <element xmi:type="ecore:EAttribute" href="pml.ecore#//Seletor/bit"/>
-          <layoutConstraint xmi:type="notation:Location" xmi:id="_cRGhMQMaEeKmKv1UmbfGqA"/>
-        </children>
-        <children xmi:type="notation:Node" xmi:id="_bCuCgAMaEeKmKv1UmbfGqA" type="2001">
-          <element xmi:type="ecore:EAttribute" href="pml.ecore#//Seletor/lengh"/>
-          <layoutConstraint xmi:type="notation:Location" xmi:id="_bCuCgQMaEeKmKv1UmbfGqA"/>
-        </children>
         <styles xmi:type="notation:DrawerStyle" xmi:id="_yz7bobAdEeGSK7L5V0QKgg"/>
         <styles xmi:type="notation:SortingStyle" xmi:id="_yz7borAdEeGSK7L5V0QKgg"/>
         <styles xmi:type="notation:FilteringStyle" xmi:id="_yz7bo7AdEeGSK7L5V0QKgg"/>
