@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="multiplexormodel"
+    nsURI="http://multiplexor/1.0" nsPrefix="multi">
+  <eSubpackages name="multiplexador" nsURI="http://lasic.ufrn.br/multiplexor/1.0"
+      nsPrefix="multiplexor">
+    <eClassifiers xsi:type="ecore:EClass" name="Input">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="inputs" lowerBound="1"
+          upperBound="-1" eType="#//multiplexador/Multiplexer" containment="true"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
+          defaultValueLiteral="0">
+        <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+          <details key="kind" value="group"/>
+          <details key="affiliation" value="#numInputs"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Multiplexer">
+      <eOperations name="multiplexerBehavior"/>
+      <eOperations name="Multiplexer">
+        <eParameters name="numInputs" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      </eOperations>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="numInputs" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
+          defaultValueLiteral="0"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="inputs" lowerBound="1"
+          upperBound="-1" eType="#//multiplexador/Input" containment="true"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="output" lowerBound="1"
+          eType="#//multiplexador/Output" containment="true"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="sel" lowerBound="1" eType="#//multiplexador/Seletor"
+          containment="true"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Output">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="output" lowerBound="1"
+          eType="#//multiplexador/Multiplexer" containment="true"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
+          defaultValueLiteral="0"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Seletor">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="sel" lowerBound="1" eType="#//multiplexador/Multiplexer"
+          containment="true"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
+          defaultValueLiteral="0"/>
+    </eClassifiers>
+  </eSubpackages>
+</ecore:EPackage>

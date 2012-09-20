@@ -1,0 +1,11 @@
+[comment encoding = UTF-8 /]
+[module main('http://teste/1.0')/]
+[import teste::modelo::generate/]
+
+
+[template public mainAgenda(aAgenda : Agenda)]
+	
+	[comment @main /]
+	[aAgenda.generateElement()/]
+	
+[/template]

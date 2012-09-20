@@ -1,0 +1,295 @@
+/**
+ * <copyright>
+ * </copyright>
+ *
+ * $Id$
+ */
+package pml.impl;
+
+import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EDataType;
+import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.ecore.EPackage;
+
+import org.eclipse.emf.ecore.impl.EFactoryImpl;
+
+import org.eclipse.emf.ecore.plugin.EcorePlugin;
+
+import pml.*;
+
+/**
+ * <!-- begin-user-doc -->
+ * An implementation of the model <b>Factory</b>.
+ * <!-- end-user-doc -->
+ * @generated
+ */
+public class PmlFactoryImpl extends EFactoryImpl implements PmlFactory {
+	/**
+	 * Creates the default factory implementation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public static PmlFactory init() {
+		try {
+			PmlFactory thePmlFactory = (PmlFactory)EPackage.Registry.INSTANCE.getEFactory("http://pml/0.1"); 
+			if (thePmlFactory != null) {
+				return thePmlFactory;
+			}
+		}
+		catch (Exception exception) {
+			EcorePlugin.INSTANCE.log(exception);
+		}
+		return new PmlFactoryImpl();
+	}
+
+	/**
+	 * Creates an instance of the factory.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public PmlFactoryImpl() {
+		super();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EObject create(EClass eClass) {
+		switch (eClass.getClassifierID()) {
+			case PmlPackage.ULA: return createULA();
+			case PmlPackage.BEHAVIOR: return createBehavior();
+			case PmlPackage.INPUT: return createInput();
+			case PmlPackage.OUTPUT: return createOutput();
+			case PmlPackage.DEMULTIPLEXOR: return createDemultiplexor();
+			case PmlPackage.MULTIPLEXOR: return createMultiplexor();
+			case PmlPackage.CONTROL_UNIT: return createControlUnit();
+			case PmlPackage.PROCESSOR: return createProcessor();
+			case PmlPackage.MEMORY: return createMemory();
+			case PmlPackage.REGISTER: return createRegister();
+			case PmlPackage.INSTRUCTIONS: return createInstructions();
+			case PmlPackage.MICRO_INSTRUCTION: return createMicroInstruction();
+			default:
+				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
+		}
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object createFromString(EDataType eDataType, String initialValue) {
+		switch (eDataType.getClassifierID()) {
+			case PmlPackage.TYPE_COMPONENT:
+				return createTypeComponentFromString(eDataType, initialValue);
+			case PmlPackage.TYPE_DATA:
+				return createTypeDataFromString(eDataType, initialValue);
+			default:
+				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
+		}
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String convertToString(EDataType eDataType, Object instanceValue) {
+		switch (eDataType.getClassifierID()) {
+			case PmlPackage.TYPE_COMPONENT:
+				return convertTypeComponentToString(eDataType, instanceValue);
+			case PmlPackage.TYPE_DATA:
+				return convertTypeDataToString(eDataType, instanceValue);
+			default:
+				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
+		}
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ULA createULA() {
+		ULAImpl ula = new ULAImpl();
+		return ula;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Behavior createBehavior() {
+		BehaviorImpl behavior = new BehaviorImpl();
+		return behavior;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Input createInput() {
+		InputImpl input = new InputImpl();
+		return input;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Output createOutput() {
+		OutputImpl output = new OutputImpl();
+		return output;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Demultiplexor createDemultiplexor() {
+		DemultiplexorImpl demultiplexor = new DemultiplexorImpl();
+		return demultiplexor;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Multiplexor createMultiplexor() {
+		MultiplexorImpl multiplexor = new MultiplexorImpl();
+		return multiplexor;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ControlUnit createControlUnit() {
+		ControlUnitImpl controlUnit = new ControlUnitImpl();
+		return controlUnit;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Processor createProcessor() {
+		ProcessorImpl processor = new ProcessorImpl();
+		return processor;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Memory createMemory() {
+		MemoryImpl memory = new MemoryImpl();
+		return memory;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Register createRegister() {
+		RegisterImpl register = new RegisterImpl();
+		return register;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Instructions createInstructions() {
+		InstructionsImpl instructions = new InstructionsImpl();
+		return instructions;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public MicroInstruction createMicroInstruction() {
+		MicroInstructionImpl microInstruction = new MicroInstructionImpl();
+		return microInstruction;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public TypeComponent createTypeComponentFromString(EDataType eDataType, String initialValue) {
+		TypeComponent result = TypeComponent.get(initialValue);
+		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertTypeComponentToString(EDataType eDataType, Object instanceValue) {
+		return instanceValue == null ? null : instanceValue.toString();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public TypeData createTypeDataFromString(EDataType eDataType, String initialValue) {
+		TypeData result = TypeData.get(initialValue);
+		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertTypeDataToString(EDataType eDataType, Object instanceValue) {
+		return instanceValue == null ? null : instanceValue.toString();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public PmlPackage getPmlPackage() {
+		return (PmlPackage)getEPackage();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @deprecated
+	 * @generated
+	 */
+	@Deprecated
+	public static PmlPackage getPackage() {
+		return PmlPackage.eINSTANCE;
+	}
+
+} //PmlFactoryImpl

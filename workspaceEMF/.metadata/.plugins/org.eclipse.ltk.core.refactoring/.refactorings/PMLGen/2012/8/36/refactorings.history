@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;multiplexor_h.mtl&apos; to &apos;PMLGen/src/PMLGen.generator&apos;&#x0A;- Original project: &apos;PMLGen&apos;&#x0A;- Destination element: &apos;PMLGen/src/PMLGen.generator&apos;&#x0A;- Original element: &apos;multiplexor_h.mtl&apos;" description="Copy file" destination="/src&lt;PMLGen.generator" element1="src/PMLGen/generator/multiplexor_h.mtl" files="1" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1346344797562" units="0" version="1.0"/>
+</session>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="org.eclipse.acceleo.ide.ui.launching.launchConfigurationType">
+<stringAttribute key="org.eclipse.acceleo.ide.ui.ARGUMENTS" value=""/>
+<booleanAttribute key="org.eclipse.acceleo.ide.ui.COMPUTE_PROFILING" value="false"/>
+<booleanAttribute key="org.eclipse.acceleo.ide.ui.COMPUTE_TRACEABILITY" value="true"/>
+<stringAttribute key="org.eclipse.acceleo.ide.ui.LAUNCHING_STRATEGY_DESCRIPTION" value="Acceleo Plug-in Application (Default)"/>
+<stringAttribute key="org.eclipse.acceleo.ide.ui.MODEL_PATH" value="/GeneratorPML/src/GeneratorPML/common/mips.pml"/>
+<stringAttribute key="org.eclipse.acceleo.ide.ui.PROFILE_MODEL_PATH" value=""/>
+<stringAttribute key="org.eclipse.acceleo.ide.ui.TARGET_PATH" value="/GeneratorPML/src/GeneratorPML/generator"/>
+<listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
+<listEntry value="/GeneratorPML/src/GeneratorPML/common/Generator.java"/>
+</listAttribute>
+<listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_TYPES">
+<listEntry value="1"/>
+</listAttribute>
+<booleanAttribute key="org.eclipse.debug.ui.ATTR_LAUNCH_IN_BACKGROUND" value="false"/>
+<stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="GeneratorPML.common.Generator"/>
+<stringAttribute key="org.eclipse.jdt.launching.PROGRAM_ARGUMENTS" value="&quot;/Users/maxmiller/Dropbox/Mestrado/workspaceEMF/GeneratorPML/src/GeneratorPML/common/mips.pml&quot; &quot;/Users/maxmiller/Dropbox/Mestrado/workspaceEMF/GeneratorPML/src/GeneratorPML/generator&quot;"/>
+<stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="GeneratorPML"/>
+</launchConfiguration>

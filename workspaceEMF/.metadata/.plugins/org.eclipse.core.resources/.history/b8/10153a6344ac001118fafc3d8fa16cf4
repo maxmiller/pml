@@ -1,0 +1,367 @@
+/**
+ * <copyright>
+ * </copyright>
+ *
+ * $Id$
+ */
+package pml.impl;
+
+import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
+
+import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
+
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.impl.EObjectImpl;
+
+import pml.MicroInstruction;
+import pml.PmlPackage;
+
+/**
+ * <!-- begin-user-doc -->
+ * An implementation of the model object '<em><b>Micro Instruction</b></em>'.
+ * <!-- end-user-doc -->
+ * <p>
+ * The following features are implemented:
+ * <ul>
+ *   <li>{@link pml.impl.MicroInstructionImpl#getName <em>Name</em>}</li>
+ *   <li>{@link pml.impl.MicroInstructionImpl#getValue <em>Value</em>}</li>
+ *   <li>{@link pml.impl.MicroInstructionImpl#getNextMicroinstruction <em>Next Microinstruction</em>}</li>
+ *   <li>{@link pml.impl.MicroInstructionImpl#getFinalMicroinstruction <em>Final Microinstruction</em>}</li>
+ * </ul>
+ * </p>
+ *
+ * @generated
+ */
+public class MicroInstructionImpl extends EObjectImpl implements MicroInstruction {
+	/**
+	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getName()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String NAME_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getName()
+	 * @generated
+	 * @ordered
+	 */
+	protected String name = NAME_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getValue() <em>Value</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getValue()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final int VALUE_EDEFAULT = 0;
+
+	/**
+	 * The cached value of the '{@link #getValue() <em>Value</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getValue()
+	 * @generated
+	 * @ordered
+	 */
+	protected int value = VALUE_EDEFAULT;
+
+	/**
+	 * The cached value of the '{@link #getNextMicroinstruction() <em>Next Microinstruction</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getNextMicroinstruction()
+	 * @generated
+	 * @ordered
+	 */
+	protected MicroInstruction nextMicroinstruction;
+
+	/**
+	 * The cached value of the '{@link #getFinalMicroinstruction() <em>Final Microinstruction</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getFinalMicroinstruction()
+	 * @generated
+	 * @ordered
+	 */
+	protected MicroInstruction finalMicroinstruction;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected MicroInstructionImpl() {
+		super();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	protected EClass eStaticClass() {
+		return PmlPackage.Literals.MICRO_INSTRUCTION;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getName() {
+		return name;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setName(String newName) {
+		String oldName = name;
+		name = newName;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, PmlPackage.MICRO_INSTRUCTION__NAME, oldName, name));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public int getValue() {
+		return value;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setValue(int newValue) {
+		int oldValue = value;
+		value = newValue;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, PmlPackage.MICRO_INSTRUCTION__VALUE, oldValue, value));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public MicroInstruction getNextMicroinstruction() {
+		return nextMicroinstruction;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetNextMicroinstruction(MicroInstruction newNextMicroinstruction, NotificationChain msgs) {
+		MicroInstruction oldNextMicroinstruction = nextMicroinstruction;
+		nextMicroinstruction = newNextMicroinstruction;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, PmlPackage.MICRO_INSTRUCTION__NEXT_MICROINSTRUCTION, oldNextMicroinstruction, newNextMicroinstruction);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setNextMicroinstruction(MicroInstruction newNextMicroinstruction) {
+		if (newNextMicroinstruction != nextMicroinstruction) {
+			NotificationChain msgs = null;
+			if (nextMicroinstruction != null)
+				msgs = ((InternalEObject)nextMicroinstruction).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - PmlPackage.MICRO_INSTRUCTION__NEXT_MICROINSTRUCTION, null, msgs);
+			if (newNextMicroinstruction != null)
+				msgs = ((InternalEObject)newNextMicroinstruction).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - PmlPackage.MICRO_INSTRUCTION__NEXT_MICROINSTRUCTION, null, msgs);
+			msgs = basicSetNextMicroinstruction(newNextMicroinstruction, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, PmlPackage.MICRO_INSTRUCTION__NEXT_MICROINSTRUCTION, newNextMicroinstruction, newNextMicroinstruction));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public MicroInstruction getFinalMicroinstruction() {
+		return finalMicroinstruction;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetFinalMicroinstruction(MicroInstruction newFinalMicroinstruction, NotificationChain msgs) {
+		MicroInstruction oldFinalMicroinstruction = finalMicroinstruction;
+		finalMicroinstruction = newFinalMicroinstruction;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, PmlPackage.MICRO_INSTRUCTION__FINAL_MICROINSTRUCTION, oldFinalMicroinstruction, newFinalMicroinstruction);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setFinalMicroinstruction(MicroInstruction newFinalMicroinstruction) {
+		if (newFinalMicroinstruction != finalMicroinstruction) {
+			NotificationChain msgs = null;
+			if (finalMicroinstruction != null)
+				msgs = ((InternalEObject)finalMicroinstruction).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - PmlPackage.MICRO_INSTRUCTION__FINAL_MICROINSTRUCTION, null, msgs);
+			if (newFinalMicroinstruction != null)
+				msgs = ((InternalEObject)newFinalMicroinstruction).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - PmlPackage.MICRO_INSTRUCTION__FINAL_MICROINSTRUCTION, null, msgs);
+			msgs = basicSetFinalMicroinstruction(newFinalMicroinstruction, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, PmlPackage.MICRO_INSTRUCTION__FINAL_MICROINSTRUCTION, newFinalMicroinstruction, newFinalMicroinstruction));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case PmlPackage.MICRO_INSTRUCTION__NEXT_MICROINSTRUCTION:
+				return basicSetNextMicroinstruction(null, msgs);
+			case PmlPackage.MICRO_INSTRUCTION__FINAL_MICROINSTRUCTION:
+				return basicSetFinalMicroinstruction(null, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object eGet(int featureID, boolean resolve, boolean coreType) {
+		switch (featureID) {
+			case PmlPackage.MICRO_INSTRUCTION__NAME:
+				return getName();
+			case PmlPackage.MICRO_INSTRUCTION__VALUE:
+				return getValue();
+			case PmlPackage.MICRO_INSTRUCTION__NEXT_MICROINSTRUCTION:
+				return getNextMicroinstruction();
+			case PmlPackage.MICRO_INSTRUCTION__FINAL_MICROINSTRUCTION:
+				return getFinalMicroinstruction();
+		}
+		return super.eGet(featureID, resolve, coreType);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void eSet(int featureID, Object newValue) {
+		switch (featureID) {
+			case PmlPackage.MICRO_INSTRUCTION__NAME:
+				setName((String)newValue);
+				return;
+			case PmlPackage.MICRO_INSTRUCTION__VALUE:
+				setValue((Integer)newValue);
+				return;
+			case PmlPackage.MICRO_INSTRUCTION__NEXT_MICROINSTRUCTION:
+				setNextMicroinstruction((MicroInstruction)newValue);
+				return;
+			case PmlPackage.MICRO_INSTRUCTION__FINAL_MICROINSTRUCTION:
+				setFinalMicroinstruction((MicroInstruction)newValue);
+				return;
+		}
+		super.eSet(featureID, newValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void eUnset(int featureID) {
+		switch (featureID) {
+			case PmlPackage.MICRO_INSTRUCTION__NAME:
+				setName(NAME_EDEFAULT);
+				return;
+			case PmlPackage.MICRO_INSTRUCTION__VALUE:
+				setValue(VALUE_EDEFAULT);
+				return;
+			case PmlPackage.MICRO_INSTRUCTION__NEXT_MICROINSTRUCTION:
+				setNextMicroinstruction((MicroInstruction)null);
+				return;
+			case PmlPackage.MICRO_INSTRUCTION__FINAL_MICROINSTRUCTION:
+				setFinalMicroinstruction((MicroInstruction)null);
+				return;
+		}
+		super.eUnset(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public boolean eIsSet(int featureID) {
+		switch (featureID) {
+			case PmlPackage.MICRO_INSTRUCTION__NAME:
+				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+			case PmlPackage.MICRO_INSTRUCTION__VALUE:
+				return value != VALUE_EDEFAULT;
+			case PmlPackage.MICRO_INSTRUCTION__NEXT_MICROINSTRUCTION:
+				return nextMicroinstruction != null;
+			case PmlPackage.MICRO_INSTRUCTION__FINAL_MICROINSTRUCTION:
+				return finalMicroinstruction != null;
+		}
+		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String toString() {
+		if (eIsProxy()) return super.toString();
+
+		StringBuffer result = new StringBuffer(super.toString());
+		result.append(" (name: ");
+		result.append(name);
+		result.append(", value: ");
+		result.append(value);
+		result.append(')');
+		return result.toString();
+	}
+
+} //MicroInstructionImpl

@@ -1,0 +1,151 @@
+/**
+ * <copyright>
+ * </copyright>
+ *
+ * $Id$
+ */
+package pml;
+
+import org.eclipse.emf.common.util.EList;
+
+import org.eclipse.emf.ecore.EObject;
+
+/**
+ * <!-- begin-user-doc -->
+ * A representation of the model object '<em><b>Control Unit</b></em>'.
+ * <!-- end-user-doc -->
+ *
+ * <p>
+ * The following features are supported:
+ * <ul>
+ *   <li>{@link pml.ControlUnit#getBehaviorsControlUnit <em>Behaviors Control Unit</em>}</li>
+ *   <li>{@link pml.ControlUnit#getInputsControlUnit <em>Inputs Control Unit</em>}</li>
+ *   <li>{@link pml.ControlUnit#getOutputsControlUnit <em>Outputs Control Unit</em>}</li>
+ *   <li>{@link pml.ControlUnit#getName <em>Name</em>}</li>
+ *   <li>{@link pml.ControlUnit#getEReference0 <em>EReference0</em>}</li>
+ *   <li>{@link pml.ControlUnit#getIntructions <em>Intructions</em>}</li>
+ * </ul>
+ * </p>
+ *
+ * @see pml.PmlPackage#getControlUnit()
+ * @model
+ * @generated
+ */
+public interface ControlUnit extends EObject {
+	/**
+	 * Returns the value of the '<em><b>Behaviors Control Unit</b></em>' containment reference list.
+	 * The list contents are of type {@link pml.Behavior}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Behaviors Control Unit</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Behaviors Control Unit</em>' containment reference list.
+	 * @see pml.PmlPackage#getControlUnit_BehaviorsControlUnit()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<Behavior> getBehaviorsControlUnit();
+
+	/**
+	 * Returns the value of the '<em><b>Inputs Control Unit</b></em>' containment reference list.
+	 * The list contents are of type {@link pml.Input}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Inputs Control Unit</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Inputs Control Unit</em>' containment reference list.
+	 * @see pml.PmlPackage#getControlUnit_InputsControlUnit()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<Input> getInputsControlUnit();
+
+	/**
+	 * Returns the value of the '<em><b>Outputs Control Unit</b></em>' containment reference list.
+	 * The list contents are of type {@link pml.Output}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Outputs Control Unit</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Outputs Control Unit</em>' containment reference list.
+	 * @see pml.PmlPackage#getControlUnit_OutputsControlUnit()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<Output> getOutputsControlUnit();
+
+	/**
+	 * Returns the value of the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Name</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Name</em>' attribute.
+	 * @see #setName(String)
+	 * @see pml.PmlPackage#getControlUnit_Name()
+	 * @model
+	 * @generated
+	 */
+	String getName();
+
+	/**
+	 * Sets the value of the '{@link pml.ControlUnit#getName <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Name</em>' attribute.
+	 * @see #getName()
+	 * @generated
+	 */
+	void setName(String value);
+
+	/**
+	 * Returns the value of the '<em><b>EReference0</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>EReference0</em>' reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>EReference0</em>' reference.
+	 * @see #setEReference0(ControlUnit)
+	 * @see pml.PmlPackage#getControlUnit_EReference0()
+	 * @model
+	 * @generated
+	 */
+	ControlUnit getEReference0();
+
+	/**
+	 * Sets the value of the '{@link pml.ControlUnit#getEReference0 <em>EReference0</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>EReference0</em>' reference.
+	 * @see #getEReference0()
+	 * @generated
+	 */
+	void setEReference0(ControlUnit value);
+
+	/**
+	 * Returns the value of the '<em><b>Intructions</b></em>' containment reference list.
+	 * The list contents are of type {@link pml.Instructions}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Intructions</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Intructions</em>' containment reference list.
+	 * @see pml.PmlPackage#getControlUnit_Intructions()
+	 * @model containment="true" required="true"
+	 * @generated
+	 */
+	EList<Instructions> getIntructions();
+
+} // ControlUnit

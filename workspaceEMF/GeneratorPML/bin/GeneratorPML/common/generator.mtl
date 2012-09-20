@@ -1,0 +1,12 @@
+[comment encoding = UTF-8 /]
+[module generator('/PML/model/pml.ecore')/]
+[import GeneratorPML::common::demultiplexor_h/]
+[import GeneratorPML::common::multiplexor_h/]
+[import GeneratorPML::common::register_h/]
+
+[template public generatorMultiplexor(aMultiplexor : Multiplexor)]
+	
+	[comment @main /]
+	[aMultiplexor.generateElement()/]
+	
+[/template]

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation">
+  <notation:Diagram xmi:id="_EA6NEPpYEeC8CbJHFDWaEg" type="EcoreTools" name="processor" measurementUnit="Pixel">
+    <styles xmi:type="notation:DiagramStyle" xmi:id="_EA7bMPpYEeC8CbJHFDWaEg"/>
+    <element xmi:type="ecore:EPackage" href="processor.ecore#/"/>
+  </notation:Diagram>
+  <notation:Diagram xmi:id="_Yg_KQf8LEeCxB8raLR0RhA" type="EcoreTools" name="diagram" measurementUnit="Pixel">
+    <styles xmi:type="notation:DiagramStyle" xmi:id="_Yg_xUP8LEeCxB8raLR0RhA"/>
+    <element xmi:type="ecore:EPackage" href="processor.ecore#/"/>
+  </notation:Diagram>
+</xmi:XMI>

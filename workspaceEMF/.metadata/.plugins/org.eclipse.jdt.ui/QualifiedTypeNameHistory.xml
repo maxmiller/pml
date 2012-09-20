@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="pml.Operation"/>
+<fullyQualifiedTypeName name="pml.Processor"/>
+<fullyQualifiedTypeName name="javax.swing.JFileChooser"/>
+<fullyQualifiedTypeName name="org.eclipse.emf.ecore.resource.Resource"/>
+<fullyQualifiedTypeName name="org.eclipse.emf.ecore.resource.Resource.Factory"/>
+<fullyQualifiedTypeName name="org.eclipse.emf.ecore.resource.Resource.Factory.Registry"/>
+<fullyQualifiedTypeName name="org.eclipse.emf.ecore.xmi.impl.XMIResourceFactoryImpl"/>
+<fullyQualifiedTypeName name="br.ufrn.lasic.pml.PMLPackage"/>
+<fullyQualifiedTypeName name="PMLGen.generator.Generator"/>
+</qualifiedTypeNameHistroy>

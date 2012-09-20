@@ -1,0 +1,15 @@
+[comment encoding = UTF-8 /]
+[module generate('/Teste/model/Teste.ecore')]
+
+
+[template public generateElement(a : Agenda)]
+
+
+Lista de contatos:
+
+[for (c : Contato | a.EReference0)]
+	Nome do contato: [c.nome/]
+[/for]
+
+
+[/template]

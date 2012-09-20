@@ -1,0 +1,158 @@
+/**
+ * <copyright>
+ * </copyright>
+ *
+ * $Id$
+ */
+package pml;
+
+import org.eclipse.emf.common.util.EList;
+
+import org.eclipse.emf.ecore.EObject;
+
+/**
+ * <!-- begin-user-doc -->
+ * A representation of the model object '<em><b>Processor</b></em>'.
+ * <!-- end-user-doc -->
+ *
+ * <p>
+ * The following features are supported:
+ * <ul>
+ *   <li>{@link pml.Processor#getDemux <em>Demux</em>}</li>
+ *   <li>{@link pml.Processor#getUlas <em>Ulas</em>}</li>
+ *   <li>{@link pml.Processor#getRegisters <em>Registers</em>}</li>
+ *   <li>{@link pml.Processor#getMemories <em>Memories</em>}</li>
+ *   <li>{@link pml.Processor#getMux <em>Mux</em>}</li>
+ *   <li>{@link pml.Processor#getControlUnits <em>Control Units</em>}</li>
+ *   <li>{@link pml.Processor#getName <em>Name</em>}</li>
+ * </ul>
+ * </p>
+ *
+ * @see pml.PmlPackage#getProcessor()
+ * @model
+ * @generated
+ */
+public interface Processor extends EObject {
+	/**
+	 * Returns the value of the '<em><b>Demux</b></em>' containment reference list.
+	 * The list contents are of type {@link pml.Demultiplexor}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Demux</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Demux</em>' containment reference list.
+	 * @see pml.PmlPackage#getProcessor_Demux()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<Demultiplexor> getDemux();
+
+	/**
+	 * Returns the value of the '<em><b>Ulas</b></em>' containment reference list.
+	 * The list contents are of type {@link pml.ULA}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Ulas</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Ulas</em>' containment reference list.
+	 * @see pml.PmlPackage#getProcessor_Ulas()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<ULA> getUlas();
+
+	/**
+	 * Returns the value of the '<em><b>Registers</b></em>' containment reference list.
+	 * The list contents are of type {@link pml.Register}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Registers</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Registers</em>' containment reference list.
+	 * @see pml.PmlPackage#getProcessor_Registers()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<Register> getRegisters();
+
+	/**
+	 * Returns the value of the '<em><b>Memories</b></em>' containment reference list.
+	 * The list contents are of type {@link pml.Memory}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Memories</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Memories</em>' containment reference list.
+	 * @see pml.PmlPackage#getProcessor_Memories()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<Memory> getMemories();
+
+	/**
+	 * Returns the value of the '<em><b>Mux</b></em>' containment reference list.
+	 * The list contents are of type {@link pml.Multiplexor}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Mux</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Mux</em>' containment reference list.
+	 * @see pml.PmlPackage#getProcessor_Mux()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<Multiplexor> getMux();
+
+	/**
+	 * Returns the value of the '<em><b>Control Units</b></em>' containment reference list.
+	 * The list contents are of type {@link pml.ControlUnit}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Control Units</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Control Units</em>' containment reference list.
+	 * @see pml.PmlPackage#getProcessor_ControlUnits()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<ControlUnit> getControlUnits();
+
+	/**
+	 * Returns the value of the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Name</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Name</em>' attribute.
+	 * @see #setName(String)
+	 * @see pml.PmlPackage#getProcessor_Name()
+	 * @model
+	 * @generated
+	 */
+	String getName();
+
+	/**
+	 * Sets the value of the '{@link pml.Processor#getName <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Name</em>' attribute.
+	 * @see #getName()
+	 * @generated
+	 */
+	void setName(String value);
+
+} // Processor

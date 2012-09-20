@@ -1,0 +1,155 @@
+package pml;
+/**
+ * <copyright>
+ * </copyright>
+ *
+ * $Id$
+ */
+
+
+import org.eclipse.emf.common.util.EList;
+
+import org.eclipse.emf.ecore.EObject;
+
+/**
+ * <!-- begin-user-doc -->
+ * A representation of the model object '<em><b>States</b></em>'.
+ * <!-- end-user-doc -->
+ *
+ * <p>
+ * The following features are supported:
+ * <ul>
+ *   <li>{@link pml.States#getIState <em>IState</em>}</li>
+ *   <li>{@link pml.States#getFState <em>FState</em>}</li>
+ *   <li>{@link pml.States#getMStates <em>MStates</em>}</li>
+ *   <li>{@link pml.States#getName <em>Name</em>}</li>
+ *   <li>{@link pml.States#getTransition <em>Transition</em>}</li>
+ * </ul>
+ * </p>
+ *
+ * @see pml.PmlPackage#getStates()
+ * @model
+ * @generated
+ */
+public interface States extends EObject {
+	/**
+	 * Returns the value of the '<em><b>IState</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>IState</em>' containment reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>IState</em>' containment reference.
+	 * @see #setIState(InitialStates)
+	 * @see pml.PmlPackage#getStates_IState()
+	 * @model containment="true"
+	 * @generated
+	 */
+	InitialStates getIState();
+
+	/**
+	 * Sets the value of the '{@link pml.States#getIState <em>IState</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>IState</em>' containment reference.
+	 * @see #getIState()
+	 * @generated
+	 */
+	void setIState(InitialStates value);
+
+	/**
+	 * Returns the value of the '<em><b>FState</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>FState</em>' containment reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>FState</em>' containment reference.
+	 * @see #setFState(FinalStates)
+	 * @see pml.PmlPackage#getStates_FState()
+	 * @model containment="true"
+	 * @generated
+	 */
+	FinalStates getFState();
+
+	/**
+	 * Sets the value of the '{@link pml.States#getFState <em>FState</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>FState</em>' containment reference.
+	 * @see #getFState()
+	 * @generated
+	 */
+	void setFState(FinalStates value);
+
+	/**
+	 * Returns the value of the '<em><b>MStates</b></em>' containment reference list.
+	 * The list contents are of type {@link pml.MiddleStates}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>MStates</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>MStates</em>' containment reference list.
+	 * @see pml.PmlPackage#getStates_MStates()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<MiddleStates> getMStates();
+
+	/**
+	 * Returns the value of the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Name</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Name</em>' attribute.
+	 * @see #setName(String)
+	 * @see pml.PmlPackage#getStates_Name()
+	 * @model
+	 * @generated
+	 */
+	String getName();
+
+	/**
+	 * Sets the value of the '{@link pml.States#getName <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Name</em>' attribute.
+	 * @see #getName()
+	 * @generated
+	 */
+	void setName(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Transition</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Transition</em>' containment reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Transition</em>' containment reference.
+	 * @see #setTransition(Transition)
+	 * @see pml.PmlPackage#getStates_Transition()
+	 * @model containment="true"
+	 * @generated
+	 */
+	Transition getTransition();
+
+	/**
+	 * Sets the value of the '{@link pml.States#getTransition <em>Transition</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Transition</em>' containment reference.
+	 * @see #getTransition()
+	 * @generated
+	 */
+	void setTransition(Transition value);
+
+} // States

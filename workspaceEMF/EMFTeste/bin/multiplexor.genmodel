@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/EMFTeste/src"
+    modelPluginID="EMFTeste" modelName="Multiplexor" importerID="org.eclipse.emf.importer.ecore"
+    complianceLevel="6.0" copyrightFields="false">
+  <foreignModel>../model/multiplexor.ecore</foreignModel>
+  <genPackages prefix="Multiplexormodel" disposableProviderFactory="true" ecorePackage="multiplexor.ecore#/">
+    <nestedGenPackages prefix="Multiplexador" resource="XML" disposableProviderFactory="true"
+        ecorePackage="multiplexor.ecore#//multiplexador">
+      <genClasses ecoreClass="multiplexor.ecore#//multiplexador/Input">
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference multiplexor.ecore#//multiplexador/Input/inputs"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute multiplexor.ecore#//multiplexador/Input/value"/>
+      </genClasses>
+      <genClasses ecoreClass="multiplexor.ecore#//multiplexador/Multiplexer">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute multiplexor.ecore#//multiplexador/Multiplexer/numInputs"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference multiplexor.ecore#//multiplexador/Multiplexer/inputs"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference multiplexor.ecore#//multiplexador/Multiplexer/output"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference multiplexor.ecore#//multiplexador/Multiplexer/sel"/>
+        <genOperations ecoreOperation="multiplexor.ecore#//multiplexador/Multiplexer/multiplexerBehavior"/>
+        <genOperations ecoreOperation="multiplexor.ecore#//multiplexador/Multiplexer/Multiplexer">
+          <genParameters ecoreParameter="multiplexor.ecore#//multiplexador/Multiplexer/Multiplexer/numInputs"/>
+        </genOperations>
+      </genClasses>
+      <genClasses ecoreClass="multiplexor.ecore#//multiplexador/Output">
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference multiplexor.ecore#//multiplexador/Output/output"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute multiplexor.ecore#//multiplexador/Output/value"/>
+      </genClasses>
+      <genClasses ecoreClass="multiplexor.ecore#//multiplexador/Seletor">
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference multiplexor.ecore#//multiplexador/Seletor/sel"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute multiplexor.ecore#//multiplexador/Seletor/value"/>
+      </genClasses>
+    </nestedGenPackages>
+  </genPackages>
+</genmodel:GenModel>

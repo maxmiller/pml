@@ -1,0 +1,30 @@
+[comment encoding = UTF-8 /]
+[module generator('/Teste/model/Teste.ecore')/]
+
+[template public generatorDemultiplexor(aDemultiplexor : Demultiplexor)]
+	
+	[comment @main /]
+	[aDemultiplexor.generateElement()/]
+	
+[/template]
+[template public generatorMultiplexor(aMultiplexor : Multiplexor)]
+	
+	[comment @main /]
+	[aMultiplexor.generateElement()/]
+	
+[/template]
+[template public generatorRegister(aRegister : Register)]
+	
+	[comment @main /]
+	[aRegister.generateElement()/]
+	
+[/template]
+
+[template public main(element : OclAny)]
+	
+	[comment @main /]
+	[file (element.name.concat('.java'), false, 'UTF-8')]
+		
+	[/file]
+	
+[/template]

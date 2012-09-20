@@ -1,0 +1,83 @@
+[comment encoding = UTF-8 /]
+[module decoder_h('/PML/model/pml.ecore')]
+
+
+[template public generateElement(c : Decoder)]
+	[file (c.name.concat('_untimed.h'), false, 'UTF-8')]
+	#ifndef [c.name.concat('_h')/]
+	#define  [c.name.concat('_h')/]
+	#include "systemc.h"
+	
+	SC_MODULE([c.name/]){
+	 	[for (p : Input | c.inDecoder)]
+	        sc_in<[if (p.type.toString().equalsIgnoreCase('Int')) ]sc_int< [/if] [if (p.type.toString().equalsIgnoreCase('Bool')) ]bool< [/if] WORD_SIZE > >   [if (p.length.abs()>0)] * [/if][p.name/];  
+ 	        
+	    [/for]
+       
+		[for (p : Output | c.outDecoder)]
+	        sc_in<[if (p.type.toString().equalsIgnoreCase('Int')) ]sc_int< [/if] [if (p.type.toString().equalsIgnoreCase('Bool')) ]bool< [/if] WORD_SIZE > >   [if (p.length.abs()>0)] * [/if][p.name/];  
+ 	    [/for]
+
+        [for (o : Behavior | c.behaviorDecoder)]
+        	[o.typeBehavior.toString().toLower()/] [o.name.toLower()/](); 
+        [/for]
+        
+		SC_CTOR([c.name/]) {
+        
+			[for (o : Behavior | c.behaviorDecoder)]
+	        	SC_METHOD([o.name.toLower()/]); 
+	        [/for]
+			[for (p : Input | c.inDecoder)]
+	        	[if(p.sensitive) ]
+				   sensitive << [p.name/];
+				[/if]
+				
+	   		[/for]
+        }       
+
+
+	};
+	#endif
+	
+	[/file]
+
+[file (c.name.concat('_untimed.h'), false, 'UTF-8')]
+	#ifndef [c.name.concat('_h')/]
+	#define  [c.name.concat('_h')/]
+	#include "systemc.h"
+	
+	SC_MODULE([c.name/]){
+	 	[for (p : Input | c.inDecoder)]
+	        sc_in<[if (p.type.toString().equalsIgnoreCase('Int')) ]sc_int< [/if] [if (p.type.toString().equalsIgnoreCase('Bool')) ]bool< [/if] WORD_SIZE > >   [if (p.length.abs()>0)] * [/if][p.name/];  
+ 	        
+	    [/for]
+       
+		[for (p : Output | c.outDecoder)]
+	        sc_in<[if (p.type.toString().equalsIgnoreCase('Int')) ]sc_int< [/if] [if (p.type.toString().equalsIgnoreCase('Bool')) ]bool< [/if] WORD_SIZE > >   [if (p.length.abs()>0)] * [/if][p.name/];  
+ 	    [/for]
+
+		
+
+        [for (o : Behavior | c.behaviorDecoder)]
+        	[o.typeBehavior.toString().toLower()/] [o.name.toLower()/](); 
+        [/for]
+        
+		SC_CTOR([c.name/]) {
+        
+			[for (o : Behavior | c.behaviorDecoder)]
+	        	SC_THREAD([o.name.toLower()/]); 
+	        [/for]
+			[for (p : Input | c.inDecoder)]
+	        	[if(p.sensitive) ]
+				   sensitive << [p.name/];
+				[/if]
+				
+	   		[/for]
+        }       
+
+
+	};
+	#endif
+	
+	[/file]
+[/template]

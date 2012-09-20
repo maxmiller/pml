@@ -1,0 +1,114 @@
+
+# <copyright>
+# </copyright>
+#
+# $Id$
+
+pluginName = Pml Edit Support
+providerName = www.example.org
+
+_UI_CreateChild_text = {0}
+_UI_CreateChild_text2 = {1} {0}
+_UI_CreateChild_text3 = {1}
+_UI_CreateChild_tooltip = Create New {0} Under {1} Feature
+_UI_CreateChild_description = Create a new child of type {0} for the {1} feature of the selected {2}.
+_UI_CreateSibling_description = Create a new sibling of type {0} for the selected {2}, under the {1} feature of their parent.
+
+_UI_PropertyDescriptor_description = The {0} of the {1}
+
+_UI_ULA_type = ULA
+_UI_Behavior_type = Behavior
+_UI_Input_type = Input
+_UI_Output_type = Output
+_UI_Operation_type = Operation
+_UI_States_type = States
+_UI_InitialStates_type = Initial States
+_UI_FinalStates_type = Final States
+_UI_MiddleStates_type = Middle States
+_UI_Demultiplexor_type = Demultiplexor
+_UI_Multiplexor_type = Multiplexor
+_UI_ControlUnit_type = Control Unit
+_UI_Processor_type = Processor
+_UI_Memory_type = Memory
+_UI_Register_type = Register
+_UI_Instructions_type = Instructions
+_UI_MicroInstruction_type = Micro Instruction
+_UI_Unknown_type = Object
+
+_UI_Unknown_datatype= Value
+
+_UI_ULA_name_feature = Name
+_UI_ULA_behavirosULA_feature = Behaviros ULA
+_UI_ULA_outputsULA_feature = Outputs ULA
+_UI_ULA_inputsULA_feature = Inputs ULA
+_UI_ULA_operationsULA_feature = Operations ULA
+_UI_Behavior_name_feature = Name
+_UI_Behavior_typeBehavior_feature = Type Behavior
+_UI_Input_name_feature = Name
+_UI_Input_type_feature = Type
+_UI_Input_length_feature = Length
+_UI_Output_name_feature = Name
+_UI_Output_type_feature = Type
+_UI_Output_length_feature = Length
+_UI_Operation_name_feature = Name
+_UI_Operation_state_feature = State
+_UI_States_iState_feature = IState
+_UI_States_fState_feature = FState
+_UI_States_mStates_feature = MStates
+_UI_Demultiplexor_behaviorsDemux_feature = Behaviors Demux
+_UI_Demultiplexor_indemux_feature = Indemux
+_UI_Demultiplexor_outdemux_feature = Outdemux
+_UI_Demultiplexor_name_feature = Name
+_UI_Multiplexor_behaviormux_feature = Behaviormux
+_UI_Multiplexor_outmux_feature = Outmux
+_UI_Multiplexor_inmux_feature = Inmux
+_UI_Multiplexor_name_feature = Name
+_UI_ControlUnit_behaviorsControlUnit_feature = Behaviors Control Unit
+_UI_ControlUnit_inputsControlUnit_feature = Inputs Control Unit
+_UI_ControlUnit_outputsControlUnit_feature = Outputs Control Unit
+_UI_ControlUnit_name_feature = Name
+_UI_ControlUnit_controlUnitOperation_feature = Control Unit Operation
+_UI_ControlUnit_EReference0_feature = EReference0
+_UI_ControlUnit_intructions_feature = Intructions
+_UI_Processor_demux_feature = Demux
+_UI_Processor_ulas_feature = Ulas
+_UI_Processor_registers_feature = Registers
+_UI_Processor_memories_feature = Memories
+_UI_Processor_mux_feature = Mux
+_UI_Processor_controlUnits_feature = Control Units
+_UI_Processor_name_feature = Name
+_UI_Memory_behaviorsMemory_feature = Behaviors Memory
+_UI_Memory_inputsMemory_feature = Inputs Memory
+_UI_Memory_outputsMemory_feature = Outputs Memory
+_UI_Memory_name_feature = Name
+_UI_Register_behaviorRegister_feature = Behavior Register
+_UI_Register_outputs_feature = Outputs
+_UI_Register_inputsRegister_feature = Inputs Register
+_UI_Register_name_feature = Name
+_UI_Instructions_microInstructions_feature = Micro Instructions
+_UI_Instructions_name_feature = Name
+_UI_MicroInstruction_name_feature = Name
+_UI_MicroInstruction_value_feature = Value
+_UI_MicroInstruction_nextMicroStruction_feature = Next Micro Struction
+_UI_Unknown_feature = Unspecified
+
+_UI_TypeComponent_Multiplexor_literal = Multiplexor
+_UI_TypeComponent_Demultiplexor_literal = Demultiplexor
+_UI_TypeComponent_UnitControl_literal = UnitControl
+_UI_TypeComponent_ULA_literal = ULA
+_UI_TypeComponent_Register_literal = Register
+_UI_TypeComponent_Software_literal = Software
+_UI_TypeComponent_HardwareGeneric_literal = HardwareGeneric
+_UI_TypeComponent_UMLComponent_literal = UMLComponent
+_UI_TypeComponent_ComponentGeneric_literal = ComponentGeneric
+_UI_TypeData_Int_literal = Int
+_UI_TypeData_Float_literal = Float
+_UI_TypeData_Boolean_literal = Boolean
+_UI_TypeData_String_literal = String
+_UI_TypeData_Char_literal = Char
+_UI_TypeData_Long_literal = Long
+_UI_TypeData_Short_literal = Short
+_UI_TypeData_UInt_literal = UInt
+_UI_TypeData_ULong_literal = ULong
+_UI_TypeData_UShort_literal = UShort
+_UI_TypeData_Void_literal = Void

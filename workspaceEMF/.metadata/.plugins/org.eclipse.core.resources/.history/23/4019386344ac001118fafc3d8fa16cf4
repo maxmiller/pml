@@ -1,0 +1,392 @@
+/**
+ * <copyright>
+ * </copyright>
+ *
+ * $Id$
+ */
+package pml.impl;
+
+import org.eclipse.emf.common.notify.Notification;
+
+import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
+
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.impl.EObjectImpl;
+
+import pml.Input;
+import pml.Output;
+import pml.PmlPackage;
+import pml.TypeData;
+
+/**
+ * <!-- begin-user-doc -->
+ * An implementation of the model object '<em><b>Output</b></em>'.
+ * <!-- end-user-doc -->
+ * <p>
+ * The following features are implemented:
+ * <ul>
+ *   <li>{@link pml.impl.OutputImpl#getName <em>Name</em>}</li>
+ *   <li>{@link pml.impl.OutputImpl#getType <em>Type</em>}</li>
+ *   <li>{@link pml.impl.OutputImpl#getLength <em>Length</em>}</li>
+ *   <li>{@link pml.impl.OutputImpl#getOutin <em>Outin</em>}</li>
+ *   <li>{@link pml.impl.OutputImpl#isSensitive <em>Sensitive</em>}</li>
+ * </ul>
+ * </p>
+ *
+ * @generated
+ */
+public class OutputImpl extends EObjectImpl implements Output {
+	/**
+	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getName()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String NAME_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getName()
+	 * @generated
+	 * @ordered
+	 */
+	protected String name = NAME_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getType() <em>Type</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getType()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final TypeData TYPE_EDEFAULT = TypeData.INT;
+
+	/**
+	 * The cached value of the '{@link #getType() <em>Type</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getType()
+	 * @generated
+	 * @ordered
+	 */
+	protected TypeData type = TYPE_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getLength() <em>Length</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getLength()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final int LENGTH_EDEFAULT = 0;
+
+	/**
+	 * The cached value of the '{@link #getLength() <em>Length</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getLength()
+	 * @generated
+	 * @ordered
+	 */
+	protected int length = LENGTH_EDEFAULT;
+
+	/**
+	 * The cached value of the '{@link #getOutin() <em>Outin</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getOutin()
+	 * @generated
+	 * @ordered
+	 */
+	protected Input outin;
+
+	/**
+	 * The default value of the '{@link #isSensitive() <em>Sensitive</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isSensitive()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final boolean SENSITIVE_EDEFAULT = false;
+
+	/**
+	 * The cached value of the '{@link #isSensitive() <em>Sensitive</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isSensitive()
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean sensitive = SENSITIVE_EDEFAULT;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected OutputImpl() {
+		super();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	protected EClass eStaticClass() {
+		return PmlPackage.Literals.OUTPUT;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getName() {
+		return name;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setName(String newName) {
+		String oldName = name;
+		name = newName;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, PmlPackage.OUTPUT__NAME, oldName, name));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public TypeData getType() {
+		return type;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setType(TypeData newType) {
+		TypeData oldType = type;
+		type = newType == null ? TYPE_EDEFAULT : newType;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, PmlPackage.OUTPUT__TYPE, oldType, type));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public int getLength() {
+		return length;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setLength(int newLength) {
+		int oldLength = length;
+		length = newLength;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, PmlPackage.OUTPUT__LENGTH, oldLength, length));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Input getOutin() {
+		if (outin != null && outin.eIsProxy()) {
+			InternalEObject oldOutin = (InternalEObject)outin;
+			outin = (Input)eResolveProxy(oldOutin);
+			if (outin != oldOutin) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, PmlPackage.OUTPUT__OUTIN, oldOutin, outin));
+			}
+		}
+		return outin;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Input basicGetOutin() {
+		return outin;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setOutin(Input newOutin) {
+		Input oldOutin = outin;
+		outin = newOutin;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, PmlPackage.OUTPUT__OUTIN, oldOutin, outin));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean isSensitive() {
+		return sensitive;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setSensitive(boolean newSensitive) {
+		boolean oldSensitive = sensitive;
+		sensitive = newSensitive;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, PmlPackage.OUTPUT__SENSITIVE, oldSensitive, sensitive));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object eGet(int featureID, boolean resolve, boolean coreType) {
+		switch (featureID) {
+			case PmlPackage.OUTPUT__NAME:
+				return getName();
+			case PmlPackage.OUTPUT__TYPE:
+				return getType();
+			case PmlPackage.OUTPUT__LENGTH:
+				return getLength();
+			case PmlPackage.OUTPUT__OUTIN:
+				if (resolve) return getOutin();
+				return basicGetOutin();
+			case PmlPackage.OUTPUT__SENSITIVE:
+				return isSensitive();
+		}
+		return super.eGet(featureID, resolve, coreType);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void eSet(int featureID, Object newValue) {
+		switch (featureID) {
+			case PmlPackage.OUTPUT__NAME:
+				setName((String)newValue);
+				return;
+			case PmlPackage.OUTPUT__TYPE:
+				setType((TypeData)newValue);
+				return;
+			case PmlPackage.OUTPUT__LENGTH:
+				setLength((Integer)newValue);
+				return;
+			case PmlPackage.OUTPUT__OUTIN:
+				setOutin((Input)newValue);
+				return;
+			case PmlPackage.OUTPUT__SENSITIVE:
+				setSensitive((Boolean)newValue);
+				return;
+		}
+		super.eSet(featureID, newValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void eUnset(int featureID) {
+		switch (featureID) {
+			case PmlPackage.OUTPUT__NAME:
+				setName(NAME_EDEFAULT);
+				return;
+			case PmlPackage.OUTPUT__TYPE:
+				setType(TYPE_EDEFAULT);
+				return;
+			case PmlPackage.OUTPUT__LENGTH:
+				setLength(LENGTH_EDEFAULT);
+				return;
+			case PmlPackage.OUTPUT__OUTIN:
+				setOutin((Input)null);
+				return;
+			case PmlPackage.OUTPUT__SENSITIVE:
+				setSensitive(SENSITIVE_EDEFAULT);
+				return;
+		}
+		super.eUnset(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public boolean eIsSet(int featureID) {
+		switch (featureID) {
+			case PmlPackage.OUTPUT__NAME:
+				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+			case PmlPackage.OUTPUT__TYPE:
+				return type != TYPE_EDEFAULT;
+			case PmlPackage.OUTPUT__LENGTH:
+				return length != LENGTH_EDEFAULT;
+			case PmlPackage.OUTPUT__OUTIN:
+				return outin != null;
+			case PmlPackage.OUTPUT__SENSITIVE:
+				return sensitive != SENSITIVE_EDEFAULT;
+		}
+		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String toString() {
+		if (eIsProxy()) return super.toString();
+
+		StringBuffer result = new StringBuffer(super.toString());
+		result.append(" (name: ");
+		result.append(name);
+		result.append(", type: ");
+		result.append(type);
+		result.append(", length: ");
+		result.append(length);
+		result.append(", sensitive: ");
+		result.append(sensitive);
+		result.append(')');
+		return result.toString();
+	}
+
+} //OutputImpl

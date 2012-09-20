@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<notation:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmi:id="_QKOAQPNdEeCIQMbYOMQigw" type="EcoreTools" name="processor" measurementUnit="Pixel">
+  <children xmi:type="notation:Node" xmi:id="_RN8uIPNdEeCIQMbYOMQigw" type="1004">
+    <children xmi:type="notation:Node" xmi:id="_RN_KYPNdEeCIQMbYOMQigw" type="4008"/>
+    <children xmi:type="notation:Node" xmi:id="_RN_KYfNdEeCIQMbYOMQigw" type="4009"/>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="_RN8uIfNdEeCIQMbYOMQigw" fontColor="4210752" fontName="Lucida Grande" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
+    <element xmi:type="ecore:EDataType" href="processor.ecore#//sc_in"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_RN8uIvNdEeCIQMbYOMQigw" x="28" y="24"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_XSOkwPNdEeCIQMbYOMQigw" type="1004">
+    <children xmi:type="notation:Node" xmi:id="_XSPy4PNdEeCIQMbYOMQigw" type="4008"/>
+    <children xmi:type="notation:Node" xmi:id="_XSPy4fNdEeCIQMbYOMQigw" type="4009"/>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="_XSOkwfNdEeCIQMbYOMQigw" fontColor="4210752" fontName="Lucida Grande" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
+    <element xmi:type="ecore:EDataType" href="processor.ecore#//sc_out"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_XSOkwvNdEeCIQMbYOMQigw" x="32" y="124"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_YXEs8PNdEeCIQMbYOMQigw" type="1004">
+    <children xmi:type="notation:Node" xmi:id="_YXFUAPNdEeCIQMbYOMQigw" type="4008"/>
+    <children xmi:type="notation:Node" xmi:id="_YXF7EPNdEeCIQMbYOMQigw" type="4009"/>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="_YXEs8fNdEeCIQMbYOMQigw" fontColor="4210752" fontName="Lucida Grande" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
+    <element xmi:type="ecore:EDataType" href="processor.ecore#//sc_signal"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_YXEs8vNdEeCIQMbYOMQigw" x="32" y="216"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_bEQE4PNdEeCIQMbYOMQigw" type="1004">
+    <children xmi:type="notation:Node" xmi:id="_bEQr8PNdEeCIQMbYOMQigw" type="4008"/>
+    <children xmi:type="notation:Node" xmi:id="_bEQr8fNdEeCIQMbYOMQigw" type="4009"/>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="_bEQE4fNdEeCIQMbYOMQigw" fontColor="4210752" fontName="Lucida Grande" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
+    <element xmi:type="ecore:EDataType" href="processor.ecore#//sc_int"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_bEQE4vNdEeCIQMbYOMQigw" x="216" y="24"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_pRQ9MPNdEeCIQMbYOMQigw" type="1001">
+    <children xmi:type="notation:Node" xmi:id="_pRSLUPNdEeCIQMbYOMQigw" type="4001"/>
+    <children xmi:type="notation:Node" xmi:id="_pRhb4PNdEeCIQMbYOMQigw" type="5001">
+      <children xmi:type="notation:Node" xmi:id="_qoLFwPNdEeCIQMbYOMQigw" type="2001">
+        <element xmi:type="ecore:EAttribute" href="processor.ecore#//Multiplexer/*inputs"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_qoLFwfNdEeCIQMbYOMQigw"/>
+      </children>
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_pRhb4fNdEeCIQMbYOMQigw"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_pRhb4vNdEeCIQMbYOMQigw"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_pRhb4_NdEeCIQMbYOMQigw"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_pRjREPNdEeCIQMbYOMQigw" type="5002">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_pRjREfNdEeCIQMbYOMQigw"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_pRjREvNdEeCIQMbYOMQigw"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_pRjRE_NdEeCIQMbYOMQigw"/>
+    </children>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="_pRQ9MfNdEeCIQMbYOMQigw" fontColor="4210752" fontName="Lucida Grande" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
+    <element xmi:type="ecore:EClass" href="processor.ecore#//Multiplexer"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_pRQ9MvNdEeCIQMbYOMQigw" x="330" y="190"/>
+  </children>
+  <styles xmi:type="notation:DiagramStyle" xmi:id="_QKOAQfNdEeCIQMbYOMQigw"/>
+  <element xmi:type="ecore:EPackage" href="processor.ecore#/"/>
+</notation:Diagram>

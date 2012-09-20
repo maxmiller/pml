@@ -1,0 +1,2494 @@
+package pml;
+/**
+ * <copyright>
+ * </copyright>
+ *
+ * $Id$
+ */
+
+
+import org.eclipse.emf.ecore.EAttribute;
+import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EEnum;
+import org.eclipse.emf.ecore.EPackage;
+import org.eclipse.emf.ecore.EReference;
+
+/**
+ * <!-- begin-user-doc -->
+ * The <b>Package</b> for the model.
+ * It contains accessors for the meta objects to represent
+ * <ul>
+ *   <li>each class,</li>
+ *   <li>each feature of each class,</li>
+ *   <li>each enum,</li>
+ *   <li>and each data type</li>
+ * </ul>
+ * <!-- end-user-doc -->
+ * @see pml.PmlFactory
+ * @model kind="package"
+ * @generated
+ */
+public interface PmlPackage extends EPackage {
+	/**
+	 * The package name.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	String eNAME = "pml";
+
+	/**
+	 * The package namespace URI.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	String eNS_URI = "http://pml/0.1";
+
+	/**
+	 * The package namespace name.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	String eNS_PREFIX = "pml";
+
+	/**
+	 * The singleton instance of the package.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	PmlPackage eINSTANCE = pml.impl.PmlPackageImpl.init();
+
+	/**
+	 * The meta object id for the '{@link pml.impl.ULAImpl <em>ULA</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see pml.impl.ULAImpl
+	 * @see pml.impl.PmlPackageImpl#getULA()
+	 * @generated
+	 */
+	int ULA = 0;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ULA__NAME = 0;
+
+	/**
+	 * The feature id for the '<em><b>Behaviros ULA</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ULA__BEHAVIROS_ULA = 1;
+
+	/**
+	 * The feature id for the '<em><b>Outputs ULA</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ULA__OUTPUTS_ULA = 2;
+
+	/**
+	 * The feature id for the '<em><b>Inputs ULA</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ULA__INPUTS_ULA = 3;
+
+	/**
+	 * The feature id for the '<em><b>Instructions ULA</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ULA__INSTRUCTIONS_ULA = 4;
+
+	/**
+	 * The number of structural features of the '<em>ULA</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ULA_FEATURE_COUNT = 5;
+
+	/**
+	 * The meta object id for the '{@link pml.impl.BehaviorImpl <em>Behavior</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see pml.impl.BehaviorImpl
+	 * @see pml.impl.PmlPackageImpl#getBehavior()
+	 * @generated
+	 */
+	int BEHAVIOR = 1;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BEHAVIOR__NAME = 0;
+
+	/**
+	 * The feature id for the '<em><b>Type Behavior</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BEHAVIOR__TYPE_BEHAVIOR = 1;
+
+	/**
+	 * The number of structural features of the '<em>Behavior</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BEHAVIOR_FEATURE_COUNT = 2;
+
+	/**
+	 * The meta object id for the '{@link pml.impl.InputImpl <em>Input</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see pml.impl.InputImpl
+	 * @see pml.impl.PmlPackageImpl#getInput()
+	 * @generated
+	 */
+	int INPUT = 2;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INPUT__NAME = 0;
+
+	/**
+	 * The feature id for the '<em><b>Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INPUT__TYPE = 1;
+
+	/**
+	 * The feature id for the '<em><b>Length</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INPUT__LENGTH = 2;
+
+	/**
+	 * The feature id for the '<em><b>Inout</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INPUT__INOUT = 3;
+
+	/**
+	 * The number of structural features of the '<em>Input</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INPUT_FEATURE_COUNT = 4;
+
+	/**
+	 * The meta object id for the '{@link pml.impl.OutputImpl <em>Output</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see pml.impl.OutputImpl
+	 * @see pml.impl.PmlPackageImpl#getOutput()
+	 * @generated
+	 */
+	int OUTPUT = 3;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OUTPUT__NAME = 0;
+
+	/**
+	 * The feature id for the '<em><b>Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OUTPUT__TYPE = 1;
+
+	/**
+	 * The feature id for the '<em><b>Length</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OUTPUT__LENGTH = 2;
+
+	/**
+	 * The feature id for the '<em><b>Outin</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OUTPUT__OUTIN = 3;
+
+	/**
+	 * The number of structural features of the '<em>Output</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OUTPUT_FEATURE_COUNT = 4;
+
+	/**
+	 * The meta object id for the '{@link pml.impl.StatesImpl <em>States</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see pml.impl.StatesImpl
+	 * @see pml.impl.PmlPackageImpl#getStates()
+	 * @generated
+	 */
+	int STATES = 4;
+
+	/**
+	 * The feature id for the '<em><b>IState</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STATES__ISTATE = 0;
+
+	/**
+	 * The feature id for the '<em><b>FState</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STATES__FSTATE = 1;
+
+	/**
+	 * The feature id for the '<em><b>MStates</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STATES__MSTATES = 2;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STATES__NAME = 3;
+
+	/**
+	 * The feature id for the '<em><b>Transition</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STATES__TRANSITION = 4;
+
+	/**
+	 * The number of structural features of the '<em>States</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STATES_FEATURE_COUNT = 5;
+
+	/**
+	 * The meta object id for the '{@link pml.impl.InitialStatesImpl <em>Initial States</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see pml.impl.InitialStatesImpl
+	 * @see pml.impl.PmlPackageImpl#getInitialStates()
+	 * @generated
+	 */
+	int INITIAL_STATES = 5;
+
+	/**
+	 * The number of structural features of the '<em>Initial States</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INITIAL_STATES_FEATURE_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link pml.impl.FinalStatesImpl <em>Final States</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see pml.impl.FinalStatesImpl
+	 * @see pml.impl.PmlPackageImpl#getFinalStates()
+	 * @generated
+	 */
+	int FINAL_STATES = 6;
+
+	/**
+	 * The number of structural features of the '<em>Final States</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FINAL_STATES_FEATURE_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link pml.impl.MiddleStatesImpl <em>Middle States</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see pml.impl.MiddleStatesImpl
+	 * @see pml.impl.PmlPackageImpl#getMiddleStates()
+	 * @generated
+	 */
+	int MIDDLE_STATES = 7;
+
+	/**
+	 * The number of structural features of the '<em>Middle States</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MIDDLE_STATES_FEATURE_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link pml.impl.DemultiplexorImpl <em>Demultiplexor</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see pml.impl.DemultiplexorImpl
+	 * @see pml.impl.PmlPackageImpl#getDemultiplexor()
+	 * @generated
+	 */
+	int DEMULTIPLEXOR = 8;
+
+	/**
+	 * The feature id for the '<em><b>Behaviors Demux</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DEMULTIPLEXOR__BEHAVIORS_DEMUX = 0;
+
+	/**
+	 * The feature id for the '<em><b>Indemux</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DEMULTIPLEXOR__INDEMUX = 1;
+
+	/**
+	 * The feature id for the '<em><b>Outdemux</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DEMULTIPLEXOR__OUTDEMUX = 2;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DEMULTIPLEXOR__NAME = 3;
+
+	/**
+	 * The number of structural features of the '<em>Demultiplexor</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DEMULTIPLEXOR_FEATURE_COUNT = 4;
+
+	/**
+	 * The meta object id for the '{@link pml.impl.MultiplexorImpl <em>Multiplexor</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see pml.impl.MultiplexorImpl
+	 * @see pml.impl.PmlPackageImpl#getMultiplexor()
+	 * @generated
+	 */
+	int MULTIPLEXOR = 9;
+
+	/**
+	 * The feature id for the '<em><b>Behaviormux</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MULTIPLEXOR__BEHAVIORMUX = 0;
+
+	/**
+	 * The feature id for the '<em><b>Outmux</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MULTIPLEXOR__OUTMUX = 1;
+
+	/**
+	 * The feature id for the '<em><b>Inmux</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MULTIPLEXOR__INMUX = 2;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MULTIPLEXOR__NAME = 3;
+
+	/**
+	 * The number of structural features of the '<em>Multiplexor</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MULTIPLEXOR_FEATURE_COUNT = 4;
+
+	/**
+	 * The meta object id for the '{@link pml.impl.ControlUnitImpl <em>Control Unit</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see pml.impl.ControlUnitImpl
+	 * @see pml.impl.PmlPackageImpl#getControlUnit()
+	 * @generated
+	 */
+	int CONTROL_UNIT = 10;
+
+	/**
+	 * The feature id for the '<em><b>Behaviors Control Unit</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONTROL_UNIT__BEHAVIORS_CONTROL_UNIT = 0;
+
+	/**
+	 * The feature id for the '<em><b>Inputs Control Unit</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONTROL_UNIT__INPUTS_CONTROL_UNIT = 1;
+
+	/**
+	 * The feature id for the '<em><b>Outputs Control Unit</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONTROL_UNIT__OUTPUTS_CONTROL_UNIT = 2;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONTROL_UNIT__NAME = 3;
+
+	/**
+	 * The feature id for the '<em><b>EReference0</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONTROL_UNIT__EREFERENCE0 = 4;
+
+	/**
+	 * The feature id for the '<em><b>Intructions</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONTROL_UNIT__INTRUCTIONS = 5;
+
+	/**
+	 * The number of structural features of the '<em>Control Unit</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONTROL_UNIT_FEATURE_COUNT = 6;
+
+	/**
+	 * The meta object id for the '{@link pml.impl.ProcessorImpl <em>Processor</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see pml.impl.ProcessorImpl
+	 * @see pml.impl.PmlPackageImpl#getProcessor()
+	 * @generated
+	 */
+	int PROCESSOR = 11;
+
+	/**
+	 * The feature id for the '<em><b>Demux</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROCESSOR__DEMUX = 0;
+
+	/**
+	 * The feature id for the '<em><b>Ulas</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROCESSOR__ULAS = 1;
+
+	/**
+	 * The feature id for the '<em><b>Registers</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROCESSOR__REGISTERS = 2;
+
+	/**
+	 * The feature id for the '<em><b>Memories</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROCESSOR__MEMORIES = 3;
+
+	/**
+	 * The feature id for the '<em><b>Mux</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROCESSOR__MUX = 4;
+
+	/**
+	 * The feature id for the '<em><b>Control Units</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROCESSOR__CONTROL_UNITS = 5;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROCESSOR__NAME = 6;
+
+	/**
+	 * The number of structural features of the '<em>Processor</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROCESSOR_FEATURE_COUNT = 7;
+
+	/**
+	 * The meta object id for the '{@link pml.impl.MemoryImpl <em>Memory</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see pml.impl.MemoryImpl
+	 * @see pml.impl.PmlPackageImpl#getMemory()
+	 * @generated
+	 */
+	int MEMORY = 12;
+
+	/**
+	 * The feature id for the '<em><b>Behaviors Memory</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MEMORY__BEHAVIORS_MEMORY = 0;
+
+	/**
+	 * The feature id for the '<em><b>Inputs Memory</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MEMORY__INPUTS_MEMORY = 1;
+
+	/**
+	 * The feature id for the '<em><b>Outputs Memory</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MEMORY__OUTPUTS_MEMORY = 2;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MEMORY__NAME = 3;
+
+	/**
+	 * The number of structural features of the '<em>Memory</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MEMORY_FEATURE_COUNT = 4;
+
+	/**
+	 * The meta object id for the '{@link pml.impl.RegisterImpl <em>Register</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see pml.impl.RegisterImpl
+	 * @see pml.impl.PmlPackageImpl#getRegister()
+	 * @generated
+	 */
+	int REGISTER = 13;
+
+	/**
+	 * The feature id for the '<em><b>Behavior Register</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REGISTER__BEHAVIOR_REGISTER = 0;
+
+	/**
+	 * The feature id for the '<em><b>Outputs</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REGISTER__OUTPUTS = 1;
+
+	/**
+	 * The feature id for the '<em><b>Inputs Register</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REGISTER__INPUTS_REGISTER = 2;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REGISTER__NAME = 3;
+
+	/**
+	 * The number of structural features of the '<em>Register</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REGISTER_FEATURE_COUNT = 4;
+
+	/**
+	 * The meta object id for the '{@link pml.impl.InstructionsImpl <em>Instructions</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see pml.impl.InstructionsImpl
+	 * @see pml.impl.PmlPackageImpl#getInstructions()
+	 * @generated
+	 */
+	int INSTRUCTIONS = 14;
+
+	/**
+	 * The feature id for the '<em><b>Micro Instructions</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INSTRUCTIONS__MICRO_INSTRUCTIONS = 0;
+
+	/**
+	 * The feature id for the '<em><b>States Composite</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INSTRUCTIONS__STATES_COMPOSITE = 1;
+
+	/**
+	 * The feature id for the '<em><b>Initial State</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INSTRUCTIONS__INITIAL_STATE = 2;
+
+	/**
+	 * The feature id for the '<em><b>Final State</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INSTRUCTIONS__FINAL_STATE = 3;
+
+	/**
+	 * The feature id for the '<em><b>Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INSTRUCTIONS__TYPE = 4;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INSTRUCTIONS__NAME = 5;
+
+	/**
+	 * The number of structural features of the '<em>Instructions</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INSTRUCTIONS_FEATURE_COUNT = 6;
+
+	/**
+	 * The meta object id for the '{@link pml.impl.MicroInstructionImpl <em>Micro Instruction</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see pml.impl.MicroInstructionImpl
+	 * @see pml.impl.PmlPackageImpl#getMicroInstruction()
+	 * @generated
+	 */
+	int MICRO_INSTRUCTION = 15;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MICRO_INSTRUCTION__NAME = 0;
+
+	/**
+	 * The feature id for the '<em><b>Value</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MICRO_INSTRUCTION__VALUE = 1;
+
+	/**
+	 * The feature id for the '<em><b>Next Micro Struction</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MICRO_INSTRUCTION__NEXT_MICRO_STRUCTION = 2;
+
+	/**
+	 * The number of structural features of the '<em>Micro Instruction</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MICRO_INSTRUCTION_FEATURE_COUNT = 3;
+
+	/**
+	 * The meta object id for the '{@link pml.impl.TransitionImpl <em>Transition</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see pml.impl.TransitionImpl
+	 * @see pml.impl.PmlPackageImpl#getTransition()
+	 * @generated
+	 */
+	int TRANSITION = 16;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRANSITION__NAME = 0;
+
+	/**
+	 * The number of structural features of the '<em>Transition</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRANSITION_FEATURE_COUNT = 1;
+
+	/**
+	 * The meta object id for the '{@link pml.TypeComponent <em>Type Component</em>}' enum.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see pml.TypeComponent
+	 * @see pml.impl.PmlPackageImpl#getTypeComponent()
+	 * @generated
+	 */
+	int TYPE_COMPONENT = 17;
+
+	/**
+	 * The meta object id for the '{@link pml.TypeData <em>Type Data</em>}' enum.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see pml.TypeData
+	 * @see pml.impl.PmlPackageImpl#getTypeData()
+	 * @generated
+	 */
+	int TYPE_DATA = 18;
+
+	/**
+	 * The meta object id for the '{@link pml.TypeInstruction <em>Type Instruction</em>}' enum.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see pml.TypeInstruction
+	 * @see pml.impl.PmlPackageImpl#getTypeInstruction()
+	 * @generated
+	 */
+	int TYPE_INSTRUCTION = 19;
+
+
+	/**
+	 * Returns the meta object for class '{@link pml.ULA <em>ULA</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>ULA</em>'.
+	 * @see pml.ULA
+	 * @generated
+	 */
+	EClass getULA();
+
+	/**
+	 * Returns the meta object for the attribute '{@link pml.ULA#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see pml.ULA#getName()
+	 * @see #getULA()
+	 * @generated
+	 */
+	EAttribute getULA_Name();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link pml.ULA#getBehavirosULA <em>Behaviros ULA</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Behaviros ULA</em>'.
+	 * @see pml.ULA#getBehavirosULA()
+	 * @see #getULA()
+	 * @generated
+	 */
+	EReference getULA_BehavirosULA();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link pml.ULA#getOutputsULA <em>Outputs ULA</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Outputs ULA</em>'.
+	 * @see pml.ULA#getOutputsULA()
+	 * @see #getULA()
+	 * @generated
+	 */
+	EReference getULA_OutputsULA();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link pml.ULA#getInputsULA <em>Inputs ULA</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Inputs ULA</em>'.
+	 * @see pml.ULA#getInputsULA()
+	 * @see #getULA()
+	 * @generated
+	 */
+	EReference getULA_InputsULA();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link pml.ULA#getInstructionsULA <em>Instructions ULA</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Instructions ULA</em>'.
+	 * @see pml.ULA#getInstructionsULA()
+	 * @see #getULA()
+	 * @generated
+	 */
+	EReference getULA_InstructionsULA();
+
+	/**
+	 * Returns the meta object for class '{@link pml.Behavior <em>Behavior</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Behavior</em>'.
+	 * @see pml.Behavior
+	 * @generated
+	 */
+	EClass getBehavior();
+
+	/**
+	 * Returns the meta object for the attribute '{@link pml.Behavior#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see pml.Behavior#getName()
+	 * @see #getBehavior()
+	 * @generated
+	 */
+	EAttribute getBehavior_Name();
+
+	/**
+	 * Returns the meta object for the attribute '{@link pml.Behavior#getTypeBehavior <em>Type Behavior</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Type Behavior</em>'.
+	 * @see pml.Behavior#getTypeBehavior()
+	 * @see #getBehavior()
+	 * @generated
+	 */
+	EAttribute getBehavior_TypeBehavior();
+
+	/**
+	 * Returns the meta object for class '{@link pml.Input <em>Input</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Input</em>'.
+	 * @see pml.Input
+	 * @generated
+	 */
+	EClass getInput();
+
+	/**
+	 * Returns the meta object for the attribute '{@link pml.Input#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see pml.Input#getName()
+	 * @see #getInput()
+	 * @generated
+	 */
+	EAttribute getInput_Name();
+
+	/**
+	 * Returns the meta object for the attribute '{@link pml.Input#getType <em>Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Type</em>'.
+	 * @see pml.Input#getType()
+	 * @see #getInput()
+	 * @generated
+	 */
+	EAttribute getInput_Type();
+
+	/**
+	 * Returns the meta object for the attribute '{@link pml.Input#getLength <em>Length</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Length</em>'.
+	 * @see pml.Input#getLength()
+	 * @see #getInput()
+	 * @generated
+	 */
+	EAttribute getInput_Length();
+
+	/**
+	 * Returns the meta object for the reference '{@link pml.Input#getInout <em>Inout</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Inout</em>'.
+	 * @see pml.Input#getInout()
+	 * @see #getInput()
+	 * @generated
+	 */
+	EReference getInput_Inout();
+
+	/**
+	 * Returns the meta object for class '{@link pml.Output <em>Output</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Output</em>'.
+	 * @see pml.Output
+	 * @generated
+	 */
+	EClass getOutput();
+
+	/**
+	 * Returns the meta object for the attribute '{@link pml.Output#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see pml.Output#getName()
+	 * @see #getOutput()
+	 * @generated
+	 */
+	EAttribute getOutput_Name();
+
+	/**
+	 * Returns the meta object for the attribute '{@link pml.Output#getType <em>Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Type</em>'.
+	 * @see pml.Output#getType()
+	 * @see #getOutput()
+	 * @generated
+	 */
+	EAttribute getOutput_Type();
+
+	/**
+	 * Returns the meta object for the attribute '{@link pml.Output#getLength <em>Length</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Length</em>'.
+	 * @see pml.Output#getLength()
+	 * @see #getOutput()
+	 * @generated
+	 */
+	EAttribute getOutput_Length();
+
+	/**
+	 * Returns the meta object for the reference '{@link pml.Output#getOutin <em>Outin</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Outin</em>'.
+	 * @see pml.Output#getOutin()
+	 * @see #getOutput()
+	 * @generated
+	 */
+	EReference getOutput_Outin();
+
+	/**
+	 * Returns the meta object for class '{@link pml.States <em>States</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>States</em>'.
+	 * @see pml.States
+	 * @generated
+	 */
+	EClass getStates();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link pml.States#getIState <em>IState</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>IState</em>'.
+	 * @see pml.States#getIState()
+	 * @see #getStates()
+	 * @generated
+	 */
+	EReference getStates_IState();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link pml.States#getFState <em>FState</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>FState</em>'.
+	 * @see pml.States#getFState()
+	 * @see #getStates()
+	 * @generated
+	 */
+	EReference getStates_FState();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link pml.States#getMStates <em>MStates</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>MStates</em>'.
+	 * @see pml.States#getMStates()
+	 * @see #getStates()
+	 * @generated
+	 */
+	EReference getStates_MStates();
+
+	/**
+	 * Returns the meta object for the attribute '{@link pml.States#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see pml.States#getName()
+	 * @see #getStates()
+	 * @generated
+	 */
+	EAttribute getStates_Name();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link pml.States#getTransition <em>Transition</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Transition</em>'.
+	 * @see pml.States#getTransition()
+	 * @see #getStates()
+	 * @generated
+	 */
+	EReference getStates_Transition();
+
+	/**
+	 * Returns the meta object for class '{@link pml.InitialStates <em>Initial States</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Initial States</em>'.
+	 * @see pml.InitialStates
+	 * @generated
+	 */
+	EClass getInitialStates();
+
+	/**
+	 * Returns the meta object for class '{@link pml.FinalStates <em>Final States</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Final States</em>'.
+	 * @see pml.FinalStates
+	 * @generated
+	 */
+	EClass getFinalStates();
+
+	/**
+	 * Returns the meta object for class '{@link pml.MiddleStates <em>Middle States</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Middle States</em>'.
+	 * @see pml.MiddleStates
+	 * @generated
+	 */
+	EClass getMiddleStates();
+
+	/**
+	 * Returns the meta object for class '{@link pml.Demultiplexor <em>Demultiplexor</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Demultiplexor</em>'.
+	 * @see pml.Demultiplexor
+	 * @generated
+	 */
+	EClass getDemultiplexor();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link pml.Demultiplexor#getBehaviorsDemux <em>Behaviors Demux</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Behaviors Demux</em>'.
+	 * @see pml.Demultiplexor#getBehaviorsDemux()
+	 * @see #getDemultiplexor()
+	 * @generated
+	 */
+	EReference getDemultiplexor_BehaviorsDemux();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link pml.Demultiplexor#getIndemux <em>Indemux</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Indemux</em>'.
+	 * @see pml.Demultiplexor#getIndemux()
+	 * @see #getDemultiplexor()
+	 * @generated
+	 */
+	EReference getDemultiplexor_Indemux();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link pml.Demultiplexor#getOutdemux <em>Outdemux</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Outdemux</em>'.
+	 * @see pml.Demultiplexor#getOutdemux()
+	 * @see #getDemultiplexor()
+	 * @generated
+	 */
+	EReference getDemultiplexor_Outdemux();
+
+	/**
+	 * Returns the meta object for the attribute '{@link pml.Demultiplexor#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see pml.Demultiplexor#getName()
+	 * @see #getDemultiplexor()
+	 * @generated
+	 */
+	EAttribute getDemultiplexor_Name();
+
+	/**
+	 * Returns the meta object for class '{@link pml.Multiplexor <em>Multiplexor</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Multiplexor</em>'.
+	 * @see pml.Multiplexor
+	 * @generated
+	 */
+	EClass getMultiplexor();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link pml.Multiplexor#getBehaviormux <em>Behaviormux</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Behaviormux</em>'.
+	 * @see pml.Multiplexor#getBehaviormux()
+	 * @see #getMultiplexor()
+	 * @generated
+	 */
+	EReference getMultiplexor_Behaviormux();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link pml.Multiplexor#getOutmux <em>Outmux</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Outmux</em>'.
+	 * @see pml.Multiplexor#getOutmux()
+	 * @see #getMultiplexor()
+	 * @generated
+	 */
+	EReference getMultiplexor_Outmux();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link pml.Multiplexor#getInmux <em>Inmux</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Inmux</em>'.
+	 * @see pml.Multiplexor#getInmux()
+	 * @see #getMultiplexor()
+	 * @generated
+	 */
+	EReference getMultiplexor_Inmux();
+
+	/**
+	 * Returns the meta object for the attribute '{@link pml.Multiplexor#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see pml.Multiplexor#getName()
+	 * @see #getMultiplexor()
+	 * @generated
+	 */
+	EAttribute getMultiplexor_Name();
+
+	/**
+	 * Returns the meta object for class '{@link pml.ControlUnit <em>Control Unit</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Control Unit</em>'.
+	 * @see pml.ControlUnit
+	 * @generated
+	 */
+	EClass getControlUnit();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link pml.ControlUnit#getBehaviorsControlUnit <em>Behaviors Control Unit</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Behaviors Control Unit</em>'.
+	 * @see pml.ControlUnit#getBehaviorsControlUnit()
+	 * @see #getControlUnit()
+	 * @generated
+	 */
+	EReference getControlUnit_BehaviorsControlUnit();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link pml.ControlUnit#getInputsControlUnit <em>Inputs Control Unit</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Inputs Control Unit</em>'.
+	 * @see pml.ControlUnit#getInputsControlUnit()
+	 * @see #getControlUnit()
+	 * @generated
+	 */
+	EReference getControlUnit_InputsControlUnit();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link pml.ControlUnit#getOutputsControlUnit <em>Outputs Control Unit</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Outputs Control Unit</em>'.
+	 * @see pml.ControlUnit#getOutputsControlUnit()
+	 * @see #getControlUnit()
+	 * @generated
+	 */
+	EReference getControlUnit_OutputsControlUnit();
+
+	/**
+	 * Returns the meta object for the attribute '{@link pml.ControlUnit#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see pml.ControlUnit#getName()
+	 * @see #getControlUnit()
+	 * @generated
+	 */
+	EAttribute getControlUnit_Name();
+
+	/**
+	 * Returns the meta object for the reference '{@link pml.ControlUnit#getEReference0 <em>EReference0</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>EReference0</em>'.
+	 * @see pml.ControlUnit#getEReference0()
+	 * @see #getControlUnit()
+	 * @generated
+	 */
+	EReference getControlUnit_EReference0();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link pml.ControlUnit#getIntructions <em>Intructions</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Intructions</em>'.
+	 * @see pml.ControlUnit#getIntructions()
+	 * @see #getControlUnit()
+	 * @generated
+	 */
+	EReference getControlUnit_Intructions();
+
+	/**
+	 * Returns the meta object for class '{@link pml.Processor <em>Processor</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Processor</em>'.
+	 * @see pml.Processor
+	 * @generated
+	 */
+	EClass getProcessor();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link pml.Processor#getDemux <em>Demux</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Demux</em>'.
+	 * @see pml.Processor#getDemux()
+	 * @see #getProcessor()
+	 * @generated
+	 */
+	EReference getProcessor_Demux();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link pml.Processor#getUlas <em>Ulas</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Ulas</em>'.
+	 * @see pml.Processor#getUlas()
+	 * @see #getProcessor()
+	 * @generated
+	 */
+	EReference getProcessor_Ulas();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link pml.Processor#getRegisters <em>Registers</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Registers</em>'.
+	 * @see pml.Processor#getRegisters()
+	 * @see #getProcessor()
+	 * @generated
+	 */
+	EReference getProcessor_Registers();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link pml.Processor#getMemories <em>Memories</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Memories</em>'.
+	 * @see pml.Processor#getMemories()
+	 * @see #getProcessor()
+	 * @generated
+	 */
+	EReference getProcessor_Memories();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link pml.Processor#getMux <em>Mux</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Mux</em>'.
+	 * @see pml.Processor#getMux()
+	 * @see #getProcessor()
+	 * @generated
+	 */
+	EReference getProcessor_Mux();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link pml.Processor#getControlUnits <em>Control Units</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Control Units</em>'.
+	 * @see pml.Processor#getControlUnits()
+	 * @see #getProcessor()
+	 * @generated
+	 */
+	EReference getProcessor_ControlUnits();
+
+	/**
+	 * Returns the meta object for the attribute '{@link pml.Processor#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see pml.Processor#getName()
+	 * @see #getProcessor()
+	 * @generated
+	 */
+	EAttribute getProcessor_Name();
+
+	/**
+	 * Returns the meta object for class '{@link pml.Memory <em>Memory</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Memory</em>'.
+	 * @see pml.Memory
+	 * @generated
+	 */
+	EClass getMemory();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link pml.Memory#getBehaviorsMemory <em>Behaviors Memory</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Behaviors Memory</em>'.
+	 * @see pml.Memory#getBehaviorsMemory()
+	 * @see #getMemory()
+	 * @generated
+	 */
+	EReference getMemory_BehaviorsMemory();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link pml.Memory#getInputsMemory <em>Inputs Memory</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Inputs Memory</em>'.
+	 * @see pml.Memory#getInputsMemory()
+	 * @see #getMemory()
+	 * @generated
+	 */
+	EReference getMemory_InputsMemory();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link pml.Memory#getOutputsMemory <em>Outputs Memory</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Outputs Memory</em>'.
+	 * @see pml.Memory#getOutputsMemory()
+	 * @see #getMemory()
+	 * @generated
+	 */
+	EReference getMemory_OutputsMemory();
+
+	/**
+	 * Returns the meta object for the attribute '{@link pml.Memory#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see pml.Memory#getName()
+	 * @see #getMemory()
+	 * @generated
+	 */
+	EAttribute getMemory_Name();
+
+	/**
+	 * Returns the meta object for class '{@link pml.Register <em>Register</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Register</em>'.
+	 * @see pml.Register
+	 * @generated
+	 */
+	EClass getRegister();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link pml.Register#getBehaviorRegister <em>Behavior Register</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Behavior Register</em>'.
+	 * @see pml.Register#getBehaviorRegister()
+	 * @see #getRegister()
+	 * @generated
+	 */
+	EReference getRegister_BehaviorRegister();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link pml.Register#getOutputs <em>Outputs</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Outputs</em>'.
+	 * @see pml.Register#getOutputs()
+	 * @see #getRegister()
+	 * @generated
+	 */
+	EReference getRegister_Outputs();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link pml.Register#getInputsRegister <em>Inputs Register</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Inputs Register</em>'.
+	 * @see pml.Register#getInputsRegister()
+	 * @see #getRegister()
+	 * @generated
+	 */
+	EReference getRegister_InputsRegister();
+
+	/**
+	 * Returns the meta object for the attribute '{@link pml.Register#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see pml.Register#getName()
+	 * @see #getRegister()
+	 * @generated
+	 */
+	EAttribute getRegister_Name();
+
+	/**
+	 * Returns the meta object for class '{@link pml.Instructions <em>Instructions</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Instructions</em>'.
+	 * @see pml.Instructions
+	 * @generated
+	 */
+	EClass getInstructions();
+
+	/**
+	 * Returns the meta object for the reference '{@link pml.Instructions#getMicroInstructions <em>Micro Instructions</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Micro Instructions</em>'.
+	 * @see pml.Instructions#getMicroInstructions()
+	 * @see #getInstructions()
+	 * @generated
+	 */
+	EReference getInstructions_MicroInstructions();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link pml.Instructions#getStatesComposite <em>States Composite</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>States Composite</em>'.
+	 * @see pml.Instructions#getStatesComposite()
+	 * @see #getInstructions()
+	 * @generated
+	 */
+	EReference getInstructions_StatesComposite();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link pml.Instructions#getInitialState <em>Initial State</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Initial State</em>'.
+	 * @see pml.Instructions#getInitialState()
+	 * @see #getInstructions()
+	 * @generated
+	 */
+	EReference getInstructions_InitialState();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link pml.Instructions#getFinalState <em>Final State</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Final State</em>'.
+	 * @see pml.Instructions#getFinalState()
+	 * @see #getInstructions()
+	 * @generated
+	 */
+	EReference getInstructions_FinalState();
+
+	/**
+	 * Returns the meta object for the attribute '{@link pml.Instructions#getType <em>Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Type</em>'.
+	 * @see pml.Instructions#getType()
+	 * @see #getInstructions()
+	 * @generated
+	 */
+	EAttribute getInstructions_Type();
+
+	/**
+	 * Returns the meta object for the attribute '{@link pml.Instructions#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see pml.Instructions#getName()
+	 * @see #getInstructions()
+	 * @generated
+	 */
+	EAttribute getInstructions_Name();
+
+	/**
+	 * Returns the meta object for class '{@link pml.MicroInstruction <em>Micro Instruction</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Micro Instruction</em>'.
+	 * @see pml.MicroInstruction
+	 * @generated
+	 */
+	EClass getMicroInstruction();
+
+	/**
+	 * Returns the meta object for the attribute '{@link pml.MicroInstruction#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see pml.MicroInstruction#getName()
+	 * @see #getMicroInstruction()
+	 * @generated
+	 */
+	EAttribute getMicroInstruction_Name();
+
+	/**
+	 * Returns the meta object for the attribute '{@link pml.MicroInstruction#getValue <em>Value</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Value</em>'.
+	 * @see pml.MicroInstruction#getValue()
+	 * @see #getMicroInstruction()
+	 * @generated
+	 */
+	EAttribute getMicroInstruction_Value();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link pml.MicroInstruction#getNextMicroStruction <em>Next Micro Struction</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Next Micro Struction</em>'.
+	 * @see pml.MicroInstruction#getNextMicroStruction()
+	 * @see #getMicroInstruction()
+	 * @generated
+	 */
+	EReference getMicroInstruction_NextMicroStruction();
+
+	/**
+	 * Returns the meta object for class '{@link pml.Transition <em>Transition</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Transition</em>'.
+	 * @see pml.Transition
+	 * @generated
+	 */
+	EClass getTransition();
+
+	/**
+	 * Returns the meta object for the attribute '{@link pml.Transition#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see pml.Transition#getName()
+	 * @see #getTransition()
+	 * @generated
+	 */
+	EAttribute getTransition_Name();
+
+	/**
+	 * Returns the meta object for enum '{@link pml.TypeComponent <em>Type Component</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for enum '<em>Type Component</em>'.
+	 * @see pml.TypeComponent
+	 * @generated
+	 */
+	EEnum getTypeComponent();
+
+	/**
+	 * Returns the meta object for enum '{@link pml.TypeData <em>Type Data</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for enum '<em>Type Data</em>'.
+	 * @see pml.TypeData
+	 * @generated
+	 */
+	EEnum getTypeData();
+
+	/**
+	 * Returns the meta object for enum '{@link pml.TypeInstruction <em>Type Instruction</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for enum '<em>Type Instruction</em>'.
+	 * @see pml.TypeInstruction
+	 * @generated
+	 */
+	EEnum getTypeInstruction();
+
+	/**
+	 * Returns the factory that creates the instances of the model.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the factory that creates the instances of the model.
+	 * @generated
+	 */
+	PmlFactory getPmlFactory();
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * Defines literals for the meta objects that represent
+	 * <ul>
+	 *   <li>each class,</li>
+	 *   <li>each feature of each class,</li>
+	 *   <li>each enum,</li>
+	 *   <li>and each data type</li>
+	 * </ul>
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	interface Literals {
+		/**
+		 * The meta object literal for the '{@link pml.impl.ULAImpl <em>ULA</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see pml.impl.ULAImpl
+		 * @see pml.impl.PmlPackageImpl#getULA()
+		 * @generated
+		 */
+		EClass ULA = eINSTANCE.getULA();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ULA__NAME = eINSTANCE.getULA_Name();
+
+		/**
+		 * The meta object literal for the '<em><b>Behaviros ULA</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference ULA__BEHAVIROS_ULA = eINSTANCE.getULA_BehavirosULA();
+
+		/**
+		 * The meta object literal for the '<em><b>Outputs ULA</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference ULA__OUTPUTS_ULA = eINSTANCE.getULA_OutputsULA();
+
+		/**
+		 * The meta object literal for the '<em><b>Inputs ULA</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference ULA__INPUTS_ULA = eINSTANCE.getULA_InputsULA();
+
+		/**
+		 * The meta object literal for the '<em><b>Instructions ULA</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference ULA__INSTRUCTIONS_ULA = eINSTANCE.getULA_InstructionsULA();
+
+		/**
+		 * The meta object literal for the '{@link pml.impl.BehaviorImpl <em>Behavior</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see pml.impl.BehaviorImpl
+		 * @see pml.impl.PmlPackageImpl#getBehavior()
+		 * @generated
+		 */
+		EClass BEHAVIOR = eINSTANCE.getBehavior();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute BEHAVIOR__NAME = eINSTANCE.getBehavior_Name();
+
+		/**
+		 * The meta object literal for the '<em><b>Type Behavior</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute BEHAVIOR__TYPE_BEHAVIOR = eINSTANCE.getBehavior_TypeBehavior();
+
+		/**
+		 * The meta object literal for the '{@link pml.impl.InputImpl <em>Input</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see pml.impl.InputImpl
+		 * @see pml.impl.PmlPackageImpl#getInput()
+		 * @generated
+		 */
+		EClass INPUT = eINSTANCE.getInput();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute INPUT__NAME = eINSTANCE.getInput_Name();
+
+		/**
+		 * The meta object literal for the '<em><b>Type</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute INPUT__TYPE = eINSTANCE.getInput_Type();
+
+		/**
+		 * The meta object literal for the '<em><b>Length</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute INPUT__LENGTH = eINSTANCE.getInput_Length();
+
+		/**
+		 * The meta object literal for the '<em><b>Inout</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference INPUT__INOUT = eINSTANCE.getInput_Inout();
+
+		/**
+		 * The meta object literal for the '{@link pml.impl.OutputImpl <em>Output</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see pml.impl.OutputImpl
+		 * @see pml.impl.PmlPackageImpl#getOutput()
+		 * @generated
+		 */
+		EClass OUTPUT = eINSTANCE.getOutput();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute OUTPUT__NAME = eINSTANCE.getOutput_Name();
+
+		/**
+		 * The meta object literal for the '<em><b>Type</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute OUTPUT__TYPE = eINSTANCE.getOutput_Type();
+
+		/**
+		 * The meta object literal for the '<em><b>Length</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute OUTPUT__LENGTH = eINSTANCE.getOutput_Length();
+
+		/**
+		 * The meta object literal for the '<em><b>Outin</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference OUTPUT__OUTIN = eINSTANCE.getOutput_Outin();
+
+		/**
+		 * The meta object literal for the '{@link pml.impl.StatesImpl <em>States</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see pml.impl.StatesImpl
+		 * @see pml.impl.PmlPackageImpl#getStates()
+		 * @generated
+		 */
+		EClass STATES = eINSTANCE.getStates();
+
+		/**
+		 * The meta object literal for the '<em><b>IState</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference STATES__ISTATE = eINSTANCE.getStates_IState();
+
+		/**
+		 * The meta object literal for the '<em><b>FState</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference STATES__FSTATE = eINSTANCE.getStates_FState();
+
+		/**
+		 * The meta object literal for the '<em><b>MStates</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference STATES__MSTATES = eINSTANCE.getStates_MStates();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute STATES__NAME = eINSTANCE.getStates_Name();
+
+		/**
+		 * The meta object literal for the '<em><b>Transition</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference STATES__TRANSITION = eINSTANCE.getStates_Transition();
+
+		/**
+		 * The meta object literal for the '{@link pml.impl.InitialStatesImpl <em>Initial States</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see pml.impl.InitialStatesImpl
+		 * @see pml.impl.PmlPackageImpl#getInitialStates()
+		 * @generated
+		 */
+		EClass INITIAL_STATES = eINSTANCE.getInitialStates();
+
+		/**
+		 * The meta object literal for the '{@link pml.impl.FinalStatesImpl <em>Final States</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see pml.impl.FinalStatesImpl
+		 * @see pml.impl.PmlPackageImpl#getFinalStates()
+		 * @generated
+		 */
+		EClass FINAL_STATES = eINSTANCE.getFinalStates();
+
+		/**
+		 * The meta object literal for the '{@link pml.impl.MiddleStatesImpl <em>Middle States</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see pml.impl.MiddleStatesImpl
+		 * @see pml.impl.PmlPackageImpl#getMiddleStates()
+		 * @generated
+		 */
+		EClass MIDDLE_STATES = eINSTANCE.getMiddleStates();
+
+		/**
+		 * The meta object literal for the '{@link pml.impl.DemultiplexorImpl <em>Demultiplexor</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see pml.impl.DemultiplexorImpl
+		 * @see pml.impl.PmlPackageImpl#getDemultiplexor()
+		 * @generated
+		 */
+		EClass DEMULTIPLEXOR = eINSTANCE.getDemultiplexor();
+
+		/**
+		 * The meta object literal for the '<em><b>Behaviors Demux</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference DEMULTIPLEXOR__BEHAVIORS_DEMUX = eINSTANCE.getDemultiplexor_BehaviorsDemux();
+
+		/**
+		 * The meta object literal for the '<em><b>Indemux</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference DEMULTIPLEXOR__INDEMUX = eINSTANCE.getDemultiplexor_Indemux();
+
+		/**
+		 * The meta object literal for the '<em><b>Outdemux</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference DEMULTIPLEXOR__OUTDEMUX = eINSTANCE.getDemultiplexor_Outdemux();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute DEMULTIPLEXOR__NAME = eINSTANCE.getDemultiplexor_Name();
+
+		/**
+		 * The meta object literal for the '{@link pml.impl.MultiplexorImpl <em>Multiplexor</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see pml.impl.MultiplexorImpl
+		 * @see pml.impl.PmlPackageImpl#getMultiplexor()
+		 * @generated
+		 */
+		EClass MULTIPLEXOR = eINSTANCE.getMultiplexor();
+
+		/**
+		 * The meta object literal for the '<em><b>Behaviormux</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference MULTIPLEXOR__BEHAVIORMUX = eINSTANCE.getMultiplexor_Behaviormux();
+
+		/**
+		 * The meta object literal for the '<em><b>Outmux</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference MULTIPLEXOR__OUTMUX = eINSTANCE.getMultiplexor_Outmux();
+
+		/**
+		 * The meta object literal for the '<em><b>Inmux</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference MULTIPLEXOR__INMUX = eINSTANCE.getMultiplexor_Inmux();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute MULTIPLEXOR__NAME = eINSTANCE.getMultiplexor_Name();
+
+		/**
+		 * The meta object literal for the '{@link pml.impl.ControlUnitImpl <em>Control Unit</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see pml.impl.ControlUnitImpl
+		 * @see pml.impl.PmlPackageImpl#getControlUnit()
+		 * @generated
+		 */
+		EClass CONTROL_UNIT = eINSTANCE.getControlUnit();
+
+		/**
+		 * The meta object literal for the '<em><b>Behaviors Control Unit</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference CONTROL_UNIT__BEHAVIORS_CONTROL_UNIT = eINSTANCE.getControlUnit_BehaviorsControlUnit();
+
+		/**
+		 * The meta object literal for the '<em><b>Inputs Control Unit</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference CONTROL_UNIT__INPUTS_CONTROL_UNIT = eINSTANCE.getControlUnit_InputsControlUnit();
+
+		/**
+		 * The meta object literal for the '<em><b>Outputs Control Unit</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference CONTROL_UNIT__OUTPUTS_CONTROL_UNIT = eINSTANCE.getControlUnit_OutputsControlUnit();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute CONTROL_UNIT__NAME = eINSTANCE.getControlUnit_Name();
+
+		/**
+		 * The meta object literal for the '<em><b>EReference0</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference CONTROL_UNIT__EREFERENCE0 = eINSTANCE.getControlUnit_EReference0();
+
+		/**
+		 * The meta object literal for the '<em><b>Intructions</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference CONTROL_UNIT__INTRUCTIONS = eINSTANCE.getControlUnit_Intructions();
+
+		/**
+		 * The meta object literal for the '{@link pml.impl.ProcessorImpl <em>Processor</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see pml.impl.ProcessorImpl
+		 * @see pml.impl.PmlPackageImpl#getProcessor()
+		 * @generated
+		 */
+		EClass PROCESSOR = eINSTANCE.getProcessor();
+
+		/**
+		 * The meta object literal for the '<em><b>Demux</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference PROCESSOR__DEMUX = eINSTANCE.getProcessor_Demux();
+
+		/**
+		 * The meta object literal for the '<em><b>Ulas</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference PROCESSOR__ULAS = eINSTANCE.getProcessor_Ulas();
+
+		/**
+		 * The meta object literal for the '<em><b>Registers</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference PROCESSOR__REGISTERS = eINSTANCE.getProcessor_Registers();
+
+		/**
+		 * The meta object literal for the '<em><b>Memories</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference PROCESSOR__MEMORIES = eINSTANCE.getProcessor_Memories();
+
+		/**
+		 * The meta object literal for the '<em><b>Mux</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference PROCESSOR__MUX = eINSTANCE.getProcessor_Mux();
+
+		/**
+		 * The meta object literal for the '<em><b>Control Units</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference PROCESSOR__CONTROL_UNITS = eINSTANCE.getProcessor_ControlUnits();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute PROCESSOR__NAME = eINSTANCE.getProcessor_Name();
+
+		/**
+		 * The meta object literal for the '{@link pml.impl.MemoryImpl <em>Memory</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see pml.impl.MemoryImpl
+		 * @see pml.impl.PmlPackageImpl#getMemory()
+		 * @generated
+		 */
+		EClass MEMORY = eINSTANCE.getMemory();
+
+		/**
+		 * The meta object literal for the '<em><b>Behaviors Memory</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference MEMORY__BEHAVIORS_MEMORY = eINSTANCE.getMemory_BehaviorsMemory();
+
+		/**
+		 * The meta object literal for the '<em><b>Inputs Memory</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference MEMORY__INPUTS_MEMORY = eINSTANCE.getMemory_InputsMemory();
+
+		/**
+		 * The meta object literal for the '<em><b>Outputs Memory</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference MEMORY__OUTPUTS_MEMORY = eINSTANCE.getMemory_OutputsMemory();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute MEMORY__NAME = eINSTANCE.getMemory_Name();
+
+		/**
+		 * The meta object literal for the '{@link pml.impl.RegisterImpl <em>Register</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see pml.impl.RegisterImpl
+		 * @see pml.impl.PmlPackageImpl#getRegister()
+		 * @generated
+		 */
+		EClass REGISTER = eINSTANCE.getRegister();
+
+		/**
+		 * The meta object literal for the '<em><b>Behavior Register</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference REGISTER__BEHAVIOR_REGISTER = eINSTANCE.getRegister_BehaviorRegister();
+
+		/**
+		 * The meta object literal for the '<em><b>Outputs</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference REGISTER__OUTPUTS = eINSTANCE.getRegister_Outputs();
+
+		/**
+		 * The meta object literal for the '<em><b>Inputs Register</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference REGISTER__INPUTS_REGISTER = eINSTANCE.getRegister_InputsRegister();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute REGISTER__NAME = eINSTANCE.getRegister_Name();
+
+		/**
+		 * The meta object literal for the '{@link pml.impl.InstructionsImpl <em>Instructions</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see pml.impl.InstructionsImpl
+		 * @see pml.impl.PmlPackageImpl#getInstructions()
+		 * @generated
+		 */
+		EClass INSTRUCTIONS = eINSTANCE.getInstructions();
+
+		/**
+		 * The meta object literal for the '<em><b>Micro Instructions</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference INSTRUCTIONS__MICRO_INSTRUCTIONS = eINSTANCE.getInstructions_MicroInstructions();
+
+		/**
+		 * The meta object literal for the '<em><b>States Composite</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference INSTRUCTIONS__STATES_COMPOSITE = eINSTANCE.getInstructions_StatesComposite();
+
+		/**
+		 * The meta object literal for the '<em><b>Initial State</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference INSTRUCTIONS__INITIAL_STATE = eINSTANCE.getInstructions_InitialState();
+
+		/**
+		 * The meta object literal for the '<em><b>Final State</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference INSTRUCTIONS__FINAL_STATE = eINSTANCE.getInstructions_FinalState();
+
+		/**
+		 * The meta object literal for the '<em><b>Type</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute INSTRUCTIONS__TYPE = eINSTANCE.getInstructions_Type();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute INSTRUCTIONS__NAME = eINSTANCE.getInstructions_Name();
+
+		/**
+		 * The meta object literal for the '{@link pml.impl.MicroInstructionImpl <em>Micro Instruction</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see pml.impl.MicroInstructionImpl
+		 * @see pml.impl.PmlPackageImpl#getMicroInstruction()
+		 * @generated
+		 */
+		EClass MICRO_INSTRUCTION = eINSTANCE.getMicroInstruction();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute MICRO_INSTRUCTION__NAME = eINSTANCE.getMicroInstruction_Name();
+
+		/**
+		 * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute MICRO_INSTRUCTION__VALUE = eINSTANCE.getMicroInstruction_Value();
+
+		/**
+		 * The meta object literal for the '<em><b>Next Micro Struction</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference MICRO_INSTRUCTION__NEXT_MICRO_STRUCTION = eINSTANCE.getMicroInstruction_NextMicroStruction();
+
+		/**
+		 * The meta object literal for the '{@link pml.impl.TransitionImpl <em>Transition</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see pml.impl.TransitionImpl
+		 * @see pml.impl.PmlPackageImpl#getTransition()
+		 * @generated
+		 */
+		EClass TRANSITION = eINSTANCE.getTransition();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute TRANSITION__NAME = eINSTANCE.getTransition_Name();
+
+		/**
+		 * The meta object literal for the '{@link pml.TypeComponent <em>Type Component</em>}' enum.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see pml.TypeComponent
+		 * @see pml.impl.PmlPackageImpl#getTypeComponent()
+		 * @generated
+		 */
+		EEnum TYPE_COMPONENT = eINSTANCE.getTypeComponent();
+
+		/**
+		 * The meta object literal for the '{@link pml.TypeData <em>Type Data</em>}' enum.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see pml.TypeData
+		 * @see pml.impl.PmlPackageImpl#getTypeData()
+		 * @generated
+		 */
+		EEnum TYPE_DATA = eINSTANCE.getTypeData();
+
+		/**
+		 * The meta object literal for the '{@link pml.TypeInstruction <em>Type Instruction</em>}' enum.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see pml.TypeInstruction
+		 * @see pml.impl.PmlPackageImpl#getTypeInstruction()
+		 * @generated
+		 */
+		EEnum TYPE_INSTRUCTION = eINSTANCE.getTypeInstruction();
+
+	}
+
+} //PmlPackage

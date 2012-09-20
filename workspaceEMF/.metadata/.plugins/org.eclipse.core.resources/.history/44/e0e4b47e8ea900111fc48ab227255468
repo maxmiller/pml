@@ -1,0 +1,7 @@
+[comment encoding = UTF-8 /]
+[module generate('http://teste/1.0')]
+
+
+[template public generateElement(aAgenda : Agenda)]
+
+[/template]

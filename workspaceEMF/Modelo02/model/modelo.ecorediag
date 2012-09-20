@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<notation:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmi:id="_L9DQ0NTsEeGLUIlCdTDvYQ" type="EcoreTools" name="modelo" measurementUnit="Pixel">
+  <children xmi:type="notation:Node" xmi:id="_SmUD0NTsEeGLUIlCdTDvYQ" type="1001">
+    <children xmi:type="notation:Node" xmi:id="_SmV5ANTsEeGLUIlCdTDvYQ" type="4001"/>
+    <children xmi:type="notation:Node" xmi:id="_SmWgENTsEeGLUIlCdTDvYQ" type="5001">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_SmWgEdTsEeGLUIlCdTDvYQ"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_SmWgEtTsEeGLUIlCdTDvYQ"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_SmWgE9TsEeGLUIlCdTDvYQ"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_SmXHINTsEeGLUIlCdTDvYQ" type="5002">
+      <children xmi:type="notation:Node" xmi:id="_Xn5HUNTsEeGLUIlCdTDvYQ" type="2002">
+        <element xmi:type="ecore:EOperation" href="modelo.ecore#//Venda/receber"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_Xn5HUdTsEeGLUIlCdTDvYQ"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_eTMhsNTsEeGLUIlCdTDvYQ" type="2002">
+        <element xmi:type="ecore:EOperation" href="modelo.ecore#//Venda/pegarFatura"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_eTMhsdTsEeGLUIlCdTDvYQ"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_h2hegNTsEeGLUIlCdTDvYQ" type="2002">
+        <element xmi:type="ecore:EOperation" href="modelo.ecore#//Venda/getItens"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_h2hegdTsEeGLUIlCdTDvYQ"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_qcB7wNTsEeGLUIlCdTDvYQ" type="2002">
+        <element xmi:type="ecore:EOperation" href="modelo.ecore#//Venda/definirItemReceber"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_qcB7wdTsEeGLUIlCdTDvYQ"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_7O4N4NTsEeGLUIlCdTDvYQ" type="2002">
+        <element xmi:type="ecore:EOperation" href="modelo.ecore#//Venda/incluirFatura"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_7O4N4dTsEeGLUIlCdTDvYQ"/>
+      </children>
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_SmXHIdTsEeGLUIlCdTDvYQ"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_SmXHItTsEeGLUIlCdTDvYQ"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_SmXHI9TsEeGLUIlCdTDvYQ"/>
+    </children>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="_SmUD0dTsEeGLUIlCdTDvYQ" fontColor="4210752" fontName="Lucida Grande" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
+    <element xmi:type="ecore:EClass" href="modelo.ecore#//Venda"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_SmUD0tTsEeGLUIlCdTDvYQ" x="104" y="76"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_VocYENTsEeGLUIlCdTDvYQ" type="1001">
+    <children xmi:type="notation:Node" xmi:id="_VodmMNTsEeGLUIlCdTDvYQ" type="4001"/>
+    <children xmi:type="notation:Node" xmi:id="_VodmMdTsEeGLUIlCdTDvYQ" type="5001">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_VodmMtTsEeGLUIlCdTDvYQ"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_VodmM9TsEeGLUIlCdTDvYQ"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_VodmNNTsEeGLUIlCdTDvYQ"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_VoeNQNTsEeGLUIlCdTDvYQ" type="5002">
+      <children xmi:type="notation:Node" xmi:id="_qZ28ENTtEeGLUIlCdTDvYQ" type="2002">
+        <element xmi:type="ecore:EOperation" href="modelo.ecore#//ItemVenda/getNomeProduto"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_qZ28EdTtEeGLUIlCdTDvYQ"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_tZnRwNTtEeGLUIlCdTDvYQ" type="2002">
+        <element xmi:type="ecore:EOperation" href="modelo.ecore#//ItemVenda/setNomeProduto"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_tZnRwdTtEeGLUIlCdTDvYQ"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_zG92INTtEeGLUIlCdTDvYQ" type="2002">
+        <element xmi:type="ecore:EOperation" href="modelo.ecore#//ItemVenda/getQuantidade"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_zG92IdTtEeGLUIlCdTDvYQ"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_01ueANTtEeGLUIlCdTDvYQ" type="2002">
+        <element xmi:type="ecore:EOperation" href="modelo.ecore#//ItemVenda/setQuantidade"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_01ueAdTtEeGLUIlCdTDvYQ"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_6QI4QNTtEeGLUIlCdTDvYQ" type="2002">
+        <element xmi:type="ecore:EOperation" href="modelo.ecore#//ItemVenda/getPreco"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_6QI4QdTtEeGLUIlCdTDvYQ"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_7jBccNTtEeGLUIlCdTDvYQ" type="2002">
+        <element xmi:type="ecore:EOperation" href="modelo.ecore#//ItemVenda/setPreco"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_7jBccdTtEeGLUIlCdTDvYQ"/>
+      </children>
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_VoeNQdTsEeGLUIlCdTDvYQ"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_VoeNQtTsEeGLUIlCdTDvYQ"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_VoeNQ9TsEeGLUIlCdTDvYQ"/>
+    </children>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="_VocYEdTsEeGLUIlCdTDvYQ" fontColor="4210752" fontName="Lucida Grande" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
+    <element xmi:type="ecore:EClass" href="modelo.ecore#//ItemVenda"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_VocYEtTsEeGLUIlCdTDvYQ" x="408" y="72"/>
+  </children>
+  <styles xmi:type="notation:DiagramStyle" xmi:id="_L9DQ0dTsEeGLUIlCdTDvYQ"/>
+  <element xmi:type="ecore:EPackage" href="modelo.ecore#/"/>
+</notation:Diagram>

@@ -1,0 +1,185 @@
+package pml;
+/**
+ * <copyright>
+ * </copyright>
+ *
+ * $Id$
+ */
+
+
+import org.eclipse.emf.common.util.EList;
+
+import org.eclipse.emf.ecore.EObject;
+
+/**
+ * <!-- begin-user-doc -->
+ * A representation of the model object '<em><b>Instructions</b></em>'.
+ * <!-- end-user-doc -->
+ *
+ * <p>
+ * The following features are supported:
+ * <ul>
+ *   <li>{@link pml.Instructions#getMicroInstructions <em>Micro Instructions</em>}</li>
+ *   <li>{@link pml.Instructions#getStatesComposite <em>States Composite</em>}</li>
+ *   <li>{@link pml.Instructions#getInitialState <em>Initial State</em>}</li>
+ *   <li>{@link pml.Instructions#getFinalState <em>Final State</em>}</li>
+ *   <li>{@link pml.Instructions#getType <em>Type</em>}</li>
+ *   <li>{@link pml.Instructions#getName <em>Name</em>}</li>
+ * </ul>
+ * </p>
+ *
+ * @see pml.PmlPackage#getInstructions()
+ * @model
+ * @generated
+ */
+public interface Instructions extends EObject {
+	/**
+	 * Returns the value of the '<em><b>Micro Instructions</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Micro Instructions</em>' reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Micro Instructions</em>' reference.
+	 * @see #setMicroInstructions(MicroInstruction)
+	 * @see pml.PmlPackage#getInstructions_MicroInstructions()
+	 * @model
+	 * @generated
+	 */
+	MicroInstruction getMicroInstructions();
+
+	/**
+	 * Sets the value of the '{@link pml.Instructions#getMicroInstructions <em>Micro Instructions</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Micro Instructions</em>' reference.
+	 * @see #getMicroInstructions()
+	 * @generated
+	 */
+	void setMicroInstructions(MicroInstruction value);
+
+	/**
+	 * Returns the value of the '<em><b>States Composite</b></em>' containment reference list.
+	 * The list contents are of type {@link pml.States}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>States Composite</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>States Composite</em>' containment reference list.
+	 * @see pml.PmlPackage#getInstructions_StatesComposite()
+	 * @model containment="true" required="true"
+	 * @generated
+	 */
+	EList<States> getStatesComposite();
+
+	/**
+	 * Returns the value of the '<em><b>Initial State</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Initial State</em>' containment reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Initial State</em>' containment reference.
+	 * @see #setInitialState(States)
+	 * @see pml.PmlPackage#getInstructions_InitialState()
+	 * @model containment="true" required="true"
+	 * @generated
+	 */
+	States getInitialState();
+
+	/**
+	 * Sets the value of the '{@link pml.Instructions#getInitialState <em>Initial State</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Initial State</em>' containment reference.
+	 * @see #getInitialState()
+	 * @generated
+	 */
+	void setInitialState(States value);
+
+	/**
+	 * Returns the value of the '<em><b>Final State</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Final State</em>' containment reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Final State</em>' containment reference.
+	 * @see #setFinalState(States)
+	 * @see pml.PmlPackage#getInstructions_FinalState()
+	 * @model containment="true" required="true"
+	 * @generated
+	 */
+	States getFinalState();
+
+	/**
+	 * Sets the value of the '{@link pml.Instructions#getFinalState <em>Final State</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Final State</em>' containment reference.
+	 * @see #getFinalState()
+	 * @generated
+	 */
+	void setFinalState(States value);
+
+	/**
+	 * Returns the value of the '<em><b>Type</b></em>' attribute.
+	 * The literals are from the enumeration {@link pml.TypeInstruction}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Type</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Type</em>' attribute.
+	 * @see pml.TypeInstruction
+	 * @see #setType(TypeInstruction)
+	 * @see pml.PmlPackage#getInstructions_Type()
+	 * @model
+	 * @generated
+	 */
+	TypeInstruction getType();
+
+	/**
+	 * Sets the value of the '{@link pml.Instructions#getType <em>Type</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Type</em>' attribute.
+	 * @see pml.TypeInstruction
+	 * @see #getType()
+	 * @generated
+	 */
+	void setType(TypeInstruction value);
+
+	/**
+	 * Returns the value of the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Name</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Name</em>' attribute.
+	 * @see #setName(String)
+	 * @see pml.PmlPackage#getInstructions_Name()
+	 * @model
+	 * @generated
+	 */
+	String getName();
+
+	/**
+	 * Sets the value of the '{@link pml.Instructions#getName <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Name</em>' attribute.
+	 * @see #getName()
+	 * @generated
+	 */
+	void setName(String value);
+
+} // Instructions

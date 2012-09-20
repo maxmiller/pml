@@ -1,0 +1,189 @@
+/**
+ * <copyright>
+ * </copyright>
+ *
+ * $Id$
+ */
+package multiplexormodel.multiplexador.impl;
+
+import multiplexormodel.multiplexador.MultiplexadorPackage;
+import multiplexormodel.multiplexador.Multiplexer;
+
+import org.eclipse.emf.common.notify.Notification;
+
+import org.eclipse.emf.ecore.EClass;
+
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.impl.EObjectImpl;
+
+/**
+ * <!-- begin-user-doc -->
+ * An implementation of the model object '<em><b>Multiplexer</b></em>'.
+ * <!-- end-user-doc -->
+ * <p>
+ * The following features are implemented:
+ * <ul>
+ *   <li>{@link multiplexormodel.multiplexador.impl.MultiplexerImpl#getNumInputs <em>Num Inputs</em>}</li>
+ * </ul>
+ * </p>
+ *
+ * @generated
+ */
+public class MultiplexerImpl extends EObjectImpl implements Multiplexer {
+	/**
+	 * The default value of the '{@link #getNumInputs() <em>Num Inputs</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getNumInputs()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final int NUM_INPUTS_EDEFAULT = 0;
+
+	/**
+	 * The cached value of the '{@link #getNumInputs() <em>Num Inputs</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getNumInputs()
+	 * @generated
+	 * @ordered
+	 */
+	protected int numInputs = NUM_INPUTS_EDEFAULT;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected MultiplexerImpl() {
+		super();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	protected EClass eStaticClass() {
+		return MultiplexadorPackage.Literals.MULTIPLEXER;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public int getNumInputs() {
+		return numInputs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setNumInputs(int newNumInputs) {
+		int oldNumInputs = numInputs;
+		numInputs = newNumInputs;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, MultiplexadorPackage.MULTIPLEXER__NUM_INPUTS, oldNumInputs, numInputs));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void multiplexerBehavior() {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void Multiplexer(int numInputs) {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object eGet(int featureID, boolean resolve, boolean coreType) {
+		switch (featureID) {
+			case MultiplexadorPackage.MULTIPLEXER__NUM_INPUTS:
+				return getNumInputs();
+		}
+		return super.eGet(featureID, resolve, coreType);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void eSet(int featureID, Object newValue) {
+		switch (featureID) {
+			case MultiplexadorPackage.MULTIPLEXER__NUM_INPUTS:
+				setNumInputs((Integer)newValue);
+				return;
+		}
+		super.eSet(featureID, newValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void eUnset(int featureID) {
+		switch (featureID) {
+			case MultiplexadorPackage.MULTIPLEXER__NUM_INPUTS:
+				setNumInputs(NUM_INPUTS_EDEFAULT);
+				return;
+		}
+		super.eUnset(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public boolean eIsSet(int featureID) {
+		switch (featureID) {
+			case MultiplexadorPackage.MULTIPLEXER__NUM_INPUTS:
+				return numInputs != NUM_INPUTS_EDEFAULT;
+		}
+		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String toString() {
+		if (eIsProxy()) return super.toString();
+
+		StringBuffer result = new StringBuffer(super.toString());
+		result.append(" (numInputs: ");
+		result.append(numInputs);
+		result.append(')');
+		return result.toString();
+	}
+
+} //MultiplexerImpl

@@ -1,0 +1,23 @@
+package pml;
+/**
+ * <copyright>
+ * </copyright>
+ *
+ * $Id$
+ */
+
+
+import org.eclipse.emf.ecore.EObject;
+
+/**
+ * <!-- begin-user-doc -->
+ * A representation of the model object '<em><b>Initial States</b></em>'.
+ * <!-- end-user-doc -->
+ *
+ *
+ * @see pml.PmlPackage#getInitialStates()
+ * @model
+ * @generated
+ */
+public interface InitialStates extends EObject {
+} // InitialStates

@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/Modelo/src"
+    modelPluginID="Modelo" modelName="Processor" importerID="org.eclipse.emf.importer.ecore"
+    complianceLevel="6.0" copyrightFields="false">
+  <foreignModel>../ProcessorUnified/model/processor.ecore</foreignModel>
+  <genPackages prefix="Processor" disposableProviderFactory="true" ecorePackage="processor.ecore#/">
+    <genDataTypes ecoreDataType="processor.ecore#//ArrayInteger"/>
+    <genClasses ecoreClass="processor.ecore#//Multiplexor">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute processor.ecore#//Multiplexor/numInputs"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference processor.ecore#//Multiplexor/inputs"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference processor.ecore#//Multiplexor/output"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference processor.ecore#//Multiplexor/inout"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference processor.ecore#//Multiplexor/inputsMul"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference processor.ecore#//Multiplexor/outputMul"/>
+      <genOperations ecoreOperation="processor.ecore#//Multiplexor/multiplexorBehavior"/>
+    </genClasses>
+    <genClasses ecoreClass="processor.ecore#//SeletorRegisterFile">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute processor.ecore#//SeletorRegisterFile/value"/>
+    </genClasses>
+    <genClasses ecoreClass="processor.ecore#//Demultiplexor">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute processor.ecore#//Demultiplexor/numOutputs"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference processor.ecore#//Demultiplexor/outputs"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference processor.ecore#//Demultiplexor/input"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference processor.ecore#//Demultiplexor/outin"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference processor.ecore#//Demultiplexor/outputsDemux"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference processor.ecore#//Demultiplexor/inputDemux"/>
+      <genOperations ecoreOperation="processor.ecore#//Demultiplexor/demultiplexorBehavior"/>
+    </genClasses>
+    <genClasses ecoreClass="processor.ecore#//RegisterFile">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference processor.ecore#//RegisterFile/sel"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference processor.ecore#//RegisterFile/rwBit"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference processor.ecore#//RegisterFile/clock"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute processor.ecore#//RegisterFile/registers"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference processor.ecore#//RegisterFile/inRf"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference processor.ecore#//RegisterFile/outRf"/>
+      <genOperations ecoreOperation="processor.ecore#//RegisterFile/registerFileBehavior"/>
+    </genClasses>
+    <genClasses ecoreClass="processor.ecore#//RegisterAssyncReset">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute processor.ecore#//RegisterAssyncReset/internalData"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference processor.ecore#//RegisterAssyncReset/outRa"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference processor.ecore#//RegisterAssyncReset/inRa"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference processor.ecore#//RegisterAssyncReset/reset"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference processor.ecore#//RegisterAssyncReset/clock"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference processor.ecore#//RegisterAssyncReset/load"/>
+      <genOperations ecoreOperation="processor.ecore#//RegisterAssyncReset/RegisterBehaviour"/>
+    </genClasses>
+    <genClasses ecoreClass="processor.ecore#//Write">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute processor.ecore#//Write/value"/>
+    </genClasses>
+    <genClasses ecoreClass="processor.ecore#//Read">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute processor.ecore#//Read/value"/>
+    </genClasses>
+    <genClasses ecoreClass="processor.ecore#//ReadWrite">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute processor.ecore#//ReadWrite/value"/>
+    </genClasses>
+    <genClasses ecoreClass="processor.ecore#//Register">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute processor.ecore#//Register/value"/>
+    </genClasses>
+    <genClasses ecoreClass="processor.ecore#//ControlUnit">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference processor.ecore#//ControlUnit/loads"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference processor.ecore#//ControlUnit/writeMemory"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference processor.ecore#//ControlUnit/readwritebit"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference processor.ecore#//ControlUnit/selControlUnit"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute processor.ecore#//ControlUnit/state"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute processor.ecore#//ControlUnit/instructionSubstate"/>
+      <genOperations ecoreOperation="processor.ecore#//ControlUnit/controlUnitBehavior"/>
+      <genOperations ecoreOperation="processor.ecore#//ControlUnit/processInstruction"/>
+      <genOperations ecoreOperation="processor.ecore#//ControlUnit/processMiscellaneousInstruction"/>
+      <genOperations ecoreOperation="processor.ecore#//ControlUnit/processControlInstruction"/>
+      <genOperations ecoreOperation="processor.ecore#//ControlUnit/processRegisterInstruction"/>
+      <genOperations ecoreOperation="processor.ecore#//ControlUnit/processMemoryInstruction"/>
+      <genOperations ecoreOperation="processor.ecore#//ControlUnit/resetAllLoads"/>
+      <genOperations ecoreOperation="processor.ecore#//ControlUnit/incrementPC"/>
+      <genOperations ecoreOperation="processor.ecore#//ControlUnit/loadsARWithPc"/>
+    </genClasses>
+    <genClasses ecoreClass="processor.ecore#//ULA">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference processor.ecore#//ULA/opSel"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference processor.ecore#//ULA/ulastatus"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference processor.ecore#//ULA/operations"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference processor.ecore#//ULA/opSelUla"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference processor.ecore#//ULA/ulaOut"/>
+      <genOperations ecoreOperation="processor.ecore#//ULA/ULABehavior"/>
+    </genClasses>
+    <genClasses ecoreClass="processor.ecore#//InputBoolean">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute processor.ecore#//InputBoolean/value"/>
+    </genClasses>
+    <genClasses ecoreClass="processor.ecore#//Reset">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute processor.ecore#//Reset/value"/>
+    </genClasses>
+    <genClasses ecoreClass="processor.ecore#//Clock">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute processor.ecore#//Clock/value"/>
+    </genClasses>
+    <genClasses ecoreClass="processor.ecore#//OutputBoolean">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute processor.ecore#//OutputBoolean/value"/>
+    </genClasses>
+    <genClasses ecoreClass="processor.ecore#//InputMultiplexor">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute processor.ecore#//InputMultiplexor/value"/>
+    </genClasses>
+    <genClasses ecoreClass="processor.ecore#//OutputMultiplexor">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute processor.ecore#//OutputMultiplexor/value"/>
+    </genClasses>
+    <genClasses ecoreClass="processor.ecore#//OutputDemux">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute processor.ecore#//OutputDemux/value"/>
+    </genClasses>
+    <genClasses ecoreClass="processor.ecore#//InputDemux">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute processor.ecore#//InputDemux/value"/>
+    </genClasses>
+    <genClasses ecoreClass="processor.ecore#//InputRegisterFile">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute processor.ecore#//InputRegisterFile/value"/>
+    </genClasses>
+    <genClasses ecoreClass="processor.ecore#//OutputRegisterFile">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute processor.ecore#//OutputRegisterFile/value"/>
+    </genClasses>
+    <genClasses ecoreClass="processor.ecore#//InputRegisterAssync">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute processor.ecore#//InputRegisterAssync/value"/>
+    </genClasses>
+    <genClasses ecoreClass="processor.ecore#//OutputRegisterAssync">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute processor.ecore#//OutputRegisterAssync/value"/>
+    </genClasses>
+    <genClasses ecoreClass="processor.ecore#//Load">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute processor.ecore#//Load/value"/>
+    </genClasses>
+    <genClasses ecoreClass="processor.ecore#//InputMemory">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute processor.ecore#//InputMemory/value"/>
+    </genClasses>
+    <genClasses ecoreClass="processor.ecore#//OutputMemory">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute processor.ecore#//OutputMemory/value"/>
+    </genClasses>
+    <genClasses ecoreClass="processor.ecore#//AddressMemory">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute processor.ecore#//AddressMemory/value"/>
+    </genClasses>
+    <genClasses ecoreClass="processor.ecore#//Memory">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute processor.ecore#//Memory/mem"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference processor.ecore#//Memory/write"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference processor.ecore#//Memory/reset"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference processor.ecore#//Memory/clock"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference processor.ecore#//Memory/datai"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference processor.ecore#//Memory/datao"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference processor.ecore#//Memory/address"/>
+      <genOperations ecoreOperation="processor.ecore#//Memory/t_sync_mem"/>
+    </genClasses>
+    <genClasses ecoreClass="processor.ecore#//Operation">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute processor.ecore#//Operation/value"/>
+    </genClasses>
+    <genClasses ecoreClass="processor.ecore#//OutputULA">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute processor.ecore#//OutputULA/value"/>
+    </genClasses>
+    <genClasses ecoreClass="processor.ecore#//SeletorULA">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute processor.ecore#//SeletorULA/value"/>
+    </genClasses>
+    <genClasses ecoreClass="processor.ecore#//Status">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute processor.ecore#//Status/value"/>
+    </genClasses>
+    <genClasses ecoreClass="processor.ecore#//LoadControlUnit">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute processor.ecore#//LoadControlUnit/value"/>
+    </genClasses>
+    <genClasses ecoreClass="processor.ecore#//SeletorControlUnit">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute processor.ecore#//SeletorControlUnit/value"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

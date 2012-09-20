@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="org.eclipse.acceleo.ide.ui.launching.launchConfigurationType">
+<stringAttribute key="org.eclipse.acceleo.ide.ui.ARGUMENTS" value=""/>
+<booleanAttribute key="org.eclipse.acceleo.ide.ui.COMPUTE_PROFILING" value="false"/>
+<booleanAttribute key="org.eclipse.acceleo.ide.ui.COMPUTE_TRACEABILITY" value="true"/>
+<stringAttribute key="org.eclipse.acceleo.ide.ui.LAUNCHING_STRATEGY_DESCRIPTION" value="Acceleo Plug-in Application (Default)"/>
+<stringAttribute key="org.eclipse.acceleo.ide.ui.MODEL_PATH" value="/PMLGen/src/PMLGen/generator/mips.pml"/>
+<stringAttribute key="org.eclipse.acceleo.ide.ui.PROFILE_MODEL_PATH" value=""/>
+<stringAttribute key="org.eclipse.acceleo.ide.ui.TARGET_PATH" value="/PMLGen/src/PMLGen/code"/>
+<listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
+<listEntry value="/PMLGen/src/PMLGen/generator/Main.java"/>
+</listAttribute>
+<listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_TYPES">
+<listEntry value="1"/>
+</listAttribute>
+<booleanAttribute key="org.eclipse.debug.ui.ATTR_APPEND_TO_FILE" value="true"/>
+<stringAttribute key="org.eclipse.debug.ui.ATTR_CAPTURE_IN_FILE" value="${workspace_loc:/PMLGen/src/PMLGen/code}"/>
+<stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="PMLGen.generator.Main"/>
+<stringAttribute key="org.eclipse.jdt.launching.PROGRAM_ARGUMENTS" value="&quot;/Users/maxmiller/Dropbox/Mestrado/workspaceEMF/PMLGen/src/PMLGen/generator/mips.pml&quot; &quot;/Users/maxmiller/Dropbox/Mestrado/workspaceEMF/PMLGen/src/PMLGen/code&quot;"/>
+<stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="PMLGen"/>
+</launchConfiguration>

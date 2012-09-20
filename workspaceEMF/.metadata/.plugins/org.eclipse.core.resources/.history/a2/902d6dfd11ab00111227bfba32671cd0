@@ -1,0 +1,402 @@
+package pml;
+/**
+ * <copyright>
+ * </copyright>
+ *
+ * $Id$
+ */
+
+
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
+
+import org.eclipse.emf.common.util.Enumerator;
+
+/**
+ * <!-- begin-user-doc -->
+ * A representation of the literals of the enumeration '<em><b>Type Component</b></em>',
+ * and utility methods for working with them.
+ * <!-- end-user-doc -->
+ * @see pml.PmlPackage#getTypeComponent()
+ * @model extendedMetaData="enumeration=''"
+ * @generated
+ */
+public enum TypeComponent implements Enumerator {
+	/**
+	 * The '<em><b>Multiplexor</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #MULTIPLEXOR_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	MULTIPLEXOR(0, "Multiplexor", "Multiplexor"),
+
+	/**
+	 * The '<em><b>Demultiplexor</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #DEMULTIPLEXOR_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	DEMULTIPLEXOR(1, "Demultiplexor", "Demultiplexor"),
+
+	/**
+	 * The '<em><b>Unit Control</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #UNIT_CONTROL_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	UNIT_CONTROL(2, "UnitControl", "UnitControl"),
+
+	/**
+	 * The '<em><b>ULA</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #ULA_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	ULA(3, "ULA", "ULA"),
+
+	/**
+	 * The '<em><b>Register</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #REGISTER_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	REGISTER(4, "Register", "Register"),
+
+	/**
+	 * The '<em><b>Software</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #SOFTWARE_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	SOFTWARE(5, "Software", "Software"),
+
+	/**
+	 * The '<em><b>Hardware Generic</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #HARDWARE_GENERIC_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	HARDWARE_GENERIC(6, "HardwareGeneric", "HardwareGeneric"),
+
+	/**
+	 * The '<em><b>UML Component</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #UML_COMPONENT_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	UML_COMPONENT(7, "UMLComponent", "UMLComponent"),
+
+	/**
+	 * The '<em><b>Component Generic</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #COMPONENT_GENERIC_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	COMPONENT_GENERIC(8, "ComponentGeneric", "ComponentGeneric");
+
+	/**
+	 * The '<em><b>Multiplexor</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of '<em><b>Multiplexor</b></em>' literal object isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @see #MULTIPLEXOR
+	 * @model name="Multiplexor"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int MULTIPLEXOR_VALUE = 0;
+
+	/**
+	 * The '<em><b>Demultiplexor</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of '<em><b>Demultiplexor</b></em>' literal object isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @see #DEMULTIPLEXOR
+	 * @model name="Demultiplexor"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int DEMULTIPLEXOR_VALUE = 1;
+
+	/**
+	 * The '<em><b>Unit Control</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of '<em><b>Unit Control</b></em>' literal object isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @see #UNIT_CONTROL
+	 * @model name="UnitControl"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int UNIT_CONTROL_VALUE = 2;
+
+	/**
+	 * The '<em><b>ULA</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of '<em><b>ULA</b></em>' literal object isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @see #ULA
+	 * @model
+	 * @generated
+	 * @ordered
+	 */
+	public static final int ULA_VALUE = 3;
+
+	/**
+	 * The '<em><b>Register</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of '<em><b>Register</b></em>' literal object isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @see #REGISTER
+	 * @model name="Register"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int REGISTER_VALUE = 4;
+
+	/**
+	 * The '<em><b>Software</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of '<em><b>Software</b></em>' literal object isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @see #SOFTWARE
+	 * @model name="Software"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int SOFTWARE_VALUE = 5;
+
+	/**
+	 * The '<em><b>Hardware Generic</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of '<em><b>Hardware Generic</b></em>' literal object isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @see #HARDWARE_GENERIC
+	 * @model name="HardwareGeneric"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int HARDWARE_GENERIC_VALUE = 6;
+
+	/**
+	 * The '<em><b>UML Component</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of '<em><b>UML Component</b></em>' literal object isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @see #UML_COMPONENT
+	 * @model name="UMLComponent"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int UML_COMPONENT_VALUE = 7;
+
+	/**
+	 * The '<em><b>Component Generic</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of '<em><b>Component Generic</b></em>' literal object isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @see #COMPONENT_GENERIC
+	 * @model name="ComponentGeneric"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int COMPONENT_GENERIC_VALUE = 8;
+
+	/**
+	 * An array of all the '<em><b>Type Component</b></em>' enumerators.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private static final TypeComponent[] VALUES_ARRAY =
+		new TypeComponent[] {
+			MULTIPLEXOR,
+			DEMULTIPLEXOR,
+			UNIT_CONTROL,
+			ULA,
+			REGISTER,
+			SOFTWARE,
+			HARDWARE_GENERIC,
+			UML_COMPONENT,
+			COMPONENT_GENERIC,
+		};
+
+	/**
+	 * A public read-only list of all the '<em><b>Type Component</b></em>' enumerators.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public static final List<TypeComponent> VALUES = Collections.unmodifiableList(Arrays.asList(VALUES_ARRAY));
+
+	/**
+	 * Returns the '<em><b>Type Component</b></em>' literal with the specified literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public static TypeComponent get(String literal) {
+		for (int i = 0; i < VALUES_ARRAY.length; ++i) {
+			TypeComponent result = VALUES_ARRAY[i];
+			if (result.toString().equals(literal)) {
+				return result;
+			}
+		}
+		return null;
+	}
+
+	/**
+	 * Returns the '<em><b>Type Component</b></em>' literal with the specified name.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public static TypeComponent getByName(String name) {
+		for (int i = 0; i < VALUES_ARRAY.length; ++i) {
+			TypeComponent result = VALUES_ARRAY[i];
+			if (result.getName().equals(name)) {
+				return result;
+			}
+		}
+		return null;
+	}
+
+	/**
+	 * Returns the '<em><b>Type Component</b></em>' literal with the specified integer value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public static TypeComponent get(int value) {
+		switch (value) {
+			case MULTIPLEXOR_VALUE: return MULTIPLEXOR;
+			case DEMULTIPLEXOR_VALUE: return DEMULTIPLEXOR;
+			case UNIT_CONTROL_VALUE: return UNIT_CONTROL;
+			case ULA_VALUE: return ULA;
+			case REGISTER_VALUE: return REGISTER;
+			case SOFTWARE_VALUE: return SOFTWARE;
+			case HARDWARE_GENERIC_VALUE: return HARDWARE_GENERIC;
+			case UML_COMPONENT_VALUE: return UML_COMPONENT;
+			case COMPONENT_GENERIC_VALUE: return COMPONENT_GENERIC;
+		}
+		return null;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private final int value;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private final String name;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private final String literal;
+
+	/**
+	 * Only this class can construct instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private TypeComponent(int value, String name, String literal) {
+		this.value = value;
+		this.name = name;
+		this.literal = literal;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public int getValue() {
+	  return value;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getName() {
+	  return name;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getLiteral() {
+	  return literal;
+	}
+
+	/**
+	 * Returns the literal value of the enumerator, which is its string representation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String toString() {
+		return literal;
+	}
+	
+} //TypeComponent

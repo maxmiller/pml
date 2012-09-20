@@ -1,0 +1,300 @@
+/**
+ * <copyright>
+ * </copyright>
+ *
+ * $Id$
+ */
+package pml.impl;
+
+import java.util.Collection;
+
+import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
+
+import org.eclipse.emf.common.util.EList;
+
+import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
+
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.impl.EObjectImpl;
+
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.InternalEList;
+
+import pml.Behavior;
+import pml.Input;
+import pml.Output;
+import pml.PmlPackage;
+import pml.Register;
+
+/**
+ * <!-- begin-user-doc -->
+ * An implementation of the model object '<em><b>Register</b></em>'.
+ * <!-- end-user-doc -->
+ * <p>
+ * The following features are implemented:
+ * <ul>
+ *   <li>{@link pml.impl.RegisterImpl#getBehaviorRegister <em>Behavior Register</em>}</li>
+ *   <li>{@link pml.impl.RegisterImpl#getOutputs <em>Outputs</em>}</li>
+ *   <li>{@link pml.impl.RegisterImpl#getInputsRegister <em>Inputs Register</em>}</li>
+ *   <li>{@link pml.impl.RegisterImpl#getName <em>Name</em>}</li>
+ * </ul>
+ * </p>
+ *
+ * @generated
+ */
+public class RegisterImpl extends EObjectImpl implements Register {
+	/**
+	 * The cached value of the '{@link #getBehaviorRegister() <em>Behavior Register</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getBehaviorRegister()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Behavior> behaviorRegister;
+
+	/**
+	 * The cached value of the '{@link #getOutputs() <em>Outputs</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getOutputs()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Output> outputs;
+
+	/**
+	 * The cached value of the '{@link #getInputsRegister() <em>Inputs Register</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getInputsRegister()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Input> inputsRegister;
+
+	/**
+	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getName()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String NAME_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getName()
+	 * @generated
+	 * @ordered
+	 */
+	protected String name = NAME_EDEFAULT;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected RegisterImpl() {
+		super();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	protected EClass eStaticClass() {
+		return PmlPackage.Literals.REGISTER;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<Behavior> getBehaviorRegister() {
+		if (behaviorRegister == null) {
+			behaviorRegister = new EObjectContainmentEList<Behavior>(Behavior.class, this, PmlPackage.REGISTER__BEHAVIOR_REGISTER);
+		}
+		return behaviorRegister;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<Output> getOutputs() {
+		if (outputs == null) {
+			outputs = new EObjectContainmentEList<Output>(Output.class, this, PmlPackage.REGISTER__OUTPUTS);
+		}
+		return outputs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<Input> getInputsRegister() {
+		if (inputsRegister == null) {
+			inputsRegister = new EObjectContainmentEList<Input>(Input.class, this, PmlPackage.REGISTER__INPUTS_REGISTER);
+		}
+		return inputsRegister;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getName() {
+		return name;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setName(String newName) {
+		String oldName = name;
+		name = newName;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, PmlPackage.REGISTER__NAME, oldName, name));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case PmlPackage.REGISTER__BEHAVIOR_REGISTER:
+				return ((InternalEList<?>)getBehaviorRegister()).basicRemove(otherEnd, msgs);
+			case PmlPackage.REGISTER__OUTPUTS:
+				return ((InternalEList<?>)getOutputs()).basicRemove(otherEnd, msgs);
+			case PmlPackage.REGISTER__INPUTS_REGISTER:
+				return ((InternalEList<?>)getInputsRegister()).basicRemove(otherEnd, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object eGet(int featureID, boolean resolve, boolean coreType) {
+		switch (featureID) {
+			case PmlPackage.REGISTER__BEHAVIOR_REGISTER:
+				return getBehaviorRegister();
+			case PmlPackage.REGISTER__OUTPUTS:
+				return getOutputs();
+			case PmlPackage.REGISTER__INPUTS_REGISTER:
+				return getInputsRegister();
+			case PmlPackage.REGISTER__NAME:
+				return getName();
+		}
+		return super.eGet(featureID, resolve, coreType);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	@Override
+	public void eSet(int featureID, Object newValue) {
+		switch (featureID) {
+			case PmlPackage.REGISTER__BEHAVIOR_REGISTER:
+				getBehaviorRegister().clear();
+				getBehaviorRegister().addAll((Collection<? extends Behavior>)newValue);
+				return;
+			case PmlPackage.REGISTER__OUTPUTS:
+				getOutputs().clear();
+				getOutputs().addAll((Collection<? extends Output>)newValue);
+				return;
+			case PmlPackage.REGISTER__INPUTS_REGISTER:
+				getInputsRegister().clear();
+				getInputsRegister().addAll((Collection<? extends Input>)newValue);
+				return;
+			case PmlPackage.REGISTER__NAME:
+				setName((String)newValue);
+				return;
+		}
+		super.eSet(featureID, newValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void eUnset(int featureID) {
+		switch (featureID) {
+			case PmlPackage.REGISTER__BEHAVIOR_REGISTER:
+				getBehaviorRegister().clear();
+				return;
+			case PmlPackage.REGISTER__OUTPUTS:
+				getOutputs().clear();
+				return;
+			case PmlPackage.REGISTER__INPUTS_REGISTER:
+				getInputsRegister().clear();
+				return;
+			case PmlPackage.REGISTER__NAME:
+				setName(NAME_EDEFAULT);
+				return;
+		}
+		super.eUnset(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public boolean eIsSet(int featureID) {
+		switch (featureID) {
+			case PmlPackage.REGISTER__BEHAVIOR_REGISTER:
+				return behaviorRegister != null && !behaviorRegister.isEmpty();
+			case PmlPackage.REGISTER__OUTPUTS:
+				return outputs != null && !outputs.isEmpty();
+			case PmlPackage.REGISTER__INPUTS_REGISTER:
+				return inputsRegister != null && !inputsRegister.isEmpty();
+			case PmlPackage.REGISTER__NAME:
+				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+		}
+		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String toString() {
+		if (eIsProxy()) return super.toString();
+
+		StringBuffer result = new StringBuffer(super.toString());
+		result.append(" (name: ");
+		result.append(name);
+		result.append(')');
+		return result.toString();
+	}
+
+} //RegisterImpl

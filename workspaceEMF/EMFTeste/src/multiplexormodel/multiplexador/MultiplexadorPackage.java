@@ -1,0 +1,523 @@
+/**
+ * <copyright>
+ * </copyright>
+ *
+ * $Id$
+ */
+package multiplexormodel.multiplexador;
+
+import org.eclipse.emf.ecore.EAttribute;
+import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EPackage;
+import org.eclipse.emf.ecore.EReference;
+
+/**
+ * <!-- begin-user-doc -->
+ * The <b>Package</b> for the model.
+ * It contains accessors for the meta objects to represent
+ * <ul>
+ *   <li>each class,</li>
+ *   <li>each feature of each class,</li>
+ *   <li>each enum,</li>
+ *   <li>and each data type</li>
+ * </ul>
+ * <!-- end-user-doc -->
+ * @see multiplexormodel.multiplexador.MultiplexadorFactory
+ * @model kind="package"
+ * @generated
+ */
+public interface MultiplexadorPackage extends EPackage {
+	/**
+	 * The package name.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	String eNAME = "multiplexador";
+
+	/**
+	 * The package namespace URI.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	String eNS_URI = "http://lasic.ufrn.br/multiplexor/1.0";
+
+	/**
+	 * The package namespace name.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	String eNS_PREFIX = "multiplexor";
+
+	/**
+	 * The singleton instance of the package.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	MultiplexadorPackage eINSTANCE = multiplexormodel.multiplexador.impl.MultiplexadorPackageImpl.init();
+
+	/**
+	 * The meta object id for the '{@link multiplexormodel.multiplexador.impl.InputImpl <em>Input</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see multiplexormodel.multiplexador.impl.InputImpl
+	 * @see multiplexormodel.multiplexador.impl.MultiplexadorPackageImpl#getInput()
+	 * @generated
+	 */
+	int INPUT = 0;
+
+	/**
+	 * The feature id for the '<em><b>Inputs</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INPUT__INPUTS = 0;
+
+	/**
+	 * The feature id for the '<em><b>Value</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INPUT__VALUE = 1;
+
+	/**
+	 * The number of structural features of the '<em>Input</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INPUT_FEATURE_COUNT = 2;
+
+	/**
+	 * The meta object id for the '{@link multiplexormodel.multiplexador.impl.MultiplexerImpl <em>Multiplexer</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see multiplexormodel.multiplexador.impl.MultiplexerImpl
+	 * @see multiplexormodel.multiplexador.impl.MultiplexadorPackageImpl#getMultiplexer()
+	 * @generated
+	 */
+	int MULTIPLEXER = 1;
+
+	/**
+	 * The feature id for the '<em><b>Num Inputs</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MULTIPLEXER__NUM_INPUTS = 0;
+
+	/**
+	 * The feature id for the '<em><b>Inputs</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MULTIPLEXER__INPUTS = 1;
+
+	/**
+	 * The feature id for the '<em><b>Output</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MULTIPLEXER__OUTPUT = 2;
+
+	/**
+	 * The feature id for the '<em><b>Sel</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MULTIPLEXER__SEL = 3;
+
+	/**
+	 * The number of structural features of the '<em>Multiplexer</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MULTIPLEXER_FEATURE_COUNT = 4;
+
+	/**
+	 * The meta object id for the '{@link multiplexormodel.multiplexador.impl.OutputImpl <em>Output</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see multiplexormodel.multiplexador.impl.OutputImpl
+	 * @see multiplexormodel.multiplexador.impl.MultiplexadorPackageImpl#getOutput()
+	 * @generated
+	 */
+	int OUTPUT = 2;
+
+	/**
+	 * The feature id for the '<em><b>Output</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OUTPUT__OUTPUT = 0;
+
+	/**
+	 * The feature id for the '<em><b>Value</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OUTPUT__VALUE = 1;
+
+	/**
+	 * The number of structural features of the '<em>Output</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OUTPUT_FEATURE_COUNT = 2;
+
+	/**
+	 * The meta object id for the '{@link multiplexormodel.multiplexador.impl.SeletorImpl <em>Seletor</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see multiplexormodel.multiplexador.impl.SeletorImpl
+	 * @see multiplexormodel.multiplexador.impl.MultiplexadorPackageImpl#getSeletor()
+	 * @generated
+	 */
+	int SELETOR = 3;
+
+	/**
+	 * The feature id for the '<em><b>Sel</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SELETOR__SEL = 0;
+
+	/**
+	 * The feature id for the '<em><b>Value</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SELETOR__VALUE = 1;
+
+	/**
+	 * The number of structural features of the '<em>Seletor</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SELETOR_FEATURE_COUNT = 2;
+
+
+	/**
+	 * Returns the meta object for class '{@link multiplexormodel.multiplexador.Input <em>Input</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Input</em>'.
+	 * @see multiplexormodel.multiplexador.Input
+	 * @generated
+	 */
+	EClass getInput();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link multiplexormodel.multiplexador.Input#getInputs <em>Inputs</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Inputs</em>'.
+	 * @see multiplexormodel.multiplexador.Input#getInputs()
+	 * @see #getInput()
+	 * @generated
+	 */
+	EReference getInput_Inputs();
+
+	/**
+	 * Returns the meta object for the attribute '{@link multiplexormodel.multiplexador.Input#getValue <em>Value</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Value</em>'.
+	 * @see multiplexormodel.multiplexador.Input#getValue()
+	 * @see #getInput()
+	 * @generated
+	 */
+	EAttribute getInput_Value();
+
+	/**
+	 * Returns the meta object for class '{@link multiplexormodel.multiplexador.Multiplexer <em>Multiplexer</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Multiplexer</em>'.
+	 * @see multiplexormodel.multiplexador.Multiplexer
+	 * @generated
+	 */
+	EClass getMultiplexer();
+
+	/**
+	 * Returns the meta object for the attribute '{@link multiplexormodel.multiplexador.Multiplexer#getNumInputs <em>Num Inputs</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Num Inputs</em>'.
+	 * @see multiplexormodel.multiplexador.Multiplexer#getNumInputs()
+	 * @see #getMultiplexer()
+	 * @generated
+	 */
+	EAttribute getMultiplexer_NumInputs();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link multiplexormodel.multiplexador.Multiplexer#getInputs <em>Inputs</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Inputs</em>'.
+	 * @see multiplexormodel.multiplexador.Multiplexer#getInputs()
+	 * @see #getMultiplexer()
+	 * @generated
+	 */
+	EReference getMultiplexer_Inputs();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link multiplexormodel.multiplexador.Multiplexer#getOutput <em>Output</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Output</em>'.
+	 * @see multiplexormodel.multiplexador.Multiplexer#getOutput()
+	 * @see #getMultiplexer()
+	 * @generated
+	 */
+	EReference getMultiplexer_Output();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link multiplexormodel.multiplexador.Multiplexer#getSel <em>Sel</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Sel</em>'.
+	 * @see multiplexormodel.multiplexador.Multiplexer#getSel()
+	 * @see #getMultiplexer()
+	 * @generated
+	 */
+	EReference getMultiplexer_Sel();
+
+	/**
+	 * Returns the meta object for class '{@link multiplexormodel.multiplexador.Output <em>Output</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Output</em>'.
+	 * @see multiplexormodel.multiplexador.Output
+	 * @generated
+	 */
+	EClass getOutput();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link multiplexormodel.multiplexador.Output#getOutput <em>Output</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Output</em>'.
+	 * @see multiplexormodel.multiplexador.Output#getOutput()
+	 * @see #getOutput()
+	 * @generated
+	 */
+	EReference getOutput_Output();
+
+	/**
+	 * Returns the meta object for the attribute '{@link multiplexormodel.multiplexador.Output#getValue <em>Value</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Value</em>'.
+	 * @see multiplexormodel.multiplexador.Output#getValue()
+	 * @see #getOutput()
+	 * @generated
+	 */
+	EAttribute getOutput_Value();
+
+	/**
+	 * Returns the meta object for class '{@link multiplexormodel.multiplexador.Seletor <em>Seletor</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Seletor</em>'.
+	 * @see multiplexormodel.multiplexador.Seletor
+	 * @generated
+	 */
+	EClass getSeletor();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link multiplexormodel.multiplexador.Seletor#getSel <em>Sel</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Sel</em>'.
+	 * @see multiplexormodel.multiplexador.Seletor#getSel()
+	 * @see #getSeletor()
+	 * @generated
+	 */
+	EReference getSeletor_Sel();
+
+	/**
+	 * Returns the meta object for the attribute '{@link multiplexormodel.multiplexador.Seletor#getValue <em>Value</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Value</em>'.
+	 * @see multiplexormodel.multiplexador.Seletor#getValue()
+	 * @see #getSeletor()
+	 * @generated
+	 */
+	EAttribute getSeletor_Value();
+
+	/**
+	 * Returns the factory that creates the instances of the model.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the factory that creates the instances of the model.
+	 * @generated
+	 */
+	MultiplexadorFactory getMultiplexadorFactory();
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * Defines literals for the meta objects that represent
+	 * <ul>
+	 *   <li>each class,</li>
+	 *   <li>each feature of each class,</li>
+	 *   <li>each enum,</li>
+	 *   <li>and each data type</li>
+	 * </ul>
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	interface Literals {
+		/**
+		 * The meta object literal for the '{@link multiplexormodel.multiplexador.impl.InputImpl <em>Input</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see multiplexormodel.multiplexador.impl.InputImpl
+		 * @see multiplexormodel.multiplexador.impl.MultiplexadorPackageImpl#getInput()
+		 * @generated
+		 */
+		EClass INPUT = eINSTANCE.getInput();
+
+		/**
+		 * The meta object literal for the '<em><b>Inputs</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference INPUT__INPUTS = eINSTANCE.getInput_Inputs();
+
+		/**
+		 * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute INPUT__VALUE = eINSTANCE.getInput_Value();
+
+		/**
+		 * The meta object literal for the '{@link multiplexormodel.multiplexador.impl.MultiplexerImpl <em>Multiplexer</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see multiplexormodel.multiplexador.impl.MultiplexerImpl
+		 * @see multiplexormodel.multiplexador.impl.MultiplexadorPackageImpl#getMultiplexer()
+		 * @generated
+		 */
+		EClass MULTIPLEXER = eINSTANCE.getMultiplexer();
+
+		/**
+		 * The meta object literal for the '<em><b>Num Inputs</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute MULTIPLEXER__NUM_INPUTS = eINSTANCE.getMultiplexer_NumInputs();
+
+		/**
+		 * The meta object literal for the '<em><b>Inputs</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference MULTIPLEXER__INPUTS = eINSTANCE.getMultiplexer_Inputs();
+
+		/**
+		 * The meta object literal for the '<em><b>Output</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference MULTIPLEXER__OUTPUT = eINSTANCE.getMultiplexer_Output();
+
+		/**
+		 * The meta object literal for the '<em><b>Sel</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference MULTIPLEXER__SEL = eINSTANCE.getMultiplexer_Sel();
+
+		/**
+		 * The meta object literal for the '{@link multiplexormodel.multiplexador.impl.OutputImpl <em>Output</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see multiplexormodel.multiplexador.impl.OutputImpl
+		 * @see multiplexormodel.multiplexador.impl.MultiplexadorPackageImpl#getOutput()
+		 * @generated
+		 */
+		EClass OUTPUT = eINSTANCE.getOutput();
+
+		/**
+		 * The meta object literal for the '<em><b>Output</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference OUTPUT__OUTPUT = eINSTANCE.getOutput_Output();
+
+		/**
+		 * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute OUTPUT__VALUE = eINSTANCE.getOutput_Value();
+
+		/**
+		 * The meta object literal for the '{@link multiplexormodel.multiplexador.impl.SeletorImpl <em>Seletor</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see multiplexormodel.multiplexador.impl.SeletorImpl
+		 * @see multiplexormodel.multiplexador.impl.MultiplexadorPackageImpl#getSeletor()
+		 * @generated
+		 */
+		EClass SELETOR = eINSTANCE.getSeletor();
+
+		/**
+		 * The meta object literal for the '<em><b>Sel</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference SELETOR__SEL = eINSTANCE.getSeletor_Sel();
+
+		/**
+		 * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute SELETOR__VALUE = eINSTANCE.getSeletor_Value();
+
+	}
+
+} //MultiplexadorPackage

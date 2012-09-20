@@ -1,0 +1,300 @@
+/**
+ * <copyright>
+ * </copyright>
+ *
+ * $Id$
+ */
+package pml.impl;
+
+import java.util.Collection;
+
+import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
+
+import org.eclipse.emf.common.util.EList;
+
+import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
+
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.impl.EObjectImpl;
+
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.InternalEList;
+
+import pml.Behavior;
+import pml.Input;
+import pml.Memory;
+import pml.Output;
+import pml.PmlPackage;
+
+/**
+ * <!-- begin-user-doc -->
+ * An implementation of the model object '<em><b>Memory</b></em>'.
+ * <!-- end-user-doc -->
+ * <p>
+ * The following features are implemented:
+ * <ul>
+ *   <li>{@link pml.impl.MemoryImpl#getBehaviorsMemory <em>Behaviors Memory</em>}</li>
+ *   <li>{@link pml.impl.MemoryImpl#getInputsMemory <em>Inputs Memory</em>}</li>
+ *   <li>{@link pml.impl.MemoryImpl#getOutputsMemory <em>Outputs Memory</em>}</li>
+ *   <li>{@link pml.impl.MemoryImpl#getName <em>Name</em>}</li>
+ * </ul>
+ * </p>
+ *
+ * @generated
+ */
+public class MemoryImpl extends EObjectImpl implements Memory {
+	/**
+	 * The cached value of the '{@link #getBehaviorsMemory() <em>Behaviors Memory</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getBehaviorsMemory()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Behavior> behaviorsMemory;
+
+	/**
+	 * The cached value of the '{@link #getInputsMemory() <em>Inputs Memory</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getInputsMemory()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Input> inputsMemory;
+
+	/**
+	 * The cached value of the '{@link #getOutputsMemory() <em>Outputs Memory</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getOutputsMemory()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Output> outputsMemory;
+
+	/**
+	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getName()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String NAME_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getName()
+	 * @generated
+	 * @ordered
+	 */
+	protected String name = NAME_EDEFAULT;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected MemoryImpl() {
+		super();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	protected EClass eStaticClass() {
+		return PmlPackage.Literals.MEMORY;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<Behavior> getBehaviorsMemory() {
+		if (behaviorsMemory == null) {
+			behaviorsMemory = new EObjectContainmentEList<Behavior>(Behavior.class, this, PmlPackage.MEMORY__BEHAVIORS_MEMORY);
+		}
+		return behaviorsMemory;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<Input> getInputsMemory() {
+		if (inputsMemory == null) {
+			inputsMemory = new EObjectContainmentEList<Input>(Input.class, this, PmlPackage.MEMORY__INPUTS_MEMORY);
+		}
+		return inputsMemory;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<Output> getOutputsMemory() {
+		if (outputsMemory == null) {
+			outputsMemory = new EObjectContainmentEList<Output>(Output.class, this, PmlPackage.MEMORY__OUTPUTS_MEMORY);
+		}
+		return outputsMemory;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getName() {
+		return name;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setName(String newName) {
+		String oldName = name;
+		name = newName;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, PmlPackage.MEMORY__NAME, oldName, name));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case PmlPackage.MEMORY__BEHAVIORS_MEMORY:
+				return ((InternalEList<?>)getBehaviorsMemory()).basicRemove(otherEnd, msgs);
+			case PmlPackage.MEMORY__INPUTS_MEMORY:
+				return ((InternalEList<?>)getInputsMemory()).basicRemove(otherEnd, msgs);
+			case PmlPackage.MEMORY__OUTPUTS_MEMORY:
+				return ((InternalEList<?>)getOutputsMemory()).basicRemove(otherEnd, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object eGet(int featureID, boolean resolve, boolean coreType) {
+		switch (featureID) {
+			case PmlPackage.MEMORY__BEHAVIORS_MEMORY:
+				return getBehaviorsMemory();
+			case PmlPackage.MEMORY__INPUTS_MEMORY:
+				return getInputsMemory();
+			case PmlPackage.MEMORY__OUTPUTS_MEMORY:
+				return getOutputsMemory();
+			case PmlPackage.MEMORY__NAME:
+				return getName();
+		}
+		return super.eGet(featureID, resolve, coreType);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	@Override
+	public void eSet(int featureID, Object newValue) {
+		switch (featureID) {
+			case PmlPackage.MEMORY__BEHAVIORS_MEMORY:
+				getBehaviorsMemory().clear();
+				getBehaviorsMemory().addAll((Collection<? extends Behavior>)newValue);
+				return;
+			case PmlPackage.MEMORY__INPUTS_MEMORY:
+				getInputsMemory().clear();
+				getInputsMemory().addAll((Collection<? extends Input>)newValue);
+				return;
+			case PmlPackage.MEMORY__OUTPUTS_MEMORY:
+				getOutputsMemory().clear();
+				getOutputsMemory().addAll((Collection<? extends Output>)newValue);
+				return;
+			case PmlPackage.MEMORY__NAME:
+				setName((String)newValue);
+				return;
+		}
+		super.eSet(featureID, newValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void eUnset(int featureID) {
+		switch (featureID) {
+			case PmlPackage.MEMORY__BEHAVIORS_MEMORY:
+				getBehaviorsMemory().clear();
+				return;
+			case PmlPackage.MEMORY__INPUTS_MEMORY:
+				getInputsMemory().clear();
+				return;
+			case PmlPackage.MEMORY__OUTPUTS_MEMORY:
+				getOutputsMemory().clear();
+				return;
+			case PmlPackage.MEMORY__NAME:
+				setName(NAME_EDEFAULT);
+				return;
+		}
+		super.eUnset(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public boolean eIsSet(int featureID) {
+		switch (featureID) {
+			case PmlPackage.MEMORY__BEHAVIORS_MEMORY:
+				return behaviorsMemory != null && !behaviorsMemory.isEmpty();
+			case PmlPackage.MEMORY__INPUTS_MEMORY:
+				return inputsMemory != null && !inputsMemory.isEmpty();
+			case PmlPackage.MEMORY__OUTPUTS_MEMORY:
+				return outputsMemory != null && !outputsMemory.isEmpty();
+			case PmlPackage.MEMORY__NAME:
+				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+		}
+		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String toString() {
+		if (eIsProxy()) return super.toString();
+
+		StringBuffer result = new StringBuffer(super.toString());
+		result.append(" (name: ");
+		result.append(name);
+		result.append(')');
+		return result.toString();
+	}
+
+} //MemoryImpl

@@ -1,0 +1,37 @@
+[comment encoding = UTF-8 /]
+[module ula_h('http://pml/0.1')]
+
+
+[template public generateElement(c : ULA)]
+
+[file (c.name.concat('.h'), false, 'UTF-8')]
+	#ifndef [c.name.concat('_h')/]
+	#define  [c.name.concat('_h')/]
+	#include "systemc.h"
+	
+	SC_MODULE([c.name/]){
+	 	[for (p : Input | c.inputsULA)]
+	        sc_in<[p.type/]<WORD_SIZE> > [if (p.length.abs()>=0)] *[p.name/];[/if]  
+                                         [if (p.length.abs()=0)] [p.name/];[/if]
+ 
+	        
+	    [/for]
+        [for (p : Output | c.outputsULA)]
+	        sc_out<[p.type/]<WORD_SIZE> > [if (p.length.abs()>=0)] *[p.name/];[/if]  
+                                         [if (p.length.abs()=0)] [p.name/];[/if]
+ 
+	        
+	    [/for]
+        [for (o : Behavior | c.behavirosULA)]
+        	[o.typeBehavior.toString()/] [o.name.toLower()/](); 
+        [/for]
+        
+		typedef enum UlaOperation_{
+		 
+		}UlaOperation;
+       
+	};
+	#endif
+	
+	[/file]
+[/template]

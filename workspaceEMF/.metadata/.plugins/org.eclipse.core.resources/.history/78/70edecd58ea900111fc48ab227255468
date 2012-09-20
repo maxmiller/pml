@@ -1,0 +1,15 @@
+[comment encoding = UTF-8 /]
+[module generate('/Teste/model/Teste.ecore')]
+
+
+[file (c.name.concat('.h'), false, 'UTF-8')]
+
+
+Lista de contatos:
+
+[for (c : Contato | a.EReference0)]
+	Nome do contato: [c.nome/]
+[/for]
+
+
+[/file]

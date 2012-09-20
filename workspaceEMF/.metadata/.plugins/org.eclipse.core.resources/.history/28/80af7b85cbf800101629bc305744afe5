@@ -1,0 +1,71 @@
+/**
+ * <copyright>
+ * </copyright>
+ *
+ * $Id$
+ */
+package multiplexormodel.multiplexador;
+
+import org.eclipse.emf.ecore.EObject;
+
+/**
+ * <!-- begin-user-doc -->
+ * A representation of the model object '<em><b>Multiplexer</b></em>'.
+ * <!-- end-user-doc -->
+ *
+ * <p>
+ * The following features are supported:
+ * <ul>
+ *   <li>{@link multiplexormodel.multiplexador.Multiplexer#getNumInputs <em>Num Inputs</em>}</li>
+ * </ul>
+ * </p>
+ *
+ * @see multiplexormodel.multiplexador.MultiplexadorPackage#getMultiplexer()
+ * @model
+ * @generated
+ */
+public interface Multiplexer extends EObject {
+	/**
+	 * Returns the value of the '<em><b>Num Inputs</b></em>' attribute.
+	 * The default value is <code>"0"</code>.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Num Inputs</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Num Inputs</em>' attribute.
+	 * @see #setNumInputs(int)
+	 * @see multiplexormodel.multiplexador.MultiplexadorPackage#getMultiplexer_NumInputs()
+	 * @model default="0"
+	 * @generated
+	 */
+	int getNumInputs();
+
+	/**
+	 * Sets the value of the '{@link multiplexormodel.multiplexador.Multiplexer#getNumInputs <em>Num Inputs</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Num Inputs</em>' attribute.
+	 * @see #getNumInputs()
+	 * @generated
+	 */
+	void setNumInputs(int value);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model
+	 * @generated
+	 */
+	void multiplexerBehavior();
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model
+	 * @generated
+	 */
+	void Multiplexer(int numInputs);
+
+} // Multiplexer

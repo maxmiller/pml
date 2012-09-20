@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<notation:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmi:id="_kr7OkPpUEeCJYZGQf3VSaw" type="EcoreTools" measurementUnit="Pixel">
+  <children xmi:type="notation:Node" xmi:id="_kr-48PpUEeCJYZGQf3VSaw" type="1002">
+    <children xmi:type="notation:Node" xmi:id="_kr_gAPpUEeCJYZGQf3VSaw" type="4006"/>
+    <children xmi:type="notation:Node" xmi:id="_kr_gAfpUEeCJYZGQf3VSaw" type="5003">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_kr_gAvpUEeCJYZGQf3VSaw"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_kr_gA_pUEeCJYZGQf3VSaw"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_kr_gBPpUEeCJYZGQf3VSaw"/>
+    </children>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="_kr-48fpUEeCJYZGQf3VSaw" fontColor="4210752" fontName="Lucida Grande" fontHeight="10" fillColor="13150135" lineColor="4210752"/>
+    <styles xmi:type="notation:MultiDiagramLinkStyle" xmi:id="_kr-48vpUEeCJYZGQf3VSaw"/>
+    <element xmi:type="ecore:EPackage" href="processor.ecore#//multiplexador"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_kr-48_pUEeCJYZGQf3VSaw"/>
+  </children>
+  <styles xmi:type="notation:DiagramStyle" xmi:id="_kr7OkfpUEeCJYZGQf3VSaw"/>
+  <element xmi:type="ecore:EPackage" href="processor.ecore#/"/>
+</notation:Diagram>

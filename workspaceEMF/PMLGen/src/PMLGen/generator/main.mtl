@@ -1,0 +1,17 @@
+[comment encoding = UTF-8 /]
+[module main('http://pml/0.1')/]
+[import PMLGen::generator::multiplexor_h/]
+[import PMLGen::generator::demultiplexor_h/]
+
+
+[template public mainMultiplexor(aMultiplexor : Multiplexor)]
+	
+	[comment @main /]
+	[aMultiplexor.generateElement()/]
+[/template]
+
+[template public mainDeMultiplexo(aDemultiplexor : Demultiplexor)]
+	
+	[comment @main /]
+	[aDemultiplexor.generateElement()/]
+[/template]

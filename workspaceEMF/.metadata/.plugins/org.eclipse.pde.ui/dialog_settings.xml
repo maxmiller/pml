@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<item value="true" key="initLaunch"/>
+	<section name="org.eclipse.pde.ui.dialogs.PluginSelectionDialog">
+		<item value="true" key="ShowStatusLine"/>
+		<item value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&#x0A;&lt;History/&gt;" key="History"/>
+		<section name="DialogBoundsSettings">
+			<item value="600" key="DIALOG_WIDTH"/>
+			<item value="54" key="DIALOG_Y_ORIGIN"/>
+			<item value="500" key="DIALOG_HEIGHT"/>
+			<item value="340" key="DIALOG_X_ORIGIN"/>
+			<item value="1|Lucida Grande|11.0|0|COCOA|1|LucidaGrande" key="DIALOG_FONT_NAME"/>
+		</section>
+	</section>
+	<section name="ProductExportWizard">
+	</section>
+	<section name="quick_assist_proposal_size">
+	</section>
+	<section name="editBundleContainerWizard">
+	</section>
+	<section name="PluginExportWizard">
+		<item value="true" key="exportUpdate"/>
+		<item value="false" key="saveAsAnt"/>
+		<item value="" key="alias"/>
+		<item value="Include source in exported plug-ins" key="exportSourceFormat"/>
+		<item value="/Users/maxmiller/Dropbox/Mestrado/workspaceEMF/.metadata/.plugins/org.eclipse.pde.core/install/" key="installDestination1"/>
+		<item value="true" key="qualifier"/>
+		<item value="/Users/maxmiller/Dropbox/Mestrado/workspaceEMF/.metadata/.plugins/org.eclipse.pde.core/install/" key="installDestination0"/>
+		<item value="/Users/max/Dropbox/Mestrado/workspaceEMF.zip" key="zipFileName0"/>
+		<item value="" key="password"/>
+		<item value="/Users/max/Dropbox/Mestrado/workspaceEMF.zip" key="zipFileName1"/>
+		<item value="/Users/max/Dropbox/Mestrado/workspaceEMF/:Users:max:Dropbox:Mestrado:workspaceEMF.zip" key="zipFileName2"/>
+		<item value="" key="keypass"/>
+		<item value="true" key="exportSource"/>
+		<item value="" key="keystore"/>
+		<item value="true" key="useWorkspaceCompiledClasses"/>
+		<item value="2" key="exportType"/>
+		<item value="false" key="signJAR"/>
+		<item value="/Users/max/Dropbox/Mestrado/workspaceEMF" key="destination2"/>
+		<item value="/Users/max/Dropbox/Mestrado/plugin" key="destination1"/>
+		<item value="/Users/max/Dropbox/Mestrado/plugin" key="destination0"/>
+		<item value="true" key="allowBinaryCycles"/>
+		<item value="201110171454" key="qualifierName"/>
+	</section>
+	<section name="pde_compiler_errorwarnings_block">
+		<item value="false" key="3"/>
+		<item value="false" key="2"/>
+		<item value="true" key="1"/>
+		<item value="true" key="0"/>
+		<item value="false" key="4"/>
+	</section>
+	<section name="FeatureExportWizard">
+		<item value="true" key="exportUpdate"/>
+		<item value="false" key="saveAsAnt"/>
+		<item value="" key="alias"/>
+		<item value="Generate source bundles" key="exportSourceFormat"/>
+		<item value="" key="category_file"/>
+		<item value="true" key="p2metadata"/>
+		<item value="false" key="qualifier"/>
+		<item value="true" key="create_categories"/>
+		<item value="/Users/maxmiller/Documents/workspaceEMF.zip" key="zipFileName0"/>
+		<item value="" key="password"/>
+		<item value="/Users/maxmiller/Documents/:Users:maxmiller:Dropbox:Mestrado:workspaceEMF.zip" key="zipFileName1"/>
+		<item value="false" key="jnlp"/>
+		<item value="" key="keypass"/>
+		<item value="false" key="exportSource"/>
+		<item value="" key="keystore"/>
+		<item value="false" key="useWorkspaceCompiledClasses"/>
+		<item value="" key="siteURL"/>
+		<item value="2" key="exportType"/>
+		<item value="false" key="signJAR"/>
+		<item value="" key="jre"/>
+		<item value="201112151757" key="qualifierName"/>
+		<item value="true" key="allowBinaryCycles"/>
+	</section>
+</section>

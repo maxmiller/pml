@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+ <copyright>
+ </copyright>
+
+ $Id$
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <package
+            uri="http://lasic.ufrn.br/multiplexor/1.0"
+            class="multiplexormodel.multiplexador.MultiplexadorPackage"
+            genModel="src/multiplexor.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.extension_parser">
+      <parser
+            type="multiplexador"
+            class="multiplexormodel.multiplexador.util.MultiplexadorResourceFactoryImpl"/>
+   </extension>
+
+</plugin>

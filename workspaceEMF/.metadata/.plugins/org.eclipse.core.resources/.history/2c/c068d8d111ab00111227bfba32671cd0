@@ -1,0 +1,109 @@
+/**
+ * <copyright>
+ * </copyright>
+ *
+ * $Id$
+ */
+
+
+import org.eclipse.emf.common.util.EList;
+
+import org.eclipse.emf.ecore.EObject;
+
+import pml.Behavior;
+
+/**
+ * <!-- begin-user-doc -->
+ * A representation of the model object '<em><b>Register</b></em>'.
+ * <!-- end-user-doc -->
+ *
+ * <p>
+ * The following features are supported:
+ * <ul>
+ *   <li>{@link pml.Register#getBehaviorRegister <em>Behavior Register</em>}</li>
+ *   <li>{@link pml.Register#getOutputs <em>Outputs</em>}</li>
+ *   <li>{@link pml.Register#getInputsRegister <em>Inputs Register</em>}</li>
+ *   <li>{@link pml.Register#getName <em>Name</em>}</li>
+ * </ul>
+ * </p>
+ *
+ * @see pml.PmlPackage#getRegister()
+ * @model
+ * @generated
+ */
+public interface Register extends EObject {
+	/**
+	 * Returns the value of the '<em><b>Behavior Register</b></em>' containment reference list.
+	 * The list contents are of type {@link pml.Behavior}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Behavior Register</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Behavior Register</em>' containment reference list.
+	 * @see pml.PmlPackage#getRegister_BehaviorRegister()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<Behavior> getBehaviorRegister();
+
+	/**
+	 * Returns the value of the '<em><b>Outputs</b></em>' containment reference list.
+	 * The list contents are of type {@link pml.Output}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Outputs</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Outputs</em>' containment reference list.
+	 * @see pml.PmlPackage#getRegister_Outputs()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<Output> getOutputs();
+
+	/**
+	 * Returns the value of the '<em><b>Inputs Register</b></em>' containment reference list.
+	 * The list contents are of type {@link pml.Input}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Inputs Register</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Inputs Register</em>' containment reference list.
+	 * @see pml.PmlPackage#getRegister_InputsRegister()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<Input> getInputsRegister();
+
+	/**
+	 * Returns the value of the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Name</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Name</em>' attribute.
+	 * @see #setName(String)
+	 * @see pml.PmlPackage#getRegister_Name()
+	 * @model
+	 * @generated
+	 */
+	String getName();
+
+	/**
+	 * Sets the value of the '{@link pml.Register#getName <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Name</em>' attribute.
+	 * @see #getName()
+	 * @generated
+	 */
+	void setName(String value);
+
+} // Register
