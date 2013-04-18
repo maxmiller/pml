@@ -1,6 +1,7 @@
 [comment encoding = UTF-8 /]
 [module decoder_h('/PML/model/pml.ecore')]
 
+[import PMLGen::generator::pmlutil /]
 
 [template public generateElement(c : Decoder)]
 	[file (c.name.concat('_untimed.h'), false, 'UTF-8')]
@@ -9,33 +10,25 @@
 	#include "systemc.h"
 	
 	SC_MODULE([c.name/]){
-	 	[for (p : Input | c.inDecoder)]
-	        sc_in<[if (p.type.toString().equalsIgnoreCase('Int')) ]sc_int< [/if] [if (p.type.toString().equalsIgnoreCase('Bool')) ]bool< [/if] WORD_SIZE > >   [if (p.length.abs()>0)] * [/if][p.name/];  
- 	        
+		[for (p : Input | c.inDecoder)]
+	    	[forIn(p.name, p.type.toString(), p.bit, p.length) /]	    
 	    [/for]
-       
-		[for (p : Output | c.outDecoder)]
-	        sc_in<[if (p.type.toString().equalsIgnoreCase('Int')) ]sc_int< [/if] [if (p.type.toString().equalsIgnoreCase('Bool')) ]bool< [/if] WORD_SIZE > >   [if (p.length.abs()>0)] * [/if][p.name/];  
- 	    [/for]
-
-        [for (o : Behavior | c.behaviorDecoder)]
+        [for (p : Output | c.outDecoder)]
+	    	[forOut(p.name, p.type.toString(), p.bit, p.length) /]	    
+	    [/for]
+	    [for (o : Behavior | c.behaviorDecoder)]
         	[o.typeBehavior.toString().toLower()/] [o.name.toLower()/](); 
         [/for]
-        
 		SC_CTOR([c.name/]) {
-        
 			[for (o : Behavior | c.behaviorDecoder)]
 	        	SC_METHOD([o.name.toLower()/]); 
 	        [/for]
 			[for (p : Input | c.inDecoder)]
 	        	[if(p.sensitive) ]
-				   sensitive << [p.name/];
+				   [forSensitive(p.name, p.length.abs())/]
 				[/if]
-				
 	   		[/for]
         }       
-
-
 	};
 	#endif
 	
@@ -47,35 +40,26 @@
 	#include "systemc.h"
 	
 	SC_MODULE([c.name/]){
-	 	[for (p : Input | c.inDecoder)]
-	        sc_in<[if (p.type.toString().equalsIgnoreCase('Int')) ]sc_int< [/if] [if (p.type.toString().equalsIgnoreCase('Bool')) ]bool< [/if] WORD_SIZE > >   [if (p.length.abs()>0)] * [/if][p.name/];  
- 	        
+	 		[for (p : Input | c.inDecoder)]
+	    	[forIn(p.name, p.type.toString(), p.bit, p.length) /]	    
 	    [/for]
-       
-		[for (p : Output | c.outDecoder)]
-	        sc_in<[if (p.type.toString().equalsIgnoreCase('Int')) ]sc_int< [/if] [if (p.type.toString().equalsIgnoreCase('Bool')) ]bool< [/if] WORD_SIZE > >   [if (p.length.abs()>0)] * [/if][p.name/];  
- 	    [/for]
-
-		
-
-        [for (o : Behavior | c.behaviorDecoder)]
+        [for (p : Output | c.outDecoder)]
+	    	[forOut(p.name, p.type.toString(), p.bit, p.length) /]	    
+	    [/for]
+	    [for (o : Behavior | c.behaviorDecoder)]
         	[o.typeBehavior.toString().toLower()/] [o.name.toLower()/](); 
         [/for]
         
 		SC_CTOR([c.name/]) {
-        
 			[for (o : Behavior | c.behaviorDecoder)]
 	        	SC_THREAD([o.name.toLower()/]); 
 	        [/for]
 			[for (p : Input | c.inDecoder)]
 	        	[if(p.sensitive) ]
-				   sensitive << [p.name/];
+				    [forSensitive(p.name, p.length.abs())/]
 				[/if]
-				
 	   		[/for]
         }       
-
-
 	};
 	#endif
 	

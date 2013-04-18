@@ -140,6 +140,14 @@ public class PMLAdapterFactory extends AdapterFactoryImpl {
 				return createDecoderAdapter();
 			}
 			@Override
+			public Adapter casePipelineInitialStage(PipelineInitialStage object) {
+				return createPipelineInitialStageAdapter();
+			}
+			@Override
+			public Adapter casePipelineNextStage(PipelineNextStage object) {
+				return createPipelineNextStageAdapter();
+			}
+			@Override
 			public Adapter defaultCase(EObject object) {
 				return createEObjectAdapter();
 			}
@@ -394,6 +402,34 @@ public class PMLAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createDecoderAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link br.ufrn.lasic.pml.PipelineInitialStage <em>Pipeline Initial Stage</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see br.ufrn.lasic.pml.PipelineInitialStage
+	 * @generated
+	 */
+	public Adapter createPipelineInitialStageAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link br.ufrn.lasic.pml.PipelineNextStage <em>Pipeline Next Stage</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see br.ufrn.lasic.pml.PipelineNextStage
+	 * @generated
+	 */
+	public Adapter createPipelineNextStageAdapter() {
 		return null;
 	}
 

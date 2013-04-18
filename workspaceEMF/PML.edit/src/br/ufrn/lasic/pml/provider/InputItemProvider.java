@@ -69,6 +69,7 @@ public class InputItemProvider
 			addLengthPropertyDescriptor(object);
 			addInoutPropertyDescriptor(object);
 			addSensitivePropertyDescriptor(object);
+			addBitPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -184,6 +185,28 @@ public class InputItemProvider
 	}
 
 	/**
+	 * This adds a property descriptor for the Bit feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addBitPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Input_bit_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Input_bit_feature", "_UI_Input_type"),
+				 PMLPackage.Literals.INPUT__BIT,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
 	 * This returns Input.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -224,6 +247,7 @@ public class InputItemProvider
 			case PMLPackage.INPUT__TYPE:
 			case PMLPackage.INPUT__LENGTH:
 			case PMLPackage.INPUT__SENSITIVE:
+			case PMLPackage.INPUT__BIT:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

@@ -19,8 +19,8 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ULA">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="behavirosULA" upperBound="-1"
-        eType="#//Behavior" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="behavirosULA" lowerBound="1"
+        upperBound="-1" eType="#//Behavior" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="outputsULA" lowerBound="1"
         upperBound="-1" eType="#//Output" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="inputsULA" lowerBound="2"
@@ -65,8 +65,8 @@
     <eLiterals name="Void" value="10"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Demultiplexor">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="behaviorsDemux" upperBound="-1"
-        eType="#//Behavior" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="behaviorsDemux" lowerBound="1"
+        upperBound="-1" eType="#//Behavior" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="indemux" lowerBound="1"
         eType="#//Input" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="outdemux" lowerBound="1"
@@ -76,8 +76,8 @@
         eType="#//Seletor" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Multiplexor">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="behaviormux" upperBound="-1"
-        eType="#//Behavior" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="behaviormux" lowerBound="1"
+        upperBound="-1" eType="#//Behavior" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="outmux" lowerBound="1"
         eType="#//Output" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="inmux" lowerBound="1" eType="#//Input"
@@ -87,8 +87,8 @@
         eType="#//Seletor" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ControlUnit">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="behaviorsControlUnit" upperBound="-1"
-        eType="#//Behavior" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="behaviorsControlUnit" lowerBound="1"
+        upperBound="-1" eType="#//Behavior" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="inputsControlUnit" lowerBound="1"
         upperBound="-1" eType="#//Input" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="outputsControlUnit" lowerBound="1"
@@ -122,8 +122,8 @@
         containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Memory">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="behaviorsMemory" upperBound="-1"
-        eType="#//Behavior" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="behaviorsMemory" lowerBound="1"
+        upperBound="-1" eType="#//Behavior" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="inputMemory" lowerBound="1"
         upperBound="-1" eType="#//Input" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="outputMemory" lowerBound="1"
@@ -133,12 +133,12 @@
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Register">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="behaviorRegister" upperBound="-1"
-        eType="#//Behavior" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="behaviorRegister" lowerBound="1"
+        upperBound="-1" eType="#//Behavior" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="outputRegister" lowerBound="1"
-        upperBound="-1" eType="#//Output" containment="true"/>
+        eType="#//Output" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="inputRegister" lowerBound="1"
-        upperBound="-1" eType="#//Input" containment="true"/>
+        eType="#//Input" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="length" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
   </eClassifiers>

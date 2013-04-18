@@ -38,13 +38,15 @@ public class Generator extends AbstractAcceleoGenerator {
      * @generated
      */
     public static final String MODULE_FILE_NAME = "/PMLGen/generator/main";
+    public static final String PROCESSOR_FILE_NAME = "/Users/maxmiller/github/pml/runtime-EclipseApplication/Modelagem/mips.pml";
+    public static final String FOLDER_NAME ="/Users/maxmiller/github/pml/workspaceEMF/SystemC/src/pml";
     
     /**
      * The name of the templates that are to be generated.
      *
      * @generated
      */
-    public static final String[] TEMPLATE_NAMES = { "mainMultiplexor" };
+    public static final String[] TEMPLATE_NAMES = { "mainMultiplexor","mainDemultiplexor","mainULA","mainRegister","mainProcessor","mainMemory","mainDecoder" };
     
     /**
      * The list of properties files from the launch parameters (Launch configuration).
@@ -125,8 +127,8 @@ public class Generator extends AbstractAcceleoGenerator {
            // if (args.length < 2) {
           //      System.out.println("Arguments not valid : {model, folder}.");
           //  } else {
-                URI modelURI = URI.createFileURI("/Users/maxmiller/Dropbox/Mestrado/workspaceEMF/PMLGen/src/PMLGen/generator/mips.pml");
-                File folder = new File("/Users/maxmiller/Dropbox/Mestrado/workspaceEMF/SystemC/src/pml");
+                URI modelURI = URI.createFileURI(PROCESSOR_FILE_NAME);
+                File folder = new File(FOLDER_NAME);
                 
                 List<String> arguments = new ArrayList<String>();
                 

@@ -179,6 +179,24 @@ public interface PMLFactory extends EFactory {
 	Decoder createDecoder();
 
 	/**
+	 * Returns a new object of class '<em>Pipeline Initial Stage</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Pipeline Initial Stage</em>'.
+	 * @generated
+	 */
+	PipelineInitialStage createPipelineInitialStage();
+
+	/**
+	 * Returns a new object of class '<em>Pipeline Next Stage</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Pipeline Next Stage</em>'.
+	 * @generated
+	 */
+	PipelineNextStage createPipelineNextStage();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

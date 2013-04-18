@@ -78,6 +78,8 @@ public class PMLFactoryImpl extends EFactoryImpl implements PMLFactory {
 			case PMLPackage.SELETOR: return createSeletor();
 			case PMLPackage.OPERATION: return createOperation();
 			case PMLPackage.DECODER: return createDecoder();
+			case PMLPackage.PIPELINE_INITIAL_STAGE: return createPipelineInitialStage();
+			case PMLPackage.PIPELINE_NEXT_STAGE: return createPipelineNextStage();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -285,6 +287,26 @@ public class PMLFactoryImpl extends EFactoryImpl implements PMLFactory {
 	public Decoder createDecoder() {
 		DecoderImpl decoder = new DecoderImpl();
 		return decoder;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public PipelineInitialStage createPipelineInitialStage() {
+		PipelineInitialStageImpl pipelineInitialStage = new PipelineInitialStageImpl();
+		return pipelineInitialStage;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public PipelineNextStage createPipelineNextStage() {
+		PipelineNextStageImpl pipelineNextStage = new PipelineNextStageImpl();
+		return pipelineNextStage;
 	}
 
 	/**

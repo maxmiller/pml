@@ -50,6 +50,7 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pml.ecore#//Input/length"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference pml.ecore#//Input/inout"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pml.ecore#//Input/sensitive"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pml.ecore#//Input/bit"/>
     </genClasses>
     <genClasses ecoreClass="pml.ecore#//Output">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pml.ecore#//Output/name"/>
@@ -57,6 +58,7 @@
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference pml.ecore#//Output/outin"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pml.ecore#//Output/sensitive"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pml.ecore#//Output/length"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pml.ecore#//Output/bit"/>
     </genClasses>
     <genClasses ecoreClass="pml.ecore#//Demultiplexor">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference pml.ecore#//Demultiplexor/behaviorsDemux"/>
@@ -88,6 +90,7 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference pml.ecore#//Processor/controlUnits"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pml.ecore#//Processor/name"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference pml.ecore#//Processor/decoders"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference pml.ecore#//Processor/initialStagePipeline"/>
     </genClasses>
     <genClasses ecoreClass="pml.ecore#//Memory">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference pml.ecore#//Memory/behaviorsMemory"/>
@@ -128,6 +131,7 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pml.ecore#//Seletor/name"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pml.ecore#//Seletor/type"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pml.ecore#//Seletor/lengh"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pml.ecore#//Seletor/bit"/>
     </genClasses>
     <genClasses ecoreClass="pml.ecore#//Operation">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pml.ecore#//Operation/name"/>
@@ -137,6 +141,14 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference pml.ecore#//Decoder/outDecoder"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference pml.ecore#//Decoder/inDecoder"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference pml.ecore#//Decoder/behaviorDecoder"/>
+    </genClasses>
+    <genClasses ecoreClass="pml.ecore#//PipelineInitialStage">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pml.ecore#//PipelineInitialStage/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference pml.ecore#//PipelineInitialStage/nextStatePipeline"/>
+    </genClasses>
+    <genClasses ecoreClass="pml.ecore#//PipelineNextStage">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference pml.ecore#//PipelineNextStage/pipelineNext"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pml.ecore#//PipelineNextStage/name"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

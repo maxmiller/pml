@@ -26,6 +26,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link br.ufrn.lasic.pml.Processor#getControlUnits <em>Control Units</em>}</li>
  *   <li>{@link br.ufrn.lasic.pml.Processor#getName <em>Name</em>}</li>
  *   <li>{@link br.ufrn.lasic.pml.Processor#getDecoders <em>Decoders</em>}</li>
+ *   <li>{@link br.ufrn.lasic.pml.Processor#getInitialStagePipeline <em>Initial Stage Pipeline</em>}</li>
  * </ul>
  * </p>
  *
@@ -171,5 +172,31 @@ public interface Processor extends EObject {
 	 * @generated
 	 */
 	EList<Decoder> getDecoders();
+
+	/**
+	 * Returns the value of the '<em><b>Initial Stage Pipeline</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Initial Stage Pipeline</em>' containment reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Initial Stage Pipeline</em>' containment reference.
+	 * @see #setInitialStagePipeline(PipelineInitialStage)
+	 * @see br.ufrn.lasic.pml.PMLPackage#getProcessor_InitialStagePipeline()
+	 * @model containment="true"
+	 * @generated
+	 */
+	PipelineInitialStage getInitialStagePipeline();
+
+	/**
+	 * Sets the value of the '{@link br.ufrn.lasic.pml.Processor#getInitialStagePipeline <em>Initial Stage Pipeline</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Initial Stage Pipeline</em>' containment reference.
+	 * @see #getInitialStagePipeline()
+	 * @generated
+	 */
+	void setInitialStagePipeline(PipelineInitialStage value);
 
 } // Processor

@@ -1,89 +1,63 @@
 [comment encoding = UTF-8 /]
-[module demultiplexor_h('/PML/model/pml.ecore')]
+[module processor_h('/PML/model/pml.ecore')]
 
 
-[template public generateElement(c : Demultiplexor)]
+[template public generateElement(c : Processor)]
 	[file (c.name.concat('_untimed.h'), false, 'UTF-8')]
 	#ifndef [c.name.concat('_h')/]
 	#define  [c.name.concat('_h')/]
 	#include "systemc.h"
 	
 	SC_MODULE([c.name/]){
-	 	[for (p : Input | c.indemux)]
-	        sc_in<[if (p.type.toString().equalsIgnoreCase('Int')) ]sc_int< [/if] [if (p.type.toString().equalsIgnoreCase('Bool')) ]bool< [/if] WORD_SIZE > >   [if (p.length.abs()>0)] * [/if][p.name/];  
- 	        
+
+		sc_in_clk clock;
+		
+	 	[for (p : ControlUnit | c.controlUnits)]
+	       [p.name/] *[p.name.toLower()/]_;
 	    [/for]
-       
-		[for (p : Output | c.outdemux)]
-	        sc_in<[if (p.type.toString().equalsIgnoreCase('Int')) ]sc_int< [/if] [if (p.type.toString().equalsIgnoreCase('Bool')) ]bool< [/if] WORD_SIZE > >   [if (p.length.abs()>0)] * [/if][p.name/];  
- 	    [/for]
-
-		[for (p : Seletor | c.seletordemux)]
-	        sc_in<[if (p.type.toString().equalsIgnoreCase('Int')) ]sc_int< [/if] [if (p.type.toString().equalsIgnoreCase('Bool')) ]bool< [/if] WORD_SIZE > >   [p.name/];  
- 	    [/for]
-
-        [for (o : Behavior | c.behaviorsDemux)]
-        	[o.typeBehavior.toString().toLower()/] [o.name.toLower()/](); 
-        [/for]
-        
+	 	[for (p : ULA | c.ulas)]
+	       [p.name/] *[p.name.toLower()/]_;
+	    [/for]
+	 	[for (p : Demultiplexor | c.demux)]
+	       [p.name/] *[p.name.toLower()/]_;
+	    [/for]
+	 	[for (p : Decoder | c.decoders)]
+	       [p.name/] *[p.name.toLower()/]_;
+	    [/for]
+	 	[for (p : Multiplexor | c.mux)]
+	       [p.name/] *[p.name.toLower()/]_;
+	    [/for]
+	 	[for (p : Memory | c.memories)]
+	       [p.name/] *[p.name.toLower()/]_;
+	    [/for]
+	 	[for (p : Register | c.registers)]
+	       [p.name/] *[p.name.toLower()/]_;
+	    [/for]
 		SC_CTOR([c.name/]) {
-        
-			[for (o : Behavior | c.behaviorsDemux)]
-	        	SC_METHOD([o.name.toLower()/]); 
-	        [/for]
-			[for (p : Input | c.indemux)]
-	        	[if(p.sensitive) ]
-				   sensitive << [p.name/];
-				[/if]
-				
-	   		[/for]
+		[for (p : ControlUnit | c.controlUnits)]
+	       [p.name.toLower()/]_ = new  [p.name/]();
+	    [/for]
+	 	[for (p : ULA | c.ulas)]
+	        [p.name.toLower()/]_ = new  [p.name/]();
+	    [/for]
+	 	[for (p : Demultiplexor | c.demux)]
+	        [p.name.toLower()/]_ = new  [p.name/]();
+	    [/for]
+	 	[for (p : Decoder | c.decoders)]
+	        [p.name.toLower()/]_ = new  [p.name/]();
+	    [/for]
+	 	[for (p : Multiplexor | c.mux)]
+	        [p.name.toLower()/]_ = new  [p.name/]();
+	    [/for]
+	 	[for (p : Memory | c.memories)]
+	        [p.name.toLower()/]_ = new  [p.name/]();
+	    [/for]
+	 	[for (p : Register | c.registers)]
+	        [p.name.toLower()/]_ = new  [p.name/]();
+	    [/for]
         }       
-
-
 	};
 	#endif
-	
-	[/file]
+[/file]
 
-[file (c.name.concat('_untimed.h'), false, 'UTF-8')]
-	#ifndef [c.name.concat('_h')/]
-	#define  [c.name.concat('_h')/]
-	#include "systemc.h"
-	
-	SC_MODULE([c.name/]){
-	 	[for (p : Input | c.indemux)]
-	        sc_in<[if (p.type.toString().equalsIgnoreCase('Int')) ]sc_int< [/if] [if (p.type.toString().equalsIgnoreCase('Bool')) ]bool< [/if] WORD_SIZE > >   [if (p.length.abs()>0)] * [/if][p.name/];  
- 	        
-	    [/for]
-       
-		[for (p : Output | c.outdemux)]
-	        sc_in<[if (p.type.toString().equalsIgnoreCase('Int')) ]sc_int< [/if] [if (p.type.toString().equalsIgnoreCase('Bool')) ]bool< [/if] WORD_SIZE > >   [if (p.length.abs()>0)] * [/if][p.name/];  
- 	    [/for]
-
-		[for (p : Seletor | c.seletordemux)]
-	        sc_in<[if (p.type.toString().equalsIgnoreCase('Int')) ]sc_int< [/if] [if (p.type.toString().equalsIgnoreCase('Bool')) ]bool< [/if] WORD_SIZE > >   [p.name/];  
- 	    [/for]
-
-        [for (o : Behavior | c.behaviorsDemux)]
-        	[o.typeBehavior.toString().toLower()/] [o.name.toLower()/](); 
-        [/for]
-        
-		SC_CTOR([c.name/]) {
-        
-			[for (o : Behavior | c.behaviorsDemux)]
-	        	SC_THREAD([o.name.toLower()/]); 
-	        [/for]
-			[for (p : Input | c.indemux)]
-	        	[if(p.sensitive) ]
-				   sensitive << [p.name/];
-				[/if]
-				
-	   		[/for]
-        }       
-
-
-	};
-	#endif
-	
-	[/file]
 [/template]

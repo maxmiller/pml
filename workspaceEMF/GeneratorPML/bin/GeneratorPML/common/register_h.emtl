@@ -119,7 +119,8 @@
           <loopVariable name="p">
             <eType xsi:type="ecore:EClass" href="http://pml/0.1#//Input"/>
           </loopVariable>
-          <iterSet xsi:type="ocl.ecore:PropertyCallExp" eType="/11/OrderedSet(Input)">
+          <iterSet xsi:type="ocl.ecore:PropertyCallExp">
+            <eType xsi:type="ecore:EClass" href="http://pml/0.1#//Input"/>
             <source xsi:type="ocl.ecore:VariableExp" name="c" referredVariable="/0/generateElement/c">
               <eType xsi:type="ecore:EClass" href="http://pml/0.1#//Register"/>
             </source>
@@ -199,7 +200,8 @@
           <loopVariable name="p">
             <eType xsi:type="ecore:EClass" href="http://pml/0.1#//Output"/>
           </loopVariable>
-          <iterSet xsi:type="ocl.ecore:PropertyCallExp" eType="/11/OrderedSet(Output)">
+          <iterSet xsi:type="ocl.ecore:PropertyCallExp">
+            <eType xsi:type="ecore:EClass" href="http://pml/0.1#//Output"/>
             <source xsi:type="ocl.ecore:VariableExp" name="c" referredVariable="/0/generateElement/c">
               <eType xsi:type="ecore:EClass" href="http://pml/0.1#//Register"/>
             </source>
@@ -234,7 +236,7 @@
           <loopVariable name="o">
             <eType xsi:type="ecore:EClass" href="http://pml/0.1#//Behavior"/>
           </loopVariable>
-          <iterSet xsi:type="ocl.ecore:PropertyCallExp" eType="/11/OrderedSet(Behavior)">
+          <iterSet xsi:type="ocl.ecore:PropertyCallExp" eType="/29/OrderedSet(Behavior)">
             <source xsi:type="ocl.ecore:VariableExp" name="c" referredVariable="/0/generateElement/c">
               <eType xsi:type="ecore:EClass" href="http://pml/0.1#//Register"/>
             </source>
@@ -353,71 +355,65 @@
   <ocl.ecore:Variable name="self">
     <eType xsi:type="ecore:EClass" href="http://pml/0.1#//Register"/>
   </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://pml/0.1#//Register"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://pml/0.1#//Input"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://pml/0.1#//Input"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://pml/0.1#//Input"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://pml/0.1#//Input"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://pml/0.1#//Input"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://pml/0.1#//Input"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://pml/0.1#//Register"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="i">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://pml/0.1#//Register"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://pml/0.1#//Output"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://pml/0.1#//Output"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://pml/0.1#//Output"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://pml/0.1#//Output"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://pml/0.1#//Output"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://pml/0.1#//Output"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://pml/0.1#//Register"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="i">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+  </ocl.ecore:Variable>
   <ecore:EPackage name="collections">
-    <eClassifiers xsi:type="ocl.ecore:OrderedSetType" name="OrderedSet(Input)" instanceClassName="java.util.LinkedHashSet">
-      <elementType xsi:type="ecore:EClass" href="http://pml/0.1#//Input"/>
-    </eClassifiers>
-    <eClassifiers xsi:type="ocl.ecore:OrderedSetType" name="OrderedSet(Output)" instanceClassName="java.util.LinkedHashSet">
-      <elementType xsi:type="ecore:EClass" href="http://pml/0.1#//Output"/>
-    </eClassifiers>
     <eClassifiers xsi:type="ocl.ecore:OrderedSetType" name="OrderedSet(Behavior)" instanceClassName="java.util.LinkedHashSet">
       <elementType xsi:type="ecore:EClass" href="http://pml/0.1#//Behavior"/>
     </eClassifiers>
   </ecore:EPackage>
-  <ocl.ecore:Variable name="self">
-    <eType xsi:type="ecore:EClass" href="http://pml/0.1#//Register"/>
-  </ocl.ecore:Variable>
-  <ocl.ecore:Variable name="self">
-    <eType xsi:type="ecore:EClass" href="http://pml/0.1#//Input"/>
-  </ocl.ecore:Variable>
-  <ocl.ecore:Variable name="self">
-    <eType xsi:type="ecore:EClass" href="http://pml/0.1#//Input"/>
-  </ocl.ecore:Variable>
-  <ocl.ecore:Variable name="self">
-    <eType xsi:type="ecore:EClass" href="http://pml/0.1#//Input"/>
-  </ocl.ecore:Variable>
-  <ocl.ecore:Variable name="self">
-    <eType xsi:type="ecore:EClass" href="http://pml/0.1#//Input"/>
-  </ocl.ecore:Variable>
-  <ocl.ecore:Variable name="self">
-    <eType xsi:type="ecore:EClass" href="http://pml/0.1#//Input"/>
-  </ocl.ecore:Variable>
-  <ocl.ecore:Variable name="self">
-    <eType xsi:type="ecore:EClass" href="http://pml/0.1#//Input"/>
-  </ocl.ecore:Variable>
-  <ocl.ecore:Variable name="self">
-    <eType xsi:type="ecore:EClass" href="http://pml/0.1#//Register"/>
-  </ocl.ecore:Variable>
-  <ocl.ecore:Variable name="i">
-    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
-  </ocl.ecore:Variable>
-  <ocl.ecore:Variable name="self">
-    <eType xsi:type="ecore:EClass" href="http://pml/0.1#//Register"/>
-  </ocl.ecore:Variable>
-  <ocl.ecore:Variable name="self">
-    <eType xsi:type="ecore:EClass" href="http://pml/0.1#//Output"/>
-  </ocl.ecore:Variable>
-  <ocl.ecore:Variable name="self">
-    <eType xsi:type="ecore:EClass" href="http://pml/0.1#//Output"/>
-  </ocl.ecore:Variable>
-  <ocl.ecore:Variable name="self">
-    <eType xsi:type="ecore:EClass" href="http://pml/0.1#//Output"/>
-  </ocl.ecore:Variable>
-  <ocl.ecore:Variable name="self">
-    <eType xsi:type="ecore:EClass" href="http://pml/0.1#//Output"/>
-  </ocl.ecore:Variable>
-  <ocl.ecore:Variable name="self">
-    <eType xsi:type="ecore:EClass" href="http://pml/0.1#//Output"/>
-  </ocl.ecore:Variable>
-  <ocl.ecore:Variable name="self">
-    <eType xsi:type="ecore:EClass" href="http://pml/0.1#//Output"/>
-  </ocl.ecore:Variable>
-  <ocl.ecore:Variable name="self">
-    <eType xsi:type="ecore:EClass" href="http://pml/0.1#//Register"/>
-  </ocl.ecore:Variable>
-  <ocl.ecore:Variable name="i">
-    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
-  </ocl.ecore:Variable>
   <ocl.ecore:Variable name="self">
     <eType xsi:type="ecore:EClass" href="http://pml/0.1#//Register"/>
   </ocl.ecore:Variable>

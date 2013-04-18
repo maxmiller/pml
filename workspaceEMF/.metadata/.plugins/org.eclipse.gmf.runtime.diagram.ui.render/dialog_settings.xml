@@ -3,7 +3,7 @@
 	<section name="CopyToImageDialog">
 		<item value="jpeg" key="CopyToImageDialog.imageFormat"/>
 		<item value="/Users/maxmiller/Dropbox/max/qualificacao/texto" key="CopyToImageDialog.folder"/>
-		<item value="true" key="CopyToImageDialog.overwriteExisting"/>
 		<item value="false" key="CopyToImageDialog.exportToHTML"/>
+		<item value="true" key="CopyToImageDialog.overwriteExisting"/>
 	</section>
 </section>

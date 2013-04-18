@@ -6,6 +6,11 @@
     </input>
     <imports href="multiplexor_h.emtl#/0"/>
     <imports href="demultiplexor_h.emtl#/0"/>
+    <imports href="processor_h.emtl#/0"/>
+    <imports href="register_h.emtl#/0"/>
+    <imports href="ula_h.emtl#/0"/>
+    <imports href="memory_h.emtl#/0"/>
+    <imports href="decoder_h.emtl#/0"/>
     <ownedModuleElement xsi:type="mtl:Template" name="mainMultiplexor" visibility="Public" main="true">
       <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#x9;&#xA;"/>
       <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#x9;"/>
@@ -20,18 +25,88 @@
         <eType xsi:type="ecore:EClass" href="http://pml/0.1#//Multiplexor"/>
       </parameter>
     </ownedModuleElement>
-    <ownedModuleElement xsi:type="mtl:Template" name="mainDeMultiplexo" visibility="Public" main="true">
+    <ownedModuleElement xsi:type="mtl:Template" name="mainDemultiplexor" visibility="Public" main="true">
       <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#x9;&#xA;"/>
       <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#x9;"/>
       <body xsi:type="mtl:TemplateInvocation">
         <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
         <definition href="demultiplexor_h.emtl#/0/generateElement"/>
-        <argument xsi:type="ocl.ecore:VariableExp" name="aDemultiplexor" referredVariable="/0/mainDeMultiplexo/aDemultiplexor">
+        <argument xsi:type="ocl.ecore:VariableExp" name="aDemultiplexor" referredVariable="/0/mainDemultiplexor/aDemultiplexor">
           <eType xsi:type="ecore:EClass" href="http://pml/0.1#//Demultiplexor"/>
         </argument>
       </body>
       <parameter name="aDemultiplexor">
         <eType xsi:type="ecore:EClass" href="http://pml/0.1#//Demultiplexor"/>
+      </parameter>
+    </ownedModuleElement>
+    <ownedModuleElement xsi:type="mtl:Template" name="mainProcessor" visibility="Public" main="true">
+      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#x9;&#xA;"/>
+      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#x9;"/>
+      <body xsi:type="mtl:TemplateInvocation">
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <definition href="processor_h.emtl#/0/generateElement"/>
+        <argument xsi:type="ocl.ecore:VariableExp" name="a" referredVariable="/0/mainProcessor/a">
+          <eType xsi:type="ecore:EClass" href="http://pml/0.1#//Processor"/>
+        </argument>
+      </body>
+      <parameter name="a">
+        <eType xsi:type="ecore:EClass" href="http://pml/0.1#//Processor"/>
+      </parameter>
+    </ownedModuleElement>
+    <ownedModuleElement xsi:type="mtl:Template" name="mainULA" visibility="Public" main="true">
+      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#x9;&#xA;"/>
+      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#x9;"/>
+      <body xsi:type="mtl:TemplateInvocation">
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <definition href="ula_h.emtl#/0/generateElement"/>
+        <argument xsi:type="ocl.ecore:VariableExp" name="a" referredVariable="/0/mainULA/a">
+          <eType xsi:type="ecore:EClass" href="http://pml/0.1#//ULA"/>
+        </argument>
+      </body>
+      <parameter name="a">
+        <eType xsi:type="ecore:EClass" href="http://pml/0.1#//ULA"/>
+      </parameter>
+    </ownedModuleElement>
+    <ownedModuleElement xsi:type="mtl:Template" name="mainRegister" visibility="Public" main="true">
+      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#x9;&#xA;"/>
+      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#x9;"/>
+      <body xsi:type="mtl:TemplateInvocation">
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <definition href="register_h.emtl#/0/generateElement"/>
+        <argument xsi:type="ocl.ecore:VariableExp" name="a" referredVariable="/0/mainRegister/a">
+          <eType xsi:type="ecore:EClass" href="http://pml/0.1#//Register"/>
+        </argument>
+      </body>
+      <parameter name="a">
+        <eType xsi:type="ecore:EClass" href="http://pml/0.1#//Register"/>
+      </parameter>
+    </ownedModuleElement>
+    <ownedModuleElement xsi:type="mtl:Template" name="mainMemory" visibility="Public" main="true">
+      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#x9;&#xA;"/>
+      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#x9;"/>
+      <body xsi:type="mtl:TemplateInvocation">
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <definition href="memory_h.emtl#/0/generateElement"/>
+        <argument xsi:type="ocl.ecore:VariableExp" name="a" referredVariable="/0/mainMemory/a">
+          <eType xsi:type="ecore:EClass" href="http://pml/0.1#//Memory"/>
+        </argument>
+      </body>
+      <parameter name="a">
+        <eType xsi:type="ecore:EClass" href="http://pml/0.1#//Memory"/>
+      </parameter>
+    </ownedModuleElement>
+    <ownedModuleElement xsi:type="mtl:Template" name="mainDecoder" visibility="Public" main="true">
+      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#x9;&#xA;"/>
+      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#x9;"/>
+      <body xsi:type="mtl:TemplateInvocation">
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <definition href="decoder_h.emtl#/0/generateElement"/>
+        <argument xsi:type="ocl.ecore:VariableExp" name="a" referredVariable="/0/mainDecoder/a">
+          <eType xsi:type="ecore:EClass" href="http://pml/0.1#//Decoder"/>
+        </argument>
+      </body>
+      <parameter name="a">
+        <eType xsi:type="ecore:EClass" href="http://pml/0.1#//Decoder"/>
       </parameter>
     </ownedModuleElement>
   </mtl:Module>
@@ -65,14 +140,64 @@
           <eType xsi:type="ecore:EClass" href="http://pml/0.1#//Multiplexor"/>
         </eParameters>
       </eOperations>
-      <eOperations name="mainDeMultiplexo">
+      <eOperations name="mainDemultiplexor">
         <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
           <contents xsi:type="ocl.ecore:Constraint"/>
         </eAnnotations>
-        <eAnnotations source="MTL" references="/0/mainDeMultiplexo"/>
+        <eAnnotations source="MTL" references="/0/mainDemultiplexor"/>
         <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
         <eParameters name="aDemultiplexor">
           <eType xsi:type="ecore:EClass" href="http://pml/0.1#//Demultiplexor"/>
+        </eParameters>
+      </eOperations>
+      <eOperations name="mainProcessor">
+        <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+          <contents xsi:type="ocl.ecore:Constraint"/>
+        </eAnnotations>
+        <eAnnotations source="MTL" references="/0/mainProcessor"/>
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <eParameters name="a">
+          <eType xsi:type="ecore:EClass" href="http://pml/0.1#//Processor"/>
+        </eParameters>
+      </eOperations>
+      <eOperations name="mainULA">
+        <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+          <contents xsi:type="ocl.ecore:Constraint"/>
+        </eAnnotations>
+        <eAnnotations source="MTL" references="/0/mainULA"/>
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <eParameters name="a">
+          <eType xsi:type="ecore:EClass" href="http://pml/0.1#//ULA"/>
+        </eParameters>
+      </eOperations>
+      <eOperations name="mainRegister">
+        <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+          <contents xsi:type="ocl.ecore:Constraint"/>
+        </eAnnotations>
+        <eAnnotations source="MTL" references="/0/mainRegister"/>
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <eParameters name="a">
+          <eType xsi:type="ecore:EClass" href="http://pml/0.1#//Register"/>
+        </eParameters>
+      </eOperations>
+      <eOperations name="mainMemory">
+        <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+          <contents xsi:type="ocl.ecore:Constraint"/>
+        </eAnnotations>
+        <eAnnotations source="MTL" references="/0/mainMemory"/>
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <eParameters name="a">
+          <eType xsi:type="ecore:EClass" href="http://pml/0.1#//Memory"/>
+        </eParameters>
+      </eOperations>
+      <eOperations name="mainDecoder">
+        <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+          <contents xsi:type="ocl.ecore:Constraint"/>
+        </eAnnotations>
+        <eAnnotations source="MTL" references="/0/mainDecoder"/>
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <eParameters name="a">
+          <eType xsi:type="ecore:EClass" href="http://pml/0.1#//Decoder"/>
         </eParameters>
       </eOperations>
       <eOperations name="generateElement">
@@ -97,6 +222,66 @@
         <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
         <eParameters name="c">
           <eType xsi:type="ecore:EClass" href="http://pml/0.1#//Demultiplexor"/>
+        </eParameters>
+      </eOperations>
+      <eOperations name="generateElement">
+        <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+          <contents xsi:type="ocl.ecore:Constraint"/>
+        </eAnnotations>
+        <eAnnotations source="MTL">
+          <references href="processor_h.emtl#/0/generateElement"/>
+        </eAnnotations>
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <eParameters name="c">
+          <eType xsi:type="ecore:EClass" href="http://pml/0.1#//Processor"/>
+        </eParameters>
+      </eOperations>
+      <eOperations name="generateElement">
+        <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+          <contents xsi:type="ocl.ecore:Constraint"/>
+        </eAnnotations>
+        <eAnnotations source="MTL">
+          <references href="register_h.emtl#/0/generateElement"/>
+        </eAnnotations>
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <eParameters name="c">
+          <eType xsi:type="ecore:EClass" href="http://pml/0.1#//Register"/>
+        </eParameters>
+      </eOperations>
+      <eOperations name="generateElement">
+        <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+          <contents xsi:type="ocl.ecore:Constraint"/>
+        </eAnnotations>
+        <eAnnotations source="MTL">
+          <references href="ula_h.emtl#/0/generateElement"/>
+        </eAnnotations>
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <eParameters name="c">
+          <eType xsi:type="ecore:EClass" href="http://pml/0.1#//ULA"/>
+        </eParameters>
+      </eOperations>
+      <eOperations name="generateElement">
+        <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+          <contents xsi:type="ocl.ecore:Constraint"/>
+        </eAnnotations>
+        <eAnnotations source="MTL">
+          <references href="memory_h.emtl#/0/generateElement"/>
+        </eAnnotations>
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <eParameters name="c">
+          <eType xsi:type="ecore:EClass" href="http://pml/0.1#//Memory"/>
+        </eParameters>
+      </eOperations>
+      <eOperations name="generateElement">
+        <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+          <contents xsi:type="ocl.ecore:Constraint"/>
+        </eAnnotations>
+        <eAnnotations source="MTL">
+          <references href="decoder_h.emtl#/0/generateElement"/>
+        </eAnnotations>
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <eParameters name="c">
+          <eType xsi:type="ecore:EClass" href="http://pml/0.1#//Decoder"/>
         </eParameters>
       </eOperations>
     </eClassifiers>
@@ -128,6 +313,31 @@
     <eClassifiers xsi:type="ecore:EClass" name="Demultiplexor_Class">
       <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
         <references href="http://pml/0.1#//Demultiplexor"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Processor_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://pml/0.1#//Processor"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="ULA_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://pml/0.1#//ULA"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Register_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://pml/0.1#//Register"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Memory_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://pml/0.1#//Memory"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Decoder_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://pml/0.1#//Decoder"/>
       </eAnnotations>
     </eClassifiers>
   </ecore:EPackage>
@@ -164,66 +374,291 @@
   <ocl.ecore:Variable name="self">
     <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
   </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://pml/0.1#//Processor"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://pml/0.1#//Processor"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://pml/0.1#//Processor"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://pml/0.1#//ULA"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://pml/0.1#//ULA"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://pml/0.1#//ULA"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://pml/0.1#//Register"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://pml/0.1#//Register"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://pml/0.1#//Register"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://pml/0.1#//Memory"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://pml/0.1#//Memory"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://pml/0.1#//Memory"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://pml/0.1#//Decoder"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://pml/0.1#//Decoder"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://pml/0.1#//Decoder"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
   <ecore:EAnnotation source="positions">
     <eAnnotations source="positions.0" references="/0/mainMultiplexor">
-      <details key="start" value="152"/>
-      <details key="end" value="281"/>
-      <details key="line" value="7"/>
+      <details key="start" value="345"/>
+      <details key="end" value="474"/>
+      <details key="line" value="12"/>
     </eAnnotations>
     <eAnnotations source="positions.1" references="/0/mainMultiplexor/@body.0">
-      <details key="start" value="214"/>
-      <details key="end" value="216"/>
-      <details key="line" value="8"/>
+      <details key="start" value="407"/>
+      <details key="end" value="409"/>
+      <details key="line" value="13"/>
     </eAnnotations>
     <eAnnotations source="positions.2" references="/0/mainMultiplexor/@body.1">
-      <details key="start" value="235"/>
-      <details key="end" value="236"/>
-      <details key="line" value="10"/>
+      <details key="start" value="428"/>
+      <details key="end" value="429"/>
+      <details key="line" value="15"/>
     </eAnnotations>
     <eAnnotations source="positions.3" references="/0/mainMultiplexor/@body.2">
-      <details key="start" value="237"/>
-      <details key="end" value="267"/>
+      <details key="start" value="430"/>
+      <details key="end" value="460"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.4" references="/0/mainMultiplexor/@body.2/aMultiplexor">
-      <details key="start" value="237"/>
-      <details key="end" value="249"/>
+      <details key="start" value="430"/>
+      <details key="end" value="442"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.5" references="/0/mainMultiplexor/aMultiplexor">
-      <details key="start" value="185"/>
-      <details key="end" value="211"/>
-      <details key="line" value="7"/>
+      <details key="start" value="378"/>
+      <details key="end" value="404"/>
+      <details key="line" value="12"/>
     </eAnnotations>
-    <eAnnotations source="positions.6" references="/0/mainDeMultiplexo">
-      <details key="start" value="283"/>
-      <details key="end" value="419"/>
-      <details key="line" value="13"/>
+    <eAnnotations source="positions.6" references="/0/mainDemultiplexor">
+      <details key="start" value="476"/>
+      <details key="end" value="613"/>
+      <details key="line" value="18"/>
     </eAnnotations>
-    <eAnnotations source="positions.7" references="/0/mainDeMultiplexo/@body.0">
-      <details key="start" value="350"/>
-      <details key="end" value="352"/>
-      <details key="line" value="14"/>
+    <eAnnotations source="positions.7" references="/0/mainDemultiplexor/@body.0">
+      <details key="start" value="544"/>
+      <details key="end" value="546"/>
+      <details key="line" value="19"/>
     </eAnnotations>
-    <eAnnotations source="positions.8" references="/0/mainDeMultiplexo/@body.1">
-      <details key="start" value="371"/>
-      <details key="end" value="372"/>
-      <details key="line" value="16"/>
+    <eAnnotations source="positions.8" references="/0/mainDemultiplexor/@body.1">
+      <details key="start" value="565"/>
+      <details key="end" value="566"/>
+      <details key="line" value="21"/>
     </eAnnotations>
-    <eAnnotations source="positions.9" references="/0/mainDeMultiplexo/@body.2">
-      <details key="start" value="373"/>
-      <details key="end" value="405"/>
+    <eAnnotations source="positions.9" references="/0/mainDemultiplexor/@body.2">
+      <details key="start" value="567"/>
+      <details key="end" value="599"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.10" references="/0/mainDeMultiplexo/@body.2/aDemultiplexor">
-      <details key="start" value="373"/>
-      <details key="end" value="387"/>
+    <eAnnotations source="positions.10" references="/0/mainDemultiplexor/@body.2/aDemultiplexor">
+      <details key="start" value="567"/>
+      <details key="end" value="581"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.11" references="/0/mainDeMultiplexo/aDemultiplexor">
-      <details key="start" value="317"/>
-      <details key="end" value="347"/>
-      <details key="line" value="13"/>
+    <eAnnotations source="positions.11" references="/0/mainDemultiplexor/aDemultiplexor">
+      <details key="start" value="511"/>
+      <details key="end" value="541"/>
+      <details key="line" value="18"/>
+    </eAnnotations>
+    <eAnnotations source="positions.12" references="/0/mainProcessor">
+      <details key="start" value="615"/>
+      <details key="end" value="718"/>
+      <details key="line" value="24"/>
+    </eAnnotations>
+    <eAnnotations source="positions.13" references="/0/mainProcessor/@body.0">
+      <details key="start" value="662"/>
+      <details key="end" value="664"/>
+      <details key="line" value="25"/>
+    </eAnnotations>
+    <eAnnotations source="positions.14" references="/0/mainProcessor/@body.1">
+      <details key="start" value="683"/>
+      <details key="end" value="684"/>
+      <details key="line" value="27"/>
+    </eAnnotations>
+    <eAnnotations source="positions.15" references="/0/mainProcessor/@body.2">
+      <details key="start" value="685"/>
+      <details key="end" value="704"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.16" references="/0/mainProcessor/@body.2/a">
+      <details key="start" value="685"/>
+      <details key="end" value="686"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.17" references="/0/mainProcessor/a">
+      <details key="start" value="646"/>
+      <details key="end" value="659"/>
+      <details key="line" value="24"/>
+    </eAnnotations>
+    <eAnnotations source="positions.18" references="/0/mainULA">
+      <details key="start" value="720"/>
+      <details key="end" value="811"/>
+      <details key="line" value="30"/>
+    </eAnnotations>
+    <eAnnotations source="positions.19" references="/0/mainULA/@body.0">
+      <details key="start" value="755"/>
+      <details key="end" value="757"/>
+      <details key="line" value="31"/>
+    </eAnnotations>
+    <eAnnotations source="positions.20" references="/0/mainULA/@body.1">
+      <details key="start" value="776"/>
+      <details key="end" value="777"/>
+      <details key="line" value="33"/>
+    </eAnnotations>
+    <eAnnotations source="positions.21" references="/0/mainULA/@body.2">
+      <details key="start" value="778"/>
+      <details key="end" value="797"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.22" references="/0/mainULA/@body.2/a">
+      <details key="start" value="778"/>
+      <details key="end" value="779"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.23" references="/0/mainULA/a">
+      <details key="start" value="745"/>
+      <details key="end" value="752"/>
+      <details key="line" value="30"/>
+    </eAnnotations>
+    <eAnnotations source="positions.24" references="/0/mainRegister">
+      <details key="start" value="813"/>
+      <details key="end" value="914"/>
+      <details key="line" value="36"/>
+    </eAnnotations>
+    <eAnnotations source="positions.25" references="/0/mainRegister/@body.0">
+      <details key="start" value="858"/>
+      <details key="end" value="860"/>
+      <details key="line" value="37"/>
+    </eAnnotations>
+    <eAnnotations source="positions.26" references="/0/mainRegister/@body.1">
+      <details key="start" value="879"/>
+      <details key="end" value="880"/>
+      <details key="line" value="39"/>
+    </eAnnotations>
+    <eAnnotations source="positions.27" references="/0/mainRegister/@body.2">
+      <details key="start" value="881"/>
+      <details key="end" value="900"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.28" references="/0/mainRegister/@body.2/a">
+      <details key="start" value="881"/>
+      <details key="end" value="882"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.29" references="/0/mainRegister/a">
+      <details key="start" value="843"/>
+      <details key="end" value="855"/>
+      <details key="line" value="36"/>
+    </eAnnotations>
+    <eAnnotations source="positions.30" references="/0/mainMemory">
+      <details key="start" value="916"/>
+      <details key="end" value="1013"/>
+      <details key="line" value="42"/>
+    </eAnnotations>
+    <eAnnotations source="positions.31" references="/0/mainMemory/@body.0">
+      <details key="start" value="957"/>
+      <details key="end" value="959"/>
+      <details key="line" value="43"/>
+    </eAnnotations>
+    <eAnnotations source="positions.32" references="/0/mainMemory/@body.1">
+      <details key="start" value="978"/>
+      <details key="end" value="979"/>
+      <details key="line" value="45"/>
+    </eAnnotations>
+    <eAnnotations source="positions.33" references="/0/mainMemory/@body.2">
+      <details key="start" value="980"/>
+      <details key="end" value="999"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.34" references="/0/mainMemory/@body.2/a">
+      <details key="start" value="980"/>
+      <details key="end" value="981"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.35" references="/0/mainMemory/a">
+      <details key="start" value="944"/>
+      <details key="end" value="954"/>
+      <details key="line" value="42"/>
+    </eAnnotations>
+    <eAnnotations source="positions.36" references="/0/mainDecoder">
+      <details key="start" value="1015"/>
+      <details key="end" value="1114"/>
+      <details key="line" value="48"/>
+    </eAnnotations>
+    <eAnnotations source="positions.37" references="/0/mainDecoder/@body.0">
+      <details key="start" value="1058"/>
+      <details key="end" value="1060"/>
+      <details key="line" value="49"/>
+    </eAnnotations>
+    <eAnnotations source="positions.38" references="/0/mainDecoder/@body.1">
+      <details key="start" value="1079"/>
+      <details key="end" value="1080"/>
+      <details key="line" value="51"/>
+    </eAnnotations>
+    <eAnnotations source="positions.39" references="/0/mainDecoder/@body.2">
+      <details key="start" value="1081"/>
+      <details key="end" value="1100"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.40" references="/0/mainDecoder/@body.2/a">
+      <details key="start" value="1081"/>
+      <details key="end" value="1082"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.41" references="/0/mainDecoder/a">
+      <details key="start" value="1044"/>
+      <details key="end" value="1055"/>
+      <details key="line" value="48"/>
     </eAnnotations>
   </ecore:EAnnotation>
 </xmi:XMI>

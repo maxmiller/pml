@@ -113,6 +113,7 @@ public class ProcessorItemProvider
 			childrenFeatures.add(PMLPackage.Literals.PROCESSOR__MUX);
 			childrenFeatures.add(PMLPackage.Literals.PROCESSOR__CONTROL_UNITS);
 			childrenFeatures.add(PMLPackage.Literals.PROCESSOR__DECODERS);
+			childrenFeatures.add(PMLPackage.Literals.PROCESSOR__INITIAL_STAGE_PIPELINE);
 		}
 		return childrenFeatures;
 	}
@@ -177,6 +178,7 @@ public class ProcessorItemProvider
 			case PMLPackage.PROCESSOR__MUX:
 			case PMLPackage.PROCESSOR__CONTROL_UNITS:
 			case PMLPackage.PROCESSOR__DECODERS:
+			case PMLPackage.PROCESSOR__INITIAL_STAGE_PIPELINE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -228,6 +230,11 @@ public class ProcessorItemProvider
 			(createChildParameter
 				(PMLPackage.Literals.PROCESSOR__DECODERS,
 				 PMLFactory.eINSTANCE.createDecoder()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(PMLPackage.Literals.PROCESSOR__INITIAL_STAGE_PIPELINE,
+				 PMLFactory.eINSTANCE.createPipelineInitialStage()));
 	}
 
 	/**

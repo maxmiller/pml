@@ -467,6 +467,52 @@ public class PMLItemProviderAdapterFactory extends PMLAdapterFactory implements 
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link br.ufrn.lasic.pml.PipelineInitialStage} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected PipelineInitialStageItemProvider pipelineInitialStageItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link br.ufrn.lasic.pml.PipelineInitialStage}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createPipelineInitialStageAdapter() {
+		if (pipelineInitialStageItemProvider == null) {
+			pipelineInitialStageItemProvider = new PipelineInitialStageItemProvider(this);
+		}
+
+		return pipelineInitialStageItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link br.ufrn.lasic.pml.PipelineNextStage} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected PipelineNextStageItemProvider pipelineNextStageItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link br.ufrn.lasic.pml.PipelineNextStage}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createPipelineNextStageAdapter() {
+		if (pipelineNextStageItemProvider == null) {
+			pipelineNextStageItemProvider = new PipelineNextStageItemProvider(this);
+		}
+
+		return pipelineNextStageItemProvider;
+	}
+
+	/**
 	 * This returns the root adapter factory that contains this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -582,6 +628,8 @@ public class PMLItemProviderAdapterFactory extends PMLAdapterFactory implements 
 		if (seletorItemProvider != null) seletorItemProvider.dispose();
 		if (operationItemProvider != null) operationItemProvider.dispose();
 		if (decoderItemProvider != null) decoderItemProvider.dispose();
+		if (pipelineInitialStageItemProvider != null) pipelineInitialStageItemProvider.dispose();
+		if (pipelineNextStageItemProvider != null) pipelineNextStageItemProvider.dispose();
 	}
 
 }

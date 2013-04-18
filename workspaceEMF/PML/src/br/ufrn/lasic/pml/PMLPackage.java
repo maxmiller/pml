@@ -226,13 +226,22 @@ public interface PMLPackage extends EPackage {
 	int INPUT__SENSITIVE = 4;
 
 	/**
+	 * The feature id for the '<em><b>Bit</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INPUT__BIT = 5;
+
+	/**
 	 * The number of structural features of the '<em>Input</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int INPUT_FEATURE_COUNT = 5;
+	int INPUT_FEATURE_COUNT = 6;
 
 	/**
 	 * The meta object id for the '{@link br.ufrn.lasic.pml.impl.OutputImpl <em>Output</em>}' class.
@@ -290,13 +299,22 @@ public interface PMLPackage extends EPackage {
 	int OUTPUT__LENGTH = 4;
 
 	/**
+	 * The feature id for the '<em><b>Bit</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OUTPUT__BIT = 5;
+
+	/**
 	 * The number of structural features of the '<em>Output</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int OUTPUT_FEATURE_COUNT = 5;
+	int OUTPUT_FEATURE_COUNT = 6;
 
 	/**
 	 * The meta object id for the '{@link br.ufrn.lasic.pml.impl.DemultiplexorImpl <em>Demultiplexor</em>}' class.
@@ -573,13 +591,22 @@ public interface PMLPackage extends EPackage {
 	int PROCESSOR__DECODERS = 7;
 
 	/**
+	 * The feature id for the '<em><b>Initial Stage Pipeline</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROCESSOR__INITIAL_STAGE_PIPELINE = 8;
+
+	/**
 	 * The number of structural features of the '<em>Processor</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PROCESSOR_FEATURE_COUNT = 8;
+	int PROCESSOR_FEATURE_COUNT = 9;
 
 	/**
 	 * The meta object id for the '{@link br.ufrn.lasic.pml.impl.MemoryImpl <em>Memory</em>}' class.
@@ -940,13 +967,22 @@ public interface PMLPackage extends EPackage {
 	int SELETOR__LENGH = 2;
 
 	/**
+	 * The feature id for the '<em><b>Bit</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SELETOR__BIT = 3;
+
+	/**
 	 * The number of structural features of the '<em>Seletor</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SELETOR_FEATURE_COUNT = 3;
+	int SELETOR_FEATURE_COUNT = 4;
 
 	/**
 	 * The meta object id for the '{@link br.ufrn.lasic.pml.impl.OperationImpl <em>Operation</em>}' class.
@@ -1032,6 +1068,80 @@ public interface PMLPackage extends EPackage {
 	int DECODER_FEATURE_COUNT = 4;
 
 	/**
+	 * The meta object id for the '{@link br.ufrn.lasic.pml.impl.PipelineInitialStageImpl <em>Pipeline Initial Stage</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see br.ufrn.lasic.pml.impl.PipelineInitialStageImpl
+	 * @see br.ufrn.lasic.pml.impl.PMLPackageImpl#getPipelineInitialStage()
+	 * @generated
+	 */
+	int PIPELINE_INITIAL_STAGE = 17;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PIPELINE_INITIAL_STAGE__NAME = 0;
+
+	/**
+	 * The feature id for the '<em><b>Next State Pipeline</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PIPELINE_INITIAL_STAGE__NEXT_STATE_PIPELINE = 1;
+
+	/**
+	 * The number of structural features of the '<em>Pipeline Initial Stage</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PIPELINE_INITIAL_STAGE_FEATURE_COUNT = 2;
+
+	/**
+	 * The meta object id for the '{@link br.ufrn.lasic.pml.impl.PipelineNextStageImpl <em>Pipeline Next Stage</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see br.ufrn.lasic.pml.impl.PipelineNextStageImpl
+	 * @see br.ufrn.lasic.pml.impl.PMLPackageImpl#getPipelineNextStage()
+	 * @generated
+	 */
+	int PIPELINE_NEXT_STAGE = 18;
+
+	/**
+	 * The feature id for the '<em><b>Pipeline Next</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PIPELINE_NEXT_STAGE__PIPELINE_NEXT = 0;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PIPELINE_NEXT_STAGE__NAME = 1;
+
+	/**
+	 * The number of structural features of the '<em>Pipeline Next Stage</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PIPELINE_NEXT_STAGE_FEATURE_COUNT = 2;
+
+	/**
 	 * The meta object id for the '{@link br.ufrn.lasic.pml.TypeComponent <em>Type Component</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1039,7 +1149,7 @@ public interface PMLPackage extends EPackage {
 	 * @see br.ufrn.lasic.pml.impl.PMLPackageImpl#getTypeComponent()
 	 * @generated
 	 */
-	int TYPE_COMPONENT = 17;
+	int TYPE_COMPONENT = 19;
 
 	/**
 	 * The meta object id for the '{@link br.ufrn.lasic.pml.TypeData <em>Type Data</em>}' enum.
@@ -1049,7 +1159,7 @@ public interface PMLPackage extends EPackage {
 	 * @see br.ufrn.lasic.pml.impl.PMLPackageImpl#getTypeData()
 	 * @generated
 	 */
-	int TYPE_DATA = 18;
+	int TYPE_DATA = 20;
 
 
 	/**
@@ -1226,6 +1336,17 @@ public interface PMLPackage extends EPackage {
 	EAttribute getInput_Sensitive();
 
 	/**
+	 * Returns the meta object for the attribute '{@link br.ufrn.lasic.pml.Input#getBit <em>Bit</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Bit</em>'.
+	 * @see br.ufrn.lasic.pml.Input#getBit()
+	 * @see #getInput()
+	 * @generated
+	 */
+	EAttribute getInput_Bit();
+
+	/**
 	 * Returns the meta object for class '{@link br.ufrn.lasic.pml.Output <em>Output</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1289,6 +1410,17 @@ public interface PMLPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getOutput_Length();
+
+	/**
+	 * Returns the meta object for the attribute '{@link br.ufrn.lasic.pml.Output#getBit <em>Bit</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Bit</em>'.
+	 * @see br.ufrn.lasic.pml.Output#getBit()
+	 * @see #getOutput()
+	 * @generated
+	 */
+	EAttribute getOutput_Bit();
 
 	/**
 	 * Returns the meta object for class '{@link br.ufrn.lasic.pml.Demultiplexor <em>Demultiplexor</em>}'.
@@ -1582,6 +1714,17 @@ public interface PMLPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getProcessor_Decoders();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link br.ufrn.lasic.pml.Processor#getInitialStagePipeline <em>Initial Stage Pipeline</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Initial Stage Pipeline</em>'.
+	 * @see br.ufrn.lasic.pml.Processor#getInitialStagePipeline()
+	 * @see #getProcessor()
+	 * @generated
+	 */
+	EReference getProcessor_InitialStagePipeline();
 
 	/**
 	 * Returns the meta object for class '{@link br.ufrn.lasic.pml.Memory <em>Memory</em>}'.
@@ -1940,6 +2083,17 @@ public interface PMLPackage extends EPackage {
 	EAttribute getSeletor_Lengh();
 
 	/**
+	 * Returns the meta object for the attribute '{@link br.ufrn.lasic.pml.Seletor#getBit <em>Bit</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Bit</em>'.
+	 * @see br.ufrn.lasic.pml.Seletor#getBit()
+	 * @see #getSeletor()
+	 * @generated
+	 */
+	EAttribute getSeletor_Bit();
+
+	/**
 	 * Returns the meta object for class '{@link br.ufrn.lasic.pml.Operation <em>Operation</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2013,6 +2167,70 @@ public interface PMLPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getDecoder_BehaviorDecoder();
+
+	/**
+	 * Returns the meta object for class '{@link br.ufrn.lasic.pml.PipelineInitialStage <em>Pipeline Initial Stage</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Pipeline Initial Stage</em>'.
+	 * @see br.ufrn.lasic.pml.PipelineInitialStage
+	 * @generated
+	 */
+	EClass getPipelineInitialStage();
+
+	/**
+	 * Returns the meta object for the attribute '{@link br.ufrn.lasic.pml.PipelineInitialStage#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see br.ufrn.lasic.pml.PipelineInitialStage#getName()
+	 * @see #getPipelineInitialStage()
+	 * @generated
+	 */
+	EAttribute getPipelineInitialStage_Name();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link br.ufrn.lasic.pml.PipelineInitialStage#getNextStatePipeline <em>Next State Pipeline</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Next State Pipeline</em>'.
+	 * @see br.ufrn.lasic.pml.PipelineInitialStage#getNextStatePipeline()
+	 * @see #getPipelineInitialStage()
+	 * @generated
+	 */
+	EReference getPipelineInitialStage_NextStatePipeline();
+
+	/**
+	 * Returns the meta object for class '{@link br.ufrn.lasic.pml.PipelineNextStage <em>Pipeline Next Stage</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Pipeline Next Stage</em>'.
+	 * @see br.ufrn.lasic.pml.PipelineNextStage
+	 * @generated
+	 */
+	EClass getPipelineNextStage();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link br.ufrn.lasic.pml.PipelineNextStage#getPipelineNext <em>Pipeline Next</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Pipeline Next</em>'.
+	 * @see br.ufrn.lasic.pml.PipelineNextStage#getPipelineNext()
+	 * @see #getPipelineNextStage()
+	 * @generated
+	 */
+	EReference getPipelineNextStage_PipelineNext();
+
+	/**
+	 * Returns the meta object for the attribute '{@link br.ufrn.lasic.pml.PipelineNextStage#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see br.ufrn.lasic.pml.PipelineNextStage#getName()
+	 * @see #getPipelineNextStage()
+	 * @generated
+	 */
+	EAttribute getPipelineNextStage_Name();
 
 	/**
 	 * Returns the meta object for enum '{@link br.ufrn.lasic.pml.TypeComponent <em>Type Component</em>}'.
@@ -2191,6 +2409,14 @@ public interface PMLPackage extends EPackage {
 		EAttribute INPUT__SENSITIVE = eINSTANCE.getInput_Sensitive();
 
 		/**
+		 * The meta object literal for the '<em><b>Bit</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute INPUT__BIT = eINSTANCE.getInput_Bit();
+
+		/**
 		 * The meta object literal for the '{@link br.ufrn.lasic.pml.impl.OutputImpl <em>Output</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -2239,6 +2465,14 @@ public interface PMLPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute OUTPUT__LENGTH = eINSTANCE.getOutput_Length();
+
+		/**
+		 * The meta object literal for the '<em><b>Bit</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute OUTPUT__BIT = eINSTANCE.getOutput_Bit();
 
 		/**
 		 * The meta object literal for the '{@link br.ufrn.lasic.pml.impl.DemultiplexorImpl <em>Demultiplexor</em>}' class.
@@ -2463,6 +2697,14 @@ public interface PMLPackage extends EPackage {
 		 * @generated
 		 */
 		EReference PROCESSOR__DECODERS = eINSTANCE.getProcessor_Decoders();
+
+		/**
+		 * The meta object literal for the '<em><b>Initial Stage Pipeline</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference PROCESSOR__INITIAL_STAGE_PIPELINE = eINSTANCE.getProcessor_InitialStagePipeline();
 
 		/**
 		 * The meta object literal for the '{@link br.ufrn.lasic.pml.impl.MemoryImpl <em>Memory</em>}' class.
@@ -2743,6 +2985,14 @@ public interface PMLPackage extends EPackage {
 		EAttribute SELETOR__LENGH = eINSTANCE.getSeletor_Lengh();
 
 		/**
+		 * The meta object literal for the '<em><b>Bit</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute SELETOR__BIT = eINSTANCE.getSeletor_Bit();
+
+		/**
 		 * The meta object literal for the '{@link br.ufrn.lasic.pml.impl.OperationImpl <em>Operation</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -2801,6 +3051,58 @@ public interface PMLPackage extends EPackage {
 		 * @generated
 		 */
 		EReference DECODER__BEHAVIOR_DECODER = eINSTANCE.getDecoder_BehaviorDecoder();
+
+		/**
+		 * The meta object literal for the '{@link br.ufrn.lasic.pml.impl.PipelineInitialStageImpl <em>Pipeline Initial Stage</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see br.ufrn.lasic.pml.impl.PipelineInitialStageImpl
+		 * @see br.ufrn.lasic.pml.impl.PMLPackageImpl#getPipelineInitialStage()
+		 * @generated
+		 */
+		EClass PIPELINE_INITIAL_STAGE = eINSTANCE.getPipelineInitialStage();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute PIPELINE_INITIAL_STAGE__NAME = eINSTANCE.getPipelineInitialStage_Name();
+
+		/**
+		 * The meta object literal for the '<em><b>Next State Pipeline</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference PIPELINE_INITIAL_STAGE__NEXT_STATE_PIPELINE = eINSTANCE.getPipelineInitialStage_NextStatePipeline();
+
+		/**
+		 * The meta object literal for the '{@link br.ufrn.lasic.pml.impl.PipelineNextStageImpl <em>Pipeline Next Stage</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see br.ufrn.lasic.pml.impl.PipelineNextStageImpl
+		 * @see br.ufrn.lasic.pml.impl.PMLPackageImpl#getPipelineNextStage()
+		 * @generated
+		 */
+		EClass PIPELINE_NEXT_STAGE = eINSTANCE.getPipelineNextStage();
+
+		/**
+		 * The meta object literal for the '<em><b>Pipeline Next</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference PIPELINE_NEXT_STAGE__PIPELINE_NEXT = eINSTANCE.getPipelineNextStage_PipelineNext();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute PIPELINE_NEXT_STAGE__NAME = eINSTANCE.getPipelineNextStage_Name();
 
 		/**
 		 * The meta object literal for the '{@link br.ufrn.lasic.pml.TypeComponent <em>Type Component</em>}' enum.

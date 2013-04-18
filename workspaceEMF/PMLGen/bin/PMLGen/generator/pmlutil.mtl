@@ -1,0 +1,14 @@
+[comment encoding = MacRoman /]
+[module pmlutil('http://www.eclipse.org/acceleo/mtl/3.0', 'http://www.eclipse.org/emf/2002/Ecore')/]
+
+[query public forSensitive(arg0 : String, arg1 : Integer) : String
+	= invoke('PMLGen.wrapper.ForSensitive', 'forSensitive(java.lang.String, java.lang.Integer)', Sequence{arg0, arg1}) /]
+
+[query public forIn(arg0 : String, arg1 : String, arg2 : Integer, arg3 : Integer) : String
+	= invoke('PMLGen.wrapper.ForSensitive', 'forIn(java.lang.String, java.lang.String, java.lang.Integer, java.lang.Integer)', Sequence{arg0, arg1, arg2, arg3}) /]
+
+[query public forOut(arg0 : String, arg1 : String, arg2 : Integer, arg3 : Integer) : String
+	= invoke('PMLGen.wrapper.ForSensitive', 'forOut(java.lang.String, java.lang.String, java.lang.Integer, java.lang.Integer)', Sequence{arg0, arg1, arg2, arg3}) /]
+
+[query public forSel(arg0 : String, arg1 : String, arg2 : Integer) : String
+	= invoke('PMLGen.wrapper.ForSensitive', 'forSel(java.lang.String, java.lang.String, java.lang.Integer)', Sequence{arg0, arg1, arg2}) /]

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map>
+	<bundle bundleID="892" class="GeneratorPML.ui.Activator" localization="OSGI-INF/l10n/bundle" name="Acceleo GeneratorPML Module IDE Plug-in" project="GeneratorPML.ui" provider="Eclipse Modeling Project"/>
+	<bundle bundleID="891" localization="plugin" name="%pluginName" project="PML" provider="%providerName">
+		<library name="."/>
+	</bundle>
+	<bundle bundleID="894" class="GeneratorPML.Activator" localization="OSGI-INF/l10n/bundle" name="Acceleo GeneratorPML Module Runtime Plug-in" project="GeneratorPML" provider="Eclipse Modeling Project"/>
+	<bundle bundleID="893" class="br.ufrn.lasic.pml.presentation.PMLEditorPlugin$Implementation" localization="plugin" name="%pluginName" project="PML.editor" provider="%providerName">
+		<library name="."/>
+	</bundle>
+	<bundle bundleID="895" localization="plugin" name="%pluginName" project="PML.tests" provider="%providerName">
+		<library name="."/>
+	</bundle>
+	<bundle bundleID="897" class="PMLGen.Activator" localization="OSGI-INF/l10n/bundle" name="Acceleo PMLGen Module Runtime Plug-in" project="PMLGen" provider="Eclipse Modeling Project"/>
+	<bundle bundleID="896" class="generator.Activator" localization="OSGI-INF/l10n/bundle" name="Acceleo Generator Module Runtime Plug-in" project="generator" provider="Eclipse Modeling Project"/>
+	<bundle bundleID="898" class="br.ufrn.lasic.pml.provider.PMLEditPlugin$Implementation" localization="plugin" name="%pluginName" project="PML.edit" provider="%providerName">
+		<library name="."/>
+	</bundle>
+	<bundle bundleID="899" localization="OSGI-INF/l10n/bundle" name="Modelo02" project="Modelo02"/>
+</map>

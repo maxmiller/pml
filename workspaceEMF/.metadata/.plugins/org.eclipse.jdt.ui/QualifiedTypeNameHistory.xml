@@ -9,4 +9,8 @@
 <fullyQualifiedTypeName name="org.eclipse.emf.ecore.xmi.impl.XMIResourceFactoryImpl"/>
 <fullyQualifiedTypeName name="br.ufrn.lasic.pml.PMLPackage"/>
 <fullyQualifiedTypeName name="PMLGen.generator.Generator"/>
+<fullyQualifiedTypeName name="org.eclipse.acceleo.engine.service.AcceleoService"/>
+<fullyQualifiedTypeName name="java.io.File"/>
+<fullyQualifiedTypeName name="java.io.FileWriter"/>
+<fullyQualifiedTypeName name="java.io.PrintWriter"/>
 </qualifiedTypeNameHistroy>

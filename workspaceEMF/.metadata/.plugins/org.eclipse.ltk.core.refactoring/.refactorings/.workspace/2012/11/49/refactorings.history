@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Delete 7 resources" deleteContents="false" description="Delete 7 resources" element1="/SystemC/src/pml/MIPS_untimed.h" element2="/SystemC/src/pml/mux_timed.h" element3="/SystemC/src/pml/mux_untimed.h" element4="/SystemC/src/pml/registerFile_timed.h" element5="/SystemC/src/pml/registerFile_untimed.h" element6="/SystemC/src/pml/ulaMIPS_timed.h" element7="/SystemC/src/pml/ulaMIPS_untimed.h" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="7" stamp="1354232119238"/>
+</session>

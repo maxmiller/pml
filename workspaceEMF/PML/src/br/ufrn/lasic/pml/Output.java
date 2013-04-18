@@ -21,6 +21,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link br.ufrn.lasic.pml.Output#getOutin <em>Outin</em>}</li>
  *   <li>{@link br.ufrn.lasic.pml.Output#isSensitive <em>Sensitive</em>}</li>
  *   <li>{@link br.ufrn.lasic.pml.Output#getLength <em>Length</em>}</li>
+ *   <li>{@link br.ufrn.lasic.pml.Output#getBit <em>Bit</em>}</li>
  * </ul>
  * </p>
  *
@@ -161,5 +162,31 @@ public interface Output extends EObject {
 	 * @generated
 	 */
 	void setLength(int value);
+
+	/**
+	 * Returns the value of the '<em><b>Bit</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Bit</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Bit</em>' attribute.
+	 * @see #setBit(int)
+	 * @see br.ufrn.lasic.pml.PMLPackage#getOutput_Bit()
+	 * @model
+	 * @generated
+	 */
+	int getBit();
+
+	/**
+	 * Sets the value of the '{@link br.ufrn.lasic.pml.Output#getBit <em>Bit</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Bit</em>' attribute.
+	 * @see #getBit()
+	 * @generated
+	 */
+	void setBit(int value);
 
 } // Output

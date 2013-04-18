@@ -27,6 +27,7 @@ import org.eclipse.emf.ecore.impl.EObjectImpl;
  *   <li>{@link br.ufrn.lasic.pml.impl.SeletorImpl#getName <em>Name</em>}</li>
  *   <li>{@link br.ufrn.lasic.pml.impl.SeletorImpl#getType <em>Type</em>}</li>
  *   <li>{@link br.ufrn.lasic.pml.impl.SeletorImpl#getLengh <em>Lengh</em>}</li>
+ *   <li>{@link br.ufrn.lasic.pml.impl.SeletorImpl#getBit <em>Bit</em>}</li>
  * </ul>
  * </p>
  *
@@ -92,6 +93,26 @@ public class SeletorImpl extends EObjectImpl implements Seletor {
 	 * @ordered
 	 */
 	protected int lengh = LENGH_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getBit() <em>Bit</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getBit()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final int BIT_EDEFAULT = 0;
+
+	/**
+	 * The cached value of the '{@link #getBit() <em>Bit</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getBit()
+	 * @generated
+	 * @ordered
+	 */
+	protected int bit = BIT_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -180,6 +201,27 @@ public class SeletorImpl extends EObjectImpl implements Seletor {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public int getBit() {
+		return bit;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setBit(int newBit) {
+		int oldBit = bit;
+		bit = newBit;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, PMLPackage.SELETOR__BIT, oldBit, bit));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -189,6 +231,8 @@ public class SeletorImpl extends EObjectImpl implements Seletor {
 				return getType();
 			case PMLPackage.SELETOR__LENGH:
 				return getLengh();
+			case PMLPackage.SELETOR__BIT:
+				return getBit();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -209,6 +253,9 @@ public class SeletorImpl extends EObjectImpl implements Seletor {
 				return;
 			case PMLPackage.SELETOR__LENGH:
 				setLengh((Integer)newValue);
+				return;
+			case PMLPackage.SELETOR__BIT:
+				setBit((Integer)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -231,6 +278,9 @@ public class SeletorImpl extends EObjectImpl implements Seletor {
 			case PMLPackage.SELETOR__LENGH:
 				setLengh(LENGH_EDEFAULT);
 				return;
+			case PMLPackage.SELETOR__BIT:
+				setBit(BIT_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -249,6 +299,8 @@ public class SeletorImpl extends EObjectImpl implements Seletor {
 				return type != TYPE_EDEFAULT;
 			case PMLPackage.SELETOR__LENGH:
 				return lengh != LENGH_EDEFAULT;
+			case PMLPackage.SELETOR__BIT:
+				return bit != BIT_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -269,6 +321,8 @@ public class SeletorImpl extends EObjectImpl implements Seletor {
 		result.append(type);
 		result.append(", lengh: ");
 		result.append(lengh);
+		result.append(", bit: ");
+		result.append(bit);
 		result.append(')');
 		return result.toString();
 	}

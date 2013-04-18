@@ -12,6 +12,7 @@ import br.ufrn.lasic.pml.Demultiplexor;
 import br.ufrn.lasic.pml.Memory;
 import br.ufrn.lasic.pml.Multiplexor;
 import br.ufrn.lasic.pml.PMLPackage;
+import br.ufrn.lasic.pml.PipelineInitialStage;
 import br.ufrn.lasic.pml.Processor;
 import br.ufrn.lasic.pml.Register;
 import br.ufrn.lasic.pml.ULA;
@@ -47,6 +48,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link br.ufrn.lasic.pml.impl.ProcessorImpl#getControlUnits <em>Control Units</em>}</li>
  *   <li>{@link br.ufrn.lasic.pml.impl.ProcessorImpl#getName <em>Name</em>}</li>
  *   <li>{@link br.ufrn.lasic.pml.impl.ProcessorImpl#getDecoders <em>Decoders</em>}</li>
+ *   <li>{@link br.ufrn.lasic.pml.impl.ProcessorImpl#getInitialStagePipeline <em>Initial Stage Pipeline</em>}</li>
  * </ul>
  * </p>
  *
@@ -142,6 +144,16 @@ public class ProcessorImpl extends EObjectImpl implements Processor {
 	 * @ordered
 	 */
 	protected EList<Decoder> decoders;
+
+	/**
+	 * The cached value of the '{@link #getInitialStagePipeline() <em>Initial Stage Pipeline</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getInitialStagePipeline()
+	 * @generated
+	 * @ordered
+	 */
+	protected PipelineInitialStage initialStagePipeline;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -272,6 +284,49 @@ public class ProcessorImpl extends EObjectImpl implements Processor {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public PipelineInitialStage getInitialStagePipeline() {
+		return initialStagePipeline;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetInitialStagePipeline(PipelineInitialStage newInitialStagePipeline, NotificationChain msgs) {
+		PipelineInitialStage oldInitialStagePipeline = initialStagePipeline;
+		initialStagePipeline = newInitialStagePipeline;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, PMLPackage.PROCESSOR__INITIAL_STAGE_PIPELINE, oldInitialStagePipeline, newInitialStagePipeline);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setInitialStagePipeline(PipelineInitialStage newInitialStagePipeline) {
+		if (newInitialStagePipeline != initialStagePipeline) {
+			NotificationChain msgs = null;
+			if (initialStagePipeline != null)
+				msgs = ((InternalEObject)initialStagePipeline).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - PMLPackage.PROCESSOR__INITIAL_STAGE_PIPELINE, null, msgs);
+			if (newInitialStagePipeline != null)
+				msgs = ((InternalEObject)newInitialStagePipeline).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - PMLPackage.PROCESSOR__INITIAL_STAGE_PIPELINE, null, msgs);
+			msgs = basicSetInitialStagePipeline(newInitialStagePipeline, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, PMLPackage.PROCESSOR__INITIAL_STAGE_PIPELINE, newInitialStagePipeline, newInitialStagePipeline));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -289,6 +344,8 @@ public class ProcessorImpl extends EObjectImpl implements Processor {
 				return ((InternalEList<?>)getControlUnits()).basicRemove(otherEnd, msgs);
 			case PMLPackage.PROCESSOR__DECODERS:
 				return ((InternalEList<?>)getDecoders()).basicRemove(otherEnd, msgs);
+			case PMLPackage.PROCESSOR__INITIAL_STAGE_PIPELINE:
+				return basicSetInitialStagePipeline(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -317,6 +374,8 @@ public class ProcessorImpl extends EObjectImpl implements Processor {
 				return getName();
 			case PMLPackage.PROCESSOR__DECODERS:
 				return getDecoders();
+			case PMLPackage.PROCESSOR__INITIAL_STAGE_PIPELINE:
+				return getInitialStagePipeline();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -361,6 +420,9 @@ public class ProcessorImpl extends EObjectImpl implements Processor {
 				getDecoders().clear();
 				getDecoders().addAll((Collection<? extends Decoder>)newValue);
 				return;
+			case PMLPackage.PROCESSOR__INITIAL_STAGE_PIPELINE:
+				setInitialStagePipeline((PipelineInitialStage)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -397,6 +459,9 @@ public class ProcessorImpl extends EObjectImpl implements Processor {
 			case PMLPackage.PROCESSOR__DECODERS:
 				getDecoders().clear();
 				return;
+			case PMLPackage.PROCESSOR__INITIAL_STAGE_PIPELINE:
+				setInitialStagePipeline((PipelineInitialStage)null);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -425,6 +490,8 @@ public class ProcessorImpl extends EObjectImpl implements Processor {
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 			case PMLPackage.PROCESSOR__DECODERS:
 				return decoders != null && !decoders.isEmpty();
+			case PMLPackage.PROCESSOR__INITIAL_STAGE_PIPELINE:
+				return initialStagePipeline != null;
 		}
 		return super.eIsSet(featureID);
 	}

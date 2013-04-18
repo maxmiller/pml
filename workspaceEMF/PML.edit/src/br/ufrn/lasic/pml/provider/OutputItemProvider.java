@@ -69,6 +69,7 @@ public class OutputItemProvider
 			addOutinPropertyDescriptor(object);
 			addSensitivePropertyDescriptor(object);
 			addLengthPropertyDescriptor(object);
+			addBitPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -184,6 +185,28 @@ public class OutputItemProvider
 	}
 
 	/**
+	 * This adds a property descriptor for the Bit feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addBitPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Output_bit_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Output_bit_feature", "_UI_Output_type"),
+				 PMLPackage.Literals.OUTPUT__BIT,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
 	 * This returns Output.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -224,6 +247,7 @@ public class OutputItemProvider
 			case PMLPackage.OUTPUT__TYPE:
 			case PMLPackage.OUTPUT__SENSITIVE:
 			case PMLPackage.OUTPUT__LENGTH:
+			case PMLPackage.OUTPUT__BIT:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

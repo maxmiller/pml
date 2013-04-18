@@ -21,6 +21,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link br.ufrn.lasic.pml.Input#getLength <em>Length</em>}</li>
  *   <li>{@link br.ufrn.lasic.pml.Input#getInout <em>Inout</em>}</li>
  *   <li>{@link br.ufrn.lasic.pml.Input#isSensitive <em>Sensitive</em>}</li>
+ *   <li>{@link br.ufrn.lasic.pml.Input#getBit <em>Bit</em>}</li>
  * </ul>
  * </p>
  *
@@ -161,5 +162,31 @@ public interface Input extends EObject {
 	 * @generated
 	 */
 	void setSensitive(boolean value);
+
+	/**
+	 * Returns the value of the '<em><b>Bit</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Bit</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Bit</em>' attribute.
+	 * @see #setBit(int)
+	 * @see br.ufrn.lasic.pml.PMLPackage#getInput_Bit()
+	 * @model
+	 * @generated
+	 */
+	int getBit();
+
+	/**
+	 * Sets the value of the '{@link br.ufrn.lasic.pml.Input#getBit <em>Bit</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Bit</em>' attribute.
+	 * @see #getBit()
+	 * @generated
+	 */
+	void setBit(int value);
 
 } // Input

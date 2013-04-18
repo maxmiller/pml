@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Delete 10 resources" deleteContents="false" description="Delete 10 resources" element1="/SystemC/src/pml/DataMem_untimed.h" element10="/SystemC/src/pml/ulaMIPS_untimed.h" element2="/SystemC/src/pml/decoder_untimed.h" element3="/SystemC/src/pml/InstructionMemory_untimed.h" element4="/SystemC/src/pml/MIPS_untimed.h" element5="/SystemC/src/pml/mux_timed.h" element6="/SystemC/src/pml/mux_untimed.h" element7="/SystemC/src/pml/registerFile_timed.h" element8="/SystemC/src/pml/registerFile_untimed.h" element9="/SystemC/src/pml/ulaMIPS_timed.h" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="10" stamp="1361996328602"/>
+</session>

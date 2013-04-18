@@ -31,6 +31,7 @@ import org.eclipse.emf.ecore.impl.EObjectImpl;
  *   <li>{@link br.ufrn.lasic.pml.impl.InputImpl#getLength <em>Length</em>}</li>
  *   <li>{@link br.ufrn.lasic.pml.impl.InputImpl#getInout <em>Inout</em>}</li>
  *   <li>{@link br.ufrn.lasic.pml.impl.InputImpl#isSensitive <em>Sensitive</em>}</li>
+ *   <li>{@link br.ufrn.lasic.pml.impl.InputImpl#getBit <em>Bit</em>}</li>
  * </ul>
  * </p>
  *
@@ -126,6 +127,26 @@ public class InputImpl extends EObjectImpl implements Input {
 	 * @ordered
 	 */
 	protected boolean sensitive = SENSITIVE_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getBit() <em>Bit</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getBit()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final int BIT_EDEFAULT = 0;
+
+	/**
+	 * The cached value of the '{@link #getBit() <em>Bit</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getBit()
+	 * @generated
+	 * @ordered
+	 */
+	protected int bit = BIT_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -273,6 +294,27 @@ public class InputImpl extends EObjectImpl implements Input {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public int getBit() {
+		return bit;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setBit(int newBit) {
+		int oldBit = bit;
+		bit = newBit;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, PMLPackage.INPUT__BIT, oldBit, bit));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -287,6 +329,8 @@ public class InputImpl extends EObjectImpl implements Input {
 				return basicGetInout();
 			case PMLPackage.INPUT__SENSITIVE:
 				return isSensitive();
+			case PMLPackage.INPUT__BIT:
+				return getBit();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -313,6 +357,9 @@ public class InputImpl extends EObjectImpl implements Input {
 				return;
 			case PMLPackage.INPUT__SENSITIVE:
 				setSensitive((Boolean)newValue);
+				return;
+			case PMLPackage.INPUT__BIT:
+				setBit((Integer)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -341,6 +388,9 @@ public class InputImpl extends EObjectImpl implements Input {
 			case PMLPackage.INPUT__SENSITIVE:
 				setSensitive(SENSITIVE_EDEFAULT);
 				return;
+			case PMLPackage.INPUT__BIT:
+				setBit(BIT_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -363,6 +413,8 @@ public class InputImpl extends EObjectImpl implements Input {
 				return inout != null;
 			case PMLPackage.INPUT__SENSITIVE:
 				return sensitive != SENSITIVE_EDEFAULT;
+			case PMLPackage.INPUT__BIT:
+				return bit != BIT_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -385,6 +437,8 @@ public class InputImpl extends EObjectImpl implements Input {
 		result.append(length);
 		result.append(", sensitive: ");
 		result.append(sensitive);
+		result.append(", bit: ");
+		result.append(bit);
 		result.append(')');
 		return result.toString();
 	}
