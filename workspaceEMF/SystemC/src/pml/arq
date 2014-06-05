@@ -1,0 +1,317 @@
+	#ifndef DLX_h
+	#define  DLX_h
+	#include "systemc.h"
+	
+	SC_MODULE(DLX){
+
+		sc_in_clk clock;
+			
+	       unitcontrol *unitcontrol_;
+	       ulaDLX *uladlx_;
+	       mux01 *mux01_;
+	       mux02 *mux02_;
+	       mux03 *mux03_;
+	       mux04 *mux04_;
+	       DataMem *datamem_;
+	       InstructionMemory *instructionmemory_;
+	       registerFile *registerfile_;
+	       PC *pc_;
+		SC_CTOR(DLX) {
+	       unitcontrol_ = new  unitcontrol();
+	        uladlx_ = new  ulaDLX();
+	        mux01_ = new  mux01();
+	        mux02_ = new  mux02();
+	        mux03_ = new  mux03();
+	        mux04_ = new  mux04();
+	        datamem_ = new  DataMem();
+	        instructionmemory_ = new  InstructionMemory();
+	        registerfile_ = new  registerFile();
+	        pc_ = new  PC();
+        }       
+	};
+	#endif
+	#ifndef DataMem_h
+	#define  DataMem_h
+	#include "systemc.h"
+	
+	SC_MODULE(DataMem){
+	     	sc_in<address;	    
+	     	sc_in< sc_bool >write;	    
+	     	sc_in<we;	    
+	  	sc_out<dataOut;	    
+        	void execute(); 
+		SC_CTOR(DataMem) {
+	        	SC_METHOD(execute); 
+        }       
+	};
+	#endif
+	
+	#ifndef InstructionMemory_h
+	#define  InstructionMemory_h
+	#include "systemc.h"
+	
+	SC_MODULE(InstructionMemory){
+	     	sc_in<address;	    
+	  	sc_out<dataMem;	    
+        	void execute(); 
+		SC_CTOR(InstructionMemory) {
+	        	SC_METHOD(execute); 
+        }       
+	};
+	#endif
+	
+	#ifndef PC_h
+	#define  PC_h
+	#include "systemc.h"
+	
+	SC_MODULE(PC){
+
+		sc_int<WORD_SIZE> *PC;
+
+		
+	     	sc_in< sc_int<16> >inPC;	    
+	  	sc_out< sc_int<16> >outPC;	    
+        	void behavior(); 
+/* example code implementation 
+if(writeReg){
+	registers[  address2.read().to_int() ] = dataIn;
+	}
+	dataOut = registers[address.read().to_int()] ;
+}
+*/
+        	void execute(); 
+/* example code implementation 
+if(writeReg){
+	registers[  address2.read().to_int() ] = dataIn;
+	}
+	dataOut = registers[address.read().to_int()] ;
+}
+*/
+		SC_CTOR(PC) {
+        
+	        	SC_METHOD(behavior); 
+	        	SC_METHOD(execute); 
+				      sensitive <<inPC;
+
+        }       
+	};
+	#endif
+	
+	#ifndef mux01_h
+	#define  mux01_h
+	#include "systemc.h"
+	
+	SC_MODULE(mux01){
+	    	sc_in< sc_int<16> > *inputs;	    
+	    	sc_out< sc_int<16> >out;	    
+	    	sc_in< sc_int<16> >sel;	    
+        	void execute();/*
+			{
+				if(sel.read().to_int() < num_inputs){
+					out = inputs[sel.read().to_int()] ;
+				}else{
+					out = inputs[0] ;
+				}
+			    wait(1);
+
+			}*/
+        
+		SC_CTOR(mux01) {
+        	
+			
+	        	SC_METHOD(execute); 
+        }       
+	};
+	#endif
+	
+	#ifndef mux02_h
+	#define  mux02_h
+	#include "systemc.h"
+	
+	SC_MODULE(mux02){
+	    	sc_in< sc_int<16> > *inputs;	    
+	    	sc_out< sc_int<16> >out;	    
+	    	sc_in< sc_int<16> >sel;	    
+        	void execute();/*
+			{
+				if(sel.read().to_int() < num_inputs){
+					out = inputs[sel.read().to_int()] ;
+				}else{
+					out = inputs[0] ;
+				}
+			    wait(1);
+
+			}*/
+        
+		SC_CTOR(mux02) {
+        	
+			
+	        	SC_METHOD(execute); 
+        }       
+	};
+	#endif
+	
+	#ifndef mux03_h
+	#define  mux03_h
+	#include "systemc.h"
+	
+	SC_MODULE(mux03){
+	    	sc_in< sc_int<16> > *inputs;	    
+	    	sc_out< sc_int<16> >out;	    
+	    	sc_in< sc_int<16> >sel;	    
+        	void execute();/*
+			{
+				if(sel.read().to_int() < num_inputs){
+					out = inputs[sel.read().to_int()] ;
+				}else{
+					out = inputs[0] ;
+				}
+			    wait(1);
+
+			}*/
+        
+		SC_CTOR(mux03) {
+        	
+			
+	        	SC_METHOD(execute); 
+        }       
+	};
+	#endif
+	
+	#ifndef mux04_h
+	#define  mux04_h
+	#include "systemc.h"
+	
+	SC_MODULE(mux04){
+	    	sc_in< sc_int<16> > *inputs;	    
+	    	sc_out< sc_int<16> >out;	    
+	    	sc_in< sc_int<16> >sel;	    
+        	void execute();/*
+			{
+				if(sel.read().to_int() < num_inputs){
+					out = inputs[sel.read().to_int()] ;
+				}else{
+					out = inputs[0] ;
+				}
+			    wait(1);
+
+			}*/
+        
+		SC_CTOR(mux04) {
+        	
+			
+	        	SC_METHOD(execute); 
+        }       
+	};
+	#endif
+	
+	#ifndef registerFile_h
+	#define  registerFile_h
+	#include "systemc.h"
+	
+	SC_MODULE(registerFile){
+
+		sc_int<WORD_SIZE> *registerFile;
+
+		
+	     	sc_in< sc_bool >clock;	    
+	     	sc_in< sc_bool >writeMem;	    
+	     	sc_in<address;	    
+	     	sc_in<dataIn;	    
+	  	sc_out<dataOut;	    
+        	void execute(); 
+/* example code implementation 
+if(writeReg){
+	registers[  address2.read().to_int() ] = dataIn;
+	}
+	dataOut = registers[address.read().to_int()] ;
+}
+*/
+		SC_CTOR(registerFile) {
+        
+	        	SC_METHOD(execute); 
+				      sensitive <<clock;
+
+        }       
+	};
+	#endif
+	
+	#ifndef ulaDLX_h
+	#define  ulaDLX_h
+	#include "systemc.h"
+	
+	SC_MODULE(ulaDLX){
+		
+		typedef enum ULAOPERATION_{
+			ulaOperation_add,
+			ulaOperation_mult,
+			ulaOperation_and,
+			ulaOperation_inc,
+			ulaOperation_do_nothing,
+			ulaOperation_gt,
+			ulaOperation_eq,
+			ulaOperation_eqz,
+			ulaOperation_lt,
+		}
+	    	sc_in<opA;	    
+	    	sc_in<opB;	    
+	    	sc_out<Result;	    
+	    	sc_out< sc_bool >status;	    
+	    	sc_in<op;	    
+        	binary execution(); 
+		SC_CTOR(ulaDLX) {
+	        	SC_METHOD(execution); 
+        }       
+	};
+	#endif
+	
+	#ifndef unitcontrol_h
+	#define  unitcontrol_h
+	#include "systemc.h"
+	
+	SC_MODULE(unitcontrol){
+	     	sc_in< sc_bool >clock;	    
+	     	sc_in< sc_int<16> >iRInput;	    
+	     	sc_in< sc_bool >statusBit;	    
+	  	sc_out< sc_int<16> >ulaOp;	    
+	  	sc_out< sc_int<16> >ulaOutDemuxSel;	    
+	  	sc_out< sc_int<16> >ulaInAMuxSel;	    
+	  	sc_out< sc_int<16> >ulaInBMuxSel;	    
+	  	sc_out< sc_int<16> >dRinMuxSel;	    
+	  	sc_out< sc_int<16> >dRoutDemuxSel;	    
+	  	sc_out< sc_int<16> >rfSel;	    
+	  	sc_out< sc_bool >rfReadWriteBit;	    
+	  	sc_out< sc_bool >writeMemory;	    
+	  	sc_out< sc_bool >loadRA;	    
+	  	sc_out< sc_bool >loadRB;	    
+	  	sc_out< sc_bool >loadIR;	    
+	  	sc_out< sc_bool >loadAR;	    
+	  	sc_out< sc_bool >loadPC;	    
+	  	sc_out< sc_bool >loadDR;	    
+        	void controlunitbehavior(); 
+        	boolean processinstruction(); 
+        	boolean processmiscellaneousinstruction(); 
+        	boolean processcontrolinstruction(); 
+        	boolean processregisterinstruction(); 
+        	boolean processmemoryinstruction(); 
+        	void resetallloads(); 
+        	void incrementpc(); 
+        	void loadsarwithpc(); 
+     	SC_CTOR(unitcontrol) {
+	        	SC_METHOD(controlunitbehavior); 
+	        	SC_METHOD(processinstruction); 
+	        	SC_METHOD(processmiscellaneousinstruction); 
+	        	SC_METHOD(processcontrolinstruction); 
+	        	SC_METHOD(processregisterinstruction); 
+	        	SC_METHOD(processmemoryinstruction); 
+	        	SC_METHOD(resetallloads); 
+	        	SC_METHOD(incrementpc); 
+	        	SC_METHOD(loadsarwithpc); 
+				  sensitive <<clock;
+
+				  sensitive <<iRInput;
+
+        }       
+	};
+	#endif
+	

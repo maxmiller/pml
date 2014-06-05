@@ -1,8 +1,4 @@
 /**
- * <copyright>
- * </copyright>
- *
- * $Id$
  */
 package br.ufrn.lasic.pml;
 
@@ -42,7 +38,7 @@ public interface Demultiplexor extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Behaviors Demux</em>' containment reference list.
 	 * @see br.ufrn.lasic.pml.PMLPackage#getDemultiplexor_BehaviorsDemux()
-	 * @model containment="true"
+	 * @model containment="true" required="true"
 	 * @generated
 	 */
 	EList<Behavior> getBehaviorsDemux();

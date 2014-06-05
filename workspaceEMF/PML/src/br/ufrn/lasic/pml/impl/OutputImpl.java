@@ -1,12 +1,7 @@
 /**
- * <copyright>
- * </copyright>
- *
- * $Id$
  */
 package br.ufrn.lasic.pml.impl;
 
-import br.ufrn.lasic.pml.Input;
 import br.ufrn.lasic.pml.Output;
 import br.ufrn.lasic.pml.PMLPackage;
 import br.ufrn.lasic.pml.TypeData;
@@ -14,7 +9,6 @@ import br.ufrn.lasic.pml.TypeData;
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.EObjectImpl;
@@ -28,7 +22,6 @@ import org.eclipse.emf.ecore.impl.EObjectImpl;
  * <ul>
  *   <li>{@link br.ufrn.lasic.pml.impl.OutputImpl#getName <em>Name</em>}</li>
  *   <li>{@link br.ufrn.lasic.pml.impl.OutputImpl#getType <em>Type</em>}</li>
- *   <li>{@link br.ufrn.lasic.pml.impl.OutputImpl#getOutin <em>Outin</em>}</li>
  *   <li>{@link br.ufrn.lasic.pml.impl.OutputImpl#isSensitive <em>Sensitive</em>}</li>
  *   <li>{@link br.ufrn.lasic.pml.impl.OutputImpl#getLength <em>Length</em>}</li>
  *   <li>{@link br.ufrn.lasic.pml.impl.OutputImpl#getBit <em>Bit</em>}</li>
@@ -77,16 +70,6 @@ public class OutputImpl extends EObjectImpl implements Output {
 	 * @ordered
 	 */
 	protected TypeData type = TYPE_EDEFAULT;
-
-	/**
-	 * The cached value of the '{@link #getOutin() <em>Outin</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getOutin()
-	 * @generated
-	 * @ordered
-	 */
-	protected Input outin;
 
 	/**
 	 * The default value of the '{@link #isSensitive() <em>Sensitive</em>}' attribute.
@@ -214,44 +197,6 @@ public class OutputImpl extends EObjectImpl implements Output {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Input getOutin() {
-		if (outin != null && outin.eIsProxy()) {
-			InternalEObject oldOutin = (InternalEObject)outin;
-			outin = (Input)eResolveProxy(oldOutin);
-			if (outin != oldOutin) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, PMLPackage.OUTPUT__OUTIN, oldOutin, outin));
-			}
-		}
-		return outin;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Input basicGetOutin() {
-		return outin;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setOutin(Input newOutin) {
-		Input oldOutin = outin;
-		outin = newOutin;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, PMLPackage.OUTPUT__OUTIN, oldOutin, outin));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public boolean isSensitive() {
 		return sensitive;
 	}
@@ -322,9 +267,6 @@ public class OutputImpl extends EObjectImpl implements Output {
 				return getName();
 			case PMLPackage.OUTPUT__TYPE:
 				return getType();
-			case PMLPackage.OUTPUT__OUTIN:
-				if (resolve) return getOutin();
-				return basicGetOutin();
 			case PMLPackage.OUTPUT__SENSITIVE:
 				return isSensitive();
 			case PMLPackage.OUTPUT__LENGTH:
@@ -348,9 +290,6 @@ public class OutputImpl extends EObjectImpl implements Output {
 				return;
 			case PMLPackage.OUTPUT__TYPE:
 				setType((TypeData)newValue);
-				return;
-			case PMLPackage.OUTPUT__OUTIN:
-				setOutin((Input)newValue);
 				return;
 			case PMLPackage.OUTPUT__SENSITIVE:
 				setSensitive((Boolean)newValue);
@@ -379,9 +318,6 @@ public class OutputImpl extends EObjectImpl implements Output {
 			case PMLPackage.OUTPUT__TYPE:
 				setType(TYPE_EDEFAULT);
 				return;
-			case PMLPackage.OUTPUT__OUTIN:
-				setOutin((Input)null);
-				return;
 			case PMLPackage.OUTPUT__SENSITIVE:
 				setSensitive(SENSITIVE_EDEFAULT);
 				return;
@@ -407,8 +343,6 @@ public class OutputImpl extends EObjectImpl implements Output {
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 			case PMLPackage.OUTPUT__TYPE:
 				return type != TYPE_EDEFAULT;
-			case PMLPackage.OUTPUT__OUTIN:
-				return outin != null;
 			case PMLPackage.OUTPUT__SENSITIVE:
 				return sensitive != SENSITIVE_EDEFAULT;
 			case PMLPackage.OUTPUT__LENGTH:

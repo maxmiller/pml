@@ -1,8 +1,4 @@
 /**
- * <copyright>
- * </copyright>
- *
- * $Id$
  */
 package br.ufrn.lasic.pml.provider;
 
@@ -69,6 +65,7 @@ public class InitialMicroInstructionItemProvider
 
 			addNamePropertyDescriptor(object);
 			addValuePropertyDescriptor(object);
+			addFirstnodeFSMPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -113,6 +110,28 @@ public class InitialMicroInstructionItemProvider
 				 false,
 				 false,
 				 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Firstnode FSM feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addFirstnodeFSMPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_InitialMicroInstruction_firstnodeFSM_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_InitialMicroInstruction_firstnodeFSM_feature", "_UI_InitialMicroInstruction_type"),
+				 PMLPackage.Literals.INITIAL_MICRO_INSTRUCTION__FIRSTNODE_FSM,
+				 true,
+				 false,
+				 true,
+				 null,
 				 null,
 				 null));
 	}

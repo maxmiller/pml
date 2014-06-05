@@ -1,8 +1,4 @@
 /**
- * <copyright>
- * </copyright>
- *
- * $Id$
  */
 package br.ufrn.lasic.pml;
 
@@ -208,22 +204,13 @@ public interface PMLPackage extends EPackage {
 	int INPUT__LENGTH = 2;
 
 	/**
-	 * The feature id for the '<em><b>Inout</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INPUT__INOUT = 3;
-
-	/**
 	 * The feature id for the '<em><b>Sensitive</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int INPUT__SENSITIVE = 4;
+	int INPUT__SENSITIVE = 3;
 
 	/**
 	 * The feature id for the '<em><b>Bit</b></em>' attribute.
@@ -232,7 +219,7 @@ public interface PMLPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INPUT__BIT = 5;
+	int INPUT__BIT = 4;
 
 	/**
 	 * The number of structural features of the '<em>Input</em>' class.
@@ -241,7 +228,7 @@ public interface PMLPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INPUT_FEATURE_COUNT = 6;
+	int INPUT_FEATURE_COUNT = 5;
 
 	/**
 	 * The meta object id for the '{@link br.ufrn.lasic.pml.impl.OutputImpl <em>Output</em>}' class.
@@ -272,22 +259,13 @@ public interface PMLPackage extends EPackage {
 	int OUTPUT__TYPE = 1;
 
 	/**
-	 * The feature id for the '<em><b>Outin</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int OUTPUT__OUTIN = 2;
-
-	/**
 	 * The feature id for the '<em><b>Sensitive</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int OUTPUT__SENSITIVE = 3;
+	int OUTPUT__SENSITIVE = 2;
 
 	/**
 	 * The feature id for the '<em><b>Length</b></em>' attribute.
@@ -296,7 +274,7 @@ public interface PMLPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int OUTPUT__LENGTH = 4;
+	int OUTPUT__LENGTH = 3;
 
 	/**
 	 * The feature id for the '<em><b>Bit</b></em>' attribute.
@@ -305,7 +283,7 @@ public interface PMLPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int OUTPUT__BIT = 5;
+	int OUTPUT__BIT = 4;
 
 	/**
 	 * The number of structural features of the '<em>Output</em>' class.
@@ -314,7 +292,7 @@ public interface PMLPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int OUTPUT_FEATURE_COUNT = 6;
+	int OUTPUT_FEATURE_COUNT = 5;
 
 	/**
 	 * The meta object id for the '{@link br.ufrn.lasic.pml.impl.DemultiplexorImpl <em>Demultiplexor</em>}' class.
@@ -500,13 +478,22 @@ public interface PMLPackage extends EPackage {
 	int CONTROL_UNIT__INTRUCTIONS = 4;
 
 	/**
+	 * The feature id for the '<em><b>Control Unit FSM</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONTROL_UNIT__CONTROL_UNIT_FSM = 5;
+
+	/**
 	 * The number of structural features of the '<em>Control Unit</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CONTROL_UNIT_FEATURE_COUNT = 5;
+	int CONTROL_UNIT_FEATURE_COUNT = 6;
 
 	/**
 	 * The meta object id for the '{@link br.ufrn.lasic.pml.impl.ProcessorImpl <em>Processor</em>}' class.
@@ -591,13 +578,13 @@ public interface PMLPackage extends EPackage {
 	int PROCESSOR__DECODERS = 7;
 
 	/**
-	 * The feature id for the '<em><b>Initial Stage Pipeline</b></em>' containment reference.
+	 * The feature id for the '<em><b>Processor Signal Events</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PROCESSOR__INITIAL_STAGE_PIPELINE = 8;
+	int PROCESSOR__PROCESSOR_SIGNAL_EVENTS = 8;
 
 	/**
 	 * The number of structural features of the '<em>Processor</em>' class.
@@ -765,22 +752,13 @@ public interface PMLPackage extends EPackage {
 	int INSTRUCTIONS__NAME = 1;
 
 	/**
-	 * The feature id for the '<em><b>Initial</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INSTRUCTIONS__INITIAL = 2;
-
-	/**
 	 * The number of structural features of the '<em>Instructions</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int INSTRUCTIONS_FEATURE_COUNT = 3;
+	int INSTRUCTIONS_FEATURE_COUNT = 2;
 
 	/**
 	 * The meta object id for the '{@link br.ufrn.lasic.pml.impl.MicroInstructionImpl <em>Micro Instruction</em>}' class.
@@ -829,13 +807,22 @@ public interface PMLPackage extends EPackage {
 	int MICRO_INSTRUCTION__FINAL = 3;
 
 	/**
+	 * The feature id for the '<em><b>Middle FSM</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MICRO_INSTRUCTION__MIDDLE_FSM = 4;
+
+	/**
 	 * The number of structural features of the '<em>Micro Instruction</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MICRO_INSTRUCTION_FEATURE_COUNT = 4;
+	int MICRO_INSTRUCTION_FEATURE_COUNT = 5;
 
 	/**
 	 * The meta object id for the '{@link br.ufrn.lasic.pml.impl.InitialMicroInstructionImpl <em>Initial Micro Instruction</em>}' class.
@@ -884,13 +871,22 @@ public interface PMLPackage extends EPackage {
 	int INITIAL_MICRO_INSTRUCTION__DIRECT_FINAL_MICRO_INSTRUCTION = 3;
 
 	/**
+	 * The feature id for the '<em><b>Firstnode FSM</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INITIAL_MICRO_INSTRUCTION__FIRSTNODE_FSM = 4;
+
+	/**
 	 * The number of structural features of the '<em>Initial Micro Instruction</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int INITIAL_MICRO_INSTRUCTION_FEATURE_COUNT = 4;
+	int INITIAL_MICRO_INSTRUCTION_FEATURE_COUNT = 5;
 
 	/**
 	 * The meta object id for the '{@link br.ufrn.lasic.pml.impl.FinalMicroInstructionImpl <em>Final Micro Instruction</em>}' class.
@@ -921,13 +917,22 @@ public interface PMLPackage extends EPackage {
 	int FINAL_MICRO_INSTRUCTION__VALUE = 1;
 
 	/**
+	 * The feature id for the '<em><b>Final FSM</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FINAL_MICRO_INSTRUCTION__FINAL_FSM = 2;
+
+	/**
 	 * The number of structural features of the '<em>Final Micro Instruction</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FINAL_MICRO_INSTRUCTION_FEATURE_COUNT = 2;
+	int FINAL_MICRO_INSTRUCTION_FEATURE_COUNT = 3;
 
 	/**
 	 * The meta object id for the '{@link br.ufrn.lasic.pml.impl.SeletorImpl <em>Seletor</em>}' class.
@@ -976,13 +981,22 @@ public interface PMLPackage extends EPackage {
 	int SELETOR__BIT = 3;
 
 	/**
+	 * The feature id for the '<em><b>Sensitive</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SELETOR__SENSITIVE = 4;
+
+	/**
 	 * The number of structural features of the '<em>Seletor</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SELETOR_FEATURE_COUNT = 4;
+	int SELETOR_FEATURE_COUNT = 5;
 
 	/**
 	 * The meta object id for the '{@link br.ufrn.lasic.pml.impl.OperationImpl <em>Operation</em>}' class.
@@ -1068,14 +1082,14 @@ public interface PMLPackage extends EPackage {
 	int DECODER_FEATURE_COUNT = 4;
 
 	/**
-	 * The meta object id for the '{@link br.ufrn.lasic.pml.impl.PipelineInitialStageImpl <em>Pipeline Initial Stage</em>}' class.
+	 * The meta object id for the '{@link br.ufrn.lasic.pml.impl.SignalEventImpl <em>Signal Event</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see br.ufrn.lasic.pml.impl.PipelineInitialStageImpl
-	 * @see br.ufrn.lasic.pml.impl.PMLPackageImpl#getPipelineInitialStage()
+	 * @see br.ufrn.lasic.pml.impl.SignalEventImpl
+	 * @see br.ufrn.lasic.pml.impl.PMLPackageImpl#getSignalEvent()
 	 * @generated
 	 */
-	int PIPELINE_INITIAL_STAGE = 17;
+	int SIGNAL_EVENT = 17;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1084,62 +1098,43 @@ public interface PMLPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PIPELINE_INITIAL_STAGE__NAME = 0;
+	int SIGNAL_EVENT__NAME = 0;
 
 	/**
-	 * The feature id for the '<em><b>Next State Pipeline</b></em>' containment reference.
+	 * The feature id for the '<em><b>Signal In</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PIPELINE_INITIAL_STAGE__NEXT_STATE_PIPELINE = 1;
+	int SIGNAL_EVENT__SIGNAL_IN = 1;
 
 	/**
-	 * The number of structural features of the '<em>Pipeline Initial Stage</em>' class.
+	 * The feature id for the '<em><b>Signal Out</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PIPELINE_INITIAL_STAGE_FEATURE_COUNT = 2;
+	int SIGNAL_EVENT__SIGNAL_OUT = 2;
 
 	/**
-	 * The meta object id for the '{@link br.ufrn.lasic.pml.impl.PipelineNextStageImpl <em>Pipeline Next Stage</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see br.ufrn.lasic.pml.impl.PipelineNextStageImpl
-	 * @see br.ufrn.lasic.pml.impl.PMLPackageImpl#getPipelineNextStage()
-	 * @generated
-	 */
-	int PIPELINE_NEXT_STAGE = 18;
-
-	/**
-	 * The feature id for the '<em><b>Pipeline Next</b></em>' containment reference.
+	 * The feature id for the '<em><b>Sinal Selector</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PIPELINE_NEXT_STAGE__PIPELINE_NEXT = 0;
+	int SIGNAL_EVENT__SINAL_SELECTOR = 3;
 
 	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * The number of structural features of the '<em>Signal Event</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PIPELINE_NEXT_STAGE__NAME = 1;
-
-	/**
-	 * The number of structural features of the '<em>Pipeline Next Stage</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PIPELINE_NEXT_STAGE_FEATURE_COUNT = 2;
+	int SIGNAL_EVENT_FEATURE_COUNT = 4;
 
 	/**
 	 * The meta object id for the '{@link br.ufrn.lasic.pml.TypeComponent <em>Type Component</em>}' enum.
@@ -1149,7 +1144,7 @@ public interface PMLPackage extends EPackage {
 	 * @see br.ufrn.lasic.pml.impl.PMLPackageImpl#getTypeComponent()
 	 * @generated
 	 */
-	int TYPE_COMPONENT = 19;
+	int TYPE_COMPONENT = 18;
 
 	/**
 	 * The meta object id for the '{@link br.ufrn.lasic.pml.TypeData <em>Type Data</em>}' enum.
@@ -1159,7 +1154,7 @@ public interface PMLPackage extends EPackage {
 	 * @see br.ufrn.lasic.pml.impl.PMLPackageImpl#getTypeData()
 	 * @generated
 	 */
-	int TYPE_DATA = 20;
+	int TYPE_DATA = 19;
 
 
 	/**
@@ -1314,17 +1309,6 @@ public interface PMLPackage extends EPackage {
 	EAttribute getInput_Length();
 
 	/**
-	 * Returns the meta object for the reference '{@link br.ufrn.lasic.pml.Input#getInout <em>Inout</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Inout</em>'.
-	 * @see br.ufrn.lasic.pml.Input#getInout()
-	 * @see #getInput()
-	 * @generated
-	 */
-	EReference getInput_Inout();
-
-	/**
 	 * Returns the meta object for the attribute '{@link br.ufrn.lasic.pml.Input#isSensitive <em>Sensitive</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1377,17 +1361,6 @@ public interface PMLPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getOutput_Type();
-
-	/**
-	 * Returns the meta object for the reference '{@link br.ufrn.lasic.pml.Output#getOutin <em>Outin</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Outin</em>'.
-	 * @see br.ufrn.lasic.pml.Output#getOutin()
-	 * @see #getOutput()
-	 * @generated
-	 */
-	EReference getOutput_Outin();
 
 	/**
 	 * Returns the meta object for the attribute '{@link br.ufrn.lasic.pml.Output#isSensitive <em>Sensitive</em>}'.
@@ -1618,6 +1591,17 @@ public interface PMLPackage extends EPackage {
 	EReference getControlUnit_Intructions();
 
 	/**
+	 * Returns the meta object for the containment reference '{@link br.ufrn.lasic.pml.ControlUnit#getControlUnitFSM <em>Control Unit FSM</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Control Unit FSM</em>'.
+	 * @see br.ufrn.lasic.pml.ControlUnit#getControlUnitFSM()
+	 * @see #getControlUnit()
+	 * @generated
+	 */
+	EReference getControlUnit_ControlUnitFSM();
+
+	/**
 	 * Returns the meta object for class '{@link br.ufrn.lasic.pml.Processor <em>Processor</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1716,15 +1700,15 @@ public interface PMLPackage extends EPackage {
 	EReference getProcessor_Decoders();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link br.ufrn.lasic.pml.Processor#getInitialStagePipeline <em>Initial Stage Pipeline</em>}'.
+	 * Returns the meta object for the containment reference list '{@link br.ufrn.lasic.pml.Processor#getProcessorSignalEvents <em>Processor Signal Events</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Initial Stage Pipeline</em>'.
-	 * @see br.ufrn.lasic.pml.Processor#getInitialStagePipeline()
+	 * @return the meta object for the containment reference list '<em>Processor Signal Events</em>'.
+	 * @see br.ufrn.lasic.pml.Processor#getProcessorSignalEvents()
 	 * @see #getProcessor()
 	 * @generated
 	 */
-	EReference getProcessor_InitialStagePipeline();
+	EReference getProcessor_ProcessorSignalEvents();
 
 	/**
 	 * Returns the meta object for class '{@link br.ufrn.lasic.pml.Memory <em>Memory</em>}'.
@@ -1889,17 +1873,6 @@ public interface PMLPackage extends EPackage {
 	EAttribute getInstructions_Name();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link br.ufrn.lasic.pml.Instructions#getInitial <em>Initial</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Initial</em>'.
-	 * @see br.ufrn.lasic.pml.Instructions#getInitial()
-	 * @see #getInstructions()
-	 * @generated
-	 */
-	EReference getInstructions_Initial();
-
-	/**
 	 * Returns the meta object for class '{@link br.ufrn.lasic.pml.MicroInstruction <em>Micro Instruction</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1952,6 +1925,17 @@ public interface PMLPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getMicroInstruction_Final();
+
+	/**
+	 * Returns the meta object for the reference list '{@link br.ufrn.lasic.pml.MicroInstruction#getMiddleFSM <em>Middle FSM</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Middle FSM</em>'.
+	 * @see br.ufrn.lasic.pml.MicroInstruction#getMiddleFSM()
+	 * @see #getMicroInstruction()
+	 * @generated
+	 */
+	EReference getMicroInstruction_MiddleFSM();
 
 	/**
 	 * Returns the meta object for class '{@link br.ufrn.lasic.pml.InitialMicroInstruction <em>Initial Micro Instruction</em>}'.
@@ -2008,6 +1992,17 @@ public interface PMLPackage extends EPackage {
 	EReference getInitialMicroInstruction_DirectFinalMicroInstruction();
 
 	/**
+	 * Returns the meta object for the reference list '{@link br.ufrn.lasic.pml.InitialMicroInstruction#getFirstnodeFSM <em>Firstnode FSM</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Firstnode FSM</em>'.
+	 * @see br.ufrn.lasic.pml.InitialMicroInstruction#getFirstnodeFSM()
+	 * @see #getInitialMicroInstruction()
+	 * @generated
+	 */
+	EReference getInitialMicroInstruction_FirstnodeFSM();
+
+	/**
 	 * Returns the meta object for class '{@link br.ufrn.lasic.pml.FinalMicroInstruction <em>Final Micro Instruction</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2038,6 +2033,17 @@ public interface PMLPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getFinalMicroInstruction_Value();
+
+	/**
+	 * Returns the meta object for the reference list '{@link br.ufrn.lasic.pml.FinalMicroInstruction#getFinalFSM <em>Final FSM</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Final FSM</em>'.
+	 * @see br.ufrn.lasic.pml.FinalMicroInstruction#getFinalFSM()
+	 * @see #getFinalMicroInstruction()
+	 * @generated
+	 */
+	EReference getFinalMicroInstruction_FinalFSM();
 
 	/**
 	 * Returns the meta object for class '{@link br.ufrn.lasic.pml.Seletor <em>Seletor</em>}'.
@@ -2092,6 +2098,17 @@ public interface PMLPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getSeletor_Bit();
+
+	/**
+	 * Returns the meta object for the attribute '{@link br.ufrn.lasic.pml.Seletor#isSensitive <em>Sensitive</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Sensitive</em>'.
+	 * @see br.ufrn.lasic.pml.Seletor#isSensitive()
+	 * @see #getSeletor()
+	 * @generated
+	 */
+	EAttribute getSeletor_Sensitive();
 
 	/**
 	 * Returns the meta object for class '{@link br.ufrn.lasic.pml.Operation <em>Operation</em>}'.
@@ -2169,68 +2186,58 @@ public interface PMLPackage extends EPackage {
 	EReference getDecoder_BehaviorDecoder();
 
 	/**
-	 * Returns the meta object for class '{@link br.ufrn.lasic.pml.PipelineInitialStage <em>Pipeline Initial Stage</em>}'.
+	 * Returns the meta object for class '{@link br.ufrn.lasic.pml.SignalEvent <em>Signal Event</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Pipeline Initial Stage</em>'.
-	 * @see br.ufrn.lasic.pml.PipelineInitialStage
+	 * @return the meta object for class '<em>Signal Event</em>'.
+	 * @see br.ufrn.lasic.pml.SignalEvent
 	 * @generated
 	 */
-	EClass getPipelineInitialStage();
+	EClass getSignalEvent();
 
 	/**
-	 * Returns the meta object for the attribute '{@link br.ufrn.lasic.pml.PipelineInitialStage#getName <em>Name</em>}'.
+	 * Returns the meta object for the attribute '{@link br.ufrn.lasic.pml.SignalEvent#getName <em>Name</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see br.ufrn.lasic.pml.PipelineInitialStage#getName()
-	 * @see #getPipelineInitialStage()
+	 * @see br.ufrn.lasic.pml.SignalEvent#getName()
+	 * @see #getSignalEvent()
 	 * @generated
 	 */
-	EAttribute getPipelineInitialStage_Name();
+	EAttribute getSignalEvent_Name();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link br.ufrn.lasic.pml.PipelineInitialStage#getNextStatePipeline <em>Next State Pipeline</em>}'.
+	 * Returns the meta object for the reference list '{@link br.ufrn.lasic.pml.SignalEvent#getSignalIn <em>Signal In</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Next State Pipeline</em>'.
-	 * @see br.ufrn.lasic.pml.PipelineInitialStage#getNextStatePipeline()
-	 * @see #getPipelineInitialStage()
+	 * @return the meta object for the reference list '<em>Signal In</em>'.
+	 * @see br.ufrn.lasic.pml.SignalEvent#getSignalIn()
+	 * @see #getSignalEvent()
 	 * @generated
 	 */
-	EReference getPipelineInitialStage_NextStatePipeline();
+	EReference getSignalEvent_SignalIn();
 
 	/**
-	 * Returns the meta object for class '{@link br.ufrn.lasic.pml.PipelineNextStage <em>Pipeline Next Stage</em>}'.
+	 * Returns the meta object for the reference list '{@link br.ufrn.lasic.pml.SignalEvent#getSignalOut <em>Signal Out</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Pipeline Next Stage</em>'.
-	 * @see br.ufrn.lasic.pml.PipelineNextStage
+	 * @return the meta object for the reference list '<em>Signal Out</em>'.
+	 * @see br.ufrn.lasic.pml.SignalEvent#getSignalOut()
+	 * @see #getSignalEvent()
 	 * @generated
 	 */
-	EClass getPipelineNextStage();
+	EReference getSignalEvent_SignalOut();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link br.ufrn.lasic.pml.PipelineNextStage#getPipelineNext <em>Pipeline Next</em>}'.
+	 * Returns the meta object for the reference list '{@link br.ufrn.lasic.pml.SignalEvent#getSinalSelector <em>Sinal Selector</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Pipeline Next</em>'.
-	 * @see br.ufrn.lasic.pml.PipelineNextStage#getPipelineNext()
-	 * @see #getPipelineNextStage()
+	 * @return the meta object for the reference list '<em>Sinal Selector</em>'.
+	 * @see br.ufrn.lasic.pml.SignalEvent#getSinalSelector()
+	 * @see #getSignalEvent()
 	 * @generated
 	 */
-	EReference getPipelineNextStage_PipelineNext();
-
-	/**
-	 * Returns the meta object for the attribute '{@link br.ufrn.lasic.pml.PipelineNextStage#getName <em>Name</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see br.ufrn.lasic.pml.PipelineNextStage#getName()
-	 * @see #getPipelineNextStage()
-	 * @generated
-	 */
-	EAttribute getPipelineNextStage_Name();
+	EReference getSignalEvent_SinalSelector();
 
 	/**
 	 * Returns the meta object for enum '{@link br.ufrn.lasic.pml.TypeComponent <em>Type Component</em>}'.
@@ -2393,14 +2400,6 @@ public interface PMLPackage extends EPackage {
 		EAttribute INPUT__LENGTH = eINSTANCE.getInput_Length();
 
 		/**
-		 * The meta object literal for the '<em><b>Inout</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference INPUT__INOUT = eINSTANCE.getInput_Inout();
-
-		/**
 		 * The meta object literal for the '<em><b>Sensitive</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -2441,14 +2440,6 @@ public interface PMLPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute OUTPUT__TYPE = eINSTANCE.getOutput_Type();
-
-		/**
-		 * The meta object literal for the '<em><b>Outin</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference OUTPUT__OUTIN = eINSTANCE.getOutput_Outin();
 
 		/**
 		 * The meta object literal for the '<em><b>Sensitive</b></em>' attribute feature.
@@ -2625,6 +2616,14 @@ public interface PMLPackage extends EPackage {
 		EReference CONTROL_UNIT__INTRUCTIONS = eINSTANCE.getControlUnit_Intructions();
 
 		/**
+		 * The meta object literal for the '<em><b>Control Unit FSM</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference CONTROL_UNIT__CONTROL_UNIT_FSM = eINSTANCE.getControlUnit_ControlUnitFSM();
+
+		/**
 		 * The meta object literal for the '{@link br.ufrn.lasic.pml.impl.ProcessorImpl <em>Processor</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -2699,12 +2698,12 @@ public interface PMLPackage extends EPackage {
 		EReference PROCESSOR__DECODERS = eINSTANCE.getProcessor_Decoders();
 
 		/**
-		 * The meta object literal for the '<em><b>Initial Stage Pipeline</b></em>' containment reference feature.
+		 * The meta object literal for the '<em><b>Processor Signal Events</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference PROCESSOR__INITIAL_STAGE_PIPELINE = eINSTANCE.getProcessor_InitialStagePipeline();
+		EReference PROCESSOR__PROCESSOR_SIGNAL_EVENTS = eINSTANCE.getProcessor_ProcessorSignalEvents();
 
 		/**
 		 * The meta object literal for the '{@link br.ufrn.lasic.pml.impl.MemoryImpl <em>Memory</em>}' class.
@@ -2833,14 +2832,6 @@ public interface PMLPackage extends EPackage {
 		EAttribute INSTRUCTIONS__NAME = eINSTANCE.getInstructions_Name();
 
 		/**
-		 * The meta object literal for the '<em><b>Initial</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference INSTRUCTIONS__INITIAL = eINSTANCE.getInstructions_Initial();
-
-		/**
 		 * The meta object literal for the '{@link br.ufrn.lasic.pml.impl.MicroInstructionImpl <em>Micro Instruction</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -2881,6 +2872,14 @@ public interface PMLPackage extends EPackage {
 		 * @generated
 		 */
 		EReference MICRO_INSTRUCTION__FINAL = eINSTANCE.getMicroInstruction_Final();
+
+		/**
+		 * The meta object literal for the '<em><b>Middle FSM</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference MICRO_INSTRUCTION__MIDDLE_FSM = eINSTANCE.getMicroInstruction_MiddleFSM();
 
 		/**
 		 * The meta object literal for the '{@link br.ufrn.lasic.pml.impl.InitialMicroInstructionImpl <em>Initial Micro Instruction</em>}' class.
@@ -2925,6 +2924,14 @@ public interface PMLPackage extends EPackage {
 		EReference INITIAL_MICRO_INSTRUCTION__DIRECT_FINAL_MICRO_INSTRUCTION = eINSTANCE.getInitialMicroInstruction_DirectFinalMicroInstruction();
 
 		/**
+		 * The meta object literal for the '<em><b>Firstnode FSM</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference INITIAL_MICRO_INSTRUCTION__FIRSTNODE_FSM = eINSTANCE.getInitialMicroInstruction_FirstnodeFSM();
+
+		/**
 		 * The meta object literal for the '{@link br.ufrn.lasic.pml.impl.FinalMicroInstructionImpl <em>Final Micro Instruction</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -2949,6 +2956,14 @@ public interface PMLPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute FINAL_MICRO_INSTRUCTION__VALUE = eINSTANCE.getFinalMicroInstruction_Value();
+
+		/**
+		 * The meta object literal for the '<em><b>Final FSM</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference FINAL_MICRO_INSTRUCTION__FINAL_FSM = eINSTANCE.getFinalMicroInstruction_FinalFSM();
 
 		/**
 		 * The meta object literal for the '{@link br.ufrn.lasic.pml.impl.SeletorImpl <em>Seletor</em>}' class.
@@ -2991,6 +3006,14 @@ public interface PMLPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute SELETOR__BIT = eINSTANCE.getSeletor_Bit();
+
+		/**
+		 * The meta object literal for the '<em><b>Sensitive</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute SELETOR__SENSITIVE = eINSTANCE.getSeletor_Sensitive();
 
 		/**
 		 * The meta object literal for the '{@link br.ufrn.lasic.pml.impl.OperationImpl <em>Operation</em>}' class.
@@ -3053,14 +3076,14 @@ public interface PMLPackage extends EPackage {
 		EReference DECODER__BEHAVIOR_DECODER = eINSTANCE.getDecoder_BehaviorDecoder();
 
 		/**
-		 * The meta object literal for the '{@link br.ufrn.lasic.pml.impl.PipelineInitialStageImpl <em>Pipeline Initial Stage</em>}' class.
+		 * The meta object literal for the '{@link br.ufrn.lasic.pml.impl.SignalEventImpl <em>Signal Event</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see br.ufrn.lasic.pml.impl.PipelineInitialStageImpl
-		 * @see br.ufrn.lasic.pml.impl.PMLPackageImpl#getPipelineInitialStage()
+		 * @see br.ufrn.lasic.pml.impl.SignalEventImpl
+		 * @see br.ufrn.lasic.pml.impl.PMLPackageImpl#getSignalEvent()
 		 * @generated
 		 */
-		EClass PIPELINE_INITIAL_STAGE = eINSTANCE.getPipelineInitialStage();
+		EClass SIGNAL_EVENT = eINSTANCE.getSignalEvent();
 
 		/**
 		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
@@ -3068,41 +3091,31 @@ public interface PMLPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute PIPELINE_INITIAL_STAGE__NAME = eINSTANCE.getPipelineInitialStage_Name();
+		EAttribute SIGNAL_EVENT__NAME = eINSTANCE.getSignalEvent_Name();
 
 		/**
-		 * The meta object literal for the '<em><b>Next State Pipeline</b></em>' containment reference feature.
+		 * The meta object literal for the '<em><b>Signal In</b></em>' reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference PIPELINE_INITIAL_STAGE__NEXT_STATE_PIPELINE = eINSTANCE.getPipelineInitialStage_NextStatePipeline();
+		EReference SIGNAL_EVENT__SIGNAL_IN = eINSTANCE.getSignalEvent_SignalIn();
 
 		/**
-		 * The meta object literal for the '{@link br.ufrn.lasic.pml.impl.PipelineNextStageImpl <em>Pipeline Next Stage</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see br.ufrn.lasic.pml.impl.PipelineNextStageImpl
-		 * @see br.ufrn.lasic.pml.impl.PMLPackageImpl#getPipelineNextStage()
-		 * @generated
-		 */
-		EClass PIPELINE_NEXT_STAGE = eINSTANCE.getPipelineNextStage();
-
-		/**
-		 * The meta object literal for the '<em><b>Pipeline Next</b></em>' containment reference feature.
+		 * The meta object literal for the '<em><b>Signal Out</b></em>' reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference PIPELINE_NEXT_STAGE__PIPELINE_NEXT = eINSTANCE.getPipelineNextStage_PipelineNext();
+		EReference SIGNAL_EVENT__SIGNAL_OUT = eINSTANCE.getSignalEvent_SignalOut();
 
 		/**
-		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Sinal Selector</b></em>' reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute PIPELINE_NEXT_STAGE__NAME = eINSTANCE.getPipelineNextStage_Name();
+		EReference SIGNAL_EVENT__SINAL_SELECTOR = eINSTANCE.getSignalEvent_SinalSelector();
 
 		/**
 		 * The meta object literal for the '{@link br.ufrn.lasic.pml.TypeComponent <em>Type Component</em>}' enum.

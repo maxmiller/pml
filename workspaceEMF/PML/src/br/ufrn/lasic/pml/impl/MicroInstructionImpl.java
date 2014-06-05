@@ -1,12 +1,9 @@
 /**
- * <copyright>
- * </copyright>
- *
- * $Id$
  */
 package br.ufrn.lasic.pml.impl;
 
 import br.ufrn.lasic.pml.FinalMicroInstruction;
+import br.ufrn.lasic.pml.Instructions;
 import br.ufrn.lasic.pml.MicroInstruction;
 import br.ufrn.lasic.pml.PMLPackage;
 
@@ -24,6 +21,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.EObjectImpl;
 
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
@@ -37,6 +35,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link br.ufrn.lasic.pml.impl.MicroInstructionImpl#getValue <em>Value</em>}</li>
  *   <li>{@link br.ufrn.lasic.pml.impl.MicroInstructionImpl#getNextMicroinstruction <em>Next Microinstruction</em>}</li>
  *   <li>{@link br.ufrn.lasic.pml.impl.MicroInstructionImpl#getFinal <em>Final</em>}</li>
+ *   <li>{@link br.ufrn.lasic.pml.impl.MicroInstructionImpl#getMiddleFSM <em>Middle FSM</em>}</li>
  * </ul>
  * </p>
  *
@@ -102,6 +101,16 @@ public class MicroInstructionImpl extends EObjectImpl implements MicroInstructio
 	 * @ordered
 	 */
 	protected FinalMicroInstruction final_;
+
+	/**
+	 * The cached value of the '{@link #getMiddleFSM() <em>Middle FSM</em>}' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getMiddleFSM()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Instructions> middleFSM;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -224,6 +233,18 @@ public class MicroInstructionImpl extends EObjectImpl implements MicroInstructio
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EList<Instructions> getMiddleFSM() {
+		if (middleFSM == null) {
+			middleFSM = new EObjectResolvingEList<Instructions>(Instructions.class, this, PMLPackage.MICRO_INSTRUCTION__MIDDLE_FSM);
+		}
+		return middleFSM;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -251,6 +272,8 @@ public class MicroInstructionImpl extends EObjectImpl implements MicroInstructio
 				return getNextMicroinstruction();
 			case PMLPackage.MICRO_INSTRUCTION__FINAL:
 				return getFinal();
+			case PMLPackage.MICRO_INSTRUCTION__MIDDLE_FSM:
+				return getMiddleFSM();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -277,6 +300,10 @@ public class MicroInstructionImpl extends EObjectImpl implements MicroInstructio
 			case PMLPackage.MICRO_INSTRUCTION__FINAL:
 				setFinal((FinalMicroInstruction)newValue);
 				return;
+			case PMLPackage.MICRO_INSTRUCTION__MIDDLE_FSM:
+				getMiddleFSM().clear();
+				getMiddleFSM().addAll((Collection<? extends Instructions>)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -301,6 +328,9 @@ public class MicroInstructionImpl extends EObjectImpl implements MicroInstructio
 			case PMLPackage.MICRO_INSTRUCTION__FINAL:
 				setFinal((FinalMicroInstruction)null);
 				return;
+			case PMLPackage.MICRO_INSTRUCTION__MIDDLE_FSM:
+				getMiddleFSM().clear();
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -321,6 +351,8 @@ public class MicroInstructionImpl extends EObjectImpl implements MicroInstructio
 				return nextMicroinstruction != null && !nextMicroinstruction.isEmpty();
 			case PMLPackage.MICRO_INSTRUCTION__FINAL:
 				return final_ != null;
+			case PMLPackage.MICRO_INSTRUCTION__MIDDLE_FSM:
+				return middleFSM != null && !middleFSM.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

@@ -1,24 +1,27 @@
 /**
- * <copyright>
- * </copyright>
- *
- * $Id$
  */
 package br.ufrn.lasic.pml.impl;
 
 import br.ufrn.lasic.pml.FinalMicroInstruction;
 import br.ufrn.lasic.pml.InitialMicroInstruction;
+import br.ufrn.lasic.pml.Instructions;
 import br.ufrn.lasic.pml.MicroInstruction;
 import br.ufrn.lasic.pml.PMLPackage;
 
+import java.util.Collection;
+
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
+import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.EObjectImpl;
+
+import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -31,6 +34,7 @@ import org.eclipse.emf.ecore.impl.EObjectImpl;
  *   <li>{@link br.ufrn.lasic.pml.impl.InitialMicroInstructionImpl#getName <em>Name</em>}</li>
  *   <li>{@link br.ufrn.lasic.pml.impl.InitialMicroInstructionImpl#getValue <em>Value</em>}</li>
  *   <li>{@link br.ufrn.lasic.pml.impl.InitialMicroInstructionImpl#getDirectFinalMicroInstruction <em>Direct Final Micro Instruction</em>}</li>
+ *   <li>{@link br.ufrn.lasic.pml.impl.InitialMicroInstructionImpl#getFirstnodeFSM <em>Firstnode FSM</em>}</li>
  * </ul>
  * </p>
  *
@@ -96,6 +100,16 @@ public class InitialMicroInstructionImpl extends EObjectImpl implements InitialM
 	 * @ordered
 	 */
 	protected FinalMicroInstruction directFinalMicroInstruction;
+
+	/**
+	 * The cached value of the '{@link #getFirstnodeFSM() <em>Firstnode FSM</em>}' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getFirstnodeFSM()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Instructions> firstnodeFSM;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -249,6 +263,18 @@ public class InitialMicroInstructionImpl extends EObjectImpl implements InitialM
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EList<Instructions> getFirstnodeFSM() {
+		if (firstnodeFSM == null) {
+			firstnodeFSM = new EObjectResolvingEList<Instructions>(Instructions.class, this, PMLPackage.INITIAL_MICRO_INSTRUCTION__FIRSTNODE_FSM);
+		}
+		return firstnodeFSM;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -276,6 +302,8 @@ public class InitialMicroInstructionImpl extends EObjectImpl implements InitialM
 				return getValue();
 			case PMLPackage.INITIAL_MICRO_INSTRUCTION__DIRECT_FINAL_MICRO_INSTRUCTION:
 				return getDirectFinalMicroInstruction();
+			case PMLPackage.INITIAL_MICRO_INSTRUCTION__FIRSTNODE_FSM:
+				return getFirstnodeFSM();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -285,6 +313,7 @@ public class InitialMicroInstructionImpl extends EObjectImpl implements InitialM
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
@@ -299,6 +328,10 @@ public class InitialMicroInstructionImpl extends EObjectImpl implements InitialM
 				return;
 			case PMLPackage.INITIAL_MICRO_INSTRUCTION__DIRECT_FINAL_MICRO_INSTRUCTION:
 				setDirectFinalMicroInstruction((FinalMicroInstruction)newValue);
+				return;
+			case PMLPackage.INITIAL_MICRO_INSTRUCTION__FIRSTNODE_FSM:
+				getFirstnodeFSM().clear();
+				getFirstnodeFSM().addAll((Collection<? extends Instructions>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -324,6 +357,9 @@ public class InitialMicroInstructionImpl extends EObjectImpl implements InitialM
 			case PMLPackage.INITIAL_MICRO_INSTRUCTION__DIRECT_FINAL_MICRO_INSTRUCTION:
 				setDirectFinalMicroInstruction((FinalMicroInstruction)null);
 				return;
+			case PMLPackage.INITIAL_MICRO_INSTRUCTION__FIRSTNODE_FSM:
+				getFirstnodeFSM().clear();
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -344,6 +380,8 @@ public class InitialMicroInstructionImpl extends EObjectImpl implements InitialM
 				return value != VALUE_EDEFAULT;
 			case PMLPackage.INITIAL_MICRO_INSTRUCTION__DIRECT_FINAL_MICRO_INSTRUCTION:
 				return directFinalMicroInstruction != null;
+			case PMLPackage.INITIAL_MICRO_INSTRUCTION__FIRSTNODE_FSM:
+				return firstnodeFSM != null && !firstnodeFSM.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

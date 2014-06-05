@@ -10,21 +10,34 @@
 	#include "systemc.h"
 	
 	SC_MODULE([c.name/]){
+ 		sc_port<read_in> in;
+	    sc_port<write_in> out;
+
 	 	[for (p : Input | c.inmux)]
 	    	[forIn(p.name, p.type.toString(), p.bit, p.length) /]	    
 	    [/for]
         [for (p : Output | c.outmux)]
-	    	[forOut(p.name, p.type.toString(), p.bit, p.length) /]	    
+	    	[forIn(p.name, p.type.toString(), p.bit, p.length) /]	    
 	    [/for]
 		[for (p : Seletor | c.seletormux)]
 	    	[forSel(p.name, p.type.toString(), p.bit) /]	    
 	    [/for]
         [for (o : Behavior | c.behaviormux)]
-        	[o.typeBehavior.toString().toLower()/] [o.name.toLower()/](); 
+        	[o.typeBehavior.toString().toLower()/] [o.name.toLower()/]();/*
+			{
+				if([c.seletormux.name /].read().to_int() < num_inputs){
+					[c.outmux.name/] = [c.inmux.name /][ '['/][c.seletormux.name /].read().to_int()[ ']' /] ;
+				}else{
+					[c.outmux.name/] = [c.inmux.name /][ '['/]0[ ']' /] ;
+				}
+			    wait(1);
+
+			}*/
         [/for]
         
 		SC_CTOR([c.name/]) {
-        
+        	
+			
 			[for (o : Behavior | c.behaviormux)]
 	        	SC_METHOD([o.name.toLower()/]); 
 	        [/for]
@@ -46,7 +59,7 @@
 	
 	SC_MODULE([c.name/]){
 	 	[for (p : Input | c.inmux)]
-	    	[forIn(p.name, p.type.toString(), p.bit, p.length) /]	    
+	    	[forInTimed(p.name, p.type.toString(), p.bit, p.length) /]	    
 	    [/for]
 		[for (p : Output | c.outmux)]
 	    	[forOut(p.name, p.type.toString(), p.bit, p.length) /]	    
@@ -55,7 +68,10 @@
 	    	[forSel(p.name, p.type.toString(), p.bit) /]	    
 	    [/for]
         [for (o : Behavior | c.behaviormux)]
-        	[o.typeBehavior.toString().toLower()/] [o.name.toLower()/](); 
+        	[o.typeBehavior.toString().toLower()/] [o.name.toLower()/](); /*
+		{
+				[switchIn(c.inmux.name, c.seletormux.name, c.outmux.name, c.inmux.length) /]
+		}*/
         [/for]
 		SC_CTOR([c.name/]) {
 			[for (o : Behavior | c.behaviormux)]
@@ -63,7 +79,7 @@
 	        [/for]
 			[for (p : Input | c.inmux)]
 	        	[if(p.sensitive) ]
-				   [forSensitive(p.name, p.length.abs())/]
+				   [forSensitiveTimed(p.name, p.length.abs())/]
 				[/if]
 				
 	   		[/for]

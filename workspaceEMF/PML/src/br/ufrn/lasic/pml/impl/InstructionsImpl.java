@@ -1,20 +1,13 @@
 /**
- * <copyright>
- * </copyright>
- *
- * $Id$
  */
 package br.ufrn.lasic.pml.impl;
 
-import br.ufrn.lasic.pml.InitialMicroInstruction;
 import br.ufrn.lasic.pml.Instructions;
 import br.ufrn.lasic.pml.PMLPackage;
 
 import org.eclipse.emf.common.notify.Notification;
-import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.EObjectImpl;
@@ -28,7 +21,6 @@ import org.eclipse.emf.ecore.impl.EObjectImpl;
  * <ul>
  *   <li>{@link br.ufrn.lasic.pml.impl.InstructionsImpl#getType <em>Type</em>}</li>
  *   <li>{@link br.ufrn.lasic.pml.impl.InstructionsImpl#getName <em>Name</em>}</li>
- *   <li>{@link br.ufrn.lasic.pml.impl.InstructionsImpl#getInitial <em>Initial</em>}</li>
  * </ul>
  * </p>
  *
@@ -74,16 +66,6 @@ public class InstructionsImpl extends EObjectImpl implements Instructions {
 	 * @ordered
 	 */
 	protected String name = NAME_EDEFAULT;
-
-	/**
-	 * The cached value of the '{@link #getInitial() <em>Initial</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getInitial()
-	 * @generated
-	 * @ordered
-	 */
-	protected InitialMicroInstruction initial;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -151,63 +133,6 @@ public class InstructionsImpl extends EObjectImpl implements Instructions {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public InitialMicroInstruction getInitial() {
-		return initial;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public NotificationChain basicSetInitial(InitialMicroInstruction newInitial, NotificationChain msgs) {
-		InitialMicroInstruction oldInitial = initial;
-		initial = newInitial;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, PMLPackage.INSTRUCTIONS__INITIAL, oldInitial, newInitial);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setInitial(InitialMicroInstruction newInitial) {
-		if (newInitial != initial) {
-			NotificationChain msgs = null;
-			if (initial != null)
-				msgs = ((InternalEObject)initial).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - PMLPackage.INSTRUCTIONS__INITIAL, null, msgs);
-			if (newInitial != null)
-				msgs = ((InternalEObject)newInitial).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - PMLPackage.INSTRUCTIONS__INITIAL, null, msgs);
-			msgs = basicSetInitial(newInitial, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, PMLPackage.INSTRUCTIONS__INITIAL, newInitial, newInitial));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
-			case PMLPackage.INSTRUCTIONS__INITIAL:
-				return basicSetInitial(null, msgs);
-		}
-		return super.eInverseRemove(otherEnd, featureID, msgs);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -215,8 +140,6 @@ public class InstructionsImpl extends EObjectImpl implements Instructions {
 				return getType();
 			case PMLPackage.INSTRUCTIONS__NAME:
 				return getName();
-			case PMLPackage.INSTRUCTIONS__INITIAL:
-				return getInitial();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -234,9 +157,6 @@ public class InstructionsImpl extends EObjectImpl implements Instructions {
 				return;
 			case PMLPackage.INSTRUCTIONS__NAME:
 				setName((String)newValue);
-				return;
-			case PMLPackage.INSTRUCTIONS__INITIAL:
-				setInitial((InitialMicroInstruction)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -256,9 +176,6 @@ public class InstructionsImpl extends EObjectImpl implements Instructions {
 			case PMLPackage.INSTRUCTIONS__NAME:
 				setName(NAME_EDEFAULT);
 				return;
-			case PMLPackage.INSTRUCTIONS__INITIAL:
-				setInitial((InitialMicroInstruction)null);
-				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -275,8 +192,6 @@ public class InstructionsImpl extends EObjectImpl implements Instructions {
 				return TYPE_EDEFAULT == null ? type != null : !TYPE_EDEFAULT.equals(type);
 			case PMLPackage.INSTRUCTIONS__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-			case PMLPackage.INSTRUCTIONS__INITIAL:
-				return initial != null;
 		}
 		return super.eIsSet(featureID);
 	}

@@ -1,8 +1,4 @@
 /**
- * <copyright>
- * </copyright>
- *
- * $Id$
  */
 package br.ufrn.lasic.pml.impl;
 
@@ -12,9 +8,9 @@ import br.ufrn.lasic.pml.Demultiplexor;
 import br.ufrn.lasic.pml.Memory;
 import br.ufrn.lasic.pml.Multiplexor;
 import br.ufrn.lasic.pml.PMLPackage;
-import br.ufrn.lasic.pml.PipelineInitialStage;
 import br.ufrn.lasic.pml.Processor;
 import br.ufrn.lasic.pml.Register;
+import br.ufrn.lasic.pml.SignalEvent;
 import br.ufrn.lasic.pml.ULA;
 
 import java.util.Collection;
@@ -48,7 +44,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link br.ufrn.lasic.pml.impl.ProcessorImpl#getControlUnits <em>Control Units</em>}</li>
  *   <li>{@link br.ufrn.lasic.pml.impl.ProcessorImpl#getName <em>Name</em>}</li>
  *   <li>{@link br.ufrn.lasic.pml.impl.ProcessorImpl#getDecoders <em>Decoders</em>}</li>
- *   <li>{@link br.ufrn.lasic.pml.impl.ProcessorImpl#getInitialStagePipeline <em>Initial Stage Pipeline</em>}</li>
+ *   <li>{@link br.ufrn.lasic.pml.impl.ProcessorImpl#getProcessorSignalEvents <em>Processor Signal Events</em>}</li>
  * </ul>
  * </p>
  *
@@ -146,14 +142,14 @@ public class ProcessorImpl extends EObjectImpl implements Processor {
 	protected EList<Decoder> decoders;
 
 	/**
-	 * The cached value of the '{@link #getInitialStagePipeline() <em>Initial Stage Pipeline</em>}' containment reference.
+	 * The cached value of the '{@link #getProcessorSignalEvents() <em>Processor Signal Events</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getInitialStagePipeline()
+	 * @see #getProcessorSignalEvents()
 	 * @generated
 	 * @ordered
 	 */
-	protected PipelineInitialStage initialStagePipeline;
+	protected EList<SignalEvent> processorSignalEvents;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -284,42 +280,11 @@ public class ProcessorImpl extends EObjectImpl implements Processor {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public PipelineInitialStage getInitialStagePipeline() {
-		return initialStagePipeline;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public NotificationChain basicSetInitialStagePipeline(PipelineInitialStage newInitialStagePipeline, NotificationChain msgs) {
-		PipelineInitialStage oldInitialStagePipeline = initialStagePipeline;
-		initialStagePipeline = newInitialStagePipeline;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, PMLPackage.PROCESSOR__INITIAL_STAGE_PIPELINE, oldInitialStagePipeline, newInitialStagePipeline);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
+	public EList<SignalEvent> getProcessorSignalEvents() {
+		if (processorSignalEvents == null) {
+			processorSignalEvents = new EObjectContainmentEList<SignalEvent>(SignalEvent.class, this, PMLPackage.PROCESSOR__PROCESSOR_SIGNAL_EVENTS);
 		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setInitialStagePipeline(PipelineInitialStage newInitialStagePipeline) {
-		if (newInitialStagePipeline != initialStagePipeline) {
-			NotificationChain msgs = null;
-			if (initialStagePipeline != null)
-				msgs = ((InternalEObject)initialStagePipeline).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - PMLPackage.PROCESSOR__INITIAL_STAGE_PIPELINE, null, msgs);
-			if (newInitialStagePipeline != null)
-				msgs = ((InternalEObject)newInitialStagePipeline).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - PMLPackage.PROCESSOR__INITIAL_STAGE_PIPELINE, null, msgs);
-			msgs = basicSetInitialStagePipeline(newInitialStagePipeline, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, PMLPackage.PROCESSOR__INITIAL_STAGE_PIPELINE, newInitialStagePipeline, newInitialStagePipeline));
+		return processorSignalEvents;
 	}
 
 	/**
@@ -344,8 +309,8 @@ public class ProcessorImpl extends EObjectImpl implements Processor {
 				return ((InternalEList<?>)getControlUnits()).basicRemove(otherEnd, msgs);
 			case PMLPackage.PROCESSOR__DECODERS:
 				return ((InternalEList<?>)getDecoders()).basicRemove(otherEnd, msgs);
-			case PMLPackage.PROCESSOR__INITIAL_STAGE_PIPELINE:
-				return basicSetInitialStagePipeline(null, msgs);
+			case PMLPackage.PROCESSOR__PROCESSOR_SIGNAL_EVENTS:
+				return ((InternalEList<?>)getProcessorSignalEvents()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -374,8 +339,8 @@ public class ProcessorImpl extends EObjectImpl implements Processor {
 				return getName();
 			case PMLPackage.PROCESSOR__DECODERS:
 				return getDecoders();
-			case PMLPackage.PROCESSOR__INITIAL_STAGE_PIPELINE:
-				return getInitialStagePipeline();
+			case PMLPackage.PROCESSOR__PROCESSOR_SIGNAL_EVENTS:
+				return getProcessorSignalEvents();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -420,8 +385,9 @@ public class ProcessorImpl extends EObjectImpl implements Processor {
 				getDecoders().clear();
 				getDecoders().addAll((Collection<? extends Decoder>)newValue);
 				return;
-			case PMLPackage.PROCESSOR__INITIAL_STAGE_PIPELINE:
-				setInitialStagePipeline((PipelineInitialStage)newValue);
+			case PMLPackage.PROCESSOR__PROCESSOR_SIGNAL_EVENTS:
+				getProcessorSignalEvents().clear();
+				getProcessorSignalEvents().addAll((Collection<? extends SignalEvent>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -459,8 +425,8 @@ public class ProcessorImpl extends EObjectImpl implements Processor {
 			case PMLPackage.PROCESSOR__DECODERS:
 				getDecoders().clear();
 				return;
-			case PMLPackage.PROCESSOR__INITIAL_STAGE_PIPELINE:
-				setInitialStagePipeline((PipelineInitialStage)null);
+			case PMLPackage.PROCESSOR__PROCESSOR_SIGNAL_EVENTS:
+				getProcessorSignalEvents().clear();
 				return;
 		}
 		super.eUnset(featureID);
@@ -490,8 +456,8 @@ public class ProcessorImpl extends EObjectImpl implements Processor {
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 			case PMLPackage.PROCESSOR__DECODERS:
 				return decoders != null && !decoders.isEmpty();
-			case PMLPackage.PROCESSOR__INITIAL_STAGE_PIPELINE:
-				return initialStagePipeline != null;
+			case PMLPackage.PROCESSOR__PROCESSOR_SIGNAL_EVENTS:
+				return processorSignalEvents != null && !processorSignalEvents.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

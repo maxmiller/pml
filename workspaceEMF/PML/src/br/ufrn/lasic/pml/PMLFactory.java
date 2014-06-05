@@ -1,8 +1,4 @@
 /**
- * <copyright>
- * </copyright>
- *
- * $Id$
  */
 package br.ufrn.lasic.pml;
 
@@ -179,22 +175,13 @@ public interface PMLFactory extends EFactory {
 	Decoder createDecoder();
 
 	/**
-	 * Returns a new object of class '<em>Pipeline Initial Stage</em>'.
+	 * Returns a new object of class '<em>Signal Event</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Pipeline Initial Stage</em>'.
+	 * @return a new object of class '<em>Signal Event</em>'.
 	 * @generated
 	 */
-	PipelineInitialStage createPipelineInitialStage();
-
-	/**
-	 * Returns a new object of class '<em>Pipeline Next Stage</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Pipeline Next Stage</em>'.
-	 * @generated
-	 */
-	PipelineNextStage createPipelineNextStage();
+	SignalEvent createSignalEvent();
 
 	/**
 	 * Returns the package supported by this factory.

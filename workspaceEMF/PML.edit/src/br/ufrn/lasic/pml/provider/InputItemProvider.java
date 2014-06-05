@@ -1,8 +1,4 @@
 /**
- * <copyright>
- * </copyright>
- *
- * $Id$
  */
 package br.ufrn.lasic.pml.provider;
 
@@ -67,7 +63,6 @@ public class InputItemProvider
 			addNamePropertyDescriptor(object);
 			addTypePropertyDescriptor(object);
 			addLengthPropertyDescriptor(object);
-			addInoutPropertyDescriptor(object);
 			addSensitivePropertyDescriptor(object);
 			addBitPropertyDescriptor(object);
 		}
@@ -136,28 +131,6 @@ public class InputItemProvider
 				 false,
 				 false,
 				 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
-				 null,
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Inout feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addInoutPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Input_inout_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Input_inout_feature", "_UI_Input_type"),
-				 PMLPackage.Literals.INPUT__INOUT,
-				 true,
-				 false,
-				 true,
-				 null,
 				 null,
 				 null));
 	}

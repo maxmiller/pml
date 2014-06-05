@@ -1,8 +1,4 @@
 /**
- * <copyright>
- * </copyright>
- *
- * $Id$
  */
 package br.ufrn.lasic.pml.util;
 
@@ -172,15 +168,9 @@ public class PMLSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case PMLPackage.PIPELINE_INITIAL_STAGE: {
-				PipelineInitialStage pipelineInitialStage = (PipelineInitialStage)theEObject;
-				T result = casePipelineInitialStage(pipelineInitialStage);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case PMLPackage.PIPELINE_NEXT_STAGE: {
-				PipelineNextStage pipelineNextStage = (PipelineNextStage)theEObject;
-				T result = casePipelineNextStage(pipelineNextStage);
+			case PMLPackage.SIGNAL_EVENT: {
+				SignalEvent signalEvent = (SignalEvent)theEObject;
+				T result = caseSignalEvent(signalEvent);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -444,32 +434,17 @@ public class PMLSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Pipeline Initial Stage</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Signal Event</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Pipeline Initial Stage</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Signal Event</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T casePipelineInitialStage(PipelineInitialStage object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Pipeline Next Stage</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Pipeline Next Stage</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T casePipelineNextStage(PipelineNextStage object) {
+	public T caseSignalEvent(SignalEvent object) {
 		return null;
 	}
 

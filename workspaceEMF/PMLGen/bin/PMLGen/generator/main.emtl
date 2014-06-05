@@ -11,6 +11,7 @@
     <imports href="ula_h.emtl#/0"/>
     <imports href="memory_h.emtl#/0"/>
     <imports href="decoder_h.emtl#/0"/>
+    <imports href="control_unit_h.emtl#/0"/>
     <ownedModuleElement xsi:type="mtl:Template" name="mainMultiplexor" visibility="Public" main="true">
       <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#x9;&#xA;"/>
       <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#x9;"/>
@@ -109,6 +110,14 @@
         <eType xsi:type="ecore:EClass" href="http://pml/0.1#//Decoder"/>
       </parameter>
     </ownedModuleElement>
+    <ownedModuleElement xsi:type="mtl:Template" name="mainControlUnit" visibility="Public" main="true">
+      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#x9;&#xA;"/>
+      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#x9;"/>
+      <body xsi:type="mtl:TemplateExpression"/>
+      <parameter name="a">
+        <eType xsi:type="ecore:EClass" href="http://pml/0.1#//ControlUnit"/>
+      </parameter>
+    </ownedModuleElement>
   </mtl:Module>
   <ecore:EPackage name="additions">
     <eClassifiers xsi:type="ecore:EClass" name="String_Class">
@@ -198,6 +207,16 @@
         <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
         <eParameters name="a">
           <eType xsi:type="ecore:EClass" href="http://pml/0.1#//Decoder"/>
+        </eParameters>
+      </eOperations>
+      <eOperations name="mainControlUnit">
+        <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+          <contents xsi:type="ocl.ecore:Constraint"/>
+        </eAnnotations>
+        <eAnnotations source="MTL" references="/0/mainControlUnit"/>
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <eParameters name="a">
+          <eType xsi:type="ecore:EClass" href="http://pml/0.1#//ControlUnit"/>
         </eParameters>
       </eOperations>
       <eOperations name="generateElement">
@@ -340,6 +359,11 @@
         <references href="http://pml/0.1#//Decoder"/>
       </eAnnotations>
     </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="ControlUnit_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://pml/0.1#//ControlUnit"/>
+      </eAnnotations>
+    </eClassifiers>
   </ecore:EPackage>
   <ocl.ecore:Variable name="self">
     <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
@@ -449,216 +473,259 @@
   <ocl.ecore:Variable name="self">
     <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
   </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://pml/0.1#//ControlUnit"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://pml/0.1#//ControlUnit"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://pml/0.1#//ControlUnit"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
   <ecore:EAnnotation source="positions">
     <eAnnotations source="positions.0" references="/0/mainMultiplexor">
-      <details key="start" value="345"/>
-      <details key="end" value="474"/>
+      <details key="start" value="389"/>
+      <details key="end" value="518"/>
       <details key="line" value="12"/>
     </eAnnotations>
     <eAnnotations source="positions.1" references="/0/mainMultiplexor/@body.0">
-      <details key="start" value="407"/>
-      <details key="end" value="409"/>
+      <details key="start" value="451"/>
+      <details key="end" value="453"/>
       <details key="line" value="13"/>
     </eAnnotations>
     <eAnnotations source="positions.2" references="/0/mainMultiplexor/@body.1">
-      <details key="start" value="428"/>
-      <details key="end" value="429"/>
+      <details key="start" value="472"/>
+      <details key="end" value="473"/>
       <details key="line" value="15"/>
     </eAnnotations>
     <eAnnotations source="positions.3" references="/0/mainMultiplexor/@body.2">
-      <details key="start" value="430"/>
-      <details key="end" value="460"/>
+      <details key="start" value="474"/>
+      <details key="end" value="504"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.4" references="/0/mainMultiplexor/@body.2/aMultiplexor">
-      <details key="start" value="430"/>
-      <details key="end" value="442"/>
+      <details key="start" value="474"/>
+      <details key="end" value="486"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.5" references="/0/mainMultiplexor/aMultiplexor">
-      <details key="start" value="378"/>
-      <details key="end" value="404"/>
+      <details key="start" value="422"/>
+      <details key="end" value="448"/>
       <details key="line" value="12"/>
     </eAnnotations>
     <eAnnotations source="positions.6" references="/0/mainDemultiplexor">
-      <details key="start" value="476"/>
-      <details key="end" value="613"/>
+      <details key="start" value="520"/>
+      <details key="end" value="657"/>
       <details key="line" value="18"/>
     </eAnnotations>
     <eAnnotations source="positions.7" references="/0/mainDemultiplexor/@body.0">
-      <details key="start" value="544"/>
-      <details key="end" value="546"/>
+      <details key="start" value="588"/>
+      <details key="end" value="590"/>
       <details key="line" value="19"/>
     </eAnnotations>
     <eAnnotations source="positions.8" references="/0/mainDemultiplexor/@body.1">
-      <details key="start" value="565"/>
-      <details key="end" value="566"/>
+      <details key="start" value="609"/>
+      <details key="end" value="610"/>
       <details key="line" value="21"/>
     </eAnnotations>
     <eAnnotations source="positions.9" references="/0/mainDemultiplexor/@body.2">
-      <details key="start" value="567"/>
-      <details key="end" value="599"/>
+      <details key="start" value="611"/>
+      <details key="end" value="643"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.10" references="/0/mainDemultiplexor/@body.2/aDemultiplexor">
-      <details key="start" value="567"/>
-      <details key="end" value="581"/>
+      <details key="start" value="611"/>
+      <details key="end" value="625"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.11" references="/0/mainDemultiplexor/aDemultiplexor">
-      <details key="start" value="511"/>
-      <details key="end" value="541"/>
+      <details key="start" value="555"/>
+      <details key="end" value="585"/>
       <details key="line" value="18"/>
     </eAnnotations>
     <eAnnotations source="positions.12" references="/0/mainProcessor">
-      <details key="start" value="615"/>
-      <details key="end" value="718"/>
+      <details key="start" value="659"/>
+      <details key="end" value="762"/>
       <details key="line" value="24"/>
     </eAnnotations>
     <eAnnotations source="positions.13" references="/0/mainProcessor/@body.0">
-      <details key="start" value="662"/>
-      <details key="end" value="664"/>
+      <details key="start" value="706"/>
+      <details key="end" value="708"/>
       <details key="line" value="25"/>
     </eAnnotations>
     <eAnnotations source="positions.14" references="/0/mainProcessor/@body.1">
-      <details key="start" value="683"/>
-      <details key="end" value="684"/>
+      <details key="start" value="727"/>
+      <details key="end" value="728"/>
       <details key="line" value="27"/>
     </eAnnotations>
     <eAnnotations source="positions.15" references="/0/mainProcessor/@body.2">
-      <details key="start" value="685"/>
-      <details key="end" value="704"/>
+      <details key="start" value="729"/>
+      <details key="end" value="748"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.16" references="/0/mainProcessor/@body.2/a">
-      <details key="start" value="685"/>
-      <details key="end" value="686"/>
+      <details key="start" value="729"/>
+      <details key="end" value="730"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.17" references="/0/mainProcessor/a">
-      <details key="start" value="646"/>
-      <details key="end" value="659"/>
+      <details key="start" value="690"/>
+      <details key="end" value="703"/>
       <details key="line" value="24"/>
     </eAnnotations>
     <eAnnotations source="positions.18" references="/0/mainULA">
-      <details key="start" value="720"/>
-      <details key="end" value="811"/>
+      <details key="start" value="764"/>
+      <details key="end" value="855"/>
       <details key="line" value="30"/>
     </eAnnotations>
     <eAnnotations source="positions.19" references="/0/mainULA/@body.0">
-      <details key="start" value="755"/>
-      <details key="end" value="757"/>
+      <details key="start" value="799"/>
+      <details key="end" value="801"/>
       <details key="line" value="31"/>
     </eAnnotations>
     <eAnnotations source="positions.20" references="/0/mainULA/@body.1">
-      <details key="start" value="776"/>
-      <details key="end" value="777"/>
+      <details key="start" value="820"/>
+      <details key="end" value="821"/>
       <details key="line" value="33"/>
     </eAnnotations>
     <eAnnotations source="positions.21" references="/0/mainULA/@body.2">
-      <details key="start" value="778"/>
-      <details key="end" value="797"/>
+      <details key="start" value="822"/>
+      <details key="end" value="841"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.22" references="/0/mainULA/@body.2/a">
-      <details key="start" value="778"/>
-      <details key="end" value="779"/>
+      <details key="start" value="822"/>
+      <details key="end" value="823"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.23" references="/0/mainULA/a">
-      <details key="start" value="745"/>
-      <details key="end" value="752"/>
+      <details key="start" value="789"/>
+      <details key="end" value="796"/>
       <details key="line" value="30"/>
     </eAnnotations>
     <eAnnotations source="positions.24" references="/0/mainRegister">
-      <details key="start" value="813"/>
-      <details key="end" value="914"/>
+      <details key="start" value="857"/>
+      <details key="end" value="958"/>
       <details key="line" value="36"/>
     </eAnnotations>
     <eAnnotations source="positions.25" references="/0/mainRegister/@body.0">
-      <details key="start" value="858"/>
-      <details key="end" value="860"/>
+      <details key="start" value="902"/>
+      <details key="end" value="904"/>
       <details key="line" value="37"/>
     </eAnnotations>
     <eAnnotations source="positions.26" references="/0/mainRegister/@body.1">
-      <details key="start" value="879"/>
-      <details key="end" value="880"/>
+      <details key="start" value="923"/>
+      <details key="end" value="924"/>
       <details key="line" value="39"/>
     </eAnnotations>
     <eAnnotations source="positions.27" references="/0/mainRegister/@body.2">
-      <details key="start" value="881"/>
-      <details key="end" value="900"/>
+      <details key="start" value="925"/>
+      <details key="end" value="944"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.28" references="/0/mainRegister/@body.2/a">
-      <details key="start" value="881"/>
-      <details key="end" value="882"/>
+      <details key="start" value="925"/>
+      <details key="end" value="926"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.29" references="/0/mainRegister/a">
-      <details key="start" value="843"/>
-      <details key="end" value="855"/>
+      <details key="start" value="887"/>
+      <details key="end" value="899"/>
       <details key="line" value="36"/>
     </eAnnotations>
     <eAnnotations source="positions.30" references="/0/mainMemory">
-      <details key="start" value="916"/>
-      <details key="end" value="1013"/>
+      <details key="start" value="960"/>
+      <details key="end" value="1057"/>
       <details key="line" value="42"/>
     </eAnnotations>
     <eAnnotations source="positions.31" references="/0/mainMemory/@body.0">
-      <details key="start" value="957"/>
-      <details key="end" value="959"/>
+      <details key="start" value="1001"/>
+      <details key="end" value="1003"/>
       <details key="line" value="43"/>
     </eAnnotations>
     <eAnnotations source="positions.32" references="/0/mainMemory/@body.1">
-      <details key="start" value="978"/>
-      <details key="end" value="979"/>
+      <details key="start" value="1022"/>
+      <details key="end" value="1023"/>
       <details key="line" value="45"/>
     </eAnnotations>
     <eAnnotations source="positions.33" references="/0/mainMemory/@body.2">
-      <details key="start" value="980"/>
-      <details key="end" value="999"/>
+      <details key="start" value="1024"/>
+      <details key="end" value="1043"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.34" references="/0/mainMemory/@body.2/a">
-      <details key="start" value="980"/>
-      <details key="end" value="981"/>
+      <details key="start" value="1024"/>
+      <details key="end" value="1025"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.35" references="/0/mainMemory/a">
-      <details key="start" value="944"/>
-      <details key="end" value="954"/>
+      <details key="start" value="988"/>
+      <details key="end" value="998"/>
       <details key="line" value="42"/>
     </eAnnotations>
     <eAnnotations source="positions.36" references="/0/mainDecoder">
-      <details key="start" value="1015"/>
-      <details key="end" value="1114"/>
+      <details key="start" value="1059"/>
+      <details key="end" value="1158"/>
       <details key="line" value="48"/>
     </eAnnotations>
     <eAnnotations source="positions.37" references="/0/mainDecoder/@body.0">
-      <details key="start" value="1058"/>
-      <details key="end" value="1060"/>
+      <details key="start" value="1102"/>
+      <details key="end" value="1104"/>
       <details key="line" value="49"/>
     </eAnnotations>
     <eAnnotations source="positions.38" references="/0/mainDecoder/@body.1">
-      <details key="start" value="1079"/>
-      <details key="end" value="1080"/>
+      <details key="start" value="1123"/>
+      <details key="end" value="1124"/>
       <details key="line" value="51"/>
     </eAnnotations>
     <eAnnotations source="positions.39" references="/0/mainDecoder/@body.2">
-      <details key="start" value="1081"/>
-      <details key="end" value="1100"/>
+      <details key="start" value="1125"/>
+      <details key="end" value="1144"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.40" references="/0/mainDecoder/@body.2/a">
-      <details key="start" value="1081"/>
-      <details key="end" value="1082"/>
+      <details key="start" value="1125"/>
+      <details key="end" value="1126"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.41" references="/0/mainDecoder/a">
-      <details key="start" value="1044"/>
-      <details key="end" value="1055"/>
+      <details key="start" value="1088"/>
+      <details key="end" value="1099"/>
       <details key="line" value="48"/>
+    </eAnnotations>
+    <eAnnotations source="positions.42" references="/0/mainControlUnit">
+      <details key="start" value="1160"/>
+      <details key="end" value="1268"/>
+      <details key="line" value="54"/>
+    </eAnnotations>
+    <eAnnotations source="positions.43" references="/0/mainControlUnit/@body.0">
+      <details key="start" value="1211"/>
+      <details key="end" value="1213"/>
+      <details key="line" value="55"/>
+    </eAnnotations>
+    <eAnnotations source="positions.44" references="/0/mainControlUnit/@body.1">
+      <details key="start" value="1232"/>
+      <details key="end" value="1233"/>
+      <details key="line" value="57"/>
+    </eAnnotations>
+    <eAnnotations source="positions.45" references="/0/mainControlUnit/@body.2">
+      <details key="start" value="-1"/>
+      <details key="end" value="-1"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.46" references="/0/mainControlUnit/a">
+      <details key="start" value="1193"/>
+      <details key="end" value="1208"/>
+      <details key="line" value="54"/>
     </eAnnotations>
   </ecore:EAnnotation>
 </xmi:XMI>

@@ -1,8 +1,4 @@
 /**
- * <copyright>
- * </copyright>
- *
- * $Id$
  */
 package br.ufrn.lasic.pml.provider;
 
@@ -110,6 +106,7 @@ public class ControlUnitItemProvider
 			childrenFeatures.add(PMLPackage.Literals.CONTROL_UNIT__INPUTS_CONTROL_UNIT);
 			childrenFeatures.add(PMLPackage.Literals.CONTROL_UNIT__OUTPUTS_CONTROL_UNIT);
 			childrenFeatures.add(PMLPackage.Literals.CONTROL_UNIT__INTRUCTIONS);
+			childrenFeatures.add(PMLPackage.Literals.CONTROL_UNIT__CONTROL_UNIT_FSM);
 		}
 		return childrenFeatures;
 	}
@@ -171,6 +168,7 @@ public class ControlUnitItemProvider
 			case PMLPackage.CONTROL_UNIT__INPUTS_CONTROL_UNIT:
 			case PMLPackage.CONTROL_UNIT__OUTPUTS_CONTROL_UNIT:
 			case PMLPackage.CONTROL_UNIT__INTRUCTIONS:
+			case PMLPackage.CONTROL_UNIT__CONTROL_UNIT_FSM:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -207,6 +205,11 @@ public class ControlUnitItemProvider
 			(createChildParameter
 				(PMLPackage.Literals.CONTROL_UNIT__INTRUCTIONS,
 				 PMLFactory.eINSTANCE.createInstructions()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(PMLPackage.Literals.CONTROL_UNIT__CONTROL_UNIT_FSM,
+				 PMLFactory.eINSTANCE.createInitialMicroInstruction()));
 	}
 
 	/**

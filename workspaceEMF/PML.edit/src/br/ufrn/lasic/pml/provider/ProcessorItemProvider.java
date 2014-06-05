@@ -1,8 +1,4 @@
 /**
- * <copyright>
- * </copyright>
- *
- * $Id$
  */
 package br.ufrn.lasic.pml.provider;
 
@@ -113,7 +109,7 @@ public class ProcessorItemProvider
 			childrenFeatures.add(PMLPackage.Literals.PROCESSOR__MUX);
 			childrenFeatures.add(PMLPackage.Literals.PROCESSOR__CONTROL_UNITS);
 			childrenFeatures.add(PMLPackage.Literals.PROCESSOR__DECODERS);
-			childrenFeatures.add(PMLPackage.Literals.PROCESSOR__INITIAL_STAGE_PIPELINE);
+			childrenFeatures.add(PMLPackage.Literals.PROCESSOR__PROCESSOR_SIGNAL_EVENTS);
 		}
 		return childrenFeatures;
 	}
@@ -178,7 +174,7 @@ public class ProcessorItemProvider
 			case PMLPackage.PROCESSOR__MUX:
 			case PMLPackage.PROCESSOR__CONTROL_UNITS:
 			case PMLPackage.PROCESSOR__DECODERS:
-			case PMLPackage.PROCESSOR__INITIAL_STAGE_PIPELINE:
+			case PMLPackage.PROCESSOR__PROCESSOR_SIGNAL_EVENTS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -233,8 +229,8 @@ public class ProcessorItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(PMLPackage.Literals.PROCESSOR__INITIAL_STAGE_PIPELINE,
-				 PMLFactory.eINSTANCE.createPipelineInitialStage()));
+				(PMLPackage.Literals.PROCESSOR__PROCESSOR_SIGNAL_EVENTS,
+				 PMLFactory.eINSTANCE.createSignalEvent()));
 	}
 
 	/**

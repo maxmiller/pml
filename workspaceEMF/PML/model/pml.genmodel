@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<genmodel:GenModel xmi:version="2.0"
-    xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
-    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/PML/src"
-    modelPluginID="PML" modelName="PML" importerID="org.eclipse.emf.importer.ecore"
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/PML/src" modelPluginID="PML" modelName="PML" importerID="org.eclipse.emf.importer.ecore"
     complianceLevel="6.0" copyrightFields="false">
   <foreignModel>pml.ecore</foreignModel>
   <genPackages prefix="PML" basePackage="br.ufrn.lasic" resource="XML" disposableProviderFactory="true"
@@ -48,14 +46,12 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pml.ecore#//Input/name"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pml.ecore#//Input/type"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pml.ecore#//Input/length"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference pml.ecore#//Input/inout"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pml.ecore#//Input/sensitive"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pml.ecore#//Input/bit"/>
     </genClasses>
     <genClasses ecoreClass="pml.ecore#//Output">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pml.ecore#//Output/name"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pml.ecore#//Output/type"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference pml.ecore#//Output/outin"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pml.ecore#//Output/sensitive"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pml.ecore#//Output/length"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pml.ecore#//Output/bit"/>
@@ -80,6 +76,7 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference pml.ecore#//ControlUnit/outputsControlUnit"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pml.ecore#//ControlUnit/name"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference pml.ecore#//ControlUnit/intructions"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference pml.ecore#//ControlUnit/controlUnitFSM"/>
     </genClasses>
     <genClasses ecoreClass="pml.ecore#//Processor">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference pml.ecore#//Processor/demux"/>
@@ -90,7 +87,7 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference pml.ecore#//Processor/controlUnits"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pml.ecore#//Processor/name"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference pml.ecore#//Processor/decoders"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference pml.ecore#//Processor/initialStagePipeline"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference pml.ecore#//Processor/processorSignalEvents"/>
     </genClasses>
     <genClasses ecoreClass="pml.ecore#//Memory">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference pml.ecore#//Memory/behaviorsMemory"/>
@@ -109,29 +106,32 @@
     <genClasses ecoreClass="pml.ecore#//Instructions">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pml.ecore#//Instructions/type"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pml.ecore#//Instructions/name"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference pml.ecore#//Instructions/initial"/>
     </genClasses>
     <genClasses ecoreClass="pml.ecore#//MicroInstruction">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pml.ecore#//MicroInstruction/name"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pml.ecore#//MicroInstruction/value"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference pml.ecore#//MicroInstruction/nextMicroinstruction"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference pml.ecore#//MicroInstruction/final"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference pml.ecore#//MicroInstruction/middleFSM"/>
     </genClasses>
     <genClasses ecoreClass="pml.ecore#//InitialMicroInstruction">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference pml.ecore#//InitialMicroInstruction/next"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pml.ecore#//InitialMicroInstruction/name"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pml.ecore#//InitialMicroInstruction/value"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference pml.ecore#//InitialMicroInstruction/directFinalMicroInstruction"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference pml.ecore#//InitialMicroInstruction/firstnodeFSM"/>
     </genClasses>
     <genClasses ecoreClass="pml.ecore#//FinalMicroInstruction">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pml.ecore#//FinalMicroInstruction/name"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pml.ecore#//FinalMicroInstruction/value"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference pml.ecore#//FinalMicroInstruction/finalFSM"/>
     </genClasses>
     <genClasses ecoreClass="pml.ecore#//Seletor">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pml.ecore#//Seletor/name"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pml.ecore#//Seletor/type"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pml.ecore#//Seletor/lengh"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pml.ecore#//Seletor/bit"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pml.ecore#//Seletor/sensitive"/>
     </genClasses>
     <genClasses ecoreClass="pml.ecore#//Operation">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pml.ecore#//Operation/name"/>
@@ -142,13 +142,11 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference pml.ecore#//Decoder/inDecoder"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference pml.ecore#//Decoder/behaviorDecoder"/>
     </genClasses>
-    <genClasses ecoreClass="pml.ecore#//PipelineInitialStage">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pml.ecore#//PipelineInitialStage/name"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference pml.ecore#//PipelineInitialStage/nextStatePipeline"/>
-    </genClasses>
-    <genClasses ecoreClass="pml.ecore#//PipelineNextStage">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference pml.ecore#//PipelineNextStage/pipelineNext"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pml.ecore#//PipelineNextStage/name"/>
+    <genClasses ecoreClass="pml.ecore#//SignalEvent">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pml.ecore#//SignalEvent/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference pml.ecore#//SignalEvent/signalIn"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference pml.ecore#//SignalEvent/signalOut"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference pml.ecore#//SignalEvent/sinalSelector"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

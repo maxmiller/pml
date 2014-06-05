@@ -4,17 +4,22 @@
 
 
 [template public generateElement(c : Memory)]
+
 	[file (c.name.concat('_untimed.h'), false, 'UTF-8')]
 	#ifndef [c.name.concat('_h')/]
 	#define  [c.name.concat('_h')/]
 	#include "systemc.h"
 	
 	SC_MODULE([c.name/]){
+
+	 sc_port<read_in> inmux;
+	    sc_port<write_in> outmux;
+
 	 	[for (p : Input | c.inputMemory)]
 	     	[forIn(p.name, p.type.toString(), p.bit, p.length) /]	    
 	    [/for]
 		[for (p : Output | c.outputMemory)]
-	  	[forOut(p.name, p.type.toString(), p.bit, p.length) /]	    
+	  	[forIn(p.name, p.type.toString(), p.bit, p.length) /]	    
 	     	    [/for]
         [for (o : Behavior | c.behaviorsMemory)]
         	[o.typeBehavior.toString().toLower()/] [o.name.toLower()/](); 
@@ -34,7 +39,7 @@
 	
 	[/file]
 
-[file (c.name.concat('_untimed.h'), false, 'UTF-8')]
+[file (c.name.concat('_timed.h'), false, 'UTF-8')]
 	#ifndef [c.name.concat('_h')/]
 	#define  [c.name.concat('_h')/]
 	#include "systemc.h"

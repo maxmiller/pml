@@ -1,8 +1,4 @@
 /**
- * <copyright>
- * </copyright>
- *
- * $Id$
  */
 package br.ufrn.lasic.pml;
 
@@ -18,7 +14,6 @@ import org.eclipse.emf.ecore.EObject;
  * <ul>
  *   <li>{@link br.ufrn.lasic.pml.Output#getName <em>Name</em>}</li>
  *   <li>{@link br.ufrn.lasic.pml.Output#getType <em>Type</em>}</li>
- *   <li>{@link br.ufrn.lasic.pml.Output#getOutin <em>Outin</em>}</li>
  *   <li>{@link br.ufrn.lasic.pml.Output#isSensitive <em>Sensitive</em>}</li>
  *   <li>{@link br.ufrn.lasic.pml.Output#getLength <em>Length</em>}</li>
  *   <li>{@link br.ufrn.lasic.pml.Output#getBit <em>Bit</em>}</li>
@@ -84,32 +79,6 @@ public interface Output extends EObject {
 	 * @generated
 	 */
 	void setType(TypeData value);
-
-	/**
-	 * Returns the value of the '<em><b>Outin</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Outin</em>' reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Outin</em>' reference.
-	 * @see #setOutin(Input)
-	 * @see br.ufrn.lasic.pml.PMLPackage#getOutput_Outin()
-	 * @model
-	 * @generated
-	 */
-	Input getOutin();
-
-	/**
-	 * Sets the value of the '{@link br.ufrn.lasic.pml.Output#getOutin <em>Outin</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Outin</em>' reference.
-	 * @see #getOutin()
-	 * @generated
-	 */
-	void setOutin(Input value);
 
 	/**
 	 * Returns the value of the '<em><b>Sensitive</b></em>' attribute.

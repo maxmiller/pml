@@ -1,8 +1,4 @@
 /**
- * <copyright>
- * </copyright>
- *
- * $Id$
  */
 package br.ufrn.lasic.pml.impl;
 
@@ -28,6 +24,7 @@ import org.eclipse.emf.ecore.impl.EObjectImpl;
  *   <li>{@link br.ufrn.lasic.pml.impl.SeletorImpl#getType <em>Type</em>}</li>
  *   <li>{@link br.ufrn.lasic.pml.impl.SeletorImpl#getLengh <em>Lengh</em>}</li>
  *   <li>{@link br.ufrn.lasic.pml.impl.SeletorImpl#getBit <em>Bit</em>}</li>
+ *   <li>{@link br.ufrn.lasic.pml.impl.SeletorImpl#isSensitive <em>Sensitive</em>}</li>
  * </ul>
  * </p>
  *
@@ -113,6 +110,26 @@ public class SeletorImpl extends EObjectImpl implements Seletor {
 	 * @ordered
 	 */
 	protected int bit = BIT_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #isSensitive() <em>Sensitive</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isSensitive()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final boolean SENSITIVE_EDEFAULT = false;
+
+	/**
+	 * The cached value of the '{@link #isSensitive() <em>Sensitive</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isSensitive()
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean sensitive = SENSITIVE_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -222,6 +239,27 @@ public class SeletorImpl extends EObjectImpl implements Seletor {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public boolean isSensitive() {
+		return sensitive;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setSensitive(boolean newSensitive) {
+		boolean oldSensitive = sensitive;
+		sensitive = newSensitive;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, PMLPackage.SELETOR__SENSITIVE, oldSensitive, sensitive));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -233,6 +271,8 @@ public class SeletorImpl extends EObjectImpl implements Seletor {
 				return getLengh();
 			case PMLPackage.SELETOR__BIT:
 				return getBit();
+			case PMLPackage.SELETOR__SENSITIVE:
+				return isSensitive();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -256,6 +296,9 @@ public class SeletorImpl extends EObjectImpl implements Seletor {
 				return;
 			case PMLPackage.SELETOR__BIT:
 				setBit((Integer)newValue);
+				return;
+			case PMLPackage.SELETOR__SENSITIVE:
+				setSensitive((Boolean)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -281,6 +324,9 @@ public class SeletorImpl extends EObjectImpl implements Seletor {
 			case PMLPackage.SELETOR__BIT:
 				setBit(BIT_EDEFAULT);
 				return;
+			case PMLPackage.SELETOR__SENSITIVE:
+				setSensitive(SENSITIVE_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -301,6 +347,8 @@ public class SeletorImpl extends EObjectImpl implements Seletor {
 				return lengh != LENGH_EDEFAULT;
 			case PMLPackage.SELETOR__BIT:
 				return bit != BIT_EDEFAULT;
+			case PMLPackage.SELETOR__SENSITIVE:
+				return sensitive != SENSITIVE_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -323,6 +371,8 @@ public class SeletorImpl extends EObjectImpl implements Seletor {
 		result.append(lengh);
 		result.append(", bit: ");
 		result.append(bit);
+		result.append(", sensitive: ");
+		result.append(sensitive);
 		result.append(')');
 		return result.toString();
 	}

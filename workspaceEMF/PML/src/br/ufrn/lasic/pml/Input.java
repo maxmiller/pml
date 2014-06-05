@@ -1,8 +1,4 @@
 /**
- * <copyright>
- * </copyright>
- *
- * $Id$
  */
 package br.ufrn.lasic.pml;
 
@@ -19,7 +15,6 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link br.ufrn.lasic.pml.Input#getName <em>Name</em>}</li>
  *   <li>{@link br.ufrn.lasic.pml.Input#getType <em>Type</em>}</li>
  *   <li>{@link br.ufrn.lasic.pml.Input#getLength <em>Length</em>}</li>
- *   <li>{@link br.ufrn.lasic.pml.Input#getInout <em>Inout</em>}</li>
  *   <li>{@link br.ufrn.lasic.pml.Input#isSensitive <em>Sensitive</em>}</li>
  *   <li>{@link br.ufrn.lasic.pml.Input#getBit <em>Bit</em>}</li>
  * </ul>
@@ -110,32 +105,6 @@ public interface Input extends EObject {
 	 * @generated
 	 */
 	void setLength(int value);
-
-	/**
-	 * Returns the value of the '<em><b>Inout</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Inout</em>' reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Inout</em>' reference.
-	 * @see #setInout(Output)
-	 * @see br.ufrn.lasic.pml.PMLPackage#getInput_Inout()
-	 * @model
-	 * @generated
-	 */
-	Output getInout();
-
-	/**
-	 * Sets the value of the '{@link br.ufrn.lasic.pml.Input#getInout <em>Inout</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Inout</em>' reference.
-	 * @see #getInout()
-	 * @generated
-	 */
-	void setInout(Output value);
 
 	/**
 	 * Returns the value of the '<em><b>Sensitive</b></em>' attribute.

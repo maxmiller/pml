@@ -10,11 +10,14 @@
 	#include "systemc.h"
 	
 	SC_MODULE([c.name/]){
+    	 sc_port<read_in> in;
+	    sc_port<write_in> out;
+
 		[for (p : Input | c.inDecoder)]
 	    	[forIn(p.name, p.type.toString(), p.bit, p.length) /]	    
 	    [/for]
         [for (p : Output | c.outDecoder)]
-	    	[forOut(p.name, p.type.toString(), p.bit, p.length) /]	    
+	    	[forIn(p.name, p.type.toString(), p.bit, p.length) /]	    
 	    [/for]
 	    [for (o : Behavior | c.behaviorDecoder)]
         	[o.typeBehavior.toString().toLower()/] [o.name.toLower()/](); 
@@ -34,14 +37,14 @@
 	
 	[/file]
 
-[file (c.name.concat('_untimed.h'), false, 'UTF-8')]
+[file (c.name.concat('_timed.h'), false, 'UTF-8')]
 	#ifndef [c.name.concat('_h')/]
 	#define  [c.name.concat('_h')/]
 	#include "systemc.h"
 	
 	SC_MODULE([c.name/]){
 	 		[for (p : Input | c.inDecoder)]
-	    	[forIn(p.name, p.type.toString(), p.bit, p.length) /]	    
+	    	[forInTimed(p.name, p.type.toString(), p.bit, p.length) /]	    
 	    [/for]
         [for (p : Output | c.outDecoder)]
 	    	[forOut(p.name, p.type.toString(), p.bit, p.length) /]	    
@@ -56,7 +59,7 @@
 	        [/for]
 			[for (p : Input | c.inDecoder)]
 	        	[if(p.sensitive) ]
-				    [forSensitive(p.name, p.length.abs())/]
+				    [forSensitiveTimed(p.name, p.length.abs())/]
 				[/if]
 	   		[/for]
         }       

@@ -1,8 +1,4 @@
 /**
- * <copyright>
- * </copyright>
- *
- * $Id$
  */
 package br.ufrn.lasic.pml;
 
@@ -69,7 +65,7 @@ public interface ULA extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Behaviros ULA</em>' containment reference list.
 	 * @see br.ufrn.lasic.pml.PMLPackage#getULA_BehavirosULA()
-	 * @model containment="true"
+	 * @model containment="true" required="true"
 	 * @generated
 	 */
 	EList<Behavior> getBehavirosULA();

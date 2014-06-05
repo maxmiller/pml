@@ -38,15 +38,15 @@ public class Generator extends AbstractAcceleoGenerator {
      * @generated
      */
     public static final String MODULE_FILE_NAME = "/PMLGen/generator/main";
-    public static final String PROCESSOR_FILE_NAME = "/Users/maxmiller/github/pml/runtime-EclipseApplication/Modelagem/mips.pml";
-    public static final String FOLDER_NAME ="/Users/maxmiller/github/pml/workspaceEMF/SystemC/src/pml";
+    public static final String PROCESSOR_FILE_NAME = "/Users/maxmiller/Dropbox/max/pml/runtime-EclipseApplication/ProcessorModels/newmips.pml";
+    public static final String FOLDER_NAME ="/Users/maxmiller/Dropbox/max/pml/workspaceEMF/SystemC/src/pml";
     
     /**
      * The name of the templates that are to be generated.
      *
      * @generated
      */
-    public static final String[] TEMPLATE_NAMES = { "mainMultiplexor","mainDemultiplexor","mainULA","mainRegister","mainProcessor","mainMemory","mainDecoder" };
+    public static final String[] TEMPLATE_NAMES = { "mainMultiplexor","mainDemultiplexor","mainULA","mainRegister","mainProcessor","mainMemory","mainDecoder", "mainControlUnit" };
     
     /**
      * The list of properties files from the launch parameters (Launch configuration).

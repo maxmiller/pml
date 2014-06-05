@@ -1,8 +1,4 @@
 /**
- * <copyright>
- * </copyright>
- *
- * $Id$
  */
 package br.ufrn.lasic.pml;
 
@@ -26,7 +22,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link br.ufrn.lasic.pml.Processor#getControlUnits <em>Control Units</em>}</li>
  *   <li>{@link br.ufrn.lasic.pml.Processor#getName <em>Name</em>}</li>
  *   <li>{@link br.ufrn.lasic.pml.Processor#getDecoders <em>Decoders</em>}</li>
- *   <li>{@link br.ufrn.lasic.pml.Processor#getInitialStagePipeline <em>Initial Stage Pipeline</em>}</li>
+ *   <li>{@link br.ufrn.lasic.pml.Processor#getProcessorSignalEvents <em>Processor Signal Events</em>}</li>
  * </ul>
  * </p>
  *
@@ -174,29 +170,19 @@ public interface Processor extends EObject {
 	EList<Decoder> getDecoders();
 
 	/**
-	 * Returns the value of the '<em><b>Initial Stage Pipeline</b></em>' containment reference.
+	 * Returns the value of the '<em><b>Processor Signal Events</b></em>' containment reference list.
+	 * The list contents are of type {@link br.ufrn.lasic.pml.SignalEvent}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Initial Stage Pipeline</em>' containment reference isn't clear,
+	 * If the meaning of the '<em>Processor Signal Events</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Initial Stage Pipeline</em>' containment reference.
-	 * @see #setInitialStagePipeline(PipelineInitialStage)
-	 * @see br.ufrn.lasic.pml.PMLPackage#getProcessor_InitialStagePipeline()
+	 * @return the value of the '<em>Processor Signal Events</em>' containment reference list.
+	 * @see br.ufrn.lasic.pml.PMLPackage#getProcessor_ProcessorSignalEvents()
 	 * @model containment="true"
 	 * @generated
 	 */
-	PipelineInitialStage getInitialStagePipeline();
-
-	/**
-	 * Sets the value of the '{@link br.ufrn.lasic.pml.Processor#getInitialStagePipeline <em>Initial Stage Pipeline</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Initial Stage Pipeline</em>' containment reference.
-	 * @see #getInitialStagePipeline()
-	 * @generated
-	 */
-	void setInitialStagePipeline(PipelineInitialStage value);
+	EList<SignalEvent> getProcessorSignalEvents();
 
 } // Processor

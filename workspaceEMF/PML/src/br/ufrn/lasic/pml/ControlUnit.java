@@ -1,8 +1,4 @@
 /**
- * <copyright>
- * </copyright>
- *
- * $Id$
  */
 package br.ufrn.lasic.pml;
 
@@ -23,6 +19,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link br.ufrn.lasic.pml.ControlUnit#getOutputsControlUnit <em>Outputs Control Unit</em>}</li>
  *   <li>{@link br.ufrn.lasic.pml.ControlUnit#getName <em>Name</em>}</li>
  *   <li>{@link br.ufrn.lasic.pml.ControlUnit#getIntructions <em>Intructions</em>}</li>
+ *   <li>{@link br.ufrn.lasic.pml.ControlUnit#getControlUnitFSM <em>Control Unit FSM</em>}</li>
  * </ul>
  * </p>
  *
@@ -42,7 +39,7 @@ public interface ControlUnit extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Behaviors Control Unit</em>' containment reference list.
 	 * @see br.ufrn.lasic.pml.PMLPackage#getControlUnit_BehaviorsControlUnit()
-	 * @model containment="true"
+	 * @model containment="true" required="true"
 	 * @generated
 	 */
 	EList<Behavior> getBehaviorsControlUnit();
@@ -121,5 +118,31 @@ public interface ControlUnit extends EObject {
 	 * @generated
 	 */
 	EList<Instructions> getIntructions();
+
+	/**
+	 * Returns the value of the '<em><b>Control Unit FSM</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Control Unit FSM</em>' containment reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Control Unit FSM</em>' containment reference.
+	 * @see #setControlUnitFSM(InitialMicroInstruction)
+	 * @see br.ufrn.lasic.pml.PMLPackage#getControlUnit_ControlUnitFSM()
+	 * @model containment="true"
+	 * @generated
+	 */
+	InitialMicroInstruction getControlUnitFSM();
+
+	/**
+	 * Sets the value of the '{@link br.ufrn.lasic.pml.ControlUnit#getControlUnitFSM <em>Control Unit FSM</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Control Unit FSM</em>' containment reference.
+	 * @see #getControlUnitFSM()
+	 * @generated
+	 */
+	void setControlUnitFSM(InitialMicroInstruction value);
 
 } // ControlUnit

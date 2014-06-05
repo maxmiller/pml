@@ -7,7 +7,7 @@
 [import PMLGen::generator::ula_h/]
 [import PMLGen::generator::memory_h/]
 [import PMLGen::generator::decoder_h/]
-
+[import PMLGen::generator::control_unit_h /]
 
 [template public mainMultiplexor(aMultiplexor : Multiplexor)]
 	
@@ -49,4 +49,10 @@
 	
 	[comment @main /]
 	[a.generateElement()/]
+[/template]
+
+[template public mainControlUnit(a : ControlUnit)]
+	
+	[comment @main /]
+	[a.generateElement() /]
 [/template]

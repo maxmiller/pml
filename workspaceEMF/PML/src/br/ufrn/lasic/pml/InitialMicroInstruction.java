@@ -1,10 +1,8 @@
 /**
- * <copyright>
- * </copyright>
- *
- * $Id$
  */
 package br.ufrn.lasic.pml;
+
+import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EObject;
 
@@ -20,6 +18,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link br.ufrn.lasic.pml.InitialMicroInstruction#getName <em>Name</em>}</li>
  *   <li>{@link br.ufrn.lasic.pml.InitialMicroInstruction#getValue <em>Value</em>}</li>
  *   <li>{@link br.ufrn.lasic.pml.InitialMicroInstruction#getDirectFinalMicroInstruction <em>Direct Final Micro Instruction</em>}</li>
+ *   <li>{@link br.ufrn.lasic.pml.InitialMicroInstruction#getFirstnodeFSM <em>Firstnode FSM</em>}</li>
  * </ul>
  * </p>
  *
@@ -131,5 +130,21 @@ public interface InitialMicroInstruction extends EObject {
 	 * @generated
 	 */
 	void setDirectFinalMicroInstruction(FinalMicroInstruction value);
+
+	/**
+	 * Returns the value of the '<em><b>Firstnode FSM</b></em>' reference list.
+	 * The list contents are of type {@link br.ufrn.lasic.pml.Instructions}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Firstnode FSM</em>' reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Firstnode FSM</em>' reference list.
+	 * @see br.ufrn.lasic.pml.PMLPackage#getInitialMicroInstruction_FirstnodeFSM()
+	 * @model extendedMetaData="name='firstNodeFSM'"
+	 * @generated
+	 */
+	EList<Instructions> getFirstnodeFSM();
 
 } // InitialMicroInstruction

@@ -1,8 +1,4 @@
 /**
- * <copyright>
- * </copyright>
- *
- * $Id$
  */
 package br.ufrn.lasic.pml.provider;
 
@@ -66,7 +62,6 @@ public class OutputItemProvider
 
 			addNamePropertyDescriptor(object);
 			addTypePropertyDescriptor(object);
-			addOutinPropertyDescriptor(object);
 			addSensitivePropertyDescriptor(object);
 			addLengthPropertyDescriptor(object);
 			addBitPropertyDescriptor(object);
@@ -114,28 +109,6 @@ public class OutputItemProvider
 				 false,
 				 false,
 				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 null,
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Outin feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addOutinPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Output_outin_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Output_outin_feature", "_UI_Output_type"),
-				 PMLPackage.Literals.OUTPUT__OUTIN,
-				 true,
-				 false,
-				 true,
-				 null,
 				 null,
 				 null));
 	}

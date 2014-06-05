@@ -1,8 +1,4 @@
 /**
- * <copyright>
- * </copyright>
- *
- * $Id$
  */
 package br.ufrn.lasic.pml;
 
@@ -18,7 +14,6 @@ import org.eclipse.emf.ecore.EObject;
  * <ul>
  *   <li>{@link br.ufrn.lasic.pml.Instructions#getType <em>Type</em>}</li>
  *   <li>{@link br.ufrn.lasic.pml.Instructions#getName <em>Name</em>}</li>
- *   <li>{@link br.ufrn.lasic.pml.Instructions#getInitial <em>Initial</em>}</li>
  * </ul>
  * </p>
  *
@@ -78,31 +73,5 @@ public interface Instructions extends EObject {
 	 * @generated
 	 */
 	void setName(String value);
-
-	/**
-	 * Returns the value of the '<em><b>Initial</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Initial</em>' containment reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Initial</em>' containment reference.
-	 * @see #setInitial(InitialMicroInstruction)
-	 * @see br.ufrn.lasic.pml.PMLPackage#getInstructions_Initial()
-	 * @model containment="true" required="true"
-	 * @generated
-	 */
-	InitialMicroInstruction getInitial();
-
-	/**
-	 * Sets the value of the '{@link br.ufrn.lasic.pml.Instructions#getInitial <em>Initial</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Initial</em>' containment reference.
-	 * @see #getInitial()
-	 * @generated
-	 */
-	void setInitial(InitialMicroInstruction value);
 
 } // Instructions

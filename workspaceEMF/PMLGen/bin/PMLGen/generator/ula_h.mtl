@@ -11,6 +11,7 @@
 	
 	SC_MODULE([c.name/]){
 		
+		
 		typedef enum ULAOPERATION_{
 		[for (p : Operation | c.operationsULA)]
 			ulaOperation_[p.name/],
@@ -55,7 +56,7 @@
 		[/for]
 		}
 	 	[for (p : Input | c.inputsULA)]
-	    	[forIn(p.name, p.type.toString(), p.bit, p.length) /]	    
+	    	[forInTimed(p.name, p.type.toString(), p.bit, p.length) /]	    
 	    [/for]
         [for (p : Output | c.outputsULA)]
 	    	[forOut(p.name, p.type.toString(), p.bit, p.length) /]	    
@@ -65,6 +66,9 @@
 	    [/for]
         [for (o : Behavior | c.behavirosULA)]
         	[o.typeBehavior.toString().toLower()/] [o.name.toLower()/](); 
+			/*
+				
+			*/
         [/for]
         
         
@@ -75,7 +79,7 @@
 	        [/for]
 			[for (p : Input | c.inputsULA)]
 	        	[if(p.sensitive) ]
-				      [forSensitive(p.name, p.length.abs())/]
+				      [forSensitiveTimed(p.name, p.length.abs())/]
 				[/if]
 				
 	   		[/for]

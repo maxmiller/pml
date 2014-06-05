@@ -1,20 +1,23 @@
 /**
- * <copyright>
- * </copyright>
- *
- * $Id$
  */
 package br.ufrn.lasic.pml.impl;
 
 import br.ufrn.lasic.pml.FinalMicroInstruction;
+import br.ufrn.lasic.pml.Instructions;
 import br.ufrn.lasic.pml.PMLPackage;
 
+import java.util.Collection;
+
 import org.eclipse.emf.common.notify.Notification;
+
+import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.EObjectImpl;
+
+import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -25,6 +28,7 @@ import org.eclipse.emf.ecore.impl.EObjectImpl;
  * <ul>
  *   <li>{@link br.ufrn.lasic.pml.impl.FinalMicroInstructionImpl#getName <em>Name</em>}</li>
  *   <li>{@link br.ufrn.lasic.pml.impl.FinalMicroInstructionImpl#getValue <em>Value</em>}</li>
+ *   <li>{@link br.ufrn.lasic.pml.impl.FinalMicroInstructionImpl#getFinalFSM <em>Final FSM</em>}</li>
  * </ul>
  * </p>
  *
@@ -70,6 +74,16 @@ public class FinalMicroInstructionImpl extends EObjectImpl implements FinalMicro
 	 * @ordered
 	 */
 	protected int value = VALUE_EDEFAULT;
+
+	/**
+	 * The cached value of the '{@link #getFinalFSM() <em>Final FSM</em>}' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getFinalFSM()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Instructions> finalFSM;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -137,6 +151,18 @@ public class FinalMicroInstructionImpl extends EObjectImpl implements FinalMicro
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EList<Instructions> getFinalFSM() {
+		if (finalFSM == null) {
+			finalFSM = new EObjectResolvingEList<Instructions>(Instructions.class, this, PMLPackage.FINAL_MICRO_INSTRUCTION__FINAL_FSM);
+		}
+		return finalFSM;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -144,6 +170,8 @@ public class FinalMicroInstructionImpl extends EObjectImpl implements FinalMicro
 				return getName();
 			case PMLPackage.FINAL_MICRO_INSTRUCTION__VALUE:
 				return getValue();
+			case PMLPackage.FINAL_MICRO_INSTRUCTION__FINAL_FSM:
+				return getFinalFSM();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -153,6 +181,7 @@ public class FinalMicroInstructionImpl extends EObjectImpl implements FinalMicro
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
@@ -161,6 +190,10 @@ public class FinalMicroInstructionImpl extends EObjectImpl implements FinalMicro
 				return;
 			case PMLPackage.FINAL_MICRO_INSTRUCTION__VALUE:
 				setValue((Integer)newValue);
+				return;
+			case PMLPackage.FINAL_MICRO_INSTRUCTION__FINAL_FSM:
+				getFinalFSM().clear();
+				getFinalFSM().addAll((Collection<? extends Instructions>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -180,6 +213,9 @@ public class FinalMicroInstructionImpl extends EObjectImpl implements FinalMicro
 			case PMLPackage.FINAL_MICRO_INSTRUCTION__VALUE:
 				setValue(VALUE_EDEFAULT);
 				return;
+			case PMLPackage.FINAL_MICRO_INSTRUCTION__FINAL_FSM:
+				getFinalFSM().clear();
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -196,6 +232,8 @@ public class FinalMicroInstructionImpl extends EObjectImpl implements FinalMicro
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 			case PMLPackage.FINAL_MICRO_INSTRUCTION__VALUE:
 				return value != VALUE_EDEFAULT;
+			case PMLPackage.FINAL_MICRO_INSTRUCTION__FINAL_FSM:
+				return finalFSM != null && !finalFSM.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

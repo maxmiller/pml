@@ -1,8 +1,4 @@
 /**
- * <copyright>
- * </copyright>
- *
- * $Id$
  */
 package br.ufrn.lasic.pml.provider;
 
@@ -467,49 +463,26 @@ public class PMLItemProviderAdapterFactory extends PMLAdapterFactory implements 
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link br.ufrn.lasic.pml.PipelineInitialStage} instances.
+	 * This keeps track of the one adapter used for all {@link br.ufrn.lasic.pml.SignalEvent} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected PipelineInitialStageItemProvider pipelineInitialStageItemProvider;
+	protected SignalEventItemProvider signalEventItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link br.ufrn.lasic.pml.PipelineInitialStage}.
+	 * This creates an adapter for a {@link br.ufrn.lasic.pml.SignalEvent}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createPipelineInitialStageAdapter() {
-		if (pipelineInitialStageItemProvider == null) {
-			pipelineInitialStageItemProvider = new PipelineInitialStageItemProvider(this);
+	public Adapter createSignalEventAdapter() {
+		if (signalEventItemProvider == null) {
+			signalEventItemProvider = new SignalEventItemProvider(this);
 		}
 
-		return pipelineInitialStageItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link br.ufrn.lasic.pml.PipelineNextStage} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected PipelineNextStageItemProvider pipelineNextStageItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link br.ufrn.lasic.pml.PipelineNextStage}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createPipelineNextStageAdapter() {
-		if (pipelineNextStageItemProvider == null) {
-			pipelineNextStageItemProvider = new PipelineNextStageItemProvider(this);
-		}
-
-		return pipelineNextStageItemProvider;
+		return signalEventItemProvider;
 	}
 
 	/**
@@ -628,8 +601,7 @@ public class PMLItemProviderAdapterFactory extends PMLAdapterFactory implements 
 		if (seletorItemProvider != null) seletorItemProvider.dispose();
 		if (operationItemProvider != null) operationItemProvider.dispose();
 		if (decoderItemProvider != null) decoderItemProvider.dispose();
-		if (pipelineInitialStageItemProvider != null) pipelineInitialStageItemProvider.dispose();
-		if (pipelineNextStageItemProvider != null) pipelineNextStageItemProvider.dispose();
+		if (signalEventItemProvider != null) signalEventItemProvider.dispose();
 	}
 
 }

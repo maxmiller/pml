@@ -1,20 +1,14 @@
 /**
- * <copyright>
- * </copyright>
- *
- * $Id$
  */
 package br.ufrn.lasic.pml.impl;
 
 import br.ufrn.lasic.pml.Input;
-import br.ufrn.lasic.pml.Output;
 import br.ufrn.lasic.pml.PMLPackage;
 import br.ufrn.lasic.pml.TypeData;
 
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.EObjectImpl;
@@ -29,7 +23,6 @@ import org.eclipse.emf.ecore.impl.EObjectImpl;
  *   <li>{@link br.ufrn.lasic.pml.impl.InputImpl#getName <em>Name</em>}</li>
  *   <li>{@link br.ufrn.lasic.pml.impl.InputImpl#getType <em>Type</em>}</li>
  *   <li>{@link br.ufrn.lasic.pml.impl.InputImpl#getLength <em>Length</em>}</li>
- *   <li>{@link br.ufrn.lasic.pml.impl.InputImpl#getInout <em>Inout</em>}</li>
  *   <li>{@link br.ufrn.lasic.pml.impl.InputImpl#isSensitive <em>Sensitive</em>}</li>
  *   <li>{@link br.ufrn.lasic.pml.impl.InputImpl#getBit <em>Bit</em>}</li>
  * </ul>
@@ -97,16 +90,6 @@ public class InputImpl extends EObjectImpl implements Input {
 	 * @ordered
 	 */
 	protected int length = LENGTH_EDEFAULT;
-
-	/**
-	 * The cached value of the '{@link #getInout() <em>Inout</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getInout()
-	 * @generated
-	 * @ordered
-	 */
-	protected Output inout;
 
 	/**
 	 * The default value of the '{@link #isSensitive() <em>Sensitive</em>}' attribute.
@@ -235,44 +218,6 @@ public class InputImpl extends EObjectImpl implements Input {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Output getInout() {
-		if (inout != null && inout.eIsProxy()) {
-			InternalEObject oldInout = (InternalEObject)inout;
-			inout = (Output)eResolveProxy(oldInout);
-			if (inout != oldInout) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, PMLPackage.INPUT__INOUT, oldInout, inout));
-			}
-		}
-		return inout;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Output basicGetInout() {
-		return inout;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setInout(Output newInout) {
-		Output oldInout = inout;
-		inout = newInout;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, PMLPackage.INPUT__INOUT, oldInout, inout));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public boolean isSensitive() {
 		return sensitive;
 	}
@@ -324,9 +269,6 @@ public class InputImpl extends EObjectImpl implements Input {
 				return getType();
 			case PMLPackage.INPUT__LENGTH:
 				return getLength();
-			case PMLPackage.INPUT__INOUT:
-				if (resolve) return getInout();
-				return basicGetInout();
 			case PMLPackage.INPUT__SENSITIVE:
 				return isSensitive();
 			case PMLPackage.INPUT__BIT:
@@ -351,9 +293,6 @@ public class InputImpl extends EObjectImpl implements Input {
 				return;
 			case PMLPackage.INPUT__LENGTH:
 				setLength((Integer)newValue);
-				return;
-			case PMLPackage.INPUT__INOUT:
-				setInout((Output)newValue);
 				return;
 			case PMLPackage.INPUT__SENSITIVE:
 				setSensitive((Boolean)newValue);
@@ -382,9 +321,6 @@ public class InputImpl extends EObjectImpl implements Input {
 			case PMLPackage.INPUT__LENGTH:
 				setLength(LENGTH_EDEFAULT);
 				return;
-			case PMLPackage.INPUT__INOUT:
-				setInout((Output)null);
-				return;
 			case PMLPackage.INPUT__SENSITIVE:
 				setSensitive(SENSITIVE_EDEFAULT);
 				return;
@@ -409,8 +345,6 @@ public class InputImpl extends EObjectImpl implements Input {
 				return type != TYPE_EDEFAULT;
 			case PMLPackage.INPUT__LENGTH:
 				return length != LENGTH_EDEFAULT;
-			case PMLPackage.INPUT__INOUT:
-				return inout != null;
 			case PMLPackage.INPUT__SENSITIVE:
 				return sensitive != SENSITIVE_EDEFAULT;
 			case PMLPackage.INPUT__BIT:

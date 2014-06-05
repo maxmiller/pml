@@ -1,8 +1,4 @@
 /**
- * <copyright>
- * </copyright>
- *
- * $Id$
  */
 package br.ufrn.lasic.pml;
 
@@ -42,7 +38,7 @@ public interface Register extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Behavior Register</em>' containment reference list.
 	 * @see br.ufrn.lasic.pml.PMLPackage#getRegister_BehaviorRegister()
-	 * @model containment="true"
+	 * @model containment="true" required="true"
 	 * @generated
 	 */
 	EList<Behavior> getBehaviorRegister();
@@ -52,7 +48,7 @@ public interface Register extends EObject {
 	 * The list contents are of type {@link br.ufrn.lasic.pml.Output}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Output Register</em>' containment reference list isn't clear,
+	 * If the meaning of the '<em>Output Register</em>' containment reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
@@ -68,7 +64,7 @@ public interface Register extends EObject {
 	 * The list contents are of type {@link br.ufrn.lasic.pml.Input}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Input Register</em>' containment reference list isn't clear,
+	 * If the meaning of the '<em>Input Register</em>' containment reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->

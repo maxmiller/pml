@@ -44,7 +44,7 @@ public class Main extends AbstractAcceleoGenerator {
      *
      * @generated
      */
-    public static final String[] TEMPLATE_NAMES = { "mainMultiplexor", "mainDemultiplexor", "mainProcessor", "mainULA", "mainRegister", "mainMemory", "mainDecoder" };
+    public static final String[] TEMPLATE_NAMES = { "mainMultiplexor", "mainDemultiplexor", "mainProcessor", "mainULA", "mainRegister", "mainMemory", "mainDecoder", "mainControlUnit" };
     
     /**
      * The list of properties files from the launch parameters (Launch configuration).

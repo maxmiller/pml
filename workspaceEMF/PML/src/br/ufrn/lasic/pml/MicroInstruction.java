@@ -1,8 +1,4 @@
 /**
- * <copyright>
- * </copyright>
- *
- * $Id$
  */
 package br.ufrn.lasic.pml;
 
@@ -22,6 +18,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link br.ufrn.lasic.pml.MicroInstruction#getValue <em>Value</em>}</li>
  *   <li>{@link br.ufrn.lasic.pml.MicroInstruction#getNextMicroinstruction <em>Next Microinstruction</em>}</li>
  *   <li>{@link br.ufrn.lasic.pml.MicroInstruction#getFinal <em>Final</em>}</li>
+ *   <li>{@link br.ufrn.lasic.pml.MicroInstruction#getMiddleFSM <em>Middle FSM</em>}</li>
  * </ul>
  * </p>
  *
@@ -123,5 +120,21 @@ public interface MicroInstruction extends EObject {
 	 * @generated
 	 */
 	void setFinal(FinalMicroInstruction value);
+
+	/**
+	 * Returns the value of the '<em><b>Middle FSM</b></em>' reference list.
+	 * The list contents are of type {@link br.ufrn.lasic.pml.Instructions}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Middle FSM</em>' reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Middle FSM</em>' reference list.
+	 * @see br.ufrn.lasic.pml.PMLPackage#getMicroInstruction_MiddleFSM()
+	 * @model
+	 * @generated
+	 */
+	EList<Instructions> getMiddleFSM();
 
 } // MicroInstruction

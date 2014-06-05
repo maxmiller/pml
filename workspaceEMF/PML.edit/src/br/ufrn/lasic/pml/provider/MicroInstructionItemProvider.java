@@ -1,8 +1,4 @@
 /**
- * <copyright>
- * </copyright>
- *
- * $Id$
  */
 package br.ufrn.lasic.pml.provider;
 
@@ -69,6 +65,7 @@ public class MicroInstructionItemProvider
 
 			addNamePropertyDescriptor(object);
 			addValuePropertyDescriptor(object);
+			addMiddleFSMPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -113,6 +110,28 @@ public class MicroInstructionItemProvider
 				 false,
 				 false,
 				 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Middle FSM feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addMiddleFSMPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_MicroInstruction_middleFSM_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_MicroInstruction_middleFSM_feature", "_UI_MicroInstruction_type"),
+				 PMLPackage.Literals.MICRO_INSTRUCTION__MIDDLE_FSM,
+				 true,
+				 false,
+				 true,
+				 null,
 				 null,
 				 null));
 	}

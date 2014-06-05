@@ -1,13 +1,10 @@
 /**
- * <copyright>
- * </copyright>
- *
- * $Id$
  */
 package br.ufrn.lasic.pml.impl;
 
 import br.ufrn.lasic.pml.Behavior;
 import br.ufrn.lasic.pml.ControlUnit;
+import br.ufrn.lasic.pml.InitialMicroInstruction;
 import br.ufrn.lasic.pml.Input;
 import br.ufrn.lasic.pml.Instructions;
 import br.ufrn.lasic.pml.Output;
@@ -41,6 +38,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link br.ufrn.lasic.pml.impl.ControlUnitImpl#getOutputsControlUnit <em>Outputs Control Unit</em>}</li>
  *   <li>{@link br.ufrn.lasic.pml.impl.ControlUnitImpl#getName <em>Name</em>}</li>
  *   <li>{@link br.ufrn.lasic.pml.impl.ControlUnitImpl#getIntructions <em>Intructions</em>}</li>
+ *   <li>{@link br.ufrn.lasic.pml.impl.ControlUnitImpl#getControlUnitFSM <em>Control Unit FSM</em>}</li>
  * </ul>
  * </p>
  *
@@ -106,6 +104,16 @@ public class ControlUnitImpl extends EObjectImpl implements ControlUnit {
 	 * @ordered
 	 */
 	protected EList<Instructions> intructions;
+
+	/**
+	 * The cached value of the '{@link #getControlUnitFSM() <em>Control Unit FSM</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getControlUnitFSM()
+	 * @generated
+	 * @ordered
+	 */
+	protected InitialMicroInstruction controlUnitFSM;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -200,6 +208,49 @@ public class ControlUnitImpl extends EObjectImpl implements ControlUnit {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public InitialMicroInstruction getControlUnitFSM() {
+		return controlUnitFSM;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetControlUnitFSM(InitialMicroInstruction newControlUnitFSM, NotificationChain msgs) {
+		InitialMicroInstruction oldControlUnitFSM = controlUnitFSM;
+		controlUnitFSM = newControlUnitFSM;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, PMLPackage.CONTROL_UNIT__CONTROL_UNIT_FSM, oldControlUnitFSM, newControlUnitFSM);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setControlUnitFSM(InitialMicroInstruction newControlUnitFSM) {
+		if (newControlUnitFSM != controlUnitFSM) {
+			NotificationChain msgs = null;
+			if (controlUnitFSM != null)
+				msgs = ((InternalEObject)controlUnitFSM).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - PMLPackage.CONTROL_UNIT__CONTROL_UNIT_FSM, null, msgs);
+			if (newControlUnitFSM != null)
+				msgs = ((InternalEObject)newControlUnitFSM).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - PMLPackage.CONTROL_UNIT__CONTROL_UNIT_FSM, null, msgs);
+			msgs = basicSetControlUnitFSM(newControlUnitFSM, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, PMLPackage.CONTROL_UNIT__CONTROL_UNIT_FSM, newControlUnitFSM, newControlUnitFSM));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -211,6 +262,8 @@ public class ControlUnitImpl extends EObjectImpl implements ControlUnit {
 				return ((InternalEList<?>)getOutputsControlUnit()).basicRemove(otherEnd, msgs);
 			case PMLPackage.CONTROL_UNIT__INTRUCTIONS:
 				return ((InternalEList<?>)getIntructions()).basicRemove(otherEnd, msgs);
+			case PMLPackage.CONTROL_UNIT__CONTROL_UNIT_FSM:
+				return basicSetControlUnitFSM(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -233,6 +286,8 @@ public class ControlUnitImpl extends EObjectImpl implements ControlUnit {
 				return getName();
 			case PMLPackage.CONTROL_UNIT__INTRUCTIONS:
 				return getIntructions();
+			case PMLPackage.CONTROL_UNIT__CONTROL_UNIT_FSM:
+				return getControlUnitFSM();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -265,6 +320,9 @@ public class ControlUnitImpl extends EObjectImpl implements ControlUnit {
 				getIntructions().clear();
 				getIntructions().addAll((Collection<? extends Instructions>)newValue);
 				return;
+			case PMLPackage.CONTROL_UNIT__CONTROL_UNIT_FSM:
+				setControlUnitFSM((InitialMicroInstruction)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -292,6 +350,9 @@ public class ControlUnitImpl extends EObjectImpl implements ControlUnit {
 			case PMLPackage.CONTROL_UNIT__INTRUCTIONS:
 				getIntructions().clear();
 				return;
+			case PMLPackage.CONTROL_UNIT__CONTROL_UNIT_FSM:
+				setControlUnitFSM((InitialMicroInstruction)null);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -314,6 +375,8 @@ public class ControlUnitImpl extends EObjectImpl implements ControlUnit {
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 			case PMLPackage.CONTROL_UNIT__INTRUCTIONS:
 				return intructions != null && !intructions.isEmpty();
+			case PMLPackage.CONTROL_UNIT__CONTROL_UNIT_FSM:
+				return controlUnitFSM != null;
 		}
 		return super.eIsSet(featureID);
 	}

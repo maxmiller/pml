@@ -1,8 +1,4 @@
 /**
- * <copyright>
- * </copyright>
- *
- * $Id$
  */
 package br.ufrn.lasic.pml.impl;
 
@@ -21,11 +17,10 @@ import br.ufrn.lasic.pml.Operation;
 import br.ufrn.lasic.pml.Output;
 import br.ufrn.lasic.pml.PMLFactory;
 import br.ufrn.lasic.pml.PMLPackage;
-import br.ufrn.lasic.pml.PipelineInitialStage;
-import br.ufrn.lasic.pml.PipelineNextStage;
 import br.ufrn.lasic.pml.Processor;
 import br.ufrn.lasic.pml.Register;
 import br.ufrn.lasic.pml.Seletor;
+import br.ufrn.lasic.pml.SignalEvent;
 import br.ufrn.lasic.pml.TypeComponent;
 import br.ufrn.lasic.pml.TypeData;
 
@@ -168,14 +163,7 @@ public class PMLPackageImpl extends EPackageImpl implements PMLPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass pipelineInitialStageEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass pipelineNextStageEClass = null;
+	private EClass signalEventEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -383,17 +371,8 @@ public class PMLPackageImpl extends EPackageImpl implements PMLPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getInput_Inout() {
-		return (EReference)inputEClass.getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EAttribute getInput_Sensitive() {
-		return (EAttribute)inputEClass.getEStructuralFeatures().get(4);
+		return (EAttribute)inputEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -402,7 +381,7 @@ public class PMLPackageImpl extends EPackageImpl implements PMLPackage {
 	 * @generated
 	 */
 	public EAttribute getInput_Bit() {
-		return (EAttribute)inputEClass.getEStructuralFeatures().get(5);
+		return (EAttribute)inputEClass.getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -437,17 +416,8 @@ public class PMLPackageImpl extends EPackageImpl implements PMLPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getOutput_Outin() {
-		return (EReference)outputEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EAttribute getOutput_Sensitive() {
-		return (EAttribute)outputEClass.getEStructuralFeatures().get(3);
+		return (EAttribute)outputEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -456,7 +426,7 @@ public class PMLPackageImpl extends EPackageImpl implements PMLPackage {
 	 * @generated
 	 */
 	public EAttribute getOutput_Length() {
-		return (EAttribute)outputEClass.getEStructuralFeatures().get(4);
+		return (EAttribute)outputEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -465,7 +435,7 @@ public class PMLPackageImpl extends EPackageImpl implements PMLPackage {
 	 * @generated
 	 */
 	public EAttribute getOutput_Bit() {
-		return (EAttribute)outputEClass.getEStructuralFeatures().get(5);
+		return (EAttribute)outputEClass.getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -635,6 +605,15 @@ public class PMLPackageImpl extends EPackageImpl implements PMLPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getControlUnit_ControlUnitFSM() {
+		return (EReference)controlUnitEClass.getEStructuralFeatures().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getProcessor() {
 		return processorEClass;
 	}
@@ -716,7 +695,7 @@ public class PMLPackageImpl extends EPackageImpl implements PMLPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getProcessor_InitialStagePipeline() {
+	public EReference getProcessor_ProcessorSignalEvents() {
 		return (EReference)processorEClass.getEStructuralFeatures().get(8);
 	}
 
@@ -860,15 +839,6 @@ public class PMLPackageImpl extends EPackageImpl implements PMLPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getInstructions_Initial() {
-		return (EReference)instructionsEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getMicroInstruction() {
 		return microInstructionEClass;
 	}
@@ -907,6 +877,15 @@ public class PMLPackageImpl extends EPackageImpl implements PMLPackage {
 	 */
 	public EReference getMicroInstruction_Final() {
 		return (EReference)microInstructionEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getMicroInstruction_MiddleFSM() {
+		return (EReference)microInstructionEClass.getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -959,6 +938,15 @@ public class PMLPackageImpl extends EPackageImpl implements PMLPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getInitialMicroInstruction_FirstnodeFSM() {
+		return (EReference)initialMicroInstructionEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getFinalMicroInstruction() {
 		return finalMicroInstructionEClass;
 	}
@@ -979,6 +967,15 @@ public class PMLPackageImpl extends EPackageImpl implements PMLPackage {
 	 */
 	public EAttribute getFinalMicroInstruction_Value() {
 		return (EAttribute)finalMicroInstructionEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getFinalMicroInstruction_FinalFSM() {
+		return (EReference)finalMicroInstructionEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -1024,6 +1021,15 @@ public class PMLPackageImpl extends EPackageImpl implements PMLPackage {
 	 */
 	public EAttribute getSeletor_Bit() {
 		return (EAttribute)seletorEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getSeletor_Sensitive() {
+		return (EAttribute)seletorEClass.getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -1094,8 +1100,8 @@ public class PMLPackageImpl extends EPackageImpl implements PMLPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getPipelineInitialStage() {
-		return pipelineInitialStageEClass;
+	public EClass getSignalEvent() {
+		return signalEventEClass;
 	}
 
 	/**
@@ -1103,8 +1109,8 @@ public class PMLPackageImpl extends EPackageImpl implements PMLPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getPipelineInitialStage_Name() {
-		return (EAttribute)pipelineInitialStageEClass.getEStructuralFeatures().get(0);
+	public EAttribute getSignalEvent_Name() {
+		return (EAttribute)signalEventEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -1112,8 +1118,8 @@ public class PMLPackageImpl extends EPackageImpl implements PMLPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getPipelineInitialStage_NextStatePipeline() {
-		return (EReference)pipelineInitialStageEClass.getEStructuralFeatures().get(1);
+	public EReference getSignalEvent_SignalIn() {
+		return (EReference)signalEventEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -1121,8 +1127,8 @@ public class PMLPackageImpl extends EPackageImpl implements PMLPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getPipelineNextStage() {
-		return pipelineNextStageEClass;
+	public EReference getSignalEvent_SignalOut() {
+		return (EReference)signalEventEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -1130,17 +1136,8 @@ public class PMLPackageImpl extends EPackageImpl implements PMLPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getPipelineNextStage_PipelineNext() {
-		return (EReference)pipelineNextStageEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getPipelineNextStage_Name() {
-		return (EAttribute)pipelineNextStageEClass.getEStructuralFeatures().get(1);
+	public EReference getSignalEvent_SinalSelector() {
+		return (EReference)signalEventEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -1205,14 +1202,12 @@ public class PMLPackageImpl extends EPackageImpl implements PMLPackage {
 		createEAttribute(inputEClass, INPUT__NAME);
 		createEAttribute(inputEClass, INPUT__TYPE);
 		createEAttribute(inputEClass, INPUT__LENGTH);
-		createEReference(inputEClass, INPUT__INOUT);
 		createEAttribute(inputEClass, INPUT__SENSITIVE);
 		createEAttribute(inputEClass, INPUT__BIT);
 
 		outputEClass = createEClass(OUTPUT);
 		createEAttribute(outputEClass, OUTPUT__NAME);
 		createEAttribute(outputEClass, OUTPUT__TYPE);
-		createEReference(outputEClass, OUTPUT__OUTIN);
 		createEAttribute(outputEClass, OUTPUT__SENSITIVE);
 		createEAttribute(outputEClass, OUTPUT__LENGTH);
 		createEAttribute(outputEClass, OUTPUT__BIT);
@@ -1237,6 +1232,7 @@ public class PMLPackageImpl extends EPackageImpl implements PMLPackage {
 		createEReference(controlUnitEClass, CONTROL_UNIT__OUTPUTS_CONTROL_UNIT);
 		createEAttribute(controlUnitEClass, CONTROL_UNIT__NAME);
 		createEReference(controlUnitEClass, CONTROL_UNIT__INTRUCTIONS);
+		createEReference(controlUnitEClass, CONTROL_UNIT__CONTROL_UNIT_FSM);
 
 		processorEClass = createEClass(PROCESSOR);
 		createEReference(processorEClass, PROCESSOR__DEMUX);
@@ -1247,7 +1243,7 @@ public class PMLPackageImpl extends EPackageImpl implements PMLPackage {
 		createEReference(processorEClass, PROCESSOR__CONTROL_UNITS);
 		createEAttribute(processorEClass, PROCESSOR__NAME);
 		createEReference(processorEClass, PROCESSOR__DECODERS);
-		createEReference(processorEClass, PROCESSOR__INITIAL_STAGE_PIPELINE);
+		createEReference(processorEClass, PROCESSOR__PROCESSOR_SIGNAL_EVENTS);
 
 		memoryEClass = createEClass(MEMORY);
 		createEReference(memoryEClass, MEMORY__BEHAVIORS_MEMORY);
@@ -1266,29 +1262,32 @@ public class PMLPackageImpl extends EPackageImpl implements PMLPackage {
 		instructionsEClass = createEClass(INSTRUCTIONS);
 		createEAttribute(instructionsEClass, INSTRUCTIONS__TYPE);
 		createEAttribute(instructionsEClass, INSTRUCTIONS__NAME);
-		createEReference(instructionsEClass, INSTRUCTIONS__INITIAL);
 
 		microInstructionEClass = createEClass(MICRO_INSTRUCTION);
 		createEAttribute(microInstructionEClass, MICRO_INSTRUCTION__NAME);
 		createEAttribute(microInstructionEClass, MICRO_INSTRUCTION__VALUE);
 		createEReference(microInstructionEClass, MICRO_INSTRUCTION__NEXT_MICROINSTRUCTION);
 		createEReference(microInstructionEClass, MICRO_INSTRUCTION__FINAL);
+		createEReference(microInstructionEClass, MICRO_INSTRUCTION__MIDDLE_FSM);
 
 		initialMicroInstructionEClass = createEClass(INITIAL_MICRO_INSTRUCTION);
 		createEReference(initialMicroInstructionEClass, INITIAL_MICRO_INSTRUCTION__NEXT);
 		createEAttribute(initialMicroInstructionEClass, INITIAL_MICRO_INSTRUCTION__NAME);
 		createEAttribute(initialMicroInstructionEClass, INITIAL_MICRO_INSTRUCTION__VALUE);
 		createEReference(initialMicroInstructionEClass, INITIAL_MICRO_INSTRUCTION__DIRECT_FINAL_MICRO_INSTRUCTION);
+		createEReference(initialMicroInstructionEClass, INITIAL_MICRO_INSTRUCTION__FIRSTNODE_FSM);
 
 		finalMicroInstructionEClass = createEClass(FINAL_MICRO_INSTRUCTION);
 		createEAttribute(finalMicroInstructionEClass, FINAL_MICRO_INSTRUCTION__NAME);
 		createEAttribute(finalMicroInstructionEClass, FINAL_MICRO_INSTRUCTION__VALUE);
+		createEReference(finalMicroInstructionEClass, FINAL_MICRO_INSTRUCTION__FINAL_FSM);
 
 		seletorEClass = createEClass(SELETOR);
 		createEAttribute(seletorEClass, SELETOR__NAME);
 		createEAttribute(seletorEClass, SELETOR__TYPE);
 		createEAttribute(seletorEClass, SELETOR__LENGH);
 		createEAttribute(seletorEClass, SELETOR__BIT);
+		createEAttribute(seletorEClass, SELETOR__SENSITIVE);
 
 		operationEClass = createEClass(OPERATION);
 		createEAttribute(operationEClass, OPERATION__NAME);
@@ -1299,13 +1298,11 @@ public class PMLPackageImpl extends EPackageImpl implements PMLPackage {
 		createEReference(decoderEClass, DECODER__IN_DECODER);
 		createEReference(decoderEClass, DECODER__BEHAVIOR_DECODER);
 
-		pipelineInitialStageEClass = createEClass(PIPELINE_INITIAL_STAGE);
-		createEAttribute(pipelineInitialStageEClass, PIPELINE_INITIAL_STAGE__NAME);
-		createEReference(pipelineInitialStageEClass, PIPELINE_INITIAL_STAGE__NEXT_STATE_PIPELINE);
-
-		pipelineNextStageEClass = createEClass(PIPELINE_NEXT_STAGE);
-		createEReference(pipelineNextStageEClass, PIPELINE_NEXT_STAGE__PIPELINE_NEXT);
-		createEAttribute(pipelineNextStageEClass, PIPELINE_NEXT_STAGE__NAME);
+		signalEventEClass = createEClass(SIGNAL_EVENT);
+		createEAttribute(signalEventEClass, SIGNAL_EVENT__NAME);
+		createEReference(signalEventEClass, SIGNAL_EVENT__SIGNAL_IN);
+		createEReference(signalEventEClass, SIGNAL_EVENT__SIGNAL_OUT);
+		createEReference(signalEventEClass, SIGNAL_EVENT__SINAL_SELECTOR);
 
 		// Create enums
 		typeComponentEEnum = createEEnum(TYPE_COMPONENT);
@@ -1344,7 +1341,7 @@ public class PMLPackageImpl extends EPackageImpl implements PMLPackage {
 		// Initialize classes and features; add operations and parameters
 		initEClass(ulaEClass, br.ufrn.lasic.pml.ULA.class, "ULA", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getULA_Name(), ecorePackage.getEString(), "name", null, 0, 1, br.ufrn.lasic.pml.ULA.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getULA_BehavirosULA(), this.getBehavior(), null, "behavirosULA", null, 0, -1, br.ufrn.lasic.pml.ULA.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getULA_BehavirosULA(), this.getBehavior(), null, "behavirosULA", null, 1, -1, br.ufrn.lasic.pml.ULA.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getULA_OutputsULA(), this.getOutput(), null, "outputsULA", null, 1, -1, br.ufrn.lasic.pml.ULA.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getULA_InputsULA(), this.getInput(), null, "inputsULA", null, 2, -1, br.ufrn.lasic.pml.ULA.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getULA_OperationsULA(), this.getOperation(), null, "operationsULA", null, 0, -1, br.ufrn.lasic.pml.ULA.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1358,38 +1355,37 @@ public class PMLPackageImpl extends EPackageImpl implements PMLPackage {
 		initEAttribute(getInput_Name(), ecorePackage.getEString(), "name", null, 0, 1, Input.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getInput_Type(), this.getTypeData(), "type", null, 0, 1, Input.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getInput_Length(), ecorePackage.getEInt(), "length", null, 0, 1, Input.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getInput_Inout(), this.getOutput(), null, "inout", null, 0, 1, Input.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getInput_Sensitive(), ecorePackage.getEBoolean(), "sensitive", null, 0, 1, Input.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getInput_Bit(), ecorePackage.getEInt(), "bit", null, 0, 1, Input.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(outputEClass, Output.class, "Output", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getOutput_Name(), ecorePackage.getEString(), "name", null, 0, 1, Output.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getOutput_Type(), this.getTypeData(), "type", null, 0, 1, Output.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getOutput_Outin(), this.getInput(), null, "outin", null, 0, 1, Output.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getOutput_Sensitive(), ecorePackage.getEBoolean(), "sensitive", null, 0, 1, Output.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getOutput_Length(), ecorePackage.getEInt(), "length", null, 0, 1, Output.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getOutput_Bit(), ecorePackage.getEInt(), "bit", null, 0, 1, Output.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(demultiplexorEClass, Demultiplexor.class, "Demultiplexor", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getDemultiplexor_BehaviorsDemux(), this.getBehavior(), null, "behaviorsDemux", null, 0, -1, Demultiplexor.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getDemultiplexor_BehaviorsDemux(), this.getBehavior(), null, "behaviorsDemux", null, 1, -1, Demultiplexor.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getDemultiplexor_Indemux(), this.getInput(), null, "indemux", null, 1, 1, Demultiplexor.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getDemultiplexor_Outdemux(), this.getOutput(), null, "outdemux", null, 1, 1, Demultiplexor.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getDemultiplexor_Name(), ecorePackage.getEString(), "name", null, 0, 1, Demultiplexor.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getDemultiplexor_Seletordemux(), this.getSeletor(), null, "seletordemux", null, 1, 1, Demultiplexor.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(multiplexorEClass, Multiplexor.class, "Multiplexor", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getMultiplexor_Behaviormux(), this.getBehavior(), null, "behaviormux", null, 0, -1, Multiplexor.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getMultiplexor_Behaviormux(), this.getBehavior(), null, "behaviormux", null, 1, -1, Multiplexor.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getMultiplexor_Outmux(), this.getOutput(), null, "outmux", null, 1, 1, Multiplexor.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getMultiplexor_Inmux(), this.getInput(), null, "inmux", null, 1, 1, Multiplexor.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getMultiplexor_Name(), ecorePackage.getEString(), "name", null, 0, 1, Multiplexor.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getMultiplexor_Seletormux(), this.getSeletor(), null, "seletormux", null, 1, 1, Multiplexor.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(controlUnitEClass, ControlUnit.class, "ControlUnit", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getControlUnit_BehaviorsControlUnit(), this.getBehavior(), null, "behaviorsControlUnit", null, 0, -1, ControlUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getControlUnit_BehaviorsControlUnit(), this.getBehavior(), null, "behaviorsControlUnit", null, 1, -1, ControlUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getControlUnit_InputsControlUnit(), this.getInput(), null, "inputsControlUnit", null, 1, -1, ControlUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getControlUnit_OutputsControlUnit(), this.getOutput(), null, "outputsControlUnit", null, 1, -1, ControlUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getControlUnit_Name(), ecorePackage.getEString(), "name", null, 0, 1, ControlUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getControlUnit_Intructions(), this.getInstructions(), null, "intructions", null, 1, -1, ControlUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getControlUnit_ControlUnitFSM(), this.getInitialMicroInstruction(), null, "controlUnitFSM", null, 0, 1, ControlUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(processorEClass, Processor.class, "Processor", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getProcessor_Demux(), this.getDemultiplexor(), null, "demux", null, 0, -1, Processor.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1400,17 +1396,17 @@ public class PMLPackageImpl extends EPackageImpl implements PMLPackage {
 		initEReference(getProcessor_ControlUnits(), this.getControlUnit(), null, "controlUnits", null, 0, -1, Processor.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getProcessor_Name(), ecorePackage.getEString(), "name", null, 0, 1, Processor.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getProcessor_Decoders(), this.getDecoder(), null, "decoders", null, 0, -1, Processor.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getProcessor_InitialStagePipeline(), this.getPipelineInitialStage(), null, "initialStagePipeline", null, 0, 1, Processor.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getProcessor_ProcessorSignalEvents(), this.getSignalEvent(), null, "processorSignalEvents", null, 0, -1, Processor.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(memoryEClass, Memory.class, "Memory", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getMemory_BehaviorsMemory(), this.getBehavior(), null, "behaviorsMemory", null, 0, -1, Memory.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getMemory_BehaviorsMemory(), this.getBehavior(), null, "behaviorsMemory", null, 1, -1, Memory.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getMemory_InputMemory(), this.getInput(), null, "inputMemory", null, 1, -1, Memory.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getMemory_OutputMemory(), this.getOutput(), null, "outputMemory", null, 1, -1, Memory.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getMemory_Name(), ecorePackage.getEString(), "name", null, 0, 1, Memory.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getMemory_Length(), ecorePackage.getEInt(), "length", null, 1, 1, Memory.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(registerEClass, Register.class, "Register", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getRegister_BehaviorRegister(), this.getBehavior(), null, "behaviorRegister", null, 0, -1, Register.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getRegister_BehaviorRegister(), this.getBehavior(), null, "behaviorRegister", null, 1, -1, Register.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getRegister_OutputRegister(), this.getOutput(), null, "outputRegister", null, 1, -1, Register.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getRegister_InputRegister(), this.getInput(), null, "inputRegister", null, 1, -1, Register.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getRegister_Name(), ecorePackage.getEString(), "name", null, 0, 1, Register.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1419,29 +1415,32 @@ public class PMLPackageImpl extends EPackageImpl implements PMLPackage {
 		initEClass(instructionsEClass, Instructions.class, "Instructions", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getInstructions_Type(), ecorePackage.getEString(), "type", null, 0, 1, Instructions.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getInstructions_Name(), ecorePackage.getEString(), "name", null, 0, 1, Instructions.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getInstructions_Initial(), this.getInitialMicroInstruction(), null, "initial", null, 1, 1, Instructions.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(microInstructionEClass, MicroInstruction.class, "MicroInstruction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getMicroInstruction_Name(), ecorePackage.getEString(), "name", null, 0, 1, MicroInstruction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getMicroInstruction_Value(), ecorePackage.getEInt(), "value", null, 0, 1, MicroInstruction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getMicroInstruction_NextMicroinstruction(), this.getMicroInstruction(), null, "nextMicroinstruction", null, 0, -1, MicroInstruction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getMicroInstruction_Final(), this.getFinalMicroInstruction(), null, "final", null, 0, 1, MicroInstruction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getMicroInstruction_MiddleFSM(), this.getInstructions(), null, "middleFSM", null, 0, -1, MicroInstruction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(initialMicroInstructionEClass, InitialMicroInstruction.class, "InitialMicroInstruction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getInitialMicroInstruction_Next(), this.getMicroInstruction(), null, "next", null, 0, 1, InitialMicroInstruction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getInitialMicroInstruction_Name(), ecorePackage.getEString(), "name", null, 0, 1, InitialMicroInstruction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getInitialMicroInstruction_Value(), ecorePackage.getEInt(), "value", null, 0, 1, InitialMicroInstruction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getInitialMicroInstruction_DirectFinalMicroInstruction(), this.getFinalMicroInstruction(), null, "directFinalMicroInstruction", null, 0, 1, InitialMicroInstruction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getInitialMicroInstruction_FirstnodeFSM(), this.getInstructions(), null, "firstnodeFSM", null, 0, -1, InitialMicroInstruction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(finalMicroInstructionEClass, FinalMicroInstruction.class, "FinalMicroInstruction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getFinalMicroInstruction_Name(), ecorePackage.getEString(), "name", null, 0, 1, FinalMicroInstruction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getFinalMicroInstruction_Value(), ecorePackage.getEInt(), "value", null, 0, 1, FinalMicroInstruction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getFinalMicroInstruction_FinalFSM(), this.getInstructions(), null, "finalFSM", null, 0, -1, FinalMicroInstruction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(seletorEClass, Seletor.class, "Seletor", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getSeletor_Name(), ecorePackage.getEString(), "name", null, 0, 1, Seletor.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getSeletor_Type(), this.getTypeData(), "type", null, 0, 1, Seletor.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getSeletor_Lengh(), ecorePackage.getEInt(), "lengh", null, 0, 1, Seletor.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getSeletor_Bit(), ecorePackage.getEInt(), "bit", null, 0, 1, Seletor.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getSeletor_Sensitive(), ecorePackage.getEBoolean(), "sensitive", null, 0, 1, Seletor.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(operationEClass, Operation.class, "Operation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getOperation_Name(), ecorePackage.getEString(), "name", null, 0, 1, Operation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1452,13 +1451,11 @@ public class PMLPackageImpl extends EPackageImpl implements PMLPackage {
 		initEReference(getDecoder_InDecoder(), this.getInput(), null, "inDecoder", null, 1, -1, Decoder.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getDecoder_BehaviorDecoder(), this.getBehavior(), null, "behaviorDecoder", null, 0, -1, Decoder.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(pipelineInitialStageEClass, PipelineInitialStage.class, "PipelineInitialStage", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getPipelineInitialStage_Name(), ecorePackage.getEString(), "name", null, 0, 1, PipelineInitialStage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getPipelineInitialStage_NextStatePipeline(), this.getPipelineNextStage(), null, "nextStatePipeline", null, 0, 1, PipelineInitialStage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(pipelineNextStageEClass, PipelineNextStage.class, "PipelineNextStage", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getPipelineNextStage_PipelineNext(), this.getPipelineNextStage(), null, "pipelineNext", null, 0, 1, PipelineNextStage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getPipelineNextStage_Name(), ecorePackage.getEString(), "name", null, 0, 1, PipelineNextStage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(signalEventEClass, SignalEvent.class, "SignalEvent", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getSignalEvent_Name(), ecorePackage.getEString(), "name", null, 0, 1, SignalEvent.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getSignalEvent_SignalIn(), this.getInput(), null, "signalIn", null, 0, -1, SignalEvent.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getSignalEvent_SignalOut(), this.getOutput(), null, "signalOut", null, 0, -1, SignalEvent.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getSignalEvent_SinalSelector(), this.getSeletor(), null, "sinalSelector", null, 0, -1, SignalEvent.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Initialize enums and add enum literals
 		initEEnum(typeComponentEEnum, TypeComponent.class, "TypeComponent");
@@ -1514,6 +1511,12 @@ public class PMLPackageImpl extends EPackageImpl implements PMLPackage {
 		   new String[] {
 			 "namespace", "",
 			 "group", "#instructionsULA"
+		   });		
+		addAnnotation
+		  (getInitialMicroInstruction_FirstnodeFSM(), 
+		   source, 
+		   new String[] {
+			 "name", "firstNodeFSM"
 		   });
 	}
 

@@ -1,8 +1,4 @@
 /**
- * <copyright>
- * </copyright>
- *
- * $Id$
  */
 package br.ufrn.lasic.pml.util;
 
@@ -140,12 +136,8 @@ public class PMLAdapterFactory extends AdapterFactoryImpl {
 				return createDecoderAdapter();
 			}
 			@Override
-			public Adapter casePipelineInitialStage(PipelineInitialStage object) {
-				return createPipelineInitialStageAdapter();
-			}
-			@Override
-			public Adapter casePipelineNextStage(PipelineNextStage object) {
-				return createPipelineNextStageAdapter();
+			public Adapter caseSignalEvent(SignalEvent object) {
+				return createSignalEventAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {
@@ -406,30 +398,16 @@ public class PMLAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link br.ufrn.lasic.pml.PipelineInitialStage <em>Pipeline Initial Stage</em>}'.
+	 * Creates a new adapter for an object of class '{@link br.ufrn.lasic.pml.SignalEvent <em>Signal Event</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see br.ufrn.lasic.pml.PipelineInitialStage
+	 * @see br.ufrn.lasic.pml.SignalEvent
 	 * @generated
 	 */
-	public Adapter createPipelineInitialStageAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link br.ufrn.lasic.pml.PipelineNextStage <em>Pipeline Next Stage</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see br.ufrn.lasic.pml.PipelineNextStage
-	 * @generated
-	 */
-	public Adapter createPipelineNextStageAdapter() {
+	public Adapter createSignalEventAdapter() {
 		return null;
 	}
 

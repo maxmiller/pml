@@ -1,8 +1,4 @@
 /**
- * <copyright>
- * </copyright>
- *
- * $Id$
  */
 package br.ufrn.lasic.pml;
 
@@ -20,6 +16,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link br.ufrn.lasic.pml.Seletor#getType <em>Type</em>}</li>
  *   <li>{@link br.ufrn.lasic.pml.Seletor#getLengh <em>Lengh</em>}</li>
  *   <li>{@link br.ufrn.lasic.pml.Seletor#getBit <em>Bit</em>}</li>
+ *   <li>{@link br.ufrn.lasic.pml.Seletor#isSensitive <em>Sensitive</em>}</li>
  * </ul>
  * </p>
  *
@@ -134,5 +131,31 @@ public interface Seletor extends EObject {
 	 * @generated
 	 */
 	void setBit(int value);
+
+	/**
+	 * Returns the value of the '<em><b>Sensitive</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Sensitive</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Sensitive</em>' attribute.
+	 * @see #setSensitive(boolean)
+	 * @see br.ufrn.lasic.pml.PMLPackage#getSeletor_Sensitive()
+	 * @model
+	 * @generated
+	 */
+	boolean isSensitive();
+
+	/**
+	 * Sets the value of the '{@link br.ufrn.lasic.pml.Seletor#isSensitive <em>Sensitive</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Sensitive</em>' attribute.
+	 * @see #isSensitive()
+	 * @generated
+	 */
+	void setSensitive(boolean value);
 
 } // Seletor
